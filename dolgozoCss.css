@@ -1,0 +1,99 @@
+body {
+  background-image: url("hatterek/body.jpg");
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+section {
+  background-image: url("hatterek/main3.jpg");
+  border: 2px solid black;
+  max-width: 400px;
+  height: 15vh;
+  margin: auto;
+  padding: 20px;
+}
+
+div {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  font-size: 140%;
+}
+
+input {
+  margin-left: 5px;
+}
+
+#belepes {
+  display: flex;
+  justify-content: center;
+}
+
+#belepes > input {
+  font-size: 2.8vh;
+}
+
+@media only screen and (max-width: 500px) {
+  section {
+    margin: 0px;
+    margin: auto;
+  }
+}
+
+@media only screen and (max-width: 415px) {
+  section {
+    height: 15vh;
+    margin: 0px;
+  }
+  div {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 2vh;
+  }
+  #belepes > input {
+    font-size: 2vh;
+  }
+}
+
+@media only screen and (max-height: 660px) {
+  div {
+    font-size: 100%;
+  }
+}
+
+@media only screen and (max-height: 800px) {
+  section {
+    height: 18vh;
+  }
+}
+
+@media only screen and (max-height: 550px) {
+  section {
+    width: 62%;
+    height: 30vh;
+    font-size: 120%;
+  }
+  div {
+    display: flex;
+    flex-direction: column;
+  }
+  input {
+    margin: 0px;
+  }
+  #belepes > input {
+    font-size: 90%;
+  }
+}
+
+@media only screen and (max-height: 500px) {
+  section {
+    width: 65%;
+    height: 150px;
+  }
+}
