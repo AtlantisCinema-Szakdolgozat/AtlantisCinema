@@ -1,0 +1,43 @@
+body {
+  background-image: url("hatterek/body.jpg");
+}
+
+main {
+  background-image: url("hatterek/main3.jpg");
+  max-width: 1200px;
+  margin: auto;
+  height: 100vh;
+  font-size: 140%;
+}
+
+ul {
+  width: 100%;
+}
+
+nav > div > ul > .nav-item > .nav-link {
+  color: rgb(212, 175, 55);
+}
+
+a:hover {
+  background-color: #333333;
+}
+
+@media only screen and (max-width: 800px) {
+  main {
+    font-size: 120%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  main {
+    font-size: 97%;
+  }
+}
+
+@media only screen and (max-width: 580px) {
+  main {
+    font-size: 95%;
+  }
+}
+
+
