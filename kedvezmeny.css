@@ -7,6 +7,7 @@ main {
   max-width: 1200px;
   margin: auto;
   height: 100vh;
+  padding-bottom: 10px;
   font-size: 140%;
 }
 
@@ -32,7 +33,7 @@ div {
   margin-bottom: 10px;
 }
 
-#urlapí {
+#urlap {
   padding: 10px;
 }
 
@@ -105,12 +106,7 @@ section > div > form > div > .btn {
   }
 
   section > div > form > div > .btn {
-    font-weight: initial;
     margin-top: 10px;
-  }
-
-  #keresesRendezes {
-    margin: 5px;
   }
 }
 

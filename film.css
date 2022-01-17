@@ -1,13 +1,16 @@
 body {
   background-image: url("hatterek/body.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
 main {
   background-image: url("hatterek/main3.jpg");
+  background-attachment: fixed;
   max-width: 1200px;
   margin: auto;
-  height: 100vh;
   padding-bottom: 10px;
+  height: auto;
   font-size: 140%;
 }
 
@@ -24,17 +27,41 @@ a:hover {
 }
 
 section {
-  margin-top: 20px;
+  margin: 20px;
 }
 
-div {
-  width: 700px;
+section > div {
+  max-width: 800px;
   margin: auto;
   margin-bottom: 10px;
 }
 
+#keresesRendezes {
+  max-width: 800px;
+  margin: auto;
+}
+
+#kereses {
+  padding-right: 0px;
+}
+
+#urlap {
+  padding: 10px;
+}
+
 #urlap > form > div > label {
   font-weight: bold;
+}
+
+form > .row > div > .btn {
+  background-color: #d9d9d9;
+  border: 2px solid black;
+  font-weight: bold;
+  margin: auto;
+}
+
+form > .row {
+  --bs-gutter-x: 0px;
 }
 
 section > div > form > div > .btn {
@@ -50,14 +77,36 @@ section > div > form > div > .btn {
   margin-bottom: 20px;
 }
 
-#kereses{
-  padding-right: 0px;
+#filmtarolo {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
 }
 
-#tablazat {
-  background-color: white;
+.filmadatok {
+  max-width: 400px;
   border: 2px solid black;
-  max-height: 40vh;
+  padding: 10px;
+  margin: 0px;
+  background-color: #d9d9d9;
+}
+
+.filmadatok > .row > h2 {
+  font-size: 25px;
+}
+
+.filmadatok > .row > p {
+  text-align: center;
+  font-size: 20px;
+}
+
+.filmadatok > .row > .leiras {
+  text-align: justify;
+}
+
+.button > div > button {
+  width: 100%;
+  font-weight: bold;
 }
 
 @media only screen and (max-width: 800px) {
@@ -65,6 +114,7 @@ section > div > form > div > .btn {
     font-size: 120%;
   }
 }
+
 @media only screen and (max-width: 700px) {
   main {
     width: 100%;
@@ -72,13 +122,37 @@ section > div > form > div > .btn {
   }
 
   section {
-    margin: 10px;
+    margin: 13px;
   }
 
   div {
     width: 100%;
     margin: 0px;
     margin-bottom: 10px;
+  }
+
+  #filmtarolo {
+    display: block;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .filmadatok {
+    max-width: 100%;
+  }
+
+  .button > div {
+    padding-right: 0px;
+  }
+}
+
+@media only screen and (max-width: 670px) {
+  form {
+    padding: 20px;
+  }
+
+  .filmadatok {
+    margin-top: 10px;
   }
 }
 
@@ -100,20 +174,22 @@ section > div > form > div > .btn {
     margin-bottom: 0px;
   }
 
+  form > .row > div > .btn {
+    margin-top: 10px;
+  }
+
   section > div > form > div > .btn {
     margin-top: 10px;
   }
 
   #keresesRendezes {
     margin: 5px;
+    margin-left: 30px;
+    padding-right: 30px;
   }
 
-  #kereses{
-    padding-left: 0px;
+  #kereses {
     padding-right: 12px;
-  }
-  #rendezes{
-    padding-left: 0px;
   }
 }
 @media only screen and (max-height: 700px) {

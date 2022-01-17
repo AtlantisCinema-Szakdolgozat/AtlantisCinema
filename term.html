@@ -20,7 +20,7 @@
                         <a class="nav-link active" href="szemely.htm">Szemelyek</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="film.htm">Filmek</a>
+                        <a class="nav-link active" href="film.html">Filmek</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="term.html">Teremek</a>
@@ -46,19 +46,19 @@
                         <div class="row">
                             <label for="tnev" class="col-sm-3 col-form-label">Terem név</label>
                           <div class="col-sm-9">
-                            <input type="text"  class="form-control" id="tnev" name="tnev">
+                            <input type="text"  class="form-control" id="tnev" name="tnev" required>
                           </div>
                         </div>
                         <div class="row">
                             <label for="sor" class="col-sm-3 col-form-label">Sor</label>
                           <div class="col-sm-9">
-                            <input type="number" class="form-control" id="sor" name="sor">
+                            <input type="number" class="form-control" id="sor" name="sor" required>
                           </div>
                         </div>
                         <div class="row">
                             <label for="oszlop" class="col-sm-3 col-form-label">Oszlop</label>
                           <div class="col-sm-9">
-                            <input type="number" class="form-control" id="oszlop" name="oszlop">
+                            <input type="number" class="form-control" id="oszlop" name="oszlop" required>
                           </div>
                         </div>
                         <div class="d-grid gap-2 d-md-flex justify-content-end">
@@ -67,12 +67,12 @@
                 </form>
             </div>
             <div id="keresesRendezes" class="row">
-                <div id="kereses" class="col"> 
+                <div id="kereses" class="col-sm-6"> 
                   <input type="text" class="form-control" placeholder="Keresés">
                 </div>
-                <div id="rendezes" class="col">
+                <div id="rendezes" class="col-sm-6">
                         <select class="form-select">
-                          <option selected>Rendezést</option>
+                          <option selected>Rendezés</option>
                           <option value="1">A-z</option>
                           <option value="2">Z-a</option>
                         </select>
@@ -251,7 +251,6 @@
                           <td><button type="submit">Törlés</button></td>
                           <td><button type="submit">Módosítás</button></td>
                       </tr>
-
                   </table>
             </div>
         </section>
