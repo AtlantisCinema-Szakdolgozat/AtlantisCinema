@@ -1,0 +1,149 @@
+body {
+  background-image: url("hatterek/body.jpg");
+}
+
+main {
+  background-image: url("hatterek/main3.jpg");
+  max-width: 1200px;
+  margin: auto;
+  height: auto;
+  padding-bottom: 10px;
+  font-size: 140%;
+}
+
+ul {
+  width: 100%;
+}
+
+nav > div > ul > .nav-item > .nav-link {
+  color: rgb(212, 175, 55);
+}
+
+a:hover {
+  background-color: #333333;
+}
+
+section {
+  margin: 20px;
+}
+
+div {
+  margin-bottom: 10px;
+}
+#urlap {
+  max-width: 700px;
+  margin: auto;
+}
+
+#urlap > form > div > label {
+  font-weight: bold;
+}
+
+#fteljesJegyar {
+  width: 100px;
+}
+
+section > div > form > div > .btn {
+  background-color: #d9d9d9;
+  border: 2px solid black;
+  font-weight: bold;
+  margin-right: 25px;
+}
+
+#keresesRendezes {
+  max-width: 700px;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#kereses {
+  padding-right: 0px;
+}
+
+#tablazat {
+  background-color: white;
+  border: 2px solid black;
+  max-height: 40vh;
+}
+
+table > thead > tr > th {
+  font-size: 90%;
+}
+
+table > tbody > tr > td {
+  font-size: 80%;
+}
+
+@media only screen and (max-width: 800px) {
+  main {
+    font-size: 120%;
+  }
+
+  table > thead > tr > th {
+    font-size: 100%;
+  }
+
+  table > tbody > tr > td {
+    font-size: 90%;
+  }
+}
+@media only screen and (max-width: 700px) {
+  main {
+    width: 100%;
+    font-size: 97%;
+  }
+
+  section {
+    margin: 10px;
+  }
+
+  div {
+    width: 100%;
+    margin: 0px;
+    margin-bottom: 10px;
+  }
+
+  table > thead > tr > th {
+    font-size: 120%;
+  }
+
+  table > tbody > tr > td {
+    font-size: 110%;
+  }
+}
+
+@media only screen and (max-width: 580px) {
+  main {
+    height: auto;
+    font-size: 95%;
+  }
+
+  section > #urlap > form > .row {
+    margin-bottom: 0px;
+  }
+
+  section > #urlap > form > .row > label {
+    margin-bottom: 0px;
+  }
+
+  section > #urlap > form > .row > div {
+    margin-bottom: 0px;
+  }
+
+  section > div > form > div > .btn {
+    margin-top: 10px;
+  }
+
+  #keresesRendezes {
+    margin: 5px;
+  }
+
+  #kereses {
+    padding-left: 0px;
+    padding-right: 12px;
+  }
+  #rendezes {
+    padding-left: 0px;
+  }
+}
