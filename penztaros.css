@@ -1,0 +1,112 @@
+body{
+    background-image: url("kepek/main3.jpg");
+  
+  }
+  
+
+  header div{
+    max-width: 120px;
+    color: #be9d31;
+    background-color: black;
+    padding:10px;
+  }
+
+  article{
+    width: 200px;
+    background-color: black;
+    text-align: center;
+    margin:auto;
+    margin-top: 10px;
+    color: #be9d31;
+    
+  }
+
+
+  article div{
+    font-weight: bold;
+}
+.datumnap{
+    font-size: 150%;
+    text-align: center;
+
+}
+.bejelentpenztar{
+    background-color:#d9d9d9;
+
+}
+.aktnap{
+font-size: x-large;
+
+}
+.bejelentpenztar p{
+    color:black;
+    
+}
+
+#napoktabla{
+
+    cursor: pointer;
+  
+  }
+  section{
+    margin-top: 20px;
+  }
+  .filmmezok{
+    display: flex;
+    margin-bottom: 15px;
+    border: 1px solid black;
+    padding: 10px;
+   
+    
+  }
+  .filmmezok >div{
+    display: flex;
+  }
+  
+  .filmcim{
+  
+    width: 260px;
+  
+  }
+  .filmidopont{
+
+    cursor: pointer;
+    margin-right: 50px;
+   
+  
+  }
+
+  section> .filmmezok>.col>.filmidopont{
+
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .filmcim p{
+      
+    color: #be9d31;
+    font-weight: bold;
+    font-size: xx-large;
+  
+  }
+  .filmidopont p{
+    color: #be9d31;
+    font-size: 130%;
+    background-color: black;
+    margin: 0;
+    text-align: center;
+    
+  }
+  .kijelentkezes{
+    background-color: black;
+    border:none;
+    color:white;
+    font-weight: bold;
+    padding: 15px 32px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  footer{
+    padding-top: 40px;;
+
+  }
