@@ -1,0 +1,21 @@
+main {
+  height: 100vh;
+}
+ 
+ section > div > form > div > .btn {
+  margin-top: 10px;
+}
+
+#tablazat {
+  max-height: 55vh;
+}
+.tbalazatLeiras {
+  text-align: justify;
+
+}
+
+@media only screen and (max-height: 880px) {
+  main {
+    height: auto;
+  }
+}

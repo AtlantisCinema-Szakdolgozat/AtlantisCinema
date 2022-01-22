@@ -1,0 +1,74 @@
+.col-sm-3 > .btn {
+  width: 100%;
+  background-color: #d9d9d9;
+  border: 2px solid black;
+  font-weight: bold;
+  padding: 4px;
+  margin-left: 5px;
+}
+
+form > .rendezo {
+  margin-top: 5px;
+}
+
+main > section > #filmtarolo {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.filmadatok {
+  max-width: calc(400px - 10px);
+  border: 2px solid black;
+  padding: 10px;
+  background-color: #d9d9d9;
+}
+
+.filmadatok > .row > h2 {
+  font-size: 120%;
+}
+
+.filmadatok > .row > p {
+  text-align: center;
+}
+
+.filmadatok > .row > .leiras {
+  text-align: justify;
+}
+
+.button > div > button {
+  width: 100%;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 700px) {
+  #filmtarolo {
+    width: 100%;
+  }
+
+  .filmadatok {
+    width: 100%;
+  }
+
+  .button > div {
+    padding-right: 0px;
+  }
+}
+
+@media only screen and (max-width: 670px) {
+
+  .filmadatok {
+    margin-top: 10px;
+  }
+}
+
+@media only screen and (max-width: 670px) {
+  .filmadatok {
+    margin: auto;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  body > main > section > #filmtarolo {
+    margin-left: 0px;
+  }
+}

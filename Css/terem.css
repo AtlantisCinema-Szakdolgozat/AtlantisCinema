@@ -1,0 +1,9 @@
+#tablazat {
+  max-height: 60vh;
+}
+
+@media only screen and (max-height: 700px) {
+  main {
+    height: auto;
+  }
+}
