@@ -1,0 +1,98 @@
+
+
+/*Aktuális  időpont*/
+.aktfilm{
+  margin: auto;
+  margin-top: 10px;
+  text-align: center;
+  width: 200px;
+  height: 150px;
+  border:1px solid #be9d31;
+  margin-bottom: 20px;
+  background-color: black;
+  padding: 10px 0 10px 0;
+  color: #be9d31;
+  
+}
+
+
+
+
+
+/*Section 
+-összesitő
+*/
+.osszesito{
+  background-color: #d9d9d9;
+  display: grid;
+  grid-template-areas:
+  'ad ad ad ad '
+  'jt jt jt jt'
+  'fo fo fo fo' 
+  'vf vf vf vf'; 
+  text-align: center;
+  grid-gap: 10px;
+  border: 1px solid black;
+  width: 30%;
+  margin: auto;
+  font-size: x-large;
+
+
+}
+
+.adatok{
+  grid-area: ad;
+}
+
+.adatok h2{
+  color: black;
+
+}
+
+.jegytipus{
+  grid-area: jt;
+  margin: auto;
+
+}
+
+.jegytipus>div{
+  display: flex;
+
+
+
+}
+.fizetendoOsszeg{
+  grid-area: fo;
+  width: 60%;
+  margin: auto;
+  background-color: gray;
+}
+
+.vasarlasfix{
+  grid-area: vf;
+}
+
+
+  
+/*Gombok*/
+
+  .vissza{
+    background-color: black;
+    border:none;
+    color:white;
+    font-weight: bold;
+    padding: 15px 32px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .vasarlas{
+    border:none;
+    cursor: pointer;
+    font-size: 25px;
+    border: 1px solid black;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;;
+
+  }
+
