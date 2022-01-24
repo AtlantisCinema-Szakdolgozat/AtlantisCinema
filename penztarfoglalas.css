@@ -179,4 +179,12 @@ body>main>#foglalas{
     font-size: 20px;
     cursor: pointer;
   }
+ 
+/*Reszponzivitás*/
 
+@media only screen and (max-width: 1400px) {
+  #foglalas>#foglalasadatok>div{
+    max-height: 35vh;
+    padding-bottom: 15px;
+  }
+}
