@@ -1,0 +1,73 @@
+@charset "utf-8";
+
+/* Hátterek */
+
+body{
+    background-image: url("../hatterek/body.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+/*main*/
+main {
+    background-image: url("../hatterek/main3.jpg");
+    max-width: 1100px;
+    margin: auto;
+    min-height: 100vh;
+
+}
+
+
+/* Header */
+
+header {
+    padding: 20px;
+
+}
+
+h1 {
+    padding-left: 40px;
+}
+
+
+/* Menü */
+ul {
+    width: 100%;
+  }
+nav > div > ul > .nav-item > .nav-link {
+    color: rgb(212, 175, 55);
+}
+
+a:hover {
+    background-color: #333333;
+  }
+
+
+/* Article */
+
+article {
+    padding: 15px;
+}
+
+
+/* Footer */
+
+footer {
+
+    background-color: black;
+    color: rgb(194, 165, 0);
+    padding: 20px;
+    top: 100%;
+   position: sticky;
+}
+footer>.row{
+    margin: 0px;
+}
+#informacio,#kapcsolat,#alkotok{
+    padding: 0px;
+}
+
+#moziNev {
+    color: rgb(223, 223, 185);
+}

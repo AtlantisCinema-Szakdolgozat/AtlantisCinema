@@ -9,7 +9,7 @@ main {
   background-attachment: fixed;
   max-width: 1200px;
   margin: auto;
-  height: auto;
+  min-height: 100vh;
   padding-bottom: 10px;
   font-size: 120%;
 }
