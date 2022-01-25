@@ -1,0 +1,338 @@
+
+@charset "utf-8";
+
+
+main {
+
+    margin: auto;
+}
+
+* {
+
+    box-sizing: border-box;
+}
+
+
+/* Hátterek */
+
+body {
+
+    background-image: url("../hatterek/body.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+  
+main {
+  
+    background-image: url("../hatterek/main3.jpg");
+    background-attachment: fixed;
+    max-width: 1100px;
+    margin: auto;
+    min-height: 100vh;
+}
+
+
+/* Header */
+
+header {
+
+    padding: 20px;
+}
+
+
+/* Nav */
+
+ul {
+
+    width: 100%;
+}
+  
+nav > div > ul > .nav-item > .nav-link {
+  
+    color: rgb(212, 175, 55);
+}
+  
+.nav-item>a:hover {
+  
+    background-color: #333333;
+}
+
+
+/* Article */
+
+article {
+
+    padding: 30px;
+}
+
+
+#galeriaSzulo {
+
+    display: flex;
+    justify-content: center;
+
+    padding: 30px;
+    margin: auto;
+}
+
+#kisGaleria {
+
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+img {
+
+    margin: 5px;
+    border: 2px solid black;
+}
+
+
+a {
+
+    text-decoration: none;
+    color: rgb(194, 165, 0);
+}
+  
+a:hover {
+  
+    background-color: #333333;
+    color: rgb(194, 165, 0);
+}
+
+li {
+
+    list-style-type: none;
+}
+
+
+
+#musorMenu {
+
+    background-color: black;
+}
+
+.napok {
+
+    padding: 10px;
+    background-color: black;
+}
+
+.napok:hover {
+
+    background-color: #333333;
+    color: rgb(194, 165, 0);
+}
+
+
+/* Táblázatos megjelenítés */
+
+#musorLista {
+
+    margin: auto;
+    padding: 10px;
+
+    border: 2px solid black;
+}
+
+th, td {
+
+    padding: 10px;
+}
+
+
+/* Csempés megjelenítés */
+
+.musorListaCsempeSzulo {
+
+    padding: 10px;
+    border: 2px solid black;
+}
+
+.csempeSablon {
+
+    display: flex;
+    flex-wrap: nowrap;
+    -ms-flex-align: center;
+
+    padding: 50px;
+    background-color: rgba(177, 214, 219, 0.562);
+    border: 2px solid black;
+}
+
+.csempePlakat {
+
+    width: 300px;
+    height: auto;
+
+    margin: 10px;
+}
+
+.csempeLeiras {
+
+    margin: 10px;
+}
+
+.csempeIdopontok {
+
+}
+
+
+
+
+.terkep > div > iframe {
+    padding-left: 0px;
+    padding-right: 0px;
+    height: 30vh;
+    width: 50vh;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+#socMedia {
+
+    padding: 30px;
+}
+
+#terkepMedia {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    background-color: rgba(177, 214, 219, 0.562);
+    padding: 30px;
+    margin-top: 30px;
+}
+
+.fa {
+
+    padding: 10px;
+    font-size: 30px;
+    width: 100px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+  
+}
+    
+.fa:hover {
+  
+    color: white;
+    opacity: 0.7;
+}
+    
+.fa-facebook {
+  
+    background: #3B5998;
+    color: white;
+}
+    
+.fa-twitter {
+  
+    background: #55ACEE;
+    color: white;
+}
+
+
+
+
+/* Footer */
+
+footer {
+
+    background-color: black;
+    color: rgb(194, 165, 0);
+    padding: 20px;
+}
+
+#moziNev {
+
+    color: rgb(223, 223, 185);
+    padding-bottom: 20px;
+}
+
+
+
+
+/* Reszponzivitás */
+
+@media only screen and (max-width: 1650px) {
+
+
+    #galeriaSzulo {
+
+        display: flex;
+        flex-wrap: wrap;
+        
+        padding: 10px;
+    }   
+
+    #korhintaGaleria img {
+
+        max-width: 100%;
+        height: auto;
+    }
+
+    #kisGaleria img {
+
+        max-width: 100%;
+        height: auto;
+    }
+
+    #terkepMedia {
+
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+}
+
+@media only screen and (max-width: 1470px) {
+
+
+    #korhintaGaleria img {
+
+        max-width: 100%;
+        height: auto;
+    }
+
+    #kisGaleria img {
+
+        max-width: 100%;
+        height: auto;
+    }
+
+    #galeriaSzulo {
+
+        display: flex;
+        flex-wrap: wrap;
+        
+        padding: 10px;
+    }   
+
+    #kisGaleria {
+
+        display: flex;
+
+        margin: auto;
+    }
+
+    nav ul {
+
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+}
+
+@media only screen and (max-width: 850px) {
+
+
+    #kisGaleria img {
+
+        max-width: 50%;
+        height: auto;
+    }
+
+}
