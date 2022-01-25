@@ -1,0 +1,6 @@
+@charset "utf-8";
+
+/* Article */
+article>div>ul>li>p{
+    text-align: justify;
+}
