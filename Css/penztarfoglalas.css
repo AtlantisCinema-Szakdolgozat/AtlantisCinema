@@ -70,6 +70,13 @@ body>main>#foglalas{
 
 }
 
+#foglalas>#foglalasadatok>div{
+
+max-height:45vh;
+
+
+}
+
 .oszlop{
   width: 1ex;
   height: 1ex;
@@ -180,11 +187,21 @@ body>main>#foglalas{
     cursor: pointer;
   }
  
+
+
+
 /*Reszponzivitás*/
 
 @media only screen and (max-width: 1400px) {
   #foglalas>#foglalasadatok>div{
     max-height: 35vh;
     padding-bottom: 15px;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  #foglalas>#ulesterv{
+   margin-top: 10px;
+   margin-bottom: 20px;
   }
 }
