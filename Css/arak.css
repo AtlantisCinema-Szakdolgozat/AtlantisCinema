@@ -1,4 +1,3 @@
-
 @charset "utf-8";
 
 
@@ -6,7 +5,7 @@
 
 body {
 
-  background-image: url("hatterek/body.jpg");
+  background-image: url("../hatterek/body.jpg");
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;

@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+
+article>.row{
+    margin: 15px 0px 15px 0px;
+}
+
+article>.row>div{
+    padding-left: 0px;
+}
+
+article>.row>div>img{
+     width: 100%; 
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 0px;
+}
+
+article>div>div>p{
+    text-align: justify;
+}
+span{
+    font-size: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+    article>div>div>h4{
+        margin-top: 10px;
+    }
+  }
