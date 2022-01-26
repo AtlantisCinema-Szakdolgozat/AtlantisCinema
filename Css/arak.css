@@ -13,13 +13,12 @@ body {
 }
 
 main {
-
-  background-image: url("hatterek/main3.jpg");
-  max-width: 1100px;
-  margin: auto;
-  min-height: 100vh;
+    background-image: url("../hatterek/main3.jpg");
+    background-attachment: fixed;
+    max-width: 1100px;
+    margin: auto;
+    min-height: 100vh;
 }
-
 
 /* Header */
 

@@ -16,7 +16,7 @@ main {
 
 body {
 
-    background-image: url("hatterek/body.jpg");
+    background-image: url("../hatterek/body.jpg");
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -24,7 +24,8 @@ body {
   
 main {
   
-    background-image: url("hatterek/main3.jpg");
+    background-image: url("../hatterek/main3.jpg");
+    background-attachment: fixed;
     max-width: 1100px;
     margin: auto;
     min-height: 100vh;
