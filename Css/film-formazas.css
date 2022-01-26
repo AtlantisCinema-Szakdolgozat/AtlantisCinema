@@ -90,6 +90,9 @@ li {
 #youtube {
 
     padding: 5px;
+
+    max-width: 100%;
+    height: 30vh;
 }
 
 #cim {
@@ -110,7 +113,9 @@ li {
     width: 400px;
     height: auto;
 
-    padding: 10px;
+    margin: 10px;
+
+    border: 2px solid black;
 }
 
 #leiras {
@@ -118,10 +123,17 @@ li {
     padding: 10px;
 }
 
+
+#napokMenu {
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .napok {
 
     padding: 10px;
-    background-color: rgba(177, 214, 219, 0.562);
+    background-color: rgba(22, 23, 24, 0.808);
 }
 
 .napok:hover {
@@ -138,6 +150,8 @@ li {
 }
 
 
+
+
 /* Footer */
 
 footer {
@@ -150,17 +164,18 @@ footer {
 #moziNev {
 
     color: rgb(223, 223, 185);
+    padding-bottom: 20px;
+    padding-top: 5px;
 }
 
+h5 {
+
+    padding-bottom: 10px;
+}
 
 
 
 /* Reszponzivitás */
-
-@media only screen and (max-width: 1650px) {
-
-
-}
 
 @media only screen and (max-width: 1470px) {
 
@@ -172,7 +187,39 @@ footer {
 
 }
 
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 950px) {
 
+
+    #filmAdatlap {
+
+        flex-wrap: wrap;
+    }
+
+    #plakat {
+
+        max-width: 100%;
+        height: auto;
+    }
+
+    #napokMenu {
+
+        flex-direction: column;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+
+
+    #filmAdatlap {
+
+        flex-wrap: wrap-reverse;
+    }
+
+    #plakat {
+
+        max-width: 80%;
+        height: auto;
+    }
 
 }
