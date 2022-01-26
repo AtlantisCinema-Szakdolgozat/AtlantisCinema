@@ -2,86 +2,10 @@
 @charset "utf-8";
 
 
-main {
-
-    margin: auto;
-}
-
-* {
-
-    box-sizing: border-box;
-}
-
-/* Hátterek */
-
-body {
-
-    background-image: url("../hatterek/body.jpg");
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-}
-  
-main {
-  
-    background-image: url("../hatterek/main3.jpg");
-    background-attachment: fixed;
-    max-width: 1100px;
-    margin: auto;
-    min-height: 100vh;
-}
+/* általános formázások másik css-ben */
 
 
-/* Header */
-
-header {
-
-    padding: 20px;
-}
-
-
-/* Nav */
-
-ul {
-
-    width: 100%;
-}
-  
-nav > div > ul > .nav-item > .nav-link {
-  
-    color: rgb(212, 175, 55);
-}
-  
-.nav-item>a:hover {
-  
-    background-color: #333333;
-}
-
-
-/* Article */
-
-article {
-
-    padding: 30px;
-}
-
-a {
-
-    text-decoration: none;
-    color: rgb(194, 165, 0);
-}
-  
-a:hover {
-  
-    background-color: #333333;
-    color: rgb(194, 165, 0);
-}
-
-li {
-
-    list-style-type: none;
-}
-
+/* ARTICLE */
 
 #film {
 
@@ -90,6 +14,8 @@ li {
 
 #youtube {
 
+    max-width: 100%;
+    height: 30vh;
     padding: 5px;
 }
 
@@ -110,8 +36,8 @@ li {
 
     width: 400px;
     height: auto;
-
-    padding: 10px;
+    margin: 10px;
+    border: 2px solid black;
 }
 
 #leiras {
@@ -119,49 +45,10 @@ li {
     padding: 10px;
 }
 
-.napok {
-
-    padding: 10px;
-    background-color: rgba(177, 214, 219, 0.562);
-}
-
-.napok:hover {
-
-    background-color: #333333;
-    color: rgb(194, 165, 0);
-}
-
-
-#musorLista {
-
-    margin: auto;
-    padding: 10px;
-}
-
-
-/* Footer */
-
-footer {
-
-    background-color: black;
-    color: rgb(194, 165, 0);
-    padding: 20px;
-}
-
-#moziNev {
-
-    color: rgb(223, 223, 185);
-}
-
 
 
 
 /* Reszponzivitás */
-
-@media only screen and (max-width: 1650px) {
-
-
-}
 
 @media only screen and (max-width: 1470px) {
 
@@ -173,7 +60,39 @@ footer {
 
 }
 
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 950px) {
 
+
+    #filmAdatlap {
+
+        flex-wrap: wrap;
+    }
+
+    #plakat {
+
+        max-width: 100%;
+        height: auto;
+    }
+
+    #napokMenu {
+
+        flex-direction: column;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+
+
+    #filmAdatlap {
+
+        flex-wrap: wrap-reverse;
+    }
+
+    #plakat {
+
+        max-width: 80%;
+        height: auto;
+    }
 
 }

@@ -33,6 +33,14 @@ body > main > .row > div {
   border-radius: 10px;
 }
 
+/* Footer */
+
+h5 {
+
+  padding-bottom: 10px;
+}
+
+
 /* Kapcsolat */
 article > .kapcsolatFelvetel > div > h3 {
   margin-bottom: 0px;

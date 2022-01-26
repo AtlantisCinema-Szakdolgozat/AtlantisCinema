@@ -4,7 +4,6 @@
 /* Hátterek */
 
 body {
-
   background-image: url("../hatterek/body.jpg");
   background-size: cover;
   background-attachment: fixed;
@@ -12,7 +11,7 @@ body {
 }
 
 main {
-    background-image: url("../hatterek/main3.jpg");
+    background-image: url("Css/hatterek/main3.jpg");
     background-attachment: fixed;
     max-width: 1100px;
     margin: auto;
@@ -124,4 +123,9 @@ a:hover {
 
   background-color: #333333;
   color: rgb(194, 165, 0);
+}
+
+h5 {
+
+  padding-bottom: 10px;
 }
