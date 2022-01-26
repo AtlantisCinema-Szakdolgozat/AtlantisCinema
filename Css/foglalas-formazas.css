@@ -1,0 +1,167 @@
+
+@charset "utf-8";
+
+
+/* általános formázások másik css-ben */
+
+
+/* ARTICLE */
+
+#valasztottFilm {
+
+    display: flex;
+
+    background-color: rgba(177, 214, 219, 0.288);
+    padding: 10px;
+    margin: 10px;
+}
+
+#cim {
+
+    padding: 10px;
+}
+
+#adatok {
+
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+h4 {
+
+    padding: 10px;
+}
+
+
+#nezoAdatok {
+
+    border: 2px solid black;
+    padding: 10px;
+}
+
+
+/* jegyek választása */
+
+#jegyValasztas {
+
+    display: flex;
+}
+
+#normalJegy, #diakJegy, #jegyP {
+
+    padding: 30px;
+}
+
+
+/* Terem rajz */
+
+#ulesterv {
+
+    display: flex;
+    flex-direction: row;
+}
+
+#szabad, #foglalt, #eppen, #eladott {
+
+    padding: 10px;
+}
+
+#jelzes {
+
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#szek {
+
+    margin: auto;
+}
+
+#vaszon {
+
+    width: 70%;
+    margin: auto;
+    height: 10px;
+    border: 1px solid black;
+    margin-bottom: 5px;
+    background-color: 
+    #31619b;
+}
+
+.sor {
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: max-content;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+#foglalas > #foglalasadatok > div {
+
+    max-height:45vh;
+}
+
+.oszlop {
+
+  width: 1ex;
+  height: 1ex;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 10px;
+  text-align: center;
+  background-color: rgb(15, 219, 15);
+
+}
+
+#ulesterv > .jelzes {
+
+  margin: auto;
+  margin-top: 30px;
+  max-width: 600px;
+}
+
+#szabad {
+
+  text-align: center;
+  background-color: rgb(15, 219, 15);
+}
+
+#foglalt {
+
+  text-align: center;
+  background-color: gray;
+}
+
+#eladott {
+
+  text-align: center;
+  background-color: red;
+}
+
+#eppen {
+
+  text-align: center;
+  background-color: yellow;
+}
+
+
+
+/* Gombok */
+
+button {
+
+    padding: 10px;
+    margin: 20px;
+}
+
+#gombok {
+
+    text-align: center;
+    padding-top: 30px;
+}
