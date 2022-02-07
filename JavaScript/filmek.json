@@ -1,0 +1,13 @@
+{
+    "filmek":[
+
+        {   "filmCim": "Mátrix: feltámadások",
+            "mufaj": "sci-fi, akció",
+            "idotartam": 148,
+            "rendezo": "Lana Wachowski",
+            "szineszek": "Keanu Reeves, Carrie-Anne Moss, Patrick Harris",
+            "leiras": "Neo nem halt meg. A Mátrix működik, de megújult, erősebb és biztonságosabb, mint valaha. Az élet megy tovább. Vannak hősök, akik képesek a feltámadásra. Vannak szörnyű erők, amelyek ellen mindig újra harcba kell szállni. És van néhány nagy titok, amelynek segítségével a hősök vállalhatják a harcot, és szembeszállhatnak azzal, aki/ami az elpusztításukra tör. Legfeljebb maguk sem értik, hogy történik mindez."
+        }
+
+    ]
+}
