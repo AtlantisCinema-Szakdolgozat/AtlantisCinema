@@ -83,16 +83,16 @@
                         <div class="col-md-4">
 
                             <h4>Film adatok</h4>
-                            <p >Mátrix feltámadások</p>
+                            <p >Mátrix: Feltámadások</p>
     
     
-                            <p >2020.01.28.</p>
+                            <p >2020. 01. 28.</p>
     
                             <p >16:30</p>
     
                             <p >Szinkronizált</p>
     
-                            <p >Bergman</p>
+                            <p >6. terem</p>
 
                         </div>
                         
@@ -173,7 +173,7 @@
 
                                     <label for="diakjegy" class="col-form-label"> Diák jegy: </label>
                                     
-                                    <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title=" Diák kedvezmény érvényes diák igazolvány felmutatása után vehető igénybe. E kedvezmény a normál árnál 20%-al olcsóbb. ">
+                                    <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title=" Diák kedvezmény érvényes diák igazolvány felmutatása után vehető igénybe. Ez 20%-os árcsökkenést jelent a normál jegy árához képest. ">
                                         i
                                     </button>
 
@@ -211,6 +211,22 @@
                     <div class="szek table-responsive">
 
                         <div id="vaszon"></div>
+
+                        <div class="sor">
+                            <div class="oszlop"></div>
+                            <div class="oszlop"></div>
+                            <div class="oszlop"></div>
+                            <div class="oszlop"></div>
+                            <div class="oszlop"></div>
+                            <div class="oszlop"></div>
+                            <div class="oszlop"></div>
+                            <div class="oszlop"></div>
+                            <div class="oszlop"></div>
+                            <div class="oszlop"></div>
+                            <div class="oszlop"></div>
+                            <div class="oszlop"></div>
+                            <div class="oszlop"></div>
+                        </div>
 
                         <div class="sor">
                             <div class="oszlop"></div>
@@ -325,6 +341,23 @@
                     <button type="button" class="btn btn-lg" id="vasarlasGomb"> Vásárlás </button>
                 </div>
 
+
+                <!-- Felugró ablak, foglalás -->
+
+                <div id="foglFelugro" class="modal">
+
+                    <div class="modal-content">
+
+                        <a class="close" href="index.html"> x </a>
+
+                        <h3> Köszönjük! Foglalását rögzítettük. </h3>
+                        <p> A megadott email címre visszaigazoló levelet fog kapni, a foglalás adataival.</p>
+
+                    </div>
+                  
+                </div>
+                  
+
             </article>
 
             <footer>
@@ -374,6 +407,28 @@
             </footer>
 
         </main>
+
+
+        <!-- Felugró ablak -->
+
+        <script>
+
+            var modal = document.getElementById("foglFelugro");
+            
+            var btn = document.getElementById("foglalasGomb");
+            
+            btn.onclick = function() {
+
+              modal.style.display = "block";
+            }
+            
+            span.onclick = function() {
+
+              modal.style.display = "none";
+            }
+
+        </script>
+
 
     </body>
 </html>

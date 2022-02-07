@@ -17,6 +17,12 @@ header {
 
 /* ARTICLE */
 
+#topGomb {
+
+    float: right;
+}
+
+
 nav > .container-fluid > .navbar-toggler {
     margin: auto;
     margin-top: 10px;
