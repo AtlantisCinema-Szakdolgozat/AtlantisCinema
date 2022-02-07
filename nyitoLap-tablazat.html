@@ -9,7 +9,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>AtlantisCinema</title>
+        <title> AtlantisCinema </title>
 
         <!-- stíluslapok -->
 
@@ -42,17 +42,21 @@
                     <ul class="navbar-nav nav-justified">
 
                         <li class="nav-item">
-                            <a class="nav-link active" href="nyitoLap-csempes.html"> Nyitólap </a>
+                            <a class="nav-link active" href="index.html"> Nyitólap </a>
                         </li>
+
                         <li class="nav-item">
                           <a class="nav-link active" href="arak.html"> Árak </a>
                         </li>
+
                         <li class="nav-item">
-                            <a class="nav-link active" href="akciok.html"> Akciok </a>
+                            <a class="nav-link active" href="akciok.html"> Akciók </a>
                         </li>
+
                         <li class="nav-item">
                             <a class="nav-link active" href="hazirend.html"> Házirend </a>
                         </li>
+
                         <li class="nav-item">
                             <a class="nav-link active" href="kapcsolat.html"> Kapcsolat </a>
                         </li>
@@ -63,82 +67,199 @@
 
             </nav>
 
-            <article>
+            <section>
 
-                <div id="galeriaSzulo">
+                <div id="galeriaSzulo" class="row">
 
-                    <div id="korhintaGaleria">
+                    <div id="korhintaGaleria" class="col-lg-9">
 
                         <img src="Css/ideiglenes/akcio.PNG" alt="kép"/>
                         
                     </div>
 
-                    <div id="kisGaleria">
+                    <div id="kisGaleria" class="col-lg-3 row">
 
-                        <img src="Css/ideiglenes/hir.PNG" alt="kép"/>
+                        <div class=" col-sm-6 col-lg-12">
+                            <img src="Css/ideiglenes/hir.PNG" alt="kép"/>
+                        </div>
 
-                        <img src="Css/ideiglenes/akcio2.PNG" alt="kép"/>
+                        <div class=" col-sm-6 col-lg-12">
+                            <img src="Css/ideiglenes/akcio2.PNG" alt="kép"/>
+                        </div>
+                        
 
                     </div> 
 
                 </div>
 
+            </section>
 
-                <div id="musorMenu">
-                    <ul id="napokMenu" class="list-group list-group-horizontal">
-                        <li class="napok"> <a href="nyitoLap-tablazat.html"> Hétfő </a> </li>
-                        <li class="napok"> <a href="nyitoLap-tablazat.html"> Kedd </a> </li>
-                        <li class="napok"> <a href="nyitoLap-tablazat.html"> Szerda </a> </li>
-                        <li class="napok"> <a href="nyitoLap-tablazat.html"> Csütörtök </a> </li>
-                        <li class="napok"> <a href="nyitoLap-tablazat.html"> Péntek </a> </li>
-                        <li class="napok"> <a href="nyitoLap-tablazat.html"> Szombat </a> </li>
-                        <li class="napok"> <a href="nyitoLap-tablazat.html"> Vasárnap</a> </li>
-                        <li class="napok"> <a href="nyitoLap-csempes.html"> Műsoron </a> </li>
-                    </ul>
+            <article>
+
+                <nav id="musorMenu"  class="navbar navbar-expand-md bg-dark navbar-dark">
+
+                    <div class="container-fluid">
+
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="mynavbar">
+
+                            <ul class="navbar-nav nav-justified">
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="index.html"> Hétfő </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="index.html"> Kedd </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="index.html"> Szerda </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="index.html"> Csütörtök </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="index.html"> Péntek </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="index.html"> Szombat </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="index.html"> Vasárnap </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="nyitoLap-tablazat.html"> Műsoron </a>
+                                </li>
+
+                            </ul>
+                                      
+                        </div>
+                    </div> 
+                </nav> 
+
+
+                <div class="table-responsive">
+                    
+                    <table class="table table-success table-striped">
+
+                        <thead>
+                            <tr >
+                                <th scope="col">Cím</th>
+                                <th scope="col">10:00</th>
+                                <th scope="col">11:00</th>
+                                <th scope="col">12:00</th>
+                                <th scope="col">13:00</th>
+                                <th scope="col">14:00</th>
+                                <th scope="col">15:00</th>
+                                <th scope="col">16:00</th>
+                                <th scope="col">17:00</th>
+                                <th scope="col">18:00</th>
+                                <th scope="col">19:00</th>
+                                <th scope="col">20:00</th>
+                                <th scope="col">21:00</th>
+                                <th scope="col">22:00</th>
+                            </tr>
+                        </thead>
+                        
+                        <tbody>
+
+                            <tr>
+                                <th scope="row">Mátrix feltámadások</th>
+                                <td>1212</td>
+                                <td>1212</td>
+                                <td>12:15</td>
+                                <td>1212</td>
+                                <td>1212</td>
+                                <td>1212</td>
+                                <td>1212</td>
+                                <td>1212</td>
+                                <td>1212</td>
+                                <td>1212</td>
+                                <td>1212</td>
+                                <td>1212</td>
+                                <td>22:10</td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+
+                    <div id="filmek">
+
+                        <div>
+
+                            <h4>Mátrix feltámadások</h4>
+
+                            <div>
+                                <table class="idoPontok table table-success bg-black" >
+
+                                    <tr>
+                                        <th class="idopont"> Időpontok: </th>
+                                        <th> <a href="foglalasOldal.html">13:15</a></th>
+                                        <th> <a href="foglalasOldal.html">16:30</a> </th>
+                                        <th>  <a href="foglalasOldal.html">20:00</a> </th>
+                                    </tr>
+                
+                                </table>
+                            </div>
+
+                        </div>
+
+                        <div>
+
+                            <h4>Mátrix feltámadások</h4>
+
+                            <div>
+                                <table class="idoPontok table table-success bg-black" >
+
+                                    <tr>
+                                        <th class="idopont"> Időpontok: </th>
+                                        <th> <a href="foglalasOldal.html">13:15</a></th>
+                                        <th> <a href="foglalasOldal.html">16:30</a> </th>
+                                        <th>  <a href="foglalasOldal.html">20:00</a> </th>
+                                    </tr>
+                
+                                </table>
+                            </div>
+
+                        </div>
+
+                        <div>
+
+                            <h4>Mátrix feltámadások</h4>
+
+                            <div>
+                                <table class="idoPontok table table-success bg-black" >
+
+                                    <tr>
+                                        <th class="idopont"> Időpontok: </th>
+                                        <th> <a href="foglalasOldal.html">13:15</a></th>
+                                        <th> <a href="foglalasOldal.html">16:30</a> </th>
+                                        <th>  <a href="foglalasOldal.html">20:00</a> </th>
+                                    </tr>
+                
+                                </table>
+                            </div>
+
+                        </div>
+                      
+                    </div>
                 </div>
                 
-
-                <table id="musorLista" class="table table-success table-striped">
-
-                    <tr>
-                        <th> <a href="filmOldal.html"> Mátrix: Feltámadások </a> </th>
-
-                        <th> <a href="foglalasOldal.html"> 13:15 </a></th>
-                        <th> <a href="foglalasOldal.html"> 16:30 </a> </th>
-                        <th>  <a href="foglalasOldal.html"> 20:00 </a> </th>
-                    </tr>
-
-                </table>
-
             </article>
 
             <footer>
-
-
-                <div class="terkepMedia">
-
-                    <div class="terkep">
-                         <div class="terkep row">
-                            <iframe class=" col-lg-9 col-md-10" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3110.3414715930558!2d-27.794577584653155!3d38.7788055795892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5710d5935c13238e!2zMzjCsDQ2JzQzLjciTiAyN8KwNDcnMzIuNiJX!5e0!3m2!1shu!2shu!4v1643067126883!5m2!1shu!2shu" loading="lazy"></iframe>
-                        </div>
-                    </div>
-
-                    <div class="socMedia">
-
-                        <h2>
-                            Kövess minket!
-                        </h2><br>
-
-                        <div class="kozossegiMedia">
-                            <a href="" class="fa fa-facebook"></a>
-                            <a href="" class="fa fa-twitter"></a>
-                        </div>
-
-                    </div>
-
-                </div>
-
-
 
                 <div>
                     <h2 id="moziNev">Atlantis Cinema </h2> 
@@ -146,7 +267,7 @@
 
                 <div class="row">
 
-                    <div id="informacio" class="col-sm-5">
+                    <div id="informacio" class="col-md-5">
 
                         <div><h5> Információk </h5></div>
                         <div><p><a href="hazirend.html"> Házirend </a></p></div>
@@ -155,20 +276,28 @@
 
                     </div>
     
-                    <div id="kapcsolat"  class="col-sm-3">
+                    <div id="kapcsolat"  class="col-md-3">
 
                         <div><h5> Kapcsolat </h5></div>
                         <div><p> Email: atlantis@email.hu </p></div>
                         <div><p> Tel.: +36 80 398 1296 </p></div>
                         <div><p> 38°46'43.7"N 27°47'32.6"W </p></div>
+                        <div class="kozossegiMedia">
+                            <a href="#" class="fa fa-facebook"></a>
+                            <a href="#" class="fa fa-twitter"></a>
+                        </div>
 
                     </div>
-    
-                    <div id="alkotok"  class="col-sm-4">
 
-                        <div><h5> Alkotók </h5></div>
-                        <div><p> Váradi Ákos, Szabó Anett, Szikora Melinda </p></div>
-                        <div><p> @AtlantisCinema, szakdolgozat </p></div>
+                    <div class="terkep col-md-4">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3110.3414715930558!2d-27.794577584653155!3d38.7788055795892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5710d5935c13238e!2zMzjCsDQ2JzQzLjciTiAyN8KwNDcnMzIuNiJX!5e0!3m2!1shu!2shu!4v1643067126883!5m2!1shu!2shu" loading="lazy"></iframe>
+                    </div>
+
+
+                    <div id="alkotok"  class="col-12 row">
+
+                        <div class="col-12" ><p> Váradi Ákos, Szabó Anett, Szikora Melinda </p></div>
+                        <div class="col-12"><p> @AtlantisCinema, szakdolgozat </p></div>
 
                     </div>
 
@@ -177,6 +306,5 @@
             </footer>
 
         </main>
-
     </body>
 </html>

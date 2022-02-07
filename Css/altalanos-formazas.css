@@ -1,17 +1,9 @@
-
 @charset "utf-8";
-
 
 * {
 
     box-sizing: border-box;
 }
-
-main {
-
-    margin: auto;
-}
-
 
 
 /* HÁTTEREK */
@@ -23,17 +15,15 @@ body {
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
-  
+
 main {
-  
+
     background-image: url("../hatterek/main3.jpg");
     background-attachment: fixed;
     max-width: 1100px;
     margin: auto;
     min-height: 100vh;
 }
-
-
 
 /* HEADER */
 
@@ -43,154 +33,49 @@ header {
 }
 
 
-
 /* NAV */
 
-ul {
+nav > .container-fluid >  .navbar-nav {
 
     width: 100%;
 }
-  
-nav > div > ul > .nav-item > .nav-link {
-  
+
+nav > .container-fluid > ul > .nav-item > .nav-link {
+
     color: rgb(212, 175, 55);
 }
-  
-.nav-item>a:hover {
-  
+
+.nav-item > a:hover {
+
     background-color: #333333;
 }
-
 
 
 /* ARTICLE */
 
 article {
 
-    padding: 30px;
-}
-
-img {
-
-    margin: 5px;
-    border: 2px solid black;
-}
-
-
-/* linkek */
-
-a {
-
-    text-decoration: none;
-    color: rgb(194, 165, 0);
-}
-  
-a:hover {
-  
-    background-color: #333333;
-    color: rgb(194, 165, 0);
-}
-
-li {
-
-    list-style-type: none;
+    padding: 15px;
 }
 
 
 /* napok és műsorlista */
 
-#musorMenu {
 
-    background-color: black;
+#musorMenu > div > ul > .nav-item > .nav-link {
+
+    color: rgb(212, 175, 55);
 }
 
-#napokMenu {
+.idopont {
 
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.napok {
-
-    padding: 10px;
-    background-color: black;
-}
-
-.napok:hover {
-
-    background-color: #333333;
-    color: rgb(194, 165, 0);
-}
-
-#musorLista {
-
-    margin: auto;
-    padding: 10px;
+    text-align: start;
 }
 
 th, td {
 
-    padding: 10px;
-}
-
-
-/* TÉRKÉP ÉS MÉDIA */
-
-.terkep > div > iframe {
-
-    padding-left: 0px;
-    padding-right: 0px;
-    height: 30vh;
-    width: 50vh;
-    border: 2px solid black;
-    border-radius: 5px;
-}
-
-.socMedia {
-
-    padding: 30px;
-}
-
-.terkepMedia {
-
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-
-    background-color: rgba(177, 214, 219, 0.562);
-    padding: 30px;
-
     text-align: center;
 }
-
-.fa {
-
-    padding: 10px;
-    font-size: 30px;
-    width: 100px;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 10px;
-  
-}
-    
-.fa:hover {
-  
-    color: white;
-    opacity: 0.7;
-}
-    
-.fa-facebook {
-  
-    background: #3B5998;
-    color: white;
-}
-    
-.fa-twitter {
-  
-    background: #55ACEE;
-    color: white;
-}
-
 
 
 /* FOOTER */
@@ -212,4 +97,110 @@ footer {
 h5 {
 
     padding-bottom: 10px;
+}
+
+.terkep > iframe {
+
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.fa {
+
+    padding: 10px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.fa:hover {
+
+    color: white;
+    opacity: 0.7;
+}
+
+.fa-facebook {
+
+    background: #3B5998;
+    color: white;
+}
+
+.fa-twitter {
+
+    background: #55ACEE;
+    color: white;
+}
+
+
+#alkotok {
+
+    margin: 0px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px solid white;
+}
+
+#alkotok > div {
+
+    text-align: center;
+}
+
+
+#myBtn {
+
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    background-color: black;
+    cursor: pointer;
+    padding:0px 0px 5px 0px;
+    width: 30pt;
+    height: 30pt;
+    border-radius: 100%;
+}
+
+#myBtn:hover {
+
+    background-color: #1a1a1a;
+}
+
+.arrow {
+
+    border: solid rgb(194, 165, 0);;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
+.up {
+
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
+
+
+/* RESZPONZIVITÁS */
+
+@media only screen and (max-width: 788px) {
+
+    .terkep {
+
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+    .idoPontok tr {
+
+        display: flex;
+        flex-direction: column;
+    }
 }

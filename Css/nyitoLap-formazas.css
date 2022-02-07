@@ -1,30 +1,82 @@
-
 @charset "utf-8";
-
 
 /* általános formázások másik css-ben */
 
-
 /* ARTICLE */
 
+nav > .container-fluid > .navbar-toggler {
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 
-/* film galéria és akciók */
+nav > .container-fluid > #mynavbar > .navbar-nav {
+
+    width: 100%;
+}
+  
+nav > .container-fluid > .collapse > ul > .nav-item > .nav-link {
+  
+    color: rgb(212, 175, 55);
+}
+  
+
+section .row {
+
+    margin: 0px;
+}
 
 #galeriaSzulo {
 
-    display: flex;
-    justify-content: center;
+    margin: 10px;
+}
 
-    padding: 30px;
-    margin: auto;
+#korhintaGaleria {
+
+    padding: 0px;
+}
+
+#korhintaGaleria > img {
+
+    width: 100%;
+    margin: 0px;
+    padding: 10px;
 }
 
 #kisGaleria {
 
-    display: grid;
-    grid-template-rows: 1fr 1fr;
+    padding: 0px;
 }
 
+#kisGaleria > div {
+
+    padding: 10px;
+}
+
+#kisGaleria > div > img {
+
+    max-width: 100%;
+    height: 100%;
+}
+
+
+/* linkek */
+
+.idoPontok>tbody>tr>th>a {
+    padding: 10px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(194, 165, 0);
+}
+
+a:hover {
+
+    background-color: #333333;
+    color: rgb(194, 165, 0);
+}
 
 
 /* Táblázatos megjelenítés */
@@ -40,139 +92,120 @@
 
 .musorListaCsempeSzulo {
 
-    padding: 10px;
     border: 2px solid black;
+    
+}
+#musorListaCsempeSzulo > .row {
+
+    margin-left: 0px;
+    margin-right: 0px;
 }
 
 .csempeSablon {
 
-    display: flex;
-    flex-wrap: nowrap;
-    -ms-flex-align: center;
-
-    padding: 50px;
+    margin-bottom: 10px;
+    padding-top: 10px;
     background-color: rgba(177, 214, 219, 0.562);
     border: 2px solid black;
 }
 
+.divCsempePlakat {
+
+    text-align: center;
+} 
+
+.divCsempePlakat > img {
+
+    border: 2px solid black;
+}
+
+.divCsempePlakat > img:hover {
+
+    transform: scale(1.4);
+}
+
 .csempePlakat {
 
-    width: 300px;
-    height: auto;
-    margin: 10px;
+    max-width: 100%;
+    max-height: 240px;
 }
 
-.csempeLeiras {
+.csempeLeiras > p {
 
-    margin: 10px;
+    text-align: justify;
 }
 
+table {
+
+    max-width: 100%;
+}
 
 
 
 /* Reszponzivitás */
 
-@media only screen and (max-width: 1650px) {
+@media only screen and (max-width: 992px) {
 
+    #kisGaleria > div {
 
-    #galeriaSzulo {
-
-        display: flex;
-        flex-wrap: wrap;
-        
-        padding: 10px;
-    }   
-
-    #korhintaGaleria img {
-
-        max-width: 100%;
-        height: auto;
+        text-align: center;
     }
-
-    #kisGaleria img {
-
-        max-width: 100%;
-        height: auto;
-    }
-
-    #terkepMedia {
-
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-}
-
-@media only screen and (max-width: 1470px) { 
-
-    #kisGaleria {
-
-        display: flex;
-        margin: auto;
-    }
-
-    nav ul {
-
-        display: flex;
-        flex-wrap: wrap;
-    }
-
 }
 
 @media only screen and (max-width: 950px) {
-
 
     .csempeSablon {
 
         flex-wrap: wrap;
     }
+}
 
-    #napokMenu {
+@media only screen and (max-width: 810px) {
 
-        flex-direction: column;
-    }
+    .table-responsive {
 
-    #musorLista tr {
-
-        display: flex;
-        flex-direction: column;
+        font-size: 11pt;
+        max-width: 100%;
+        margin: auto;
     }
 }
 
-@media only screen and (max-width: 850px) {
+#filmek {
 
-
-    #kisGaleria img {
-
-        max-width: 50%;
-        height: auto;
-    }
-
+    padding: 10px;
+    background-color: #d1e7dd;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 768px) {
 
+    .table-responsive > table {
 
-    #kisGaleria img {
-
-        max-width: 47%;
-        height: auto;
+        display: none;
     }
+}
 
-    .csempePlakat {
+@media only screen and (min-width: 768px) {
 
-        max-width: 80%;
-        height: auto;
+    #filmek {
+
+        display: none;
     }
+}
 
-    .csempeLeiras {
+article > div {
 
-        max-width: 80%;
-    }
+    max-width: 1200px;
+}
+.table-responsive > table > thead > tr > th {
 
-    #idoPontok tr {
+    padding: 3px;
+}
 
-        display: flex;
-        flex-direction: column;
+
+@media only screen and (max-width: 881px) {
+
+    article > div {
+
+       max-width: 200vh;
     }
 }
