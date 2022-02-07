@@ -2,6 +2,19 @@
 
 /* általános formázások másik css-ben */
 
+/* HEADER */
+
+header {
+
+    display: flex;
+}
+
+#kereses {
+
+    display: flex;
+}
+
+
 /* ARTICLE */
 
 nav > .container-fluid > .navbar-toggler {
