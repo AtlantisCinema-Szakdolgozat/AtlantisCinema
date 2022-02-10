@@ -23,6 +23,9 @@
         <!-- scriptek -->
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>       -->
         
 
     </head>
@@ -35,7 +38,7 @@
                 <h1> Atlantis Cinema </h1>
             </header>
 
-            <nav class="navbar navbar-expand-sm bg-dark ">
+            <!-- <nav class="navbar navbar-expand-sm bg-dark ">
 
                 <div class="container-fluid">
 
@@ -61,107 +64,165 @@
 
                 </div>
 
+            </nav> -->
+            <nav class="navbar navbar-expand-sm bg-dark ">
+
+                <div class="container-fluid">
+
+                    <ul class="navbar-nav nav-justified">
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html"> Nyitólap </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link active" href="arak.html"> Árak </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="akciok.html"> Akciók </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="hazirend.html">Házirend</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="kapcsolat.html"> Kapcsolat </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
             </nav>
+
+            <section>
+                    <div id="valasztottFilm" class="row">
+                        <div  class="col-md-4">
+                            <img  src="Css/ideiglenes/matrix.jpg" alt="plakát">
+                        </div>
+                        <div class="col-md-4">
+                            <h4>Film adatok</h4>
+                            <p >Mátrix feltámadások</p>
+    
+    
+                            <p >2020.01.28.</p>
+    
+                            <p >16:30</p>
+    
+                            <p >Szinkronizált</p>
+    
+                            <p >Bergman</p>
+                        </div>
+                        
+                        <div  class="col-md-4">
+                            <img  src="Css/ideiglenes/matrix.jpg" alt="plakát">
+                        </div>
+
+                    </div>
+                    <div id="nezoAdatok" class="col-12">
+                        
+                        <form>
+                            <h4>Néző adatai</h4>
+                            <div class="row mb-3">
+                                <label for="nev" class="col-sm-2 col-form-label">Nev:</label>
+                                <div class="col-sm">
+                                  <input type="text" class="form-control" id="nev" placeholder="Kiss Zoli">
+                                </div>
+                            </div>
+    
+                            <div class="row mb-2">
+                                <label for="email" class="col-sm-2 form-label">Email:</label>
+                                <div class="col-sm">
+                                  <input type="email" class="form-control"id="email" placeholder="zoli@email.hu">
+                                </div>
+                            </div>
+                            <!-- <div class="mb-3">
+        
+                                <label for="nev" class="form-label"> Adja meg a nevét: </label>
+                                <input type="email" class="form-control" id="nev" placeholder="Kiss Zoli">
+        
+                            </div> -->
+                            <!-- <div class="mb-3">
+        
+                                <label for="email" class="form-label">Adja meg az email címét:</label>
+                                <input type="email" class="form-control" id="email" placeholder="zoli@email.hu">
+                            
+                            </div> -->
+                            <!-- <p id="jegyP"> Adja meg a jegyek darabszámát: </p> -->
+    
+                            
+        
+                        </form>
+                    </div>
+                    <div id="jegyValasztas" class="col-12">
+                        
+                        <form class="row">
+                            
+        
+                            <div class="col-sm row mb-3">
+                                <div class="col-sm-4" >
+                                    <label for="normaljegy" class="col-form-label">Normál jegy:</label>
+                                </div>
+                                <div class="col-sm">
+                                    <select class="form-select" aria-label="Default select example">
+                                            
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+        
+                                        </select>   
+                                </div>         
+                            </div>
+        
+                            <div class="col-sm row mb-3">
+                                <div class="col-sm-4" >
+                                    <label for="diakjegy" class="col-form-label">Diák jegy:</label>
+                                    <!-- A title-be majd kell egy hivatalosabb szöveg a diák árról vagy betölteni a kedvezmények leírásából -->
+                                    <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="A diák jegy 1500 foint">
+                                        i
+                                    </button>
+                                </div>
+                                
+                                <div class="col-sm">
+                                    <select class="form-select" aria-label="Default select example">
+                                        
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+        
+                                    </select>  
+                                </div>           
+                            </div>
+        
+                        </form>
+                    </div>
+                   
+                </div>
+
+            </section>
+            
+                
+
+                
+        
 
             <article>
 
-                <div id="valasztottFilm">
-
-                    <h3 id="cim"> Mátrix: Feltámadások </h3>
-
-                    <div id="adatok">
-                        <h4> 2022. 01. 28.  </h4>
-                        <h4>16:30</h4>
-                        <h4> Szinkron </h4>
-                        <h4> 4. terem </h4>
-                    </div>
-                    
-                </div>
-
-                <div id="nezoAdatok">
-                    <form>
-
-                        <div class="mb-3">
-    
-                            <label for="nev" class="form-label"> Adja meg a nevét: </label>
-                            <input type="email" class="form-control" id="nev" placeholder="Kiss Zoli">
-    
-                        </div>
-                        <div class="mb-3">
-    
-                            <label for="email" class="form-label">Adja meg az email címét:</label>
-                            <input type="email" class="form-control" id="email" placeholder="zoli@email.hu">
-                        
-                        </div>
-    
-                    </form>
-                </div>
-                
-                <div id="jegyValasztas">
-
-                    <p id="jegyP"> Adja meg a jegyek darabszámát: </p>
-
-                    <div id="normalJegy">
-
-                        <p>Normál jegy:</p>
-                        <form>
-                            <select class="form-select" aria-label="Default select example">
-                                
-                                <option value="0">0</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                                <option value="10">10</option>
-
-                            </select>
-                        </form>                  
-                    </div>
-
-                    <div id="diakJegy">
-
-                        <p>Diák jegy:</p>
-                        <form>
-                            <select class="form-select" aria-label="Default select example">
-                                
-                                <option value="0">0</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                                <option value="10">10</option>
-
-                            </select>
-                        </form>                
-                    </div>
-
-                </div>
-
-
-                <div id="ulesterv" class="col-xxl-7">
-        
-
-                    <div id="jelzes" class="jelzes row">
-          
-                        <div id="szabad" class="col"> Szabad </div>
-                        <div id="foglalt" class="col"> Foglalt </div>
-                        <div id="eppen" class="col"> Éppen foglal </div>
-                        <div id="eladott" class="col"> Eladott </div>
-            
-                    </div>
-
-
-                    <div class="szek">
+                    <div class="szek table-responsive">
 
                         <div id="vaszon"></div>
 
@@ -263,13 +324,19 @@
 
                     </div>
 
-                </div>
+                <div id="jelzes" class="jelzes row">
           
-
+                    <div id="szabad" class="col"> Szabad </div>
+                    <div id="foglalt" class="col"> Foglalt </div>
+                    <div id="eppen" class="col"> Éppen foglal </div>
+                    <div id="eladott" class="col"> Eladott </div>
+        
+                </div>
+               
 
                 <div id="gombok">
-                    <button type="button" class="foglalasGomb"> Foglalás </button>
-                    <button type="button" class="vasarlasGomb"> Vásárlás </button>
+                    <button type="button" class="btn btn-lg" id="foglalasGomb"> Foglalás </button>
+                    <button type="button" class="btn btn-lg" id="vasarlasGomb"> Vásárlás </button>
                 </div>
 
 
@@ -278,7 +345,7 @@
             <footer>
 
 
-                <div class="terkepMedia">
+                <!-- <div class="terkepMedia">
 
                     <div class="terkep">
                          <div class="terkep row">
@@ -293,13 +360,13 @@
                         </h2><br>
 
                         <div class="kozossegiMedia">
-                            <a href="" class="fa fa-facebook"></a>
-                            <a href="" class="fa fa-twitter"></a>
+                            <a href="#" class="fa fa-facebook"></a>
+                            <a href="#" class="fa fa-twitter"></a>
                         </div>
 
                     </div>
 
-                </div>
+                </div> -->
 
 
 
@@ -309,7 +376,7 @@
 
                 <div class="row">
 
-                    <div id="informacio" class="col-sm-5">
+                    <div id="informacio" class="col-md-5">
 
                         <div><h5> Információk </h5></div>
                         <div><p><a href="hazirend.html"> Házirend </a></p></div>
@@ -318,20 +385,28 @@
 
                     </div>
     
-                    <div id="kapcsolat"  class="col-sm-3">
+                    <div id="kapcsolat"  class="col-md-3">
 
                         <div><h5> Kapcsolat </h5></div>
                         <div><p> Email: atlantis@email.hu </p></div>
                         <div><p> Tel.: +36 80 398 1296 </p></div>
                         <div><p> 38°46'43.7"N 27°47'32.6"W </p></div>
+                        <div class="kozossegiMedia">
+                            <a href="#" class="fa fa-facebook"></a>
+                            <a href="#" class="fa fa-twitter"></a>
+                        </div>
 
                     </div>
-    
-                    <div id="alkotok"  class="col-sm-4">
+                    <div class="terkep col-md-4">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3110.3414715930558!2d-27.794577584653155!3d38.7788055795892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5710d5935c13238e!2zMzjCsDQ2JzQzLjciTiAyN8KwNDcnMzIuNiJX!5e0!3m2!1shu!2shu!4v1643067126883!5m2!1shu!2shu" loading="lazy"></iframe>
+                    </div>
 
-                        <div><h5> Alkotók </h5></div>
-                        <div><p> Váradi Ákos, Szabó Anett, Szikora Melinda </p></div>
-                        <div><p> @AtlantisCinema, szakdolgozat </p></div>
+    
+                    <div id="alkotok"  class="col-12 row">
+
+                        <!-- <div><h5> Alkotók </h5></div> -->
+                        <div class="col-12" ><p> Váradi Ákos, Szabó Anett, Szikora Melinda </p></div>
+                        <div class="col-12"><p> @AtlantisCinema, szakdolgozat </p></div>
 
                     </div>
 

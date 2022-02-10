@@ -1,5 +1,5 @@
 body {
-  background-image: url("hatterek/body.jpg");
+  background-image: url("../hatterek/body.jpg");
 }
 
 main {
@@ -10,7 +10,7 @@ main {
 }
 
 section {
-  background-image: url("hatterek/main3.jpg");
+  background-image: url("../hatterek/main3.jpg");
   border: 2px solid black;
   max-width: 400px;
   height: 15vh;

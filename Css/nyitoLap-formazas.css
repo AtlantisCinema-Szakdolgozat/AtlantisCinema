@@ -10,12 +10,11 @@
 
 /* film galéria és akciók */
 
-#galeriaSzulo {
+/* #galeriaSzulo {
 
     display: flex;
     justify-content: center;
 
-    padding: 30px;
     margin: auto;
 }
 
@@ -23,6 +22,47 @@
 
     display: grid;
     grid-template-rows: 1fr 1fr;
+} */
+nav > .container-fluid > .navbar-toggler{
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+nav > .container-fluid > #mynavbar > .navbar-nav {
+
+    width: 100%;
+}
+  
+nav > .container-fluid > .collapse > ul > .nav-item > .nav-link {
+  
+    color: rgb(212, 175, 55);
+}
+  
+
+section .row{
+    margin: 0px;
+}
+#galeriaSzulo{
+    margin: 10px;
+}
+
+#korhintaGaleria{
+    padding: 0px;
+}
+#korhintaGaleria>img{
+    width: 100%;
+    margin: 0px;
+    padding: 10px;
+}
+#kisGaleria{
+    padding: 0px;
+}
+#kisGaleria div{
+    padding: 10px;
+}
+#kisGaleria div img{
+    max-width: 100%;
+    height: 100%;
 }
 
 
@@ -40,34 +80,50 @@
 
 .musorListaCsempeSzulo {
 
-    padding: 10px;
+    /* padding: 10px; */
     border: 2px solid black;
+    
+}
+#musorListaCsempeSzulo>.row{
+    margin-left: 0px;
+    margin-right: 0px;
 }
 
 .csempeSablon {
 
-    display: flex;
+    /* display: flex;
     flex-wrap: nowrap;
-    -ms-flex-align: center;
-
-    padding: 50px;
+    -ms-flex-align: center; */
+    margin-bottom: 10px;
+    padding-top: 10px;
     background-color: rgba(177, 214, 219, 0.562);
     border: 2px solid black;
 }
+ .divCsempePlakat{
+    text-align: center;
+} 
+.divCsempePlakat img {
 
+    border: 2px solid black;
+}
+.divCsempePlakat img:hover {
+
+    transform: scale(1.4);
+}
 .csempePlakat {
+    max-width: 100%;
+    max-height: 240px;
 
-    width: 300px;
-    height: auto;
-    margin: 10px;
-}
-
-.csempeLeiras {
-
-    margin: 10px;
 }
 
 
+.csempeLeiras>p {
+    text-align: justify;
+}
+
+table{
+    max-width: 100%;
+}
 
 
 /* Reszponzivitás */
@@ -75,35 +131,36 @@
 @media only screen and (max-width: 1650px) {
 
 
-    #galeriaSzulo {
+    /* #galeriaSzulo {
 
         display: flex;
         flex-wrap: wrap;
         
         padding: 10px;
-    }   
+    }    */
 
-    #korhintaGaleria img {
-
-        max-width: 100%;
-        height: auto;
-    }
-
-    #kisGaleria img {
+    /* #korhintaGaleria img {
 
         max-width: 100%;
-        height: auto;
-    }
+        height: 100%;
+        margin: auto;
+    } */
 
-    #terkepMedia {
+    /* #kisGaleria img {
+
+        max-width: 100%;
+        height: 100%;
+    } */
+
+    /* #terkepMedia {
 
         display: flex;
         flex-wrap: wrap;
-    }
+    } */
 
 }
 
-@media only screen and (max-width: 1470px) { 
+/* @media only screen and (max-width: 1470px) { 
 
     #kisGaleria {
 
@@ -117,16 +174,30 @@
         flex-wrap: wrap;
     }
 
+} */
+@media only screen and (max-width: 992px) {
+    #kisGaleria div {
+        text-align: center;
+    }
 }
 
-@media only screen and (max-width: 950px) {
+ @media only screen and (max-width: 950px) {
 
 
     .csempeSablon {
 
         flex-wrap: wrap;
     }
+ }
+    @media only screen and (max-width: 810px) {
 
+
+        .table-responsive{
+            font-size: 11pt;
+            max-width: 100%;
+            margin: auto;
+        }
+/*
     #napokMenu {
 
         flex-direction: column;
@@ -136,9 +207,27 @@
 
         display: flex;
         flex-direction: column;
+    }*/
+}
+#filmek{
+    padding: 10px;
+    background-color: #d1e7dd;
+}
+@media only screen and (max-width: 768px) {
+    .table-responsive>table{
+        display: none;
+    }
+
+    
+}
+
+@media only screen and (min-width: 768px) {
+    #filmek{
+        display: none;
     }
 }
 
+/*
 @media only screen and (max-width: 850px) {
 
 
@@ -148,31 +237,23 @@
         height: auto;
     }
 
+}*/
+
+article > div{
+    max-width: 1200px;
+
+   }
+.table-responsive>table>thead>tr>th{
+    padding: 3px;
 }
 
-@media only screen and (max-width: 500px) {
+
+@media only screen and (max-width: 881px) {
 
 
-    #kisGaleria img {
+   article > div{
+    max-width: 200vh;
 
-        max-width: 47%;
-        height: auto;
-    }
-
-    .csempePlakat {
-
-        max-width: 80%;
-        height: auto;
-    }
-
-    .csempeLeiras {
-
-        max-width: 80%;
-    }
-
-    #idoPontok tr {
-
-        display: flex;
-        flex-direction: column;
-    }
+   }
 }
+ 
