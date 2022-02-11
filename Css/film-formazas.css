@@ -1,8 +1,6 @@
 @charset "utf-8";
 
-
 /* általános formázások másik css-ben */
-
 
 /* ARTICLE */
 nav > .container-fluid > .navbar-toggler{
@@ -20,8 +18,8 @@ nav > .container-fluid > .collapse > ul > .nav-item > .nav-link {
     color: rgb(212, 175, 55);
 }
 
+section {
 
-section{
     margin: 15px;
 }
 
@@ -30,20 +28,25 @@ section{
     width: 100%;
     height: 30vh;
 }
-article>.row{
+
+article > .row {
+
     margin: 0px;
 }
 
 #filmAdatlap {
+
     background-color: rgba(219, 219, 207, 0.507);
     margin-bottom: 10px;
 }
 
-#plakat{
+
+#plakat {
+
     padding: 0px;
 }
 
-#plakat>img {
+#plakat > img {
 
     width: 100%;
     height: auto;
@@ -56,60 +59,26 @@ article>.row{
 }
 
 
-
 #leiras {
+
     text-align: justify;
     padding: 10px;
 }
 
+/* linkek */
 
+.idoPontok>tbody>tr>th>a {
+    padding: 10px;
+    text-align: center;
+}
 
+a {
+    text-decoration: none;
+    color: rgb(194, 165, 0);
+}
 
-/* Reszponzivitás */
+a:hover {
 
-/* @media only screen and (max-width: 1470px) {
-
-    nav ul {
-
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-} */
-
-/* @media only screen and (max-width: 950px) {
-
-
-    #filmAdatlap {
-
-        flex-wrap: wrap;
-    }
-
-    #plakat {
-
-        max-width: 100%;
-        height: auto;
-    }
-
-    #napokMenu {
-
-        flex-direction: column;
-    }
-
-} */
-/* 
-@media only screen and (max-width: 500px) {
-
-
-    #filmAdatlap {
-
-        flex-wrap: wrap-reverse;
-    }
-
-    #plakat {
-
-        max-width: 80%;
-        height: auto;
-    }
-
-} */
+    background-color: #333333;
+    color: rgb(194, 165, 0);
+}

@@ -1,6 +1,4 @@
-
 @charset "utf-8";
-
 
 * {
 
@@ -27,15 +25,12 @@ main {
     min-height: 100vh;
 }
 
-
-
 /* HEADER */
 
 header {
 
     padding: 20px;
 }
-
 
 
 /* NAV */
@@ -50,11 +45,11 @@ nav > .container-fluid > ul > .nav-item > .nav-link {
     color: rgb(212, 175, 55);
 }
 
-.nav-item>a:hover {
+
+.nav-item > a:hover {
 
     background-color: #333333;
 }
-
 
 
 /* ARTICLE */
@@ -63,30 +58,6 @@ article {
 
     padding: 15px;
 }
-
-/* linkek */
-/* Ez a kezdőoldalcssébe kéne */
-.idoPontok>tbody>tr>th>a {
-    padding: 10px;
-    text-align: center;
-}
-
-a {
-    text-decoration: none;
-    color: rgb(194, 165, 0);
-}
-
-a:hover {
-
-    background-color: #333333;
-    color: rgb(194, 165, 0);
-}
-
-/* li {
-
-    list-style-type: none;
-} */
-
 
 /* napok és műsorlista */
 
@@ -97,81 +68,13 @@ a:hover {
 }
 
 
-/* #napokMenu {
+.idopont {
 
-    display: flex;
-    flex-wrap: wrap;
-} */
-
-/* .napok {
-
-    padding: 0px;
-    background-color: black;
-}
-
-.napok:hover {
-
-    background-color: #333333;
-    color: rgb(194, 165, 0);
-}
-
-#musorLista {
-
-    margin: auto;
-    padding: 10px;
-} */
-.idopont{
     text-align: start;
 }
 th, td {
     text-align: center;
-
 }
-
-
-/* TÉRKÉP ÉS MÉDIA */
-
-  /*
-  .terkep > .row {
-    margin-left: 0px;
-    margin-right: 0px;
-  }
-  .terkep > div > iframe {
-    padding-left: 0px;
-    padding-right: 0px;
-    height: 25vh;
-    border: 2px solid black;
-    border-radius: 10px;
-  } */
-/* .terkep > div > iframe {
-
-    padding-left: 0px;
-    padding-right: 0px;
-    height: 30vh;
-    width: 50vh;
-    border: 2px solid black;
-    border-radius: 5px;
-} */
-
-/* .socMedia {
-
-    padding: 30px;
-} */
-
-/* .terkepMedia {
-
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-
-    background-color: rgba(177, 214, 219, 0.562);
-    padding: 30px;
-
-    text-align: center;
-} */
-
-
-
-
 
 /* FOOTER */
 
@@ -193,7 +96,9 @@ h5 {
 
     padding-bottom: 10px;
 }
+
 .terkep > iframe {
+
     width: 100%;
     height: 100%;
     border-radius: 5px;
@@ -201,13 +106,12 @@ h5 {
 
 .fa {
 
-    padding: 10px;
+  padding: 10px;
   font-size: 30px;
   width: 50px;
   text-align: center;
   text-decoration: none;
   border-radius: 10px;
-
 }
 
 .fa:hover {
@@ -227,18 +131,22 @@ h5 {
     background: #55ACEE;
     color: white;
 }
-#alkotok{
+#alkotok {
+
     margin: 0px;
     margin-top: 20px;
     padding-top: 20px;
     border-top: 2px solid white;
 }
-#alkotok>div{
+
+#alkotok > div {
+
     text-align: center;
 }
 
 
 #myBtn {
+
     display: none;
     position: fixed;
     bottom: 20px;
@@ -248,50 +156,48 @@ h5 {
     border: none;
     outline: none;
     background-color: black;
- 
     cursor: pointer;
     padding:0px 0px 5px 0px;
-
     width: 30pt;
     height: 30pt;
     border-radius: 100%;
-  }
+}
 
-  #myBtn:hover {
+#myBtn:hover {
+
     background-color: #1a1a1a;
-  }
+}
 
-  .arrow {
+.arrow {
+
     border: solid rgb(194, 165, 0);;
     border-width: 0 3px 3px 0;
     display: inline-block;
     padding: 3px;
-  }
-  .up {
+}
+
+.up {
+
     transform: rotate(-135deg);
     -webkit-transform: rotate(-135deg);
-  }
+}
+
+
+/* RESZPONZIVITÁS */
 
 @media only screen and (max-width: 788px) {
+
     .terkep {
+
         margin-top: 20px;
     }
 }
+
 @media only screen and (max-width: 500px) {
 
-    /*
-        #kisGaleria img {
+    .idoPontok tr {
 
-            max-width: 47%;
-            height: auto;
-        } */
-
-
-
-
-        .idoPontok tr {
-
-            display: flex;
-            flex-direction: column;
-        }
+        display: flex;
+        flex-direction: column;
     }
+}

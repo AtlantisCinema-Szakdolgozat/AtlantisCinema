@@ -1,33 +1,34 @@
-
 @charset "utf-8";
 
-
 /* általános formázások másik css-ben */
+
+/* HEADER */
+
+header {
+
+    display: flex;
+}
+
+#kereses {
+
+    display: flex;
+}
 
 
 /* ARTICLE */
 
+#topGomb {
 
-/* film galéria és akciók */
-
-/* #galeriaSzulo {
-
-    display: flex;
-    justify-content: center;
-
-    margin: auto;
+    float: right;
 }
 
-#kisGaleria {
 
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-} */
-nav > .container-fluid > .navbar-toggler{
+nav > .container-fluid > .navbar-toggler {
     margin: auto;
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
 nav > .container-fluid > #mynavbar > .navbar-nav {
 
     width: 100%;
@@ -39,32 +40,61 @@ nav > .container-fluid > .collapse > ul > .nav-item > .nav-link {
 }
   
 
-section .row{
+section .row {
+
     margin: 0px;
 }
-#galeriaSzulo{
-    margin: 10px;
-}
 
-#korhintaGaleria{
+
+#korhintaGaleria {
+
     padding: 0px;
 }
-#korhintaGaleria>img{
+
+#korhintaGaleria > img {
+
     width: 100%;
     margin: 0px;
     padding: 10px;
 }
+
+#galeriaSzulo{
+    margin: 10px;
+}
+
 #kisGaleria{
     padding: 0px;
 }
-#kisGaleria div{
+
+#kisGaleria > div {
+
     padding: 10px;
 }
-#kisGaleria div img{
+
+#kisGaleria > div > img {
+
     max-width: 100%;
     height: 100%;
 }
 
+
+/* linkek */
+
+.idoPontok>tbody>tr>th>a {
+    padding: 10px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(194, 165, 0);
+}
+
+a:hover {
+
+    background-color: #333333;
+    color: rgb(194, 165, 0);
+}
 
 
 /* Táblázatos megjelenítés */
@@ -80,42 +110,53 @@ section .row{
 
 .musorListaCsempeSzulo {
 
-    /* padding: 10px; */
     border: 2px solid black;
     
 }
-#musorListaCsempeSzulo>.row{
+
+#musorListaCsempeSzulo > .row {
+
     margin-left: 0px;
     margin-right: 0px;
 }
 
 .csempeSablon {
 
-    /* display: flex;
-    flex-wrap: nowrap;
-    -ms-flex-align: center; */
     margin-bottom: 10px;
     padding-top: 10px;
     background-color: rgba(177, 214, 219, 0.562);
     border: 2px solid black;
 }
- .divCsempePlakat{
+
+.divCsempePlakat {
+
     text-align: center;
 } 
-.divCsempePlakat img {
+
+.divCsempePlakat > img {
 
     border: 2px solid black;
 }
-.divCsempePlakat img:hover {
+
+.divCsempePlakat > img:hover {
 
     transform: scale(1.4);
 }
+
 .csempePlakat {
     max-width: 100%;
     max-height: 240px;
-
 }
 
+.csempeLeiras > p {
+
+    text-align: justify;
+}
+
+table {
+
+    max-width: 100%;
+}
 
 .csempeLeiras>p {
     text-align: justify;
@@ -127,54 +168,6 @@ table{
 
 
 /* Reszponzivitás */
-
-@media only screen and (max-width: 1650px) {
-
-
-    /* #galeriaSzulo {
-
-        display: flex;
-        flex-wrap: wrap;
-        
-        padding: 10px;
-    }    */
-
-    /* #korhintaGaleria img {
-
-        max-width: 100%;
-        height: 100%;
-        margin: auto;
-    } */
-
-    /* #kisGaleria img {
-
-        max-width: 100%;
-        height: 100%;
-    } */
-
-    /* #terkepMedia {
-
-        display: flex;
-        flex-wrap: wrap;
-    } */
-
-}
-
-/* @media only screen and (max-width: 1470px) { 
-
-    #kisGaleria {
-
-        display: flex;
-        margin: auto;
-    }
-
-    nav ul {
-
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-} */
 @media only screen and (max-width: 992px) {
     #kisGaleria div {
         text-align: center;
@@ -183,77 +176,55 @@ table{
 
  @media only screen and (max-width: 950px) {
 
-
     .csempeSablon {
 
         flex-wrap: wrap;
     }
+
  }
-    @media only screen and (max-width: 810px) {
+@media only screen and (max-width: 810px) {
 
 
-        .table-responsive{
-            font-size: 11pt;
-            max-width: 100%;
-            margin: auto;
-        }
-/*
-    #napokMenu {
-
-        flex-direction: column;
+    .table-responsive{
+        font-size: 11pt;
+        max-width: 100%;
+        margin: auto;
     }
-
-    #musorLista tr {
-
-        display: flex;
-        flex-direction: column;
-    }*/
 }
+
 #filmek{
     padding: 10px;
     background-color: #d1e7dd;
 }
+
 @media only screen and (max-width: 768px) {
     .table-responsive>table{
         display: none;
     }
-
-    
 }
 
 @media only screen and (min-width: 768px) {
-    #filmek{
+
+    #filmek {
+
         display: none;
     }
 }
 
-/*
-@media only screen and (max-width: 850px) {
+article > div {
 
-
-    #kisGaleria img {
-
-        max-width: 50%;
-        height: auto;
-    }
-
-}*/
-
-article > div{
     max-width: 1200px;
+}
+.table-responsive > table > thead > tr > th {
 
-   }
-.table-responsive>table>thead>tr>th{
     padding: 3px;
 }
 
 
 @media only screen and (max-width: 881px) {
 
+    article > div {
 
-   article > div{
-    max-width: 200vh;
-
-   }
+       max-width: 200vh;
+    }
 }
- 
