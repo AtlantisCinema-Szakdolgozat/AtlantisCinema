@@ -80,12 +80,14 @@ section .row {
 
 /* linkek */
 
-.idoPontok>tbody>tr>th>a {
+.idoPontok > tbody > tr > th > a {
+    
     padding: 10px;
     text-align: center;
 }
 
 a {
+
     text-decoration: none;
     color: rgb(194, 165, 0);
 }
@@ -103,7 +105,6 @@ a:hover {
 
     border: 2px solid black;
 }
-
 
 
 /* Csempés megjelenítés */
@@ -198,7 +199,13 @@ table{
 }
 
 @media only screen and (max-width: 768px) {
+    
     .table-responsive>table{
+        display: none;
+    }
+
+    #kisGaleria {
+
         display: none;
     }
 }

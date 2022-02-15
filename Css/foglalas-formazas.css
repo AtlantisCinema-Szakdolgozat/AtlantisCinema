@@ -314,3 +314,10 @@ button {
     font-weight: bold;
     width: 10%;
 }
+
+
+/* RESZPONZIVITÁS */
+
+@media only screen and (max-width: 768px) {
+    
+}

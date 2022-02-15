@@ -67,7 +67,7 @@ article > .row {
 
 /* linkek */
 
-.idoPontok>tbody>tr>th>a {
+.idoPontok > tbody > tr > th > a {
     padding: 10px;
     text-align: center;
 }
