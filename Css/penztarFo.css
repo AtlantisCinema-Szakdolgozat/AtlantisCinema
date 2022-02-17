@@ -1,49 +1,49 @@
 body{
-    background-image: url("/keszites/kepek/main3.jpg");
-    color: #be9d31;
-  }
+  background-image: url("/keszites/kepek/main3.jpg");
+  color: #be9d31;
+}
 
 
-  /*Header*/
+/*Header*/
 header div{
-    max-width: 120px;
-    color: #be9d31;
-    padding:10px;
-    background-color:#d9d9d9;
-  }
-  
-  
-  .elerhetoseg p{
-    font-size: 15px;
-    font-weight: bold;
-    padding-left: 10px;
-  }
-  
-  .felirat p{
-    text-align: center;
-    font-size: 30px;
-    
-    }
-  
-  
-  .bejelentpenztar{
-    background-color:#d9d9d9;
+  max-width: 120px;
+  color: #be9d31;
+  padding:10px;
+  background-color:#d9d9d9;
+}
+
+
+.elerhetoseg p{
+  font-size: 15px;
+  font-weight: bold;
+  padding-left: 10px;
+}
+
+.felirat p{
+  text-align: center;
+  font-size: 30px;
   
   }
-  .bejelentpenztar p{
-  color:black;
-  
-  }
+
+
+.bejelentpenztar{
+  background-color:#d9d9d9;
+
+}
+.bejelentpenztar p{
+color:black;
+
+}
 /*Aktfilm p*/
 
-  .aktfilm p{
-    margin: 0;
-    font-size: 20px;
-  }
+.aktfilm p{
+  margin: 0;
+  font-size: 20px;
+}
 
-  
+
 /*Footer*/
-  footer{
-    padding-top: 40px;;
-    padding-left: 10px;
-  }
+footer{
+  padding-top: 40px;;
+  padding-left: 10px;
+}
