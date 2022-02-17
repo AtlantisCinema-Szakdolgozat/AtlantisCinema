@@ -1,29 +1,7 @@
 @charset "utf-8";
 
-
-/* Hátterek */
-
-body {
-  background-image: url("../hatterek/body.jpg");
-  background-size: cover;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-}
-
-main {
-    background-image: url("../hatterek/main3.jpg");
-    background-attachment: fixed;
-    max-width: 1100px;
-    margin: auto;
-    min-height: 100vh;
-}
-
 /* Header */
 
-header {
-
-  padding: 20px;
-}
 
 h1 {
 
@@ -31,101 +9,5 @@ h1 {
 }
 
 
-/* Nav*/
-
-ul {
-
-  width: 100%;
-}
-
-nav > div > ul > .nav-item > .nav-link {
-
-    color: rgb(212, 175, 55);
-}
-
-.nav-item>a:hover {
-
-  background-color: #333333;
-}
 
 
-/* Article */
-
-article {
-
-  padding: 15px;
-}
-
-.fa {
-
-  padding: 10px;
-  font-size: 30px;
-  width: 50px;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 10px;
-
-}
-  
-.fa:hover {
-
-  color: white;
-  opacity: 0.7;
-}
-  
-.fa-facebook {
-
-  background: #3B5998;
-  color: white;
-}
-  
-.fa-twitter {
-
-  background: #55ACEE;
-  color: white;
-}
-
-
-/* Footer */
-
-footer {
-
-  background-color: black;
-  color: rgb(194, 165, 0);
-  padding: 20px;
-  top: 100%;
-  position: sticky;
-}
-
-footer>.row{
-
-  margin: 0px;
-}
-
-#informacio,#kapcsolat,#alkotok{
-
-  padding: 0px;
-}
-
-#moziNev {
-
-  color: rgb(223, 223, 185);
-  padding-bottom: 10px;
-}
-
-a {
-
-  text-decoration: none;
-  color: rgb(194, 165, 0);
-}
-
-a:hover {
-
-  background-color: #333333;
-  color: rgb(194, 165, 0);
-}
-
-h5 {
-
-  padding-bottom: 10px;
-}

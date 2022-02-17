@@ -45,6 +45,7 @@ nav > .container-fluid > ul > .nav-item > .nav-link {
     color: rgb(212, 175, 55);
 }
 
+
 .nav-item > a:hover {
 
     background-color: #333333;
@@ -58,7 +59,6 @@ article {
     padding: 15px;
 }
 
-
 /* napok és műsorlista */
 
 
@@ -67,16 +67,14 @@ article {
     color: rgb(212, 175, 55);
 }
 
+
 .idopont {
 
     text-align: start;
 }
-
 th, td {
-
     text-align: center;
 }
-
 
 /* FOOTER */
 
@@ -108,12 +106,12 @@ h5 {
 
 .fa {
 
-    padding: 10px;
-    font-size: 30px;
-    width: 50px;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 10px;
+  padding: 10px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10px;
 }
 
 .fa:hover {
@@ -133,8 +131,6 @@ h5 {
     background: #55ACEE;
     color: white;
 }
-
-
 #alkotok {
 
     margin: 0px;
@@ -179,6 +175,7 @@ h5 {
     display: inline-block;
     padding: 3px;
 }
+
 .up {
 
     transform: rotate(-135deg);

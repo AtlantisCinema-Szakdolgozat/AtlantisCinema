@@ -3,14 +3,11 @@
 /* általános formázások másik css-ben */
 
 /* ARTICLE */
-
-nav > .container-fluid > .navbar-toggler {
-
+nav > .container-fluid > .navbar-toggler{
     margin: auto;
     margin-top: 10px;
     margin-bottom: 10px;
 }
-
 nav > .container-fluid > #mynavbar > .navbar-nav {
 
     width: 100%;
@@ -43,6 +40,7 @@ article > .row {
     margin-bottom: 10px;
 }
 
+
 #plakat {
 
     padding: 0px;
@@ -60,6 +58,7 @@ article > .row {
     color: rgb(194, 165, 0);
 }
 
+
 #leiras {
 
     text-align: justify;
@@ -68,7 +67,7 @@ article > .row {
 
 /* linkek */
 
-.idoPontok>tbody>tr>th>a {
+.idoPontok > tbody > tr > th > a {
     padding: 10px;
     text-align: center;
 }

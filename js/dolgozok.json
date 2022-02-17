@@ -1,0 +1,15 @@
+[
+    {
+        "dolgozoid": 1,
+        "neve": "Kis Bernadett",
+        "jelszó": "12345678910",
+        "munkakör": "Pénztáros"
+    },
+
+    {
+        "dolgozoid": 3,
+        "neve": "Kis Bernadett",
+        "jelszó": "1sjhkkjdfj",
+        "munkakör": "Admin"
+    }
+]

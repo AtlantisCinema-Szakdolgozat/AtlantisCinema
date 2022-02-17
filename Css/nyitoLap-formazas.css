@@ -45,10 +45,6 @@ section .row {
     margin: 0px;
 }
 
-#galeriaSzulo {
-
-    margin: 10px;
-}
 
 #korhintaGaleria {
 
@@ -62,8 +58,11 @@ section .row {
     padding: 10px;
 }
 
-#kisGaleria {
+#galeriaSzulo{
+    margin: 10px;
+}
 
+#kisGaleria{
     padding: 0px;
 }
 
@@ -81,12 +80,14 @@ section .row {
 
 /* linkek */
 
-.idoPontok>tbody>tr>th>a {
+.idoPontok > tbody > tr > th > a {
+    
     padding: 10px;
     text-align: center;
 }
 
 a {
+
     text-decoration: none;
     color: rgb(194, 165, 0);
 }
@@ -106,7 +107,6 @@ a:hover {
 }
 
 
-
 /* Csempés megjelenítés */
 
 .musorListaCsempeSzulo {
@@ -114,6 +114,7 @@ a:hover {
     border: 2px solid black;
     
 }
+
 #musorListaCsempeSzulo > .row {
 
     margin-left: 0px;
@@ -144,7 +145,6 @@ a:hover {
 }
 
 .csempePlakat {
-
     max-width: 100%;
     max-height: 240px;
 }
@@ -159,45 +159,52 @@ table {
     max-width: 100%;
 }
 
+.csempeLeiras>p {
+    text-align: justify;
+}
+
+table{
+    max-width: 100%;
+}
 
 
 /* Reszponzivitás */
-
 @media only screen and (max-width: 992px) {
-
-    #kisGaleria > div {
-
+    #kisGaleria div {
         text-align: center;
     }
 }
 
-@media only screen and (max-width: 950px) {
+ @media only screen and (max-width: 950px) {
 
     .csempeSablon {
 
         flex-wrap: wrap;
     }
-}
 
+ }
 @media only screen and (max-width: 810px) {
 
-    .table-responsive {
 
+    .table-responsive{
         font-size: 11pt;
         max-width: 100%;
         margin: auto;
     }
 }
 
-#filmek {
-
+#filmek{
     padding: 10px;
     background-color: #d1e7dd;
 }
 
 @media only screen and (max-width: 768px) {
+    
+    .table-responsive>table{
+        display: none;
+    }
 
-    .table-responsive > table {
+    #kisGaleria {
 
         display: none;
     }
