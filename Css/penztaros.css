@@ -1,7 +1,7 @@
 
 /*Navigáció*/
 
-  nav{
+nav{
   background-color: black;
   color: #be9d31;
   cursor: pointer;
@@ -54,13 +54,13 @@
     display: flex;
   }
   
-  .filmcim{
+  .filmcimek{
   
     width: 260px;
   
   }
 
-  .filmcim p{
+  .filmCim{
       
     color: #be9d31;
     font-weight: bold;
