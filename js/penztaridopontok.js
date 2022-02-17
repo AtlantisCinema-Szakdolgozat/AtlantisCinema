@@ -9,15 +9,21 @@ class Idopontok{
         this.idopont=this.elem.children(".idopont");
         this.szinkron=this.elem.children(".szinkron");
         this.ferohely=this.elem.children(".ferohely");
+        this.vasarlas1=this.elem.children(".vasarlas1");
         this.adat=adat;
         this.setAdatok(this.adat);
+        
+        
         this.foglalj.on("click",()=>{
         this.idopontbetoltTrigger();
         //console.log("Hii");
     });
         
 
-
+       this.vasarlas1.on("click",()=>{
+        this.idopontbetoltTrigger();
+        //console.log("Hii");
+    });
 
 
     }
@@ -38,5 +44,7 @@ class Idopontok{
         window.dispatchEvent(esemeny);
 
     }
+
+
 
 }

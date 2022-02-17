@@ -7,12 +7,19 @@ $(function () {
   myAjax.vetitesBetolt(fajlnev, vetitesekTomb, filmetkiir);
   //const foOldal=new FoOldal;
 
+
   $(window).on("idopontBetolt", (event) => {
     console.log(event.detail);
     eventTomb.push(event.detail);
     localStorage.setItem("kulcs", JSON.stringify(eventTomb));
   });
 
+  /* PénztárFoOldal*/
+  $(window).on("idopontBetolt", (event) => {
+    console.log(event.detail);
+    eventTomb.push(event.detail);
+    localStorage.setItem("kulcs", JSON.stringify(eventTomb));
+  });
   function idopontKiir(szuloelem, index) {
     //idpontok egy adott filmhez
 
@@ -51,4 +58,11 @@ $(function () {
     });
     sablonElem.hide();
   }
+
+
+  /* PÉNZTÁR VÉGEEEEEEE*/
+
+
+
+
 });
