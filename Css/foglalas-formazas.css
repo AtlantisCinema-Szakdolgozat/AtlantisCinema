@@ -15,7 +15,7 @@
     
 }
 
-#valasztottFilm>div>img {
+#valasztottFilm > div > img {
     max-width: 100%;
 }
 
@@ -320,4 +320,7 @@ button {
 
 @media only screen and (max-width: 768px) {
 
+    #valasztottFilm > div > img {
+        display: none;
+    }
 }
