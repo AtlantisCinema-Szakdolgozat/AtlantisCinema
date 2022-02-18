@@ -14,6 +14,11 @@ header {
     display: flex;
 }
 
+input {
+
+    width: 80%;
+}
+
 
 /* ARTICLE */
 
@@ -198,11 +203,7 @@ table{
     background-color: #d1e7dd;
 }
 
-@media only screen and (max-width: 768px) {
-    
-    .table-responsive>table{
-        display: none;
-    }
+@media only screen and (max-width: 767px) {
 
     #kisGaleria {
 
@@ -228,6 +229,13 @@ table{
     #filmek {
 
         display: none;
+    }
+}
+@media only screen and (max-width: 767px) {
+
+    #korhintaGaleria {
+
+        width: 100%;
     }
 }
 
