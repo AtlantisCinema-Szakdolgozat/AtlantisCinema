@@ -1,0 +1,316 @@
+@charset "utf-8";
+
+/* általános formázások másik css-ben */
+
+#valasztottFilm {
+    margin: auto; 
+    max-width: 700px;
+    padding: 10px;
+    text-align: center;
+    background-color: black;
+    color: rgb(212, 175, 55);
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+}
+
+#valasztottFilm>div>img {
+    max-width: 100%;
+}
+
+#adatok {
+    margin-bottom: 10px;
+}
+
+#jegyValaszta {
+    margin-top: 10px;
+}
+section {
+
+    margin-bottom: 10px; 
+}
+
+#valasztottFilm > div > img {
+
+    max-width: 100%;
+}
+
+#adatok {
+
+    margin-bottom: 10px;
+}
+ 
+#jegyValaszta {
+
+    margin-top: 10px;
+}
+
+
+section>#jegyValasztas>.row {
+    max-width: 700px;
+    margin: auto;
+}
+
+
+section > #jegyValasztas > .row {
+
+    max-width: 700px;
+    margin: auto;
+}
+
+#cim {
+
+    padding: 10px;
+}
+
+#adatok {
+
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+h4 {
+
+    padding: 10px;
+}
+
+#nezoAdatok > form {
+
+    max-width: 700px;
+    margin: auto;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgba(177, 214, 219, 0.288); 
+    margin-bottom: 10px;
+}
+
+form > div > label {
+    font-weight: bold;
+}
+
+#jegyValasztas>form>.row>div{
+    padding: 0px;
+    padding-left: 5px;
+}
+form>div>div>label{
+    font-weight: bold;
+}
+form>div>div>.btn{
+    border-radius: 100%;
+    padding: 0px;
+    font-size: 7pt;
+    width: 10pt;
+    height: 10pt;
+    margin: auto;
+    background-color:  #004d99;
+
+}
+
+
+
+
+form > div > label {
+
+    font-weight: bold;
+}
+
+#jegyValasztas > form > .row > div {
+
+    padding: 0px;
+    padding-left: 5px;
+}
+
+
+form > div > div > label {
+
+    font-weight: bold;
+}
+
+form > div > div > .btn {
+
+    border-radius: 100%;
+    padding: 0px;
+    font-size: 7pt;
+    width: 10pt;
+    height: 10pt;
+    margin: auto;
+    background-color:  #004d99;
+}
+
+/* linkek */
+
+.idoPontok>tbody>tr>th>a {
+    padding: 10px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(194, 165, 0);
+}
+
+a:hover {
+
+    background-color: #333333;
+    color: rgb(194, 165, 0);
+}
+
+
+
+/* Terem rajz */
+
+#jelzes {
+
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+#szek {
+
+    margin: auto;
+}
+
+#vaszon {
+
+    width: 700px;
+    margin: auto;
+    height: 10px;
+    border: 1px solid black;
+    margin-bottom: 10px;
+    background-color: 
+    #31619b;
+}
+
+.sor {
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 700px;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+#foglalas > #foglalasadatok > div {
+
+    max-height:45vh;
+}
+
+.oszlop {
+
+  max-width: 10px;
+  max-height:10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 10px;
+  text-align: center;
+  background-color: rgb(15, 219, 15);
+  margin: auto;
+}
+
+.jelzes {
+
+  margin: auto;
+  max-width: 500px;
+}
+
+#szabad, #foglalt, #eppen, #eladott {
+
+    text-align: center;
+    padding: 5px;
+}
+
+#szabad {
+
+    background-color: rgb(15, 219, 15);
+}
+
+#foglalt {
+
+    background-color: gray;
+}
+
+#eladott {
+
+    background-color: red;
+
+}
+
+#eppen {
+
+    background-color: yellow;
+}
+
+
+/* Gombok */
+
+button {
+
+    padding: 10px;
+    margin: 20px;
+    
+}
+
+#gombok {
+
+    text-align: center;
+}
+
+#foglalasGomb {
+
+    background-color: white;
+    color: #b00;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+#vasarlasGomb {
+
+    background-image: linear-gradient( #fa6464 , #ff0000);
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+
+/* Felugró ablak */
+
+.modal {
+
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+  
+.modal-content {
+
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+    text-align: center;
+}
+  
+
+.close {
+
+    color: #aaaaaa;
+    font-size: 28px;
+    font-weight: bold;
+    width: 10%;
+}

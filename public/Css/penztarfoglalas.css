@@ -1,0 +1,207 @@
+
+/*Aside
+-foglalasadatok
+*/
+.aktfilm{
+  margin: auto;
+  text-align: center;
+  width: 200px;
+  height: 150px;
+  border:1px solid #be9d31;
+  margin-bottom: 20px;
+  background-color: black;
+  padding: 10px 0 10px 0;
+  color: #be9d31;
+  
+}
+
+
+body>main>#foglalas{
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-top: 40px;
+}
+
+
+#foglalasadatok{
+  background-color: #d9d9d9;
+  border: 1px solid black;
+  padding-top: 10px;
+
+}
+
+
+
+  /*Táblázat*/
+  table{
+    border: 1px solid black;
+  }
+ 
+ 
+ #foglalas>#foglalasadatok>table{
+     border: 1px solid black;
+     background-color: white;
+ }
+
+
+
+ 
+  
+  /*Ülésterv*/
+
+  #vaszon{
+    width: 50%;
+    margin: auto;
+    height: 10px;
+    border: 1px solid black;
+    margin-bottom: 5px;
+    background-color: 
+    #31619b;
+}
+
+
+.sor{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: max-content;
+  margin: auto;
+  margin-bottom: 10px;
+
+}
+
+#foglalas>#foglalasadatok>div{
+
+max-height:45vh;
+
+
+}
+
+.oszlop{
+  width: 1ex;
+  height: 1ex;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 10px;
+  text-align: center;
+  background-color: rgb(15, 219, 15);
+
+}
+#ulesterv>.jelzes{
+  margin: auto;
+  margin-top: 30px;
+  max-width: 600px;
+  
+}
+
+#szabad{
+  text-align: center;
+  background-color: chartreuse;
+}
+
+#foglalt{
+  text-align: center;
+  background-color: gray;
+}
+
+
+
+#eladott{
+
+  text-align: center;
+  background-color: red;
+}
+
+#eppen{
+
+  text-align: center;
+  background-color: yellow;
+}
+
+
+
+/*Darab jegyek*/
+ 
+  #jegyekdarab{
+
+    background-color: #d9d9d9;
+    border: 1px solid black;
+  
+  
+  }
+  
+  #jegyek{
+    width: 50%;
+    margin:auto;
+    margin-top: 10px;
+    
+  }  
+
+  #jegyek>div>p{
+    margin: 0;
+
+  }
+
+#jegyek>div{
+  margin: 12px;
+
+}
+
+#diakjegy p,#felnott p,#szerda,form label{
+    color: black;
+    font-size: 20px;
+  }
+  
+/*Gombok*/
+  .gombok{
+    padding:5px;
+    padding-top: 10px;
+    
+    
+ 
+   }
+  .foglalasgomb,.vasarlas1{
+    margin:auto;
+    font-size: 20px;
+    border-radius: 10px;
+    
+  }
+
+  .foglalasgomb{
+
+    margin-right: 5px;
+
+  }
+  
+
+  /*Vissza*/
+
+  .vissza{
+    background-color: black;
+    border:none;
+    color:white;
+    font-weight: bold;
+    padding: 15px 32px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+ 
+
+
+
+/*Reszponzivitás*/
+
+@media only screen and (max-width: 1400px) {
+  #foglalas>#foglalasadatok>div{
+    max-height: 35vh;
+    padding-bottom: 15px;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  #foglalas>#ulesterv{
+   margin-top: 10px;
+   margin-bottom: 20px;
+  }
+}

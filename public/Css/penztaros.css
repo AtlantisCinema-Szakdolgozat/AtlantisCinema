@@ -1,0 +1,106 @@
+
+/*Navigáció*/
+
+  nav{
+  background-color: black;
+  color: #be9d31;
+  cursor: pointer;
+  }
+
+  .datumnap{
+    font-size: 150%;
+    text-align: center;
+
+}
+/*Article*/
+
+  article{
+    width: 200px;
+    background-color: black;
+    text-align: center;
+    margin:auto;
+    margin-top: 10px;
+    color: #be9d31;
+    
+  }
+
+  article div{
+    font-weight: bold;
+}
+
+.aktnap{
+  font-size: x-large;
+  
+  }
+
+/*Section
+-filmemzők
+*/
+
+
+  section{
+    margin-top: 20px;
+  }
+
+  .filmmezok{
+    display: flex;
+    margin-bottom: 15px;
+    border: 1px solid black;
+    padding: 10px;
+   
+    
+  }
+  .filmmezok >div{
+    display: flex;
+  }
+  
+  .filmcim{
+  
+    width: 260px;
+  
+  }
+
+  .filmcim p{
+      
+    color: #be9d31;
+    font-weight: bold;
+    font-size: xx-large;
+  
+  }
+  .filmidopont{
+
+    cursor: pointer;
+    margin-right: 50px;
+   
+  
+  }
+
+  section> .filmmezok>.col>.filmidopont{
+
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  .filmidopont p{
+    color: #be9d31;
+    font-size: 130%;
+    background-color: black;
+    margin: 0;
+    text-align: center;
+    
+  }
+
+
+/*Footer*/
+  
+  .kijelentkezes{
+    background-color: black;
+    border:none;
+    color:white;
+    font-weight: bold;
+    padding: 15px 32px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+
