@@ -1,18 +1,18 @@
 class Termek{
-    constructor(elem, adat, index){
-        this.elem=elem;
+    constructor(adat){
         this.adat=adat;
-        this.index=index;
-        this.setAdatok(this.adat);
-    }   
-    setAdatok(ertekek){
-        let aktSor="<tr dataid="+this.index+">";
-        for (const key in ertekek) {
-            aktSor+="<td>"+ertekek[key]+"</td>";
+    }
+       
+    tablaSorGeneralas(){
+        let aktSor="<tr dataid="+this.adat.teremId+">";
+        for (const key in this.adat) {
+            if(key!="created_at" && key!="updated_at"){
+                aktSor+="<td>"+this.adat[key]+"</td>";
+            }
         }
-        aktSor+="<td><button type='button' dataid="+this.index+" class='torles'>Törlés</button></td>";
-        aktSor+="<td><button type='button' dataid="+this.index+"  class='modositas'>Módosítás</button></td>";
+        aktSor+="<td><button type='button' dataid="+this.adat.teremId+" class='torles'>Törlés</button></td>";
+        aktSor+="<td><button type='button' dataid="+this.adat.teremId+"  class='modositas'>Módosítás</button></td>";
         aktSor+="</tr>";
-        this.elem.append(aktSor);
+        return aktSor;
     }
 }

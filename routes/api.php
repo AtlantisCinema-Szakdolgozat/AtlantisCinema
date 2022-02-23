@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TeremController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +18,9 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/terem', [TeremController::class, 'index']);
+Route::put('/terem/id', [TeremController::class, 'update']);
+Route::get('/terem/{terem}', [TeremController::class, 'show']);
+Route::delete('/terem/{id}', [TeremController::class, 'destroy']);
+Route::post('/terem', [TeremController::class, 'store']);

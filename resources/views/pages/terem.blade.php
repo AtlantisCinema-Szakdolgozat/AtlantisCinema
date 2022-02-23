@@ -12,7 +12,8 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/admintermekek.js" type="text/javascript"></script>
+    <script src="js/ajax.js"></script>
+    <script src="js/admintermek.js" type="text/javascript"></script>
     <script src="js/termek.js" type="text/javascript"></script>
 </head>
 <body>
@@ -46,13 +47,13 @@
             </div>
             <div id="keresesRendezes" class="row">
                 <div id="kereses" class="col-sm-6"> 
-                  <input type="text" class="form-control" placeholder="Keresés">
+                  <input type="text" id="keresesmezo" class="form-control" placeholder="Keresés">
                 </div>
                 <div id="rendezes" class="col-sm-6">
-                        <select class="form-select">
+                        <select class="form-select" id="rendezeskivalasztasa">
                           <option selected>Rendezés</option>
-                          <option value="1">A-z</option>
-                          <option value="2">Z-a</option>
+                          <option value="rend1">A-z</option>
+                          <option value="rend2">Z-a</option>
                         </select>
                 </div>
             </div>

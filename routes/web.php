@@ -1,8 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\TesztController;
-use App\Http\Controllers\TeremController;
 use App\Http\Controllers\MufajController;
 use App\Http\Controllers\FilmController;
 use App\Http\Controllers\SzemelyController;
@@ -122,11 +120,6 @@ Route::get('/api/film/{film}', [FilmController::class, 'show']);
 Route::delete('/api/film/{id}', [FilmController::class, 'destroy']);
 Route::post('/api/film', [FilmController::class, 'store']);
 
-Route::get('/api/terem', [TeremController::class, 'index']);
-Route::put('/api/terem/id', [TeremController::class, 'update']);
-Route::get('/api/terem/{terem}', [TeremController::class, 'show']);
-Route::delete('/api/terem/{id}', [TeremController::class, 'destroy']);
-Route::post('/api/terem', [TeremController::class, 'store']);
 
 Route::get('/api/vetites', [VetitesController::class, 'index']);
 Route::put('/api/vetites/id', [VetitesController::class, 'update']);

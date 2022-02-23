@@ -8,7 +8,9 @@ class Dolgozok{
     setAdatok(ertekek){
         let aktSor="<tr dataid="+this.index+">";
         for (const key in ertekek) {
-            aktSor+="<td>"+ertekek[key]+"</td>";
+            if(key!="created_at" && key!="updated_at"){
+                aktSor+="<td>"+ertekek[key]+"</td>";
+            }
         }
         aktSor+="<td><button type='button' dataid="+this.index+" class='torles'>Törlés</button></td>";
         aktSor+="<td><button type='button' dataid="+this.index+"  class='modositas'>Módosítás</button></td>";

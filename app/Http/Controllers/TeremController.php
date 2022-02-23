@@ -8,9 +8,10 @@ use App\Models\Terem;
 class TeremController extends Controller
 {
     //
-    public function index()
+    public function index(Request $request)
     {
-        return Terem::all();
+        $name = $request->query('q','');
+        return Terem::where('teremNev','like',"%$name%")->get();
     }
  
     public function show($id)
