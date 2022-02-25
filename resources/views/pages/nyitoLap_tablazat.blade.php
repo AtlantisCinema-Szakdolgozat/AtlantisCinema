@@ -145,19 +145,8 @@
                             <tr>
                                 <th scope="row"> <a href="/filmOldal"> Mátrix feltámadások </a> </th>
 
-                                <th> <a href="/foglalasOldal"> 16:45 </a> </th>
-                                <th> <a href="/foglalasOldal"> 16:45 </a> </th>
-                                <th> <a href="/foglalasOldal"> 16:45 </a> </th>
-                                <th> <a href="/foglalasOldal"> 16:45 </a> </th>
-                                <th> <a href="/foglalasOldal"> 16:45 </a> </th>
-                                <th> <a href="/foglalasOldal"> 16:45 </a> </th>
-                                <th> <a href="/foglalasOldal"> 16:45 </a> </th>
-                                <th> <a href="/foglalasOldal"> 16:45 </a> </th>
-                                <th> <a href="/foglalasOldal"> 16:45 </a> </th>
-                                <th> <a href="/foglalasOldal"> 16:45 </a> </th>
-                                <th> <a href="/foglalasOldal"> 16:45 </a> </th>
-                                <th> <a href="/foglalasOldal"> 16:45 </a> </th>
-                                <th> <a href="/foglalasOldal"> 16:45 </a> </th>
+                                <th> <a href="/foglalasOldal">  </a> </th>
+
                             </tr>
                         </tbody>
 
