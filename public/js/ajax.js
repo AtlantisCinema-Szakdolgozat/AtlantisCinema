@@ -34,19 +34,19 @@ class MyAjax{
             url:apivegpont+"/"+id,
             type:"DELETE",
             success:function(result){
-                //console.log(result);
+                console.log(result);
             }
         });
         
     }
 
-    putAdat(apivegpont,adat,id,){
+    putAdat(apivegpont,adat,id){
         $.ajax({
             url:apivegpont+"/"+id,
             type:"PUT",
             data:adat,
             success:function(result){
-                console.log(result);
+                //console.log(result);
             }
         });
     }

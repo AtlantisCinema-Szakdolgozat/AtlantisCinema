@@ -19,6 +19,7 @@ $(function(){
             termek.forEach(function(adat) {
                 const ujTerem = new Termek(adat);
                 szuloelem.append(ujTerem.tablaSorGeneralas());
+                //ujTerem.kikk();
             });
         }
         akt=apivegpont;
@@ -31,27 +32,22 @@ $(function(){
     })
 
     $("#rendezeskivalasztasa").on("change",function(){
-        console.log("rendez");
+        //console.log("rendez");
         apivegpont="http://127.0.0.1:8000/api/terem";
         let szempont=$(this).val();
-        console.log(szempont);
+        ///console.log(szempont);
         switch(szempont) {
             case "rend1":
-                apivegpont+="?_sort=teremNev&_order=desc";
-                console.log(apivegpont);
-                myAjax.getAdat(apivegpont,termek,termekMegjelenitese);
+                apivegpont+="?desc=rend1";
+                ///console.log(apivegpont);
               break;
             case "rend2":
-                apivegpont+="?_sort=teremNev&_order=ASC";
-                myAjax.getAdat(apivegpont,termek,termekMegjelenitese);
+                apivegpont+="?desc=rend2";
+                //console.log(apivegpont);
               break;
-              
             default:
               // code block
           }
-        
-        
+          myAjax.getAdat(apivegpont,termek,termekMegjelenitese);
     })
-
-   
 });
