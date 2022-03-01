@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Terem extends Model
 {
     use HasFactory;
-    protected $primaryKEY='teremid';
+    protected $primaryKey='teremId';
 }

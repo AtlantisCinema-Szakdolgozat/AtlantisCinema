@@ -16,10 +16,10 @@ $(function(){
         }
         else if(akt!==apivegpont || akt=="http://127.0.0.1:8000/api/terem"){
             szuloelem.children().remove();
+            let ujTerem;
             termek.forEach(function(adat) {
-                const ujTerem = new Termek(adat);
-                szuloelem.append(ujTerem.tablaSorGeneralas());
-                //ujTerem.kikk();
+                let tablaSor = $("<tr></tr>").appendTo(szuloelem);
+                ujTerem = new Termek(tablaSor,adat);
             });
         }
         akt=apivegpont;
@@ -32,22 +32,25 @@ $(function(){
     })
 
     $("#rendezeskivalasztasa").on("change",function(){
-        //console.log("rendez");
         apivegpont="http://127.0.0.1:8000/api/terem";
         let szempont=$(this).val();
-        ///console.log(szempont);
         switch(szempont) {
             case "rend1":
                 apivegpont+="?desc=rend1";
-                ///console.log(apivegpont);
               break;
             case "rend2":
                 apivegpont+="?desc=rend2";
-                //console.log(apivegpont);
               break;
             default:
-              // code block
           }
           myAjax.getAdat(apivegpont,termek,termekMegjelenitese);
     })
+
+    $(window).on("torles",(event)=>{
+        myAjax.deletAdat(apivegpont,event.detail.adat.teremId,sikeresTorles,event.detail.szuloelem);
+    })
+
+    function sikeresTorles(sor){
+        $(sor).remove();
+    }
 });

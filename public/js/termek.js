@@ -1,19 +1,27 @@
 class Termek{
-    constructor(adat){
+    constructor(szuloelem, adat){
+        this.szuloelem=szuloelem;
         this.adat=adat;
-        console.log();
+        this.tablaSorGeneralas();
+
+    }
+
+    torles(){
+        let event = new CustomEvent("torles", {detail:this});
+        window.dispatchEvent(event);
     }
        
     tablaSorGeneralas(){
-        let aktSor="<tr calass='tr' dataid="+this.adat.teremId+">";
         for (const key in this.adat) {
             if(key!="created_at" && key!="updated_at"){
-                aktSor+="<td>"+this.adat[key]+"</td>";
+                this.szuloelem.append("<td>"+this.adat[key]+"</td>");
             }
         }
-        aktSor+="<td><button type='torles' dataid="+this.adat.teremId+" class='torles'>Törlés</button></td>";
-        aktSor+="<td><button type='button' dataid="+this.adat.teremId+" class='modositas'>Módosítás</button></td>";
-        aktSor+="</tr>";
-        return aktSor;
+        this.szuloelem.append("<td><button type='torles' dataid="+this.adat.teremId+" class='torles'>Törlés</button></td>");
+        this.szuloelem.append("<td><button type='button' dataid="+this.adat.teremId+" class='modositas'>Módosítás</button></td>");
+        console.log(this.szuloelem.find('.torles'));
+        $(this.szuloelem.find('.torles')).on("click", ()=>{
+             this.torles();
+         })
     }
 }
