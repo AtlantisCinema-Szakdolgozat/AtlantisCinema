@@ -3,7 +3,6 @@ class Termek{
         this.szuloelem=szuloelem;
         this.adat=adat;
         this.tablaSorGeneralas();
-
     }
 
     torles(){
@@ -19,9 +18,10 @@ class Termek{
         }
         this.szuloelem.append("<td><button type='torles' dataid="+this.adat.teremId+" class='torles'>Törlés</button></td>");
         this.szuloelem.append("<td><button type='button' dataid="+this.adat.teremId+" class='modositas'>Módosítás</button></td>");
-        console.log(this.szuloelem.find('.torles'));
         $(this.szuloelem.find('.torles')).on("click", ()=>{
              this.torles();
-         })
+         });
     }
+
+  
 }

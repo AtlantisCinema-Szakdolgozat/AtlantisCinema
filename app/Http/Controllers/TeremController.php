@@ -35,7 +35,7 @@ class TeremController extends Controller
     {
         //kötelező oszlopok
      $request->validate([
-    'teremnev' => 'required',
+    'teremNev' => 'required',
     'sor' =>  'required',
     'oszlop' =>  'required']);
         return Terem::create($request->all());

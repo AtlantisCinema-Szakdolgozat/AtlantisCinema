@@ -21,7 +21,7 @@
     @section('content')
         <section>
             <div id="urlap">
-                <form action=""  method="post">
+                <form action=""  method="POST">
                         <div class="row">
                             <label for="tnev" class="col-sm-3 col-form-label">Terem név</label>
                           <div class="col-sm-9">
@@ -41,7 +41,7 @@
                           </div>
                         </div>
                         <div class="d-grid gap-2 d-md-flex justify-content-end">
-                            <input type="button" class="btn " value="Felvitel">
+                            <input type="button" class="btn felvitel" value="Felvitel">
                         </div>
                 </form>
             </div>

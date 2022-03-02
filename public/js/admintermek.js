@@ -50,6 +50,16 @@ $(function(){
         myAjax.deletAdat(apivegpont,event.detail.adat.teremId,sikeresTorles,event.detail.szuloelem);
     })
 
+    $(".felvitel").on("click", ()=>{
+        let ujTerem={};
+        ujTerem.teremNev=$("#tnev").val();
+        ujTerem.sor=Number($("#sor").val());
+        ujTerem.oszlop=Number($("#oszlop").val());
+        console.log(ujTerem);
+        myAjax.postAdat(apivegpont,ujTerem);
+        myAjax.getAdat(apivegpont,termek,termekMegjelenitese);
+    });
+
     function sikeresTorles(sor){
         $(sor).remove();
     }

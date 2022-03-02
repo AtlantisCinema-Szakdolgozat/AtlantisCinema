@@ -9,4 +9,5 @@ class Terem extends Model
 {
     use HasFactory;
     protected $primaryKey='teremId';
+    protected $fillable = ['teremNev','sor','oszlop'];
 }
