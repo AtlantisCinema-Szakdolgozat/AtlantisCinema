@@ -22,26 +22,33 @@
         <section>
             <div id="urlap">
                 <form action=""  method="POST">
+                        <div class="row" id="index">
+                            <label for="teremid" class="col-sm-3 col-form-label">Index</label>
+                          <div class="col-sm-9">
+                            <input type="text"  class="form-control" id="teremid" name="teremid" value="" required>
+                          </div>
+                        </div>
                         <div class="row">
                             <label for="tnev" class="col-sm-3 col-form-label">Terem név</label>
                           <div class="col-sm-9">
-                            <input type="text"  class="form-control" id="tnev" name="tnev" required>
+                            <input type="text"  class="form-control" id="tnev" name="tnev" value="" required>
                           </div>
                         </div>
                         <div class="row">
                             <label for="sor" class="col-sm-3 col-form-label">Sor</label>
                           <div class="col-sm-9">
-                            <input type="number" class="form-control" id="sor" name="sor" required>
+                            <input type="number" class="form-control" id="sor" name="sor" value="" required>
                           </div>
                         </div>
                         <div class="row">
                             <label for="oszlop" class="col-sm-3 col-form-label">Oszlop</label>
                           <div class="col-sm-9">
-                            <input type="number" class="form-control" id="oszlop" name="oszlop" required>
+                            <input type="number" class="form-control" id="oszlop" name="oszlop" value="" required>
                           </div>
                         </div>
                         <div class="d-grid gap-2 d-md-flex justify-content-end">
                             <input type="button" class="btn felvitel" value="Felvitel">
+                            <input type="button" class="btn modosit" value="Módosit">
                         </div>
                 </form>
             </div>

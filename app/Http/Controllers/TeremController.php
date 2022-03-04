@@ -34,22 +34,21 @@ class TeremController extends Controller
     public function store(Request $request)
     {
         //kötelező oszlopok
-     $request->validate([
-    'teremNev' => 'required',
-    'sor' =>  'required',
-    'oszlop' =>  'required']);
+        $request->validate([
+            'teremNev' => 'required',
+            'sor' =>  'required',
+            'oszlop' =>  'required']);
         return Terem::create($request->all());
     }
 
     public function update(Request $request, $id)
     {
         $article = Terem::find($id);
-     $request->validate([ 
-     'teremnev' => 'required',
-     'sor' =>  'required',
-     'oszlop' =>  'required']);
+        $request->validate([ 
+            'teremNev' => 'required',
+            'sor' =>  'required',
+            'oszlop' =>  'required']);
         $article->update($request->all());
-
         return $article;
     }
 

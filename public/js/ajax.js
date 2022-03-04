@@ -50,7 +50,7 @@ class MyAjax{
             type:"PUT",
             data:adat,
             success:function(result){
-                //console.log(result);
+                console.log(result);
             }
         });
     }

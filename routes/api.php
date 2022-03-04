@@ -20,7 +20,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/terem', [TeremController::class, 'index']);
-Route::put('/terem/id', [TeremController::class, 'update']);
+Route::put('/terem/{id}', [TeremController::class, 'update']);
 Route::get('/terem/{terem}', [TeremController::class, 'show']);
 Route::delete('/terem/{id}', [TeremController::class, 'delete']);
 Route::post('/terem', [TeremController::class, 'store']);
