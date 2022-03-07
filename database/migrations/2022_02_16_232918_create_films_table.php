@@ -16,14 +16,14 @@ return new class extends Migration
         Schema::create('films', function (Blueprint $table) {
             $table->increments('filmId');
             $table->string('cim',50);
-            $table->string('filmLeiras',50);
-            $table->string('hossz',50);
+            $table->string('filmLeiras',500);
+            $table->integer('hossz');
             $table->string('nyelv',10);
             $table->string('poszter',50);
             $table->string('youtubeLink',100);
-            $table->integer('mufajID')->unsigned();
+            $table->integer('mufajId')->unsigned();
             
-            $table->foreign('mufajID')->references('mufajID')->on('mufajs');
+            $table->foreign('mufajId')->references('mufajId')->on('mufajs');
 
             $table->timestamps();
         });

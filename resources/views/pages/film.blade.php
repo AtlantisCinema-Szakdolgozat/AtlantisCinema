@@ -11,7 +11,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/ajax.js"></script>
+    <script src="js/adminfilmek.js" type="text/javascript"></script>
+    <script src="js/filmek.js" type="text/javascript"></script>
 </head>
 <body>
     @extends('layouts.adminApp')
@@ -110,71 +113,71 @@
             </div>
             
             
-            <div id="filmtarolo" class="row g-3">
+            <div id="filmtarolo" class="row g-3 szulo">
 
-                <div class="col-lg-4 col-sm-6">
+                <div class="col-lg-4 col-sm-6 gyerek">
                     <div class="filmadatok">
 
 
-                    <div class="row">
-                        <h2 class="col-3">Sorszám</h2>
-                        <p class="col-9">1</p>
-                    </div>
-                    <div class="row">
-                        <h2 class="col-sm-4">Film cím</h2>
-                        <p class="col-sm-8">Clifford the Big Red Dog</p>
-                    </div>
-                    <div class="row">
-                        <h2 class="col-12">Leírás</h2>
-                        <p class="col-12 leiras">Amikor az általános iskolás Emily Elizabeth azt kívánja, hogy a
-                         kis piros kutyája legyen nagy és erős, nem arra számít, hogy
-                         amikor felébred, egy négy méter magas kutyát talál a kis New
-                         York-i lakásban. Mivel mindenképp meg akarja tartani szeretett
-                         kedvencét, Emily elindul, hogy felkeressen egy varázslatos
-                         állatgondozót, aki reményei szerint képes visszaállítani
-                         Clifford eredeti méreteit. Miközben a várost járja felelőtlen
-                         bácsikájával, Caseyel, az iskolatársával Owennel, és
-                         Clifforddal, a nagy piros kutyával, Clifford méretének híre
-                         eljut egy gonosz tudós fülébe, aki úgy dönt, hogy megkaparintja
-                         az állatot...</p>
-                    </div>
-                    <div class="row">
-                        <h2 class="col-3">Hossz</h2>
-                        <p class="col-9">96 perc</p>
-                    </div>
-                    <div class="row">
-                        <h2 class="col-3">Nyelv</h2>
-                        <p class="col-9">EN</p>
-                    </div>
-                    <div class="row">
-                        <h2 class="col-sm-3">Műfaj</h2>
-                        <p class="col-sm-9">Vígjáték, Családi</p>
-                    </div>
-                    <div class="row">
-                        <h2  class="col-sm-3">Szereplő</h2>
-                        <p class="col-sm-9">Darby Camp, Jack Whitehall, Izaac Wang, John Cleese</p>
-                    </div>
-                    <div class="row">
-                        <h2  class="col-sm-3">Rendező</h2>
-                        <p class="col-sm-9">Walt Becker, Walt Becker</p>
-                    </div>
-                    <div class="row">
-                        <h2  class="col-sm-3">Poszter</h2>
-                        <p class="col-sm-9">posters/4507D2R-lg.jpg</p>
-                    </div>
-                    <div class="row">
-                        <h2  class="col-sm-3">Link</h2>
-                        <p class="col-sm-9">posters/4507D2R-lg.jpg</p>
-                    </div>
-                    <div class="row button">
-                        <div class="col-6">
-                            <button type="submit" class="torles">Törlés</button>
+                        <div class="row">
+                            <h2 class="col-3">Sorszám</h2>
+                            <p class="col-9 filmID">1</p>
                         </div>
-                        <div class="col-6">
-                            <button type="submit" class="modositas">Módosítás</button>
+                        <div class="row">
+                            <h2 class="col-sm-4">Film cím</h2>
+                            <p class="col-sm-8 cim">Clifford the Big Red Dog</p>
+                        </div>
+                        <div class="row">
+                            <h2 class="col-12">Leírás</h2>
+                            <p class="col-12 leiras">Amikor az általános iskolás Emily Elizabeth azt kívánja, hogy a
+                            kis piros kutyája legyen nagy és erős, nem arra számít, hogy
+                            amikor felébred, egy négy méter magas kutyát talál a kis New
+                            York-i lakásban. Mivel mindenképp meg akarja tartani szeretett
+                            kedvencét, Emily elindul, hogy felkeressen egy varázslatos
+                            állatgondozót, aki reményei szerint képes visszaállítani
+                            Clifford eredeti méreteit. Miközben a várost járja felelőtlen
+                            bácsikájával, Caseyel, az iskolatársával Owennel, és
+                            Clifforddal, a nagy piros kutyával, Clifford méretének híre
+                            eljut egy gonosz tudós fülébe, aki úgy dönt, hogy megkaparintja
+                            az állatot...</p>
+                        </div>
+                        <div class="row">
+                            <h2 class="col-3">Hossz</h2>
+                            <p class="col-9 hossz">96 perc</p>
+                        </div>
+                        <div class="row">
+                            <h2 class="col-3">Nyelv</h2>
+                            <p class="col-9 nyelv">EN</p>
+                        </div>
+                        <div class="row">
+                            <h2 class="col-sm-3">Műfaj</h2>
+                            <p class="col-sm-9 mufajId">Vígjáték, Családi</p>
+                        </div>
+                        <div class="row">
+                            <h2  class="col-sm-3">Szereplő</h2>
+                            <p class="col-sm-9">Darby Camp, Jack Whitehall, Izaac Wang, John Cleese</p>
+                        </div>
+                        <div class="row">
+                            <h2  class="col-sm-3">Rendező</h2>
+                            <p class="col-sm-9">Walt Becker, Walt Becker</p>
+                        </div>
+                        <div class="row">
+                            <h2  class="col-sm-3">Poszter</h2>
+                            <p class="col-sm-9">posters/4507D2R-lg.jpg</p>
+                        </div>
+                        <div class="row">
+                            <h2  class="col-sm-3">Link</h2>
+                            <p class="col-sm-9">posters/4507D2R-lg.jpg</p>
+                        </div>
+                        <div class="row button">
+                            <div class="col-6">
+                                <button type="submit" class="torles">Törlés</button>
+                            </div>
+                            <div class="col-6">
+                                <button type="submit" class="modositas">Módosítás</button>
+                            </div>
                         </div>
                     </div>
-                </div>
                 </div>
 
                 <div class="col-lg-4 col-sm-6">
