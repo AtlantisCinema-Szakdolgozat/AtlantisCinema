@@ -2,7 +2,7 @@ $(function(){
     const myAjax=new MyAjax;
     let vetitesek =[];
     const szuloelem = $("#szulo");
-    let apivegpont="http://127.0.0.1:8000/api/vetites";
+    let apivegpont="http://127.0.0.1:8000/api/filmVetites";
 
     myAjax.getAdat(apivegpont,vetitesek,vetitesekMegjelenitese);
 

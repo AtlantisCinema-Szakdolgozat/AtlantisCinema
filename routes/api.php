@@ -29,6 +29,7 @@ use App\Http\Controllers\filmMufajController;
 |
 */
 
+
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
