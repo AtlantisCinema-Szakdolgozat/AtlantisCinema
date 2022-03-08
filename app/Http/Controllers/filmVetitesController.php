@@ -27,5 +27,4 @@ class filmVetitesController extends Controller
         ->get();
     }
  
-    
 }
