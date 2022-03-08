@@ -10,6 +10,7 @@ use App\Http\Controllers\KedvezmenyController;
 use App\Http\Controllers\DolgozoController;
 use App\Http\Controllers\Film_SzemelyController;
 use App\Http\Controllers\SzekController;
+use App\Http\Controllers\filmVetitesController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes

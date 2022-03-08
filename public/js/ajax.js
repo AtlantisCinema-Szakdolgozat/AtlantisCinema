@@ -3,6 +3,19 @@ class MyAjax{
 
     }
 
+    getAdatOnly(apivegpont,tomb){
+        tomb.splice(0,tomb.length);
+        $.ajax({
+            url:apivegpont,
+            type:"GET",
+            success:function(result){
+                result.forEach(element => {
+                    tomb.push(element)
+                });
+            }
+        });
+    }
+
     getAdat(apivegpont,tomb,myCallback){
         tomb.splice(0,tomb.length);
         $.ajax({
