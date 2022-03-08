@@ -39,6 +39,13 @@ section {
 form > .row {
   --bs-gutter-x: 0px;
 } 
+#urlap > form > #index {
+  display: none;
+} 
+
+#urlap > form > div > .modosit{
+  display: none;
+}
 
 #urlap > form > div {
   margin-top: 7px;

@@ -16,17 +16,17 @@ return new class extends Migration
         Schema::create('vetites', function (Blueprint $table) {
             $table->increments('vetitesId');
             $table->integer('teremId')->unsigned();
-            $table->integer('filmID')->unsigned();
+            $table->integer('filmId')->unsigned();
             $table->boolean('felirat');
             $table->boolean('szinkron');
             $table->date('vetitesNap');
-            $table->time('kezdesiIdo');
+            $table->time('kezdesIdo');
             $table->integer('teljesJegyar');
             $table->date('premier');
             $table->boolean('publikus');
 
             $table->foreign('teremId')->references('teremId')->on('terems');
-            $table->foreign('filmID')->references('filmID')->on('films');
+            $table->foreign('filmId')->references('filmId')->on('films');
 
             $table->timestamps();
         });

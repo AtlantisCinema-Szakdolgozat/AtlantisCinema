@@ -42,18 +42,22 @@ class MyAjax{
         
     }
 
-    deletAdat(apivegpont,id){
+    deletAdat(apivegpont,id,calback,sor){
         $.ajax({
             url:apivegpont+"/"+id,
             type:"DELETE",
-            success:function(result){
-                //console.log(result);
+            success:function(data){
+                console.log(data);
+                calback(sor);
+            },
+            error: function(data) {
+                alert("NO");
             }
         });
         
     }
 
-    putAdat(apivegpont,adat,id,){
+    putAdat(apivegpont,adat,id){
         $.ajax({
             url:apivegpont+"/"+id,
             type:"PUT",
