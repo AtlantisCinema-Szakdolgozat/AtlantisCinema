@@ -12,7 +12,11 @@ use App\Http\Controllers\NezoController;
 use App\Http\Controllers\SzekController;
 use App\Http\Controllers\KedvezmenyController;
 use App\Http\Controllers\DolgozoController;
+
 use App\Http\Controllers\filmVetitesController;
+use App\Http\Controllers\filmMufajController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -91,7 +95,5 @@ Route::delete('/dolgozo/{id}', [DolgozoController::class, 'delete']);
 Route::post('/dolgozo', [DolgozoController::class, 'store']);
 
 Route::get('/filmVetites', [filmVetitesController::class, 'index']);
-Route::put('/filmVetites/{id}', [filmVetitesController::class, 'update']);
-Route::get('/filmVetites/{terem}', [filmVetitesController::class, 'show']);
-Route::delete('/filmVetites/{id}', [filmVetitesController::class, 'delete']);
-Route::post('/filmVetites', [filmVetitesController::class, 'store']);
+
+Route::get('/filmMufaj', [filmMufajController::class, 'index']);

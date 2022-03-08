@@ -9,6 +9,7 @@ class filmVetitesController extends Controller
 {
     public function index()
     {
+        
         return DB::table('vetites')
         -> join('films', 'vetites.filmId','=','films.filmId')
         -> join('terems', 'vetites.teremId','=','terems.teremId')
