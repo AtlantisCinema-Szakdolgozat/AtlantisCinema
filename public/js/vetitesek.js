@@ -44,15 +44,15 @@ class Vetitesek{
                     }
                     
                 break;
-                case "premier":
-                    if(this.adat.premier=="0000-00-00"){
-                        this.szuloelem.append("<td>Nem</td>");
-                    }
-                    else if(this.adat.premier==1){
-                        this.szuloelem.append("<td>Igen</td>");
-                    }
+                // case "premier":
+                //     if(this.adat.premier=="0000-00-00"){
+                //         this.szuloelem.append("<td>Nem</td>");
+                //     }
+                //     else if(this.adat.premier==1){
+                //         this.szuloelem.append("<td>Igen</td>");
+                //     }
                     
-                break;
+                // break;
                 case "publikus":
                     if(this.adat.publikus==0){
                         this.szuloelem.append("<td>Nem</td>");

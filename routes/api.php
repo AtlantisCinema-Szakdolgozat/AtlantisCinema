@@ -91,7 +91,3 @@ Route::delete('/dolgozo/{id}', [DolgozoController::class, 'delete']);
 Route::post('/dolgozo', [DolgozoController::class, 'store']);
 
 Route::get('/filmVetites', [filmVetitesController::class, 'index']);
-Route::put('/filmVetites/{id}', [filmVetitesController::class, 'update']);
-Route::get('/filmVetites/{terem}', [filmVetitesController::class, 'show']);
-Route::delete('/filmVetites/{id}', [filmVetitesController::class, 'delete']);
-Route::post('/filmVetites', [filmVetitesController::class, 'store']);

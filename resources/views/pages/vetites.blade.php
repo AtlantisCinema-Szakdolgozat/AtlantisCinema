@@ -23,6 +23,16 @@
             <div id="urlap">
                 <form action=""  method="post">
                         <div class="row">
+                            <label for="terem" class="col-sm-4 col-form-label">Terem Név</label>
+                          <div class="col-sm-8">
+                            <select class="terem form-select">
+                                <option selected>Terem Név</option>
+                                <option value="1">Bergman</option>
+                                <option value="2">Labri</option>
+                              </select>
+                          </div>
+                        </div>
+                        <div class="row">
                             <label for="fcim" class="col-sm-4 col-form-label">Film címe</label>
                           <div class="col-sm-8">
                             <select class="fcim form-select">
@@ -59,15 +69,21 @@
                           </div>
                         </div>
                         <div class="row">
-                            <label for="fvetitesiIdopot" class="col-sm-4 col-form-label">Vetítés időponja</label>
+                            <label for="fkezdesIdopot" class="col-sm-4 col-form-label">Kezdés időponja</label>
                           <div class="col-sm-8">
-                            <input type="time" id="fvetitesiIdopot" name="fvetitesiIdopot" required>
+                            <input type="time" id="fkezdesIdopot" name="fkezdesIdopot" required>
                           </div>
                         </div>
                         <div class="row">
                             <label for="fteljesJegyar" class="col-sm-4 col-form-label">Teljes jegyár</label>
                           <div class="col-sm-8">
                             <input type="number" class="form-control" id="fteljesJegyar" name="fteljesJegyar" value="1900" required>
+                          </div>
+                        </div>
+                        <div class="row">
+                            <label for="premier" class="col-sm-4 col-form-label">Permier Nap</label>
+                          <div class="col-sm-8">
+                            <input type="date" id="premier" name="premier" required>
                           </div>
                         </div>
                         <div class="d-grid gap-2 d-md-flex justify-content-end">
