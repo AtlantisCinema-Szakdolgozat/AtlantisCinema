@@ -10,6 +10,8 @@ use App\Http\Controllers\KedvezmenyController;
 use App\Http\Controllers\DolgozoController;
 use App\Http\Controllers\Film_SzemelyController;
 use App\Http\Controllers\SzekController;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,6 +22,8 @@ use App\Http\Controllers\SzekController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+
 Route::get('/', function () {
     return view('pages.index');
 });

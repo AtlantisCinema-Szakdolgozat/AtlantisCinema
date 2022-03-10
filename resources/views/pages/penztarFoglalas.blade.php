@@ -11,6 +11,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script src="js/ajax.js"></script>
+    <script src="js/penztarFoglalasClass.js" type="text/javascript"></script>
+    <script src="js/penztarFoscript.js" type="text/javascript"></script>
     <script src="js/penztarFilmek.js" type="text/javascript"></script>
     <script src="js/penztaridopontok.js" type="text/javascript"></script>
     <script src="js/penztarFoglalasOldal.js" type="text/javascript"></script>
@@ -52,22 +55,13 @@
                     <th scope="col">E-mail</th>
                   </tr>
                 </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Gipszjakab@gmail.com</td>
+                <tbody class="tablafoglaSzulo">
+                  <tr class="tablafoglaSablon">
+                    <th scope="row" class="sorszam"></th>
+                    <td class="nev"></td>
+                    <td class="email"></td>
                   </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>@fat</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>Jacob</td>
-                    <td>@twitter</td>
-                  </tr>
+                
                 </tbody>
               </table>
 
