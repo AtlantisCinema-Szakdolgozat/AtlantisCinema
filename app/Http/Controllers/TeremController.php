@@ -11,7 +11,19 @@ class TeremController extends Controller
     public function index(Request $request)
     {
         $name = $request->query('q','');
-        return Terem::where('teremNev','like',"%$name%")->get();
+        $keres=Terem::where('teremNev','like',"%$name%");
+        $sort = $request->query('desc','');
+        $a='';
+        if($sort==""){
+            return $keres->get();
+        }
+        else if($sort=="rend1"){
+            $a='ASC';
+        }
+        else if($sort=="rend2"){
+            $a='DESC';
+        }
+        return $keres->orderBy('teremNev', $a)->get();    
     }
  
     public function show($id)
@@ -22,26 +34,25 @@ class TeremController extends Controller
     public function store(Request $request)
     {
         //kötelező oszlopok
-     $request->validate([
-    'teremnev' => 'required',
-    'sor' =>  'required',
-    'oszlop' =>  'required']);
+        $request->validate([
+            'teremNev' => 'required',
+            'sor' =>  'required',
+            'oszlop' =>  'required']);
         return Terem::create($request->all());
     }
 
     public function update(Request $request, $id)
     {
         $article = Terem::find($id);
-     $request->validate([ 
-     'teremnev' => 'required',
-     'sor' =>  'required',
-     'oszlop' =>  'required']);
+        $request->validate([ 
+            'teremNev' => 'required',
+            'sor' =>  'required',
+            'oszlop' =>  'required']);
         $article->update($request->all());
-
         return $article;
     }
 
-    public function delete(Request $request, $id)
+    public function delete($id)
     {
         $article = Terem::find($id);
         $article->delete();

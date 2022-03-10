@@ -11,7 +11,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/ajax.js"></script>
+    <script src="js/adminvetitesek.js" type="text/javascript"></script>
+    <script src="js/vetitesek.js" type="text/javascript"></script>
 </head>
 <body>
     @extends('layouts.adminApp')
@@ -19,6 +22,16 @@
         <section>
             <div id="urlap">
                 <form action=""  method="post">
+                        <div class="row">
+                            <label for="terem" class="col-sm-4 col-form-label">Terem Név</label>
+                          <div class="col-sm-8">
+                            <select class="terem form-select">
+                                <option selected>Terem Név</option>
+                                <option value="1">Bergman</option>
+                                <option value="2">Labri</option>
+                              </select>
+                          </div>
+                        </div>
                         <div class="row">
                             <label for="fcim" class="col-sm-4 col-form-label">Film címe</label>
                           <div class="col-sm-8">
@@ -56,15 +69,21 @@
                           </div>
                         </div>
                         <div class="row">
-                            <label for="fvetitesiIdopot" class="col-sm-4 col-form-label">Vetítés időponja</label>
+                            <label for="fkezdesIdopot" class="col-sm-4 col-form-label">Kezdés időponja</label>
                           <div class="col-sm-8">
-                            <input type="time" id="fvetitesiIdopot" name="fvetitesiIdopot" required>
+                            <input type="time" id="fkezdesIdopot" name="fkezdesIdopot" required>
                           </div>
                         </div>
                         <div class="row">
                             <label for="fteljesJegyar" class="col-sm-4 col-form-label">Teljes jegyár</label>
                           <div class="col-sm-8">
                             <input type="number" class="form-control" id="fteljesJegyar" name="fteljesJegyar" value="1900" required>
+                          </div>
+                        </div>
+                        <div class="row">
+                            <label for="premier" class="col-sm-4 col-form-label">Permier Nap</label>
+                          <div class="col-sm-8">
+                            <input type="date" id="premier" name="premier" required>
                           </div>
                         </div>
                         <div class="d-grid gap-2 d-md-flex justify-content-end">
@@ -94,6 +113,7 @@
                     <thead>
                       <tr>
                         <th>Sorszám</th>
+                        <th>Terem</th>
                         <th>Film cím</th>
                         <th>Feliratos</th>
                         <th>Szinkronizált</th>
@@ -101,12 +121,15 @@
                         <th>Kezdés</th>
                         <th>Teljes jegyár</th>
                         <th>Premier</th>
+                        <th>Publikus</th>
                         <th>Törlés</th>
                         <th>Módosítás</th>
-                        <th>Publikus</th>
                       </tr>
                     </thead>
-                    <tr>
+                    <tbody id="szulo">
+
+                    </tbody>
+                    <!-- <tr>
                       <td>1</td>
                       <td>Clifford the Big Red Dog</td>
                       <td>Nem</td>
@@ -118,85 +141,8 @@
                       <td><button type="submit">Törlés</button></td>
                       <td><button type="submit">Módosítás</button></td>
                       <td><button type="submit">Publikus</button></td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Clifford the Big Red Dog</td>
-                        <td>Nem</td>
-                        <td>Igen</td>
-                        <td>2022.01.19.</td>
-                        <td>14:30</td>
-                        <td>1900</td>
-                        <td><button type="submit">Premier</button></td>
-                        <td><button type="submit">Törlés</button></td>
-                        <td><button type="submit">Módosítás</button></td>
-                        <td><button type="submit">Publikus</button></td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>Clifford the Big Red Dog</td>
-                        <td>Nem</td>
-                        <td>Igen</td>
-                        <td>2022.01.19.</td>
-                        <td>14:30</td>
-                        <td>1900</td>
-                        <td><button type="submit">Premier</button></td>
-                        <td><button type="submit">Törlés</button></td>
-                        <td><button type="submit">Módosítás</button></td>
-                        <td><button type="submit">Publikus</button></td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>Clifford the Big Red Dog</td>
-                        <td>Nem</td>
-                        <td>Igen</td>
-                        <td>2022.01.19.</td>
-                        <td>14:30</td>
-                        <td>1900</td>
-                        <td><button type="submit">Premier</button></td>
-                        <td><button type="submit">Törlés</button></td>
-                        <td><button type="submit">Módosítás</button></td>
-                        <td><button type="submit">Publikus</button></td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>Clifford the Big Red Dog</td>
-                        <td>Nem</td>
-                        <td>Igen</td>
-                        <td>2022.01.19.</td>
-                        <td>14:30</td>
-                        <td>1900</td>
-                        <td><button type="submit">Premier</button></td>
-                        <td><button type="submit">Törlés</button></td>
-                        <td><button type="submit">Módosítás</button></td>
-                        <td><button type="submit">Publikus</button></td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>Clifford the Big Red Dog</td>
-                        <td>Nem</td>
-                        <td>Igen</td>
-                        <td>2022.01.19.</td>
-                        <td>14:30</td>
-                        <td>1900</td>
-                        <td><button type="submit">Premier</button></td>
-                        <td><button type="submit">Törlés</button></td>
-                        <td><button type="submit">Módosítás</button></td>
-                        <td><button type="submit">Publikus</button></td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>Clifford the Big Red Dog</td>
-                        <td>Nem</td>
-                        <td>Igen</td>
-                        <td>2022.01.19.</td>
-                        <td>14:30</td>
-                        <td>1900</td>
-                        <td><button type="submit">Premier</button></td>
-                        <td><button type="submit">Törlés</button></td>
-                        <td><button type="submit">Módosítás</button></td>
-                        <td><button type="submit">Publikus</button></td>
-                      </tr>
+                    </tr> -->
+                    
                   </table>
             </div>
         </section>
