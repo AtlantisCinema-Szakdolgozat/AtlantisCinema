@@ -8,9 +8,22 @@ use App\Models\Nezo;
 class NezoController extends Controller
 {
     //
-    public function index()
+    public function index(Request $request)
     {
-        return Nezo::all();
+        $name = $request->query('q','');
+        $keres=Nezo::where('nev','like',"%$name%");
+        $sort = $request->query('desc','');
+        $a='';
+        if($sort==""){
+            return $keres->get();
+        }
+        else if($sort=="az"){
+            $a='ASC';
+        }
+        else if($sort=="za"){
+            $a='DESC';
+        }
+        return $keres->orderBy('nev', $a)->get();
     }
  
     public function show($id)

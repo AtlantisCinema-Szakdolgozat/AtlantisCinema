@@ -34,13 +34,13 @@
             <form class="row">
               <div class="col-xl-6 kereses">
                 
-                <input type="text"  class="form-control" id="keresesmezo" name="kereses" placeholder="Keresés"><br>
+                <input type="text"  class="form-control" id="keresesmezofoglalas" name="kereses" placeholder="Keresés"><br>
               </div>
-              <div class="col-xl-6">
+              <div id="rendezes" class="col-xl-6">
                 <select class="form-select" aria-label="Default select example">
                   <option selected>Rendezés</option>
-                  <option value="a-z">A-Z</option>
-                  <option value="z-a">Z-A</option>
+                  <option value="az">A-Z</option>
+                  <option value="za">Z-A</option>
                 </select>
               </div>
 
@@ -54,13 +54,15 @@
                     <th scope="col">Név</th>
                     <th scope="col">E-mail</th>
                   </tr>
-                </thead>
-                <tbody class="tablafoglaSzulo">
-                  <tr class="tablafoglaSablon">
+                   <tr class="tablafoglaSablon">
                     <th scope="row" class="sorszam"></th>
                     <td class="nev"></td>
                     <td class="email"></td>
                   </tr>
+                </thead>
+                <tbody class="tablafoglaSzulo">
+                  
+                 
                 
                 </tbody>
               </table>

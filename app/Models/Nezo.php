@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Nezo extends Model
 {
     use HasFactory;
-    protected $primaryKEY='nezoid';
+    protected $primaryKey='nezoid';
 }

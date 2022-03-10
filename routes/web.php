@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-<<<<<<< HEAD
+
 use App\Http\Controllers\MufajController;
 use App\Http\Controllers\FilmController;
 use App\Http\Controllers\SzemelyController;
@@ -12,8 +12,6 @@ use App\Http\Controllers\DolgozoController;
 use App\Http\Controllers\Film_SzemelyController;
 use App\Http\Controllers\SzekController;
 
-=======
->>>>>>> 1b859eeb78253155d69cc9a88ad15f8070a6bc44
 
 /*
 |--------------------------------------------------------------------------
@@ -26,10 +24,7 @@ use App\Http\Controllers\SzekController;
 |
 */
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 1b859eeb78253155d69cc9a88ad15f8070a6bc44
 Route::get('/', function () {
     return view('pages.index');
 });
