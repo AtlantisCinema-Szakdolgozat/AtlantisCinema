@@ -21,22 +21,22 @@ class KedvezmenyController extends Controller
     public function store(Request $request)
     {
         //kötelező oszlopok
-     $request->validate([
-        'tipus' => 'required',
-        'szazalek' =>  'required',
-        'leiras' =>  'required']);
+        $request->validate([
+            'tipus' => 'required',
+            'szazalek' =>  'required',
+            'leiras' =>  'required']);
         return Kedvezmeny::create($request->all());
     }
 
     public function update(Request $request, $id)
     {
+        
         $article = Kedvezmeny::find($id);
-     $request->validate([ 
-        'tipus' => 'required',
-        'szazalek' =>  'required',
-        'leiras' =>  'required']);
+        $request->validate([ 
+            'tipus' => 'required',
+            'szazalek' =>  'required',
+            'leiras' =>  'required']);
         $article->update($request->all());
-
         return $article;
     }
 

@@ -12,6 +12,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/ajax.js"></script>
     <script src="js/adminkedvezmenyek.js" type="text/javascript"></script>
     <script src="js/kedvezmenyek.js" type="text/javascript"></script>
 </head>
@@ -21,6 +22,12 @@
         <section>
             <div id="urlap">
                 <form action=""  method="post">
+                        <div class="row" id="index">
+                            <label for="kedvezmenyid" class="col-sm-3 col-form-label">Index</label>
+                          <div class="col-sm-9">
+                            <input type="text"  class="form-control" id="kedvezmenyid" name="kedvezmenyid" value="" required>
+                          </div>
+                        </div>
                         <div class="row">
                             <label for="tipus" class="col-sm-3 col-form-label">Jegy típus</label>
                         <div class="col-sm-9">
@@ -41,7 +48,8 @@
                         </div>
                         
                         <div class="d-grid gap-2 d-md-flex justify-content-end">
-                            <input type="button" class="btn " value="Felvitel">
+                            <input type="button" class="btn felvitel" value="Felvitel">
+                            <input type="button" class="btn modosit" value="Módosit">
                         </div>
                 </form>
             </div>

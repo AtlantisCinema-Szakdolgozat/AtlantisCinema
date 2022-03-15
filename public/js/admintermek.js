@@ -58,6 +58,9 @@ $(function(){
         ujTerem.oszlop=Number($("#oszlop").val());
         myAjax.postAdat(apivegpont,ujTerem);
         myAjax.getAdat(apivegpont,termek,termekMegjelenitese);
+        $("#tnev").val('');
+        $("#sor").val('');
+        $("#oszlop").val('');
     });
 
     $(window).on("mosdositas",(event)=>{
