@@ -11,7 +11,7 @@ use App\Http\Controllers\KedvezmenyController;
 use App\Http\Controllers\DolgozoController;
 use App\Http\Controllers\Film_SzemelyController;
 use App\Http\Controllers\SzekController;
-
+use App\Http\Controllers\foglalasFelvitelController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,6 +23,9 @@ use App\Http\Controllers\SzekController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::post('/foglalas-Felvitel', [foglalasFelvitelController::class, 'foglalasFelvitel'] )->name('foglalas-Felvitel');
+
 
 
 Route::get('/', function () {

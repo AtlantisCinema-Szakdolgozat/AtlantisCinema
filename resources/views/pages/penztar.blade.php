@@ -79,7 +79,7 @@
 
       <section class="secSablon">
           <!-- filmidőpontok sablonja -->
-        <div class="filmidopontSablon col-xxl-1 col-xl-2 col-lg-3 col-md-4 col-sm-4 col-xs-5">
+        <div class="filmidopontSablon col-xxl-2 col-xl-2 col-lg-3 col-md-4 col-sm-4 col-xs-5">
           <p class="terem"></p>
           <p class="idopont"></p>
           <p class="szinkron"></p>

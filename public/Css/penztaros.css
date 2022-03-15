@@ -54,13 +54,13 @@
     display: flex;
   }
   
-  .filmcim{
+  .filmCim{
   
     width: 260px;
   
   }
 
-  .filmcim p{
+  .filmcimek p{
       
     color: #be9d31;
     font-weight: bold;

@@ -7,10 +7,21 @@ use Illuminate\Database\Eloquent\Model;
 
 class Film extends Model
 {
-    // use HasFactory;
+    use HasFactory;
     protected $primaryKey='filmId';
-    protected $table ='films';
-    public $timestamps = false;
+    protected $table='films';
+    public $timestamps=false;
+
+
+
+    public function terem(){
+
+        return $this->belongsToMany(Terem::class,'vetites','filmId','teremId')->as('kapcsolat')->withPivot('szinkron','kezdesiIdo','vetitesNap');
+
+
+    }
+
+
 
     public function szemelyek(){
         return $this->belongsToMany(Szemely::class, 'film__szemelies','filmId','szemelyId')->as('kapcsolat')->withPivot('poszt');
@@ -22,4 +33,5 @@ class Film extends Model
     }
 
     
+
 }
