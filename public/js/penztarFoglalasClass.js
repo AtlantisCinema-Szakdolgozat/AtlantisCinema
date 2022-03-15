@@ -4,7 +4,7 @@ class Foglalas{
         this.elem=elem;
        
        
-        this.sorszam=this.elem.children(".sorszam");
+       
         this.nev=this.elem.children(".nev");
         this.email=this.elem.children(".email");
         this.adat=adat;
@@ -15,7 +15,7 @@ class Foglalas{
     }
 
     setAdatok(ertekek){
-        this.sorszam.html(ertekek.nezoId);
+        
         this.nev.html(ertekek.nev);
         this.email.html(ertekek.email);
         

@@ -8,5 +8,16 @@ use Illuminate\Database\Eloquent\Model;
 class Film extends Model
 {
     use HasFactory;
-    protected $primaryKEY='filmid';
+    protected $primaryKey='filmId';
+    protected $table='films';
+    public $timestamps=false;
+
+
+
+    public function terem(){
+
+        return $this->belongsToMany(Terem::class,'vetites','filmId','teremId')->as('kapcsolat')->withPivot('szinkron','kezdesiIdo','vetitesNap');
+
+
+    }
 }

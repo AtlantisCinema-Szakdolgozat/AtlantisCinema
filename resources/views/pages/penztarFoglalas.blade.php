@@ -50,12 +50,10 @@
               <table class="table table-striped">
                 <thead>
                   <tr>
-                    <th scope="col">Sorszám</th>
                     <th scope="col">Név</th>
                     <th scope="col">E-mail</th>
                   </tr>
                    <tr class="tablafoglaSablon">
-                    <th scope="row" class="sorszam"></th>
                     <td class="nev"></td>
                     <td class="email"></td>
                   </tr>
@@ -198,6 +196,38 @@
 
 
         <div id="jegyekdarab"class="col-xl-2 col-lg-1">
+        <form action="{{route('foglalas-Felvitel')}}" method="post">
+
+          @if(Session::has('sikeres'))
+
+        <div class="alert alert-sikeres">{{Session::get('sikeres')}}</div>
+
+          @endif
+
+        @if(Session::has('sikertelen'))
+
+        <div class="alert alert-danger">{{Session::get('sikertelen')}}</div>
+
+        @endif
+
+        @csrf
+
+<div class="container">
+
+
+<label for="nev">Név:</label>
+                    <input type="text" id="nev" name="nev" value="{{old('nev')}}" >
+
+<label for="email">Email:</label>
+<input type="text" placeholder="beta@emil.com" name="email" id="email"  value="{{old('email')}}">
+<button type="submit" class="foglalasgomb col">Foglalás</button>
+
+</div>
+</form>
+
+      
+
+
           <div id="jegyek">
 
                 <div id="diakjegy">
@@ -264,7 +294,7 @@
  
               </div>
               <div class="gombok row">
-                <button type="button" class="foglalasgomb col">Foglalás</button>
+                
                 <a href="/penztarVasarlas" class="col"><button type="button" class="vasarlas1">Vásárlás</button></a>
             </div>
             </aside>

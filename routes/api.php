@@ -15,6 +15,7 @@ use App\Http\Controllers\DolgozoController;
 
 use App\Http\Controllers\filmVetitesController;
 use App\Http\Controllers\filmMufajController;
+use App\Http\Controllers\penztarFoOldalController;
 
 
 
@@ -98,3 +99,5 @@ Route::post('/dolgozo', [DolgozoController::class, 'store']);
 Route::get('/filmVetites', [filmVetitesController::class, 'index']);
 
 Route::get('/filmMufaj', [filmMufajController::class, 'index']);
+
+Route::get('/penztarFoOldal', [penztarFoOldalController::class, 'index']);
