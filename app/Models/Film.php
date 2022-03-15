@@ -20,4 +20,18 @@ class Film extends Model
 
 
     }
+
+
+
+    public function szemelyek(){
+        return $this->belongsToMany(Szemely::class, 'film__szemelies','filmId','szemelyId')->as('kapcsolat')->withPivot('poszt');
+    }
+    
+    public function mufaj()
+    {
+        return $this->hasOne(Mufaj::class, 'mufajId', 'mufajId');
+    }
+
+    
+
 }

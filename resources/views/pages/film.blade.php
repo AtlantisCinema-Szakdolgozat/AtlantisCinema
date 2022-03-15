@@ -151,23 +151,23 @@
                         </div>
                         <div class="row">
                             <h2 class="col-sm-3">Műfaj</h2>
-                            <p class="col-sm-9 mufajId">Vígjáték, Családi</p>
+                            <p class="col-sm-9 mufaj">Vígjáték, Családi</p>
                         </div>
                         <div class="row">
                             <h2  class="col-sm-3">Szereplő</h2>
-                            <p class="col-sm-9">Darby Camp, Jack Whitehall, Izaac Wang, John Cleese</p>
+                            <p class="col-sm-9 szereplo">Darby Camp, Jack Whitehall, Izaac Wang, John Cleese</p>
                         </div>
                         <div class="row">
                             <h2  class="col-sm-3">Rendező</h2>
-                            <p class="col-sm-9">Walt Becker, Walt Becker</p>
+                            <p class="col-sm-9 rendezo">Walt Becker, Walt Becker</p>
                         </div>
                         <div class="row">
                             <h2  class="col-sm-3">Poszter</h2>
-                            <p class="col-sm-9">posters/4507D2R-lg.jpg</p>
+                            <p class="col-sm-9 poszter">posters/4507D2R-lg.jpg</p>
                         </div>
                         <div class="row">
                             <h2  class="col-sm-3">Link</h2>
-                            <p class="col-sm-9">posters/4507D2R-lg.jpg</p>
+                            <p class="col-sm-9 youtubeLink">posters/4507D2R-lg.jpg</p>
                         </div>
                         <div class="row button">
                             <div class="col-6">

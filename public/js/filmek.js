@@ -2,41 +2,46 @@ class Filmek{
     constructor(szuloelem, adat){
         this.szuloelem=szuloelem;
 
-        this.fimId=this.elem.children(".termeknev");
-        this.leiras=this.elem.children(".leiras");
-        this.ar=this.elem.children(".ar");
-
-        this.adat=adat;
-        this.filmekSorGeneralas();
-    }
-
-    // torles(){
-    //     let event = new CustomEvent("torles", {detail:this});
-    //     window.dispatchEvent(event);
-    // }
-
-    // mosdositas(){  
-    //     let event = new CustomEvent("mosdositas", {detail:this});
-    //     window.dispatchEvent(event);
-    // }
+        this.filmId=this.szuloelem.children(".filmadatok").children(".row").children(".filmID");
+        this.cim=this.szuloelem.children(".filmadatok").children(".row").children(".cim");
+        this.leiras=this.szuloelem.children(".filmadatok").children(".row").children(".leiras");
+        this.hossz=this.szuloelem.children(".filmadatok").children(".row").children(".hossz");
+        this.nyelv=this.szuloelem.children(".filmadatok").children(".row").children(".nyelv");
+        this.mufaj=this.szuloelem.children(".filmadatok").children(".row").children(".mufaj");
+        this.szereplo=this.szuloelem.children(".filmadatok").children(".row").children(".szereplo");
+        this.rendezo=this.szuloelem.children(".filmadatok").children(".row").children(".rendezo");
+        this.poszter=this.szuloelem.children(".filmadatok").children(".row").children(".poszter");
+        this.youtubeLink=this.szuloelem.children(".filmadatok").children(".row").children(".youtubeLink");
+        this.torles=this.szuloelem.children(".filmadatok").children(".row").children(".col-6").children(".torles");
+        this.modositas=this.szuloelem.children(".filmadatok").children(".row").children(".col-6").children(".modositas");
        
-    filmekSorGeneralas(){
-        for (const key in this.adat) {
-            
-            if(key!="created_at" && key!="updated_at"){
-                this.szuloelem.append("<td>"+this.adat[key]+"</td>");
-            }
-        }
-        this.szuloelem.append("<td><button type='torles' dataid="+this.adat.teremId+" class='torles'>Törlés</button></td>");
-        this.szuloelem.append("<td><button type='modositas' dataid="+this.adat.teremId+" class='modositas'>Módosítás</button></td>");
-        // $(this.szuloelem.find('.torles')).on("click", ()=>{
-        //      this.torles();
-        //  });
-
-        // $(this.szuloelem.find('.modositas')).on("click", ()=>{
-        //     this.mosdositas();
-        // });
+        this.adat=adat;
+        this.filmekSorGeneralas(this.adat);
     }
-
-  
+       
+    filmekSorGeneralas(ertekek){
+        console.log(ertekek.szemelyek);
+        this.filmId.html(this.adat.filmId);
+        this.cim.html(this.adat.cim);
+        this.leiras.html(this.adat.filmLeiras);
+        this.hossz.html(this.adat.hossz);
+        this.nyelv.html(this.adat.nyelv);
+        this.mufaj.html(this.adat.mufaj.mufaj);
+        let szemely="";
+        let rendezo="";
+        ertekek.szemelyek.forEach(element => {
+            if(element.kapcsolat.poszt="Szereplő"){
+                szemely+=element.nev+", ";
+                this.szereplo.html(szemely);
+            }
+            else{
+                rendezo+=element.nev+", ";
+                this.rendezo.html(rendezo);
+            }
+        });
+        this.poszter.html(this.adat.poszter);
+        this.youtubeLink.html(this.adat.youtubeLink);
+        this.torles.attr('value',this.adat.filmId);
+        this.modositas.attr('value',this.adat.filmId);
+    }
 }
