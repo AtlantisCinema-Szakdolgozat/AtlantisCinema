@@ -7,6 +7,19 @@ use Illuminate\Database\Eloquent\Model;
 
 class Film extends Model
 {
-    use HasFactory;
-    protected $primaryKEY='filmid';
+    // use HasFactory;
+    protected $primaryKey='filmId';
+    protected $table ='films';
+    public $timestamps = false;
+
+    public function szemelyek(){
+        return $this->belongsToMany(Szemely::class, 'film__szemelies','filmId','szemelyId')->as('kapcsolat')->withPivot('poszt');
+    }
+    
+    public function mufaj()
+    {
+        return $this->hasOne(Mufaj::class, 'mufajId', 'mufajId');
+    }
+
+    
 }

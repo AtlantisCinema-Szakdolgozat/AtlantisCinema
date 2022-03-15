@@ -8,5 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Film_Szemely extends Model
 {
     use HasFactory;
-    protected $primaryKEY=['filmid','szemelyid'];
+    protected $primaryKey=['filmId','szemelyId'];
+    public $incrementing = false;
 }
