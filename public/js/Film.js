@@ -13,9 +13,7 @@ class Film {
 
         /* Ezek csak a nyitó oldalon használt film adatok. A kiválasztott film ebből öröklődik? */  
 
-
         this.setAdatok(this.fAdat);
-        this.setMufaj(this.fAdat);
     }
 
     setAdatok(ertek) {
@@ -23,21 +21,7 @@ class Film {
         this.fCim.html(ertek.cim);
         this.leiras.html(ertek.filmLeiras);
         this.plakat.attr("src", ertek.poszter);
-        this.mufaj.html(ertek.mufajID);
-    }
-
-    setMufaj(ertek) {
-
-        const myAjax = new MyAjax();
-
-        const mufajApi = "http://127.0.0.1:8000/api/mufaj";
-        const mufajTomb = [];
-        myAjax.getAdatOnly(mufajApi, mufajTomb);
-
-        //console.log(ertek.mufajID);
-        //console.log(mufajTomb);
-
-        this.mufaj.html();
+        this.mufaj.html(ertek.mufaj);
     }
 
 }

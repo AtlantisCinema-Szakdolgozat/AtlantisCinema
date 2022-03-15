@@ -12,7 +12,11 @@ use App\Http\Controllers\NezoController;
 use App\Http\Controllers\SzekController;
 use App\Http\Controllers\KedvezmenyController;
 use App\Http\Controllers\DolgozoController;
+
 use App\Http\Controllers\filmVetitesController;
+use App\Http\Controllers\filmMufajController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +28,7 @@ use App\Http\Controllers\filmVetitesController;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
@@ -91,3 +96,5 @@ Route::delete('/dolgozo/{id}', [DolgozoController::class, 'delete']);
 Route::post('/dolgozo', [DolgozoController::class, 'store']);
 
 Route::get('/filmVetites', [filmVetitesController::class, 'index']);
+
+Route::get('/filmMufaj', [filmMufajController::class, 'index']);

@@ -29,8 +29,8 @@ class Idopontok{
     }
 
     setAdatok(ertekek){
-        this.terem.html(ertekek.terem);
-        this.idopont.html(ertekek.idopont);
+        this.terem.html(ertekek.teremId);
+        this.idopont.html(ertekek.kezdesiIdo);
         this.szinkron.html(ertekek.szinkron);
         this.ferohely.html(ertekek.ferohely);
     }
