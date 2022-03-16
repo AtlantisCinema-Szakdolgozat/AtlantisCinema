@@ -21,8 +21,8 @@ class Kedvezmenyek{
                 this.szuloelem.append("<td>"+this.adat[key]+"</td>");
             }
         }
-        this.szuloelem.append("<td><button type='torles' dataid="+this.adat.teremId+" class='torles'>Törlés</button></td>");
-        this.szuloelem.append("<td><button type='modositas' dataid="+this.adat.teremId+" class='modositas'>Módosítás</button></td>");
+        this.szuloelem.append("<td><button type='torles' dataid="+this.adat.kedvezmenyId+" class='torles'>Törlés</button></td>");
+        this.szuloelem.append("<td><button type='modositas' dataid="+this.adat.kedvezmenyId+" class='modositas'>Módosítás</button></td>");
         $(this.szuloelem.find('.torles')).on("click", ()=>{
              this.torles();
          });

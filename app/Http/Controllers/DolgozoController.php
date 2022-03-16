@@ -8,9 +8,22 @@ use App\Models\Dolgozo;
 class DolgozoController extends Controller
 {
     //
-    public function index()
+    public function index(Request $request)
     {
-        return Dolgozo::all();
+        $name = $request->query('q','');
+        $keres=Dolgozo::where('nev','like',"%$name%");
+        $sort = $request->query('desc','');
+        $a='';
+        if($sort==""){
+            return $keres->get();
+        }
+        else if($sort=="rend1"){
+            $a='ASC';
+        }
+        else if($sort=="rend2"){
+            $a='DESC';
+        }
+        return $keres->orderBy('nev', $a)->get(); 
     }
  
     public function show($id)
@@ -21,7 +34,7 @@ class DolgozoController extends Controller
     public function store(Request $request)
     {
      $request->validate([
-    'neve' => 'required',
+    'nev' => 'required',
     'jelszo' =>  'required',
     'munkakor' =>  'required']);
         return Dolgozo::create($request->all());
@@ -30,12 +43,11 @@ class DolgozoController extends Controller
     public function update(Request $request, $id)
     {
         $article = Dolgozo::find($id);
-     $request->validate([ 
-        'neve' => 'required',
-        'jelszo' =>  'required',
-        'munkakor' =>  'required']);
+        $request->validate([ 
+            'nev' => 'required',
+            'jelszo' =>  'required',
+            'munkakor' =>  'required']);
         $article->update($request->all());
-
         return $article;
     }
 

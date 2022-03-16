@@ -8,5 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Dolgozo extends Model
 {
     use HasFactory;
-    protected $primaryKEY='dolgozoid';
+    protected $primaryKey='dologozoId';
+    protected $fillable = ['nev','jelszo','munkakor'];
 }

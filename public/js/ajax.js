@@ -18,7 +18,6 @@ class MyAjax{
 
     getAdat(apivegpont,tomb,myCallback){
         tomb.splice(0,tomb.length);
-        console.log(tomb);
         $.ajax({
             url:apivegpont,
             type:"GET",
@@ -37,7 +36,6 @@ class MyAjax{
             type:"POST",
             data:adat,
             success:function(result){
-                console.log(result);
             }
         });
         
@@ -48,7 +46,6 @@ class MyAjax{
             url:apivegpont+"/"+id,
             type:"DELETE",
             success:function(data){
-                console.log(data);
                 calback(sor);
             },
             error: function(data) {
@@ -64,7 +61,6 @@ class MyAjax{
             type:"PUT",
             data:adat,
             success:function(result){
-                console.log(result);
             }
         });
     }

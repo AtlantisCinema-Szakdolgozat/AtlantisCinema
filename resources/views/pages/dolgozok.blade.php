@@ -7,12 +7,12 @@
     <title>Dolgozók</title>
     <link rel="stylesheet" href="css/admin.css">
     <link rel="stylesheet" href="css/dolgozok.css">
-    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/ajax.js"></script>
     <script src="js/admindolgozok.js" type="text/javascript"></script>
     <script src="js/dolgozok.js" type="text/javascript"></script>
   </head>
@@ -22,6 +22,12 @@
         <section>
             <div id="urlap">
                 <form action=""  method="post">
+                        <div class="row" id="index">
+                            <label for="dolgozoid" class="col-sm-3 col-form-label">Index</label>
+                          <div class="col-sm-9">
+                            <input type="text"  class="form-control" id="dolgozoid" name="dolgozoid" value="" required>
+                          </div>
+                        </div>
                         <div class="row">
                             <label for="dnev" class="col-sm-3 col-form-label">Dolgozó neve</label>
                           <div class="col-sm-9">
@@ -29,36 +35,45 @@
                           </div>
                         </div>
                         <div class="row">
-                            <label for="djelszó" class="col-sm-3 col-form-label">Jelszó</label>
+                            <label for="djelszo" class="col-sm-3 col-form-label">Jelszó</label>
                           <div class="col-sm-7">
-                            <input type="password" class="form-control" id="djelszó" name="djelszó" required>
+                            <input type="password" class="form-control" id="djelszo" name="djelszo" required>
                           </div>
                           <div class="col-sm-2">
                             <input type="button" class="btn jelszo" value="Új jelszó">
                           </div>
                         </div>
-                        <div class="row">
+                        <!-- <div class="row">
                             <label for="dmunkakor" class="col-sm-3 col-form-label">Munkaköre</label>
                           <div class="col-sm-9">
                             <input type="text" class="form-control" id="dmunkakor" name="dmunkakor" required>
                           </div>
+                        </div> -->
+                        <div class="row">
+                            <label for="dmunkakor" class="col-sm-3 col-form-label">Munkaköre</label>
+                          <div class="col-sm-9">
+                            <select class="dmunkakor form-select" id="dmunkakor">
+                                <option selected>Munkakör</option>
+                                <option value="Admin">Admin</option>
+                                <option value="Pénztáros">Pénztáros</option>
+                              </select>
+                          </div>
                         </div>
                         <div class="d-grid gap-2 d-md-flex justify-content-end">
-                            <input type="button" class="btn " value="Felvitel">
+                            <input type="button" class="btn felvitel" value="Felvitel">
+                            <input type="button" class="btn modosit" value="Módosit">
                         </div>
                 </form>
             </div>
             <div id="keresesRendezes" class="row">
                 <div id="kereses" class="col-sm-6"> 
-                  <input type="text" class="form-control" placeholder="Keresés">
+                  <input type="text" id="keresesmezo" class="form-control" placeholder="Keresés">
                 </div>
                 <div id="rendezes" class="col-sm-6">
-                        <select class="form-select">
+                        <select class="form-select" id="rendezeskivalasztasa">
                           <option selected>Rendezés</option>
-                          <option value="1">Név szeriznt növekvő</option>
-                          <option value="2">Név szeriznt csökkenő</option>
-                          <option value="1">Munkakör szeriznt növekvő</option>
-                          <option value="2">Munkakör szeriznt csökkenő</option>
+                          <option value="rend1">A-z</option>
+                          <option value="rend2">Z-a</option>
                         </select>
                 </div>
             </div>

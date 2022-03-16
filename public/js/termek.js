@@ -7,7 +7,9 @@ class Termek{
 
     torles(){
         let event = new CustomEvent("torles", {detail:this});
-        window.dispatchEvent(event);
+        console.log({detail:this});
+        console.log(event);
+        //window.dispatchEvent(event);
     }
 
     mosdositas(){  
