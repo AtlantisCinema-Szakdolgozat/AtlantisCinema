@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Dolgozo;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Gate;
 
 class DolgozoController extends Controller
 {
@@ -11,19 +13,19 @@ class DolgozoController extends Controller
     public function index(Request $request)
     {
         $name = $request->query('q','');
-        $keres=Dolgozo::where('nev','like',"%$name%");
-        $sort = $request->query('desc','');
-        $a='';
-        if($sort==""){
-            return $keres->get();
-        }
-        else if($sort=="rend1"){
-            $a='ASC';
-        }
-        else if($sort=="rend2"){
-            $a='DESC';
-        }
-        return $keres->orderBy('nev', $a)->get(); 
+            $keres=Dolgozo::where('name','like',"%$name%");
+            $sort = $request->query('desc','');
+            $a='';
+            if($sort==""){
+                return $keres->get();
+            }
+            else if($sort=="rend1"){
+                $a='ASC';
+            }
+            else if($sort=="rend2"){
+                $a='DESC';
+            }
+            return $keres->orderBy('name', $a)->get(); 
     }
  
     public function show($id)
@@ -33,19 +35,22 @@ class DolgozoController extends Controller
 
     public function store(Request $request)
     {
-     $request->validate([
-    'nev' => 'required',
-    'jelszo' =>  'required',
-    'munkakor' =>  'required']);
-        return Dolgozo::create($request->all());
+        $data =$request->validate([
+            'name' => 'required|unique:users|max:50',
+            'email' => 'required|max:200',
+            'password' =>  'required',
+            'munkakor' =>  'required']);
+        $data["password"]= Hash::make($data["password"]);
+        return Dolgozo::create($data);
     }
 
     public function update(Request $request, $id)
     {
         $article = Dolgozo::find($id);
         $request->validate([ 
-            'nev' => 'required',
-            'jelszo' =>  'required',
+            'name' => 'required',
+            'email' => 'required|max:200',
+            'password' =>  'required',
             'munkakor' =>  'required']);
         $article->update($request->all());
         return $article;

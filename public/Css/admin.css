@@ -22,7 +22,7 @@ nav > div > ul > .nav-item > .nav-link {
   color: rgb(212, 175, 55);
 }
 
-a:hover {
+.active:hover {
   background-color: #333333;
 }
 
