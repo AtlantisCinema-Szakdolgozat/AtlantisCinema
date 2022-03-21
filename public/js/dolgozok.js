@@ -19,8 +19,9 @@ class Dolgozok{
     }
 
     tablaSorGeneralas(){
+
         for (const key in this.adat) {
-            if(key!="created_at" && key!="updated_at"){
+            if(key=="id" || key=="name" || key=="email" || key=="munkakor" ){
                 this.szuloelem.append("<td>"+this.adat[key]+"</td>");
             }
         }

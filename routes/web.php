@@ -27,7 +27,6 @@ use App\Http\Controllers\foglalasFelvitelController;
 Route::post('/foglalas-Felvitel', [foglalasFelvitelController::class, 'foglalasFelvitel'] )->name('foglalas-Felvitel');
 
 
-
 Route::get('/', function () {
     return view('pages.index');
 });
@@ -66,40 +65,39 @@ Route::get('foglalasOldal', function () {
 
 Route::get('penztar', function () {
     return view('pages.penztar');
-});
+})->middleware('can:penztarosJogosultsag');
 
 Route::get('penztarFoglalas', function () {
     return view('pages.penztarFoglalas');
-});
+})->middleware('can:penztarosJogosultsag');
 
 Route::get('penztarVasarlas', function () {
     return view('pages.penztarVasarlas');
-});
+})->middleware('can:penztarosJogosultsag');
 
 Route::get('film', function () {
     return view('pages.film');
-});
+})->middleware('can:adminJogosultsag');
 
 Route::get('terem', function () {
     return view('pages.terem');
-});
+})->middleware('can:adminJogosultsag');
 
 Route::get('vetites', function () {
     return view('pages.vetites');
-});
+})->middleware('can:adminJogosultsag');
 
 Route::get('kedvezmeny', function () {
     return view('pages.kedvezmeny');
-});
+})->middleware('can:adminJogosultsag');
 
 Route::get('dolgozok', function () {
     return view('pages.dolgozok');
-});
+})->middleware('can:adminJogosultsag');
 
 Route::get('statisztika', function () {
     return view('pages.statisztika');
-});
+})->middleware('can:adminJogosultsag');
+Auth::routes();
 
-Route::get('dolgozo', function () {
-    return view('pages.dolgozo');
-});
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

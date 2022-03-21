@@ -14,6 +14,7 @@ use App\Http\Controllers\KedvezmenyController;
 use App\Http\Controllers\DolgozoController;
 use App\Http\Controllers\filmVetitesController;
 use App\Http\Controllers\penztarFoOldalController;
+use App\Http\Controllers\AuthController;
 
 
 
@@ -27,7 +28,6 @@ use App\Http\Controllers\penztarFoOldalController;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-
 
 Route::get('/mufaj', [MufajController::class, 'index']);
 Route::put('/mufaj/{id}', [MufajController::class, 'update']);
@@ -72,10 +72,10 @@ Route::delete('/nezo/{id}', [NezoController::class, 'delete']);
 Route::post('/nezo', [NezoController::class, 'store']);
 
 Route::get('/szek', [SzekController::class, 'index']);
-Route::put('/nezo/{id}', [SzekController::class, 'update']);
-Route::get('/nezo/{nezo}', [SzekController::class, 'show']);
-Route::delete('/nezo/{id}', [SzekController::class, 'delete']);
-Route::post('/nezo', [SzekController::class, 'store']);
+Route::put('/szek/{id}', [SzekController::class, 'update']);
+Route::get('/szek/{szek}', [SzekController::class, 'show']);
+Route::delete('/szek/{id}', [SzekController::class, 'delete']);
+Route::post('/szek', [SzekController::class, 'store']);
 
 Route::get('/kedvezmeny', [KedvezmenyController::class, 'index']);
 Route::put('/kedvezmeny/{id}', [KedvezmenyController::class, 'update']);
@@ -88,6 +88,7 @@ Route::put('/dolgozo/{id}', [DolgozoController::class, 'update']);
 Route::get('/dolgozo/{dolgozo}', [DolgozoController::class, 'show']);
 Route::delete('/dolgozo/{id}', [DolgozoController::class, 'delete']);
 Route::post('/dolgozo', [DolgozoController::class, 'store']);
-Route::get('/filmVetites', [filmVetitesController::class, 'index']);
-Route::get('/penztarFoOldal', [penztarFoOldalController::class, 'index']);
 
+Route::get('/filmVetites', [filmVetitesController::class, 'index']);
+
+Route::get('/penztarFoOldal', [penztarFoOldalController::class, 'index']);

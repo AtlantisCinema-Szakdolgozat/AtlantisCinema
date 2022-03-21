@@ -8,6 +8,7 @@ class MyAjax{
         $.ajax({
             url:apivegpont,
             type:"GET",
+            headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
             success:function(result){
                 result.forEach(element => {
                     tomb.push(element)
@@ -21,6 +22,7 @@ class MyAjax{
         $.ajax({
             url:apivegpont,
             type:"GET",
+            headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
             success:function(result){
                 result.forEach(element => {
                     tomb.push(element)
@@ -35,6 +37,7 @@ class MyAjax{
             url:apivegpont,
             type:"POST",
             data:adat,
+            headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
             success:function(result){
             }
         });
@@ -45,6 +48,7 @@ class MyAjax{
         $.ajax({
             url:apivegpont+"/"+id,
             type:"DELETE",
+            headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
             success:function(data){
                 calback(sor);
             },
@@ -60,6 +64,7 @@ class MyAjax{
             url:apivegpont+"/"+id,
             type:"PUT",
             data:adat,
+            headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
             success:function(result){
             }
         });
