@@ -5,11 +5,11 @@ $(function () {
   const vetitesekTomb = [];
   const foglalasTomb = [];
   let eventTomb = [];
+  let eventTomb2 = [];
   const myAjax = new MyAjax();
   myAjax.getAdat(fajlnev, vetitesekTomb, filmetkiir);
   myAjax.getAdat(fajlnevFoglalas, foglalasTomb, foglalasKiir);
-  console.log(foglalasTomb);
-
+  //console.log(foglalasTomb);
 
 
 
@@ -21,10 +21,18 @@ $(function () {
 
   /* PénztárFoOldal*/
   $(window).on("idopontBetolt", (event) => {
+    console.log(event.detail);
     eventTomb.push(event.detail);
+    //console.log(event.detail.adat.nyelv);
     localStorage.setItem("kulcs", JSON.stringify(eventTomb));
-    console.log(eventTomb);
   });
+  $(window).on("nyelvKiir", (event) => {
+    console.log(event.detail);
+    eventTomb2.push(event.detail);
+    //console.log(event.detail.adat.nyelv);
+    localStorage.setItem("nyelv", JSON.stringify(eventTomb2));
+  });
+  
   function idopontKiir(szuloelem, index) {
     //idpontok egy adott filmhez
 
@@ -36,10 +44,10 @@ $(function () {
     const idopontTomb = vetitesekTomb[index].terem;
 
 
-    idopontTomb.forEach(function (elem) {
+    idopontTomb.forEach(function (elem,index) {
       let ujElem = sablonElem.clone().appendTo(szuloelem);
-       console.log(ujElem);
-      const ujIdopontok = new Idopontok(ujElem, elem);
+     console.log(elem);
+      const ujIdopontok = new Idopontok(ujElem, elem, vetitesekTomb[index].nyelv);
       // console.log(ujIdopontok);
     });
     sablonElem.hide();
@@ -52,6 +60,7 @@ $(function () {
     szuloelem.empty();
     sablonElem.show();
     vetitesekTomb.forEach(function (elem, index) {
+      //console.log(elem);
       let ujElem = sablonElem.clone().appendTo(szuloelem);
       // console.log(ujElem);
       const ujFilm = new Filmek(ujElem, elem);
@@ -79,7 +88,7 @@ function foglalasKiir(){
   
   szuloelem.empty();
   sablonElem.show();
-  console.log(foglalasTomb);
+  //console.log(foglalasTomb);
   foglalasTomb.forEach(function (elem) {
     let ujElem = sablonElem.clone().appendTo(szuloelem);
     // console.log(ujElem);

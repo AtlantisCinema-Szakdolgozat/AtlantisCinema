@@ -5,6 +5,7 @@ class Filmek{
         this.filmcim=this.elem.children(".filmcimek").children(".filmCim");
         this.filmIdopont=this.elem.children(".filmidopont");
         this.adat=adat;
+        //console.log(adat);
         this.setAdatok(this.adat);
         
         
@@ -15,4 +16,9 @@ class Filmek{
 
     }
 
+
+
+
+
+    
 }
