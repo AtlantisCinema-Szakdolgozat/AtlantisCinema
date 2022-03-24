@@ -206,16 +206,15 @@ $("#rendezes").on("change",function(){
   foglalasTomb.splice();
   let szempont=$(this).val();
   switch(szempont) {
-      case "az":
-          apivegpont+="?desc=az";
+      case"rendezesSzempont1":
+          apivegpont+="?desc=rendezesSzempont1";
         break;
-      case "za":
-          apivegpont+="?desc=za";
+      case"rendezesSzempont2":
+          apivegpont+="?desc=rendezesSzempont2";
         break;
       default:
+        break;
     }
-
-
     myAjax.getAdat(apivegpont,foglalasTomb,foglalasKiir);
 })
 

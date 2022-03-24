@@ -17,10 +17,10 @@ class NezoController extends Controller
         if($sort==""){
             return $keres->get();
         }
-        else if($sort=="az"){
+        else if($sort=="rendezesSzempont1"){
             $a='ASC';
         }
-        else if($sort=="za"){
+        else if($sort=="rendezesSzempont2"){
             $a='DESC';
         }
         return $keres->orderBy('nev', $a)->get();
