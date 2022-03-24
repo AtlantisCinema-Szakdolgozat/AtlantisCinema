@@ -36,34 +36,11 @@
     @section('content')
 
       <nav class="row datumnapSzulo">
-        <div class="datumnapSablon col">
-          <p class="nap">Hetfő</p>
-          <p class="datum">2020.20.20</p>
-        </div>
-        <div class="datumnap col">
-          <p>Hetfő</p>
-          <p>2020.20.20</p>
-        </div>
-        <div class="datumnap col">
-          <p>Hetfő</p>
-          <p>2020.20.20</p>
-        </div>
-        <div class="datumnap col">
-          <p>Hetfő</p>
-          <p>2020.20.20</p>
-        </div>
-        <div class="datumnap col">
-          <p>Hetfő</p>
-          <p>2020.20.20</p>
-        </div>
-        <div class="datumnap col">
-          <p>Hetfő</p>
-          <p>2020.20.20</p>
-        </div>
-        <div class="datumnap col">
-          <p>Hetfő</p>
-          <p>2020.20.20</p>
-        </div>
+        <!-- <div class="datumnapSablon col">
+          <p class="nap"></p>
+          <p class="datum"></p>
+        </div> -->
+        
       </nav>
 
       <article>

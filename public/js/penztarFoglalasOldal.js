@@ -1,6 +1,7 @@
 $(function(){
     let adat=JSON.parse(localStorage.getItem("kulcs"));
     let nyelv=JSON.parse(localStorage.getItem("nyelv"));
+    
     kiir(adat);
     kiir2(nyelv);
 function kiir(adat){

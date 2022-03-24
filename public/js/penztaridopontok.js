@@ -3,7 +3,7 @@ class Idopontok{
     constructor(elem, adat,nyelv){
         this.elem=elem;
         this.nyelv=nyelv;
-        console.log(adat);
+        //console.log(adat);
         this.filmidopontSablon=this.elem.children(".filmidopontSablon");
         this.foglalj=this.elem.children(".foglalj");
         this.terem=this.elem.children(".terem");
@@ -31,7 +31,7 @@ class Idopontok{
     }
 
     setAdatok(ertekek,nyelv){
-        console.log(ertekek);
+        //console.log(ertekek);
         this.terem.html(ertekek.teremNev);
         this.idopont.html(ertekek.kapcsolat.kezdesiIdo);
         this.szinkron.html(nyelv);
@@ -40,7 +40,6 @@ class Idopontok{
 
 
     idopontbetoltTrigger(){
-        let a;
         let esemeny=new CustomEvent("idopontBetolt",{
             detail:this.adat,
 
