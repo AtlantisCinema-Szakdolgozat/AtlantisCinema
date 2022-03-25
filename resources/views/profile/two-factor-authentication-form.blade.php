@@ -1,18 +1,18 @@
 <x-jet-action-section>
     <x-slot name="title">
-        {{ __('Two Factor Authentication') }}
+        {{ __('Két kulcsos htelesítés') }}
     </x-slot>
 
     <x-slot name="description">
-        {{ __('Add additional security to your account using two factor authentication.') }}
+        {{ __('A két kulcsos hitelesítés növeli a fiókja biztonságát.') }}
     </x-slot>
 
     <x-slot name="content">
         <h3 class="text-lg font-medium text-gray-900">
             @if ($this->enabled)
-                {{ __('You have enabled two factor authentication.') }}
+                {{ __('Engedéjezett a kétkulcsos hitelesítés.') }}
             @else
-                {{ __('You have not enabled two factor authentication.') }}
+                {{ __('Nem engedéjezett a kétkulcsos hitelesítés.') }}
             @endif
         </h3>
 
@@ -26,7 +26,7 @@
             @if ($showingQrCode)
                 <div class="mt-4 max-w-xl text-sm text-gray-600">
                     <p class="font-semibold">
-                        {{ __('Two factor authentication is now enabled. Scan the following QR code using your phone\'s authenticator application.') }}
+                        {{ __('A két kulcsos hitelesítés most engedélyezve van. Olvassa be a következő QR-kódot telefonja hitelesítő alkalmazásával.') }}
                     </p>
                 </div>
 

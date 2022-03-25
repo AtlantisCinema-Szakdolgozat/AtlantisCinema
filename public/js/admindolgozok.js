@@ -49,25 +49,28 @@ $(function(){
     $(window).on("torles",(event)=>{
         apivegpont="http://127.0.0.1:8000/api/dolgozo";
         console.log(event);
-        myAjax.deletAdat(apivegpont,event.detail.adat.dologozoId,sikeresTorles,event.detail.szuloelem);
+        myAjax.deletAdat(apivegpont,event.detail.adat.id,sikeresTorles,event.detail.szuloelem);
     });
 
     $(".felvitel").on("click", ()=>{
         let ujDolgozo={};
-        ujDolgozo.nev=$("#dnev").val();
-        ujDolgozo.jelszo=$("#djelszo").val();
+        ujDolgozo.name=$("#dnev").val();
+        ujDolgozo.email=$("#demail").val();
+        ujDolgozo.password=$("#djelszo").val();
         ujDolgozo.munkakor=$("#dmunkakor").val();
         myAjax.postAdat(apivegpont,ujDolgozo);
         myAjax.getAdat(apivegpont,dolgozok,dolgozokMegjelenitese);
         $("#dnev").val('');
+        $("#demail").val('');
         $("#djelszo").val('');
         $("#dmunkakor").val('');
     });
 
     $(window).on("mosdositas",(event)=>{
-        $("#dolgozoid").val(event.detail.adat.dologozoId);
-        $("#dnev").val(event.detail.adat.nev);
-        $("#djelszo").val(event.detail.adat.jelszo);
+        $("#dolgozoid").val(event.detail.adat.id);
+        $("#dnev").val(event.detail.adat.name);
+        $("#demail").val(event.detail.adat.email);
+        $("#djelszo").val(event.detail.adat.password);
         $("#djelszo").css("display", "block");
         $("#dmunkakor").val(event.detail.adat.munkakor);
         $(".felvitel").css("display", "none");
@@ -77,14 +80,16 @@ $(function(){
 
     $(".modosit").on("click", ()=>{
         let modositottDolgozo={};
-        modositottDolgozo.dolgozoId=$("#dolgozoid").val();
-        modositottDolgozo.nev=$("#dnev").val();
-        modositottDolgozo.jelszo=$("#djelszo").val();
+        modositottDolgozo.id=$("#dolgozoid").val();
+        modositottDolgozo.name=$("#dnev").val();
+        modositottDolgozo.email=$("#demail").val();
+        modositottDolgozo.password=$("#djelszo").val();
         $("#djelszo").css("display", "inline");
         modositottDolgozo.munkakor=$("#dmunkakor").val();
-        myAjax.putAdat(apivegpont,modositottDolgozo,modositottDolgozo.dolgozoId);
+        myAjax.putAdat(apivegpont,modositottDolgozo,modositottDolgozo.id);
         myAjax.getAdat(apivegpont,dolgozok,dolgozokMegjelenitese);
         $("#dnev").val('');
+        $("#demail").val('');
         $("#djelszo").val('');
         $("#sor").val('');
         $("#dmunkakor").val('');

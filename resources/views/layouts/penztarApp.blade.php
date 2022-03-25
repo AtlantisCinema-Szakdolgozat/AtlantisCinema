@@ -1,5 +1,5 @@
 <main>
-    @include('includes.PenztarFejlec')
+    @include('includes.Felhasznaloadatok')
     @yield('content')
 
 </main>

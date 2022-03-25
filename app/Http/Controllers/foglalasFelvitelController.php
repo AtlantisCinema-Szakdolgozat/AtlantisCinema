@@ -19,7 +19,7 @@ class foglalasFelvitelController extends Controller
 
         $nezo -> nev = $request -> nev;
         $nezo -> email = $request -> email;
-
+        
         $res = $nezo -> save();
 
         if($res){

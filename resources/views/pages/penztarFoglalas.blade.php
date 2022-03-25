@@ -10,7 +10,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     <script src="js/ajax.js"></script>
     <script src="js/penztarFoglalasClass.js" type="text/javascript"></script>
     <script src="js/penztarFoscript.js" type="text/javascript"></script>
@@ -36,16 +35,16 @@
                 
                 <input type="text"  class="form-control" id="keresesmezofoglalas" name="kereses" placeholder="Keresés"><br>
               </div>
-              <div id="rendezes" class="col-xl-6">
-                <select class="form-select" aria-label="Default select example">
+              <div class="col-xl-6">
+                <select id="rendezes" class="form-select" aria-label="Default select example">
                   <option selected>Rendezés</option>
-                  <option value="az">A-Z</option>
-                  <option value="za">Z-A</option>
+                  <option value="rendezesSzempont1">A-Z</option>
+                  <option value="rendezesSzempont2">Z-A</option>
                 </select>
               </div>
 
                
-                
+      
               </form> 
               <table class="table table-striped">
                 <thead>
@@ -75,7 +74,6 @@
             <p class="terem"></p>
             <p class="idopont"></p>
             <p class="szinkron"></p>
-            <p class="ferohely"></p>
             </div>
           <div id="vaszon"></div>
           

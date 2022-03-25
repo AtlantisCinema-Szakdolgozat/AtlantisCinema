@@ -23,11 +23,6 @@
       integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
       crossorigin="anonymous"
     ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
-      integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
-      crossorigin="anonymous"
-    ></script>
     <script src="js/ajax.js"></script>
     <!--<script src="penztarFoOldalScript.js" type="text/javascript"></script> -->
     <script src="js/penztarFoscript.js" type="text/javascript"></script>
@@ -40,35 +35,12 @@
     @extends('layouts.penztarApp')
     @section('content')
 
-      <nav class="row">
-        <div class="datumnap col">
-          <p>Hetfő</p>
-          <p>2020.20.20</p>
-        </div>
-        <div class="datumnap col">
-          <p>Hetfő</p>
-          <p>2020.20.20</p>
-        </div>
-        <div class="datumnap col">
-          <p>Hetfő</p>
-          <p>2020.20.20</p>
-        </div>
-        <div class="datumnap col">
-          <p>Hetfő</p>
-          <p>2020.20.20</p>
-        </div>
-        <div class="datumnap col">
-          <p>Hetfő</p>
-          <p>2020.20.20</p>
-        </div>
-        <div class="datumnap col">
-          <p>Hetfő</p>
-          <p>2020.20.20</p>
-        </div>
-        <div class="datumnap col">
-          <p>Hetfő</p>
-          <p>2020.20.20</p>
-        </div>
+      <nav class="row datumnapSzulo">
+        <!-- <div class="datumnapSablon col">
+          <p class="nap"></p>
+          <p class="datum"></p>
+        </div> -->
+        
       </nav>
 
       <article>
@@ -83,7 +55,6 @@
           <p class="terem"></p>
           <p class="idopont"></p>
           <p class="szinkron"></p>
-          <p class="ferohely"></p>
           <a href="/penztarFoglalas" class="foglalj">Foglalj!</a>
         </div>
         <!-- filmek sablonja -->
@@ -100,10 +71,7 @@
       </section>
    
       
-      <footer>
-        <button type="button" class="kijelentkezes">Kijelentkezés</button>
-
-      </footer>
+      
     @endsection
   </body>
 </html>
