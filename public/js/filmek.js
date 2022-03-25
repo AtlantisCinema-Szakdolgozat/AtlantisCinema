@@ -18,9 +18,18 @@ class Filmek{
         this.adat=adat;
         this.filmekSorGeneralas(this.adat);
     }
+
+    torles(){
+        let event = new CustomEvent("torles", {detail:this});
+        window.dispatchEvent(event);
+    }
+
+    mosdositas(){  
+        let event = new CustomEvent("mosdositas", {detail:this});
+        window.dispatchEvent(event);
+    }
        
     filmekSorGeneralas(ertekek){
-        console.log(ertekek.szemelyek);
         this.filmId.html(this.adat.filmId);
         this.cim.html(this.adat.cim);
         this.leiras.html(this.adat.filmLeiras);
@@ -43,5 +52,12 @@ class Filmek{
         this.youtubeLink.html(this.adat.youtubeLink);
         this.torles.attr('value',this.adat.filmId);
         this.modositas.attr('value',this.adat.filmId);
+        $(this.szuloelem.find('.torles')).on("click", ()=>{
+             this.torles();
+         });
+
+        $(this.szuloelem.find('.modositas')).on("click", ()=>{
+            this.mosdositas();
+        });
     }
 }

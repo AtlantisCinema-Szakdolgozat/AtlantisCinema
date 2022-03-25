@@ -15,6 +15,7 @@ use App\Http\Controllers\DolgozoController;
 use App\Http\Controllers\filmVetitesController;
 use App\Http\Controllers\penztarFoOldalController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\FilmSzemelyekMufajController;
 
 
 
@@ -90,5 +91,7 @@ Route::delete('/dolgozo/{id}', [DolgozoController::class, 'delete']);
 Route::post('/dolgozo', [DolgozoController::class, 'store']);
 
 Route::get('/filmVetites', [filmVetitesController::class, 'index']);
+
+Route::get('/filmSzemelyMufaj', [FilmSzemelyekMufajController::class, 'index']);
 
 Route::get('/penztarFoOldal', [penztarFoOldalController::class, 'index']);

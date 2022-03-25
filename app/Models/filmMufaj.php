@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class filmMufaj extends Model
 {
     use HasFactory;
-    protected $primaryKEY='filmId';
+    protected $primaryKey='filmId';
 }
