@@ -1,21 +1,27 @@
+
 $(function() {
 
 
     const myAjax = new MyAjax();
 
-    /* API végpontok: */
-    const filmApi = "http://127.0.0.1:8000/api/filmMufaj";     // film tábla, összekötve a műfaj táblával
-    const vetitesApi = "http://127.0.0.1:8000/api/vetites";
 
-    /* Adat tömbök: */
+    /* API végpontok: */
+
+    const filmApi = "http://127.0.0.1:8000/api/filmMufaj";   // film tábla, összekötve a műfaj táblával
+
+
+    /* Adat tömb: */
+
     const filmekTomb = [];
 
 
-    /* Adatok lekérése és tárolása: */
+    /* Adatok lekérése, tárolása és megjelenítése: */
+
     myAjax.getAdat(filmApi, filmekTomb, filmekMegjelenitese);
 
 
-    /* Adatok megjelenítése: */
+
+    /* Megjelenítés: */
 
     function filmekMegjelenitese() {
 
@@ -26,8 +32,6 @@ $(function() {
 
             const ujElem = sablonElem.clone().appendTo(szuloElem);
             const ujFilm = new Film(ujElem, filmekTomb[index]); 
-
-            console.log(filmekTomb);
         });
 
         sablonElem.remove(); 

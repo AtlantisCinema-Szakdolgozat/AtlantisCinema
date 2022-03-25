@@ -35,16 +35,16 @@
                 
                 <input type="text"  class="form-control" id="keresesmezofoglalas" name="kereses" placeholder="Keresés"><br>
               </div>
-              <div id="rendezes" class="col-xl-6">
-                <select class="form-select" aria-label="Default select example">
+              <div class="col-xl-6">
+                <select id="rendezes" class="form-select" aria-label="Default select example">
                   <option selected>Rendezés</option>
-                  <option value="az">A-Z</option>
-                  <option value="za">Z-A</option>
+                  <option value="rendezesSzempont1">A-Z</option>
+                  <option value="rendezesSzempont2">Z-A</option>
                 </select>
               </div>
 
                
-                
+      
               </form> 
               <table class="table table-striped">
                 <thead>
@@ -74,7 +74,6 @@
             <p class="terem"></p>
             <p class="idopont"></p>
             <p class="szinkron"></p>
-            <p class="ferohely"></p>
             </div>
           <div id="vaszon"></div>
           

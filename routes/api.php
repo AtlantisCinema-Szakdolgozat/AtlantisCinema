@@ -17,6 +17,9 @@ use App\Http\Controllers\penztarFoOldalController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\FilmSzemelyekMufajController;
 
+use App\Http\Controllers\filmMufajController;
+use App\Http\Controllers\vetitesFilmMufajController;
+
 
 
 /*
@@ -90,7 +93,11 @@ Route::get('/dolgozo/{dolgozo}', [DolgozoController::class, 'show']);
 Route::delete('/dolgozo/{id}', [DolgozoController::class, 'delete']);
 Route::post('/dolgozo', [DolgozoController::class, 'store']);
 
+Route::get('/filmMufaj', [filmMufajController::class, 'index']);
+Route::get('/vetitesFilmMufaj', [vetitesFilmMufajController::class, 'index']);
+
 Route::get('/filmVetites', [filmVetitesController::class, 'index']);
+
 
 Route::get('/filmSzemelyMufaj', [FilmSzemelyekMufajController::class, 'index']);
 

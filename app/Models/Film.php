@@ -16,7 +16,7 @@ class Film extends Model
 
     public function terem(){
 
-        return $this->belongsToMany(Terem::class,'vetites','filmId','teremId')->as('kapcsolat')->withPivot('szinkron','kezdesiIdo','vetitesNap');
+        return $this->belongsToMany(Terem::class,'vetites','filmId','teremId')->as('kapcsolat')->withPivot('vetitesId','szinkron','kezdesiIdo','vetitesNap');
 
 
     }
@@ -33,5 +33,12 @@ class Film extends Model
     }
 
     
+    
+    public function vetites()
+    {
+
+        return $this->hasMany(Vetites::class, 'filmId', 'filmId');
+    }
+
 
 }

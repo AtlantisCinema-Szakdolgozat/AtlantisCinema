@@ -23,7 +23,6 @@
                 <p class="terem"></p>
                 <p class="idopont"></p>
                 <p class="szinkron"></p>
-                <p class="ferohely"></p>
                 </div>
                 </nav>
         <section>

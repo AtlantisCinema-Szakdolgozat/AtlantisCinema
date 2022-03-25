@@ -35,35 +35,12 @@
     @extends('layouts.penztarApp')
     @section('content')
 
-      <nav class="row">
-        <div class="datumnap col">
-          <p>Hetfő</p>
-          <p>2020.20.20</p>
-        </div>
-        <div class="datumnap col">
-          <p>Hetfő</p>
-          <p>2020.20.20</p>
-        </div>
-        <div class="datumnap col">
-          <p>Hetfő</p>
-          <p>2020.20.20</p>
-        </div>
-        <div class="datumnap col">
-          <p>Hetfő</p>
-          <p>2020.20.20</p>
-        </div>
-        <div class="datumnap col">
-          <p>Hetfő</p>
-          <p>2020.20.20</p>
-        </div>
-        <div class="datumnap col">
-          <p>Hetfő</p>
-          <p>2020.20.20</p>
-        </div>
-        <div class="datumnap col">
-          <p>Hetfő</p>
-          <p>2020.20.20</p>
-        </div>
+      <nav class="row datumnapSzulo">
+        <!-- <div class="datumnapSablon col">
+          <p class="nap"></p>
+          <p class="datum"></p>
+        </div> -->
+        
       </nav>
 
       <article>
@@ -78,7 +55,6 @@
           <p class="terem"></p>
           <p class="idopont"></p>
           <p class="szinkron"></p>
-          <p class="ferohely"></p>
           <a href="/penztarFoglalas" class="foglalj">Foglalj!</a>
         </div>
         <!-- filmek sablonja -->
@@ -95,10 +71,7 @@
       </section>
    
       
-      <footer>
-        <button type="button" class="kijelentkezes">Kijelentkezés</button>
-
-      </footer>
+      
     @endsection
   </body>
 </html>
