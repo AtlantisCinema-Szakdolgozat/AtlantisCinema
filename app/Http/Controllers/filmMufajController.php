@@ -10,7 +10,9 @@ class filmMufajController extends Controller
     public function index()
     {
         return DB::table('films')
+        
         -> join('mufajs', 'films.mufajId','=','mufajs.mufajId')
+
         -> select(
             'films.cim',
             'films.filmLeiras',
@@ -18,8 +20,10 @@ class filmMufajController extends Controller
             'films.nyelv',
             'films.poszter',
             'films.youtubeLink',
-            'mufajs.mufaj'
+            'mufajs.mufaj',
+
             )
+
         ->get();
     }
  

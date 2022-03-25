@@ -11,6 +11,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script src="js/ajax.js"></script>
+    <script src="js/penztarFoglalasClass.js" type="text/javascript"></script>
+    <script src="js/penztarFoscript.js" type="text/javascript"></script>
     <script src="js/penztarFilmek.js" type="text/javascript"></script>
     <script src="js/penztaridopontok.js" type="text/javascript"></script>
     <script src="js/penztarFoglalasOldal.js" type="text/javascript"></script>
@@ -31,13 +34,13 @@
             <form class="row">
               <div class="col-xl-6 kereses">
                 
-                <input type="text"  class="form-control" id="keresesmezo" name="kereses" placeholder="Keresés"><br>
+                <input type="text"  class="form-control" id="keresesmezofoglalas" name="kereses" placeholder="Keresés"><br>
               </div>
-              <div class="col-xl-6">
+              <div id="rendezes" class="col-xl-6">
                 <select class="form-select" aria-label="Default select example">
                   <option selected>Rendezés</option>
-                  <option value="a-z">A-Z</option>
-                  <option value="z-a">Z-A</option>
+                  <option value="az">A-Z</option>
+                  <option value="za">Z-A</option>
                 </select>
               </div>
 
@@ -47,27 +50,18 @@
               <table class="table table-striped">
                 <thead>
                   <tr>
-                    <th scope="col">Sorszám</th>
                     <th scope="col">Név</th>
                     <th scope="col">E-mail</th>
                   </tr>
+                   <tr class="tablafoglaSablon">
+                    <td class="nev"></td>
+                    <td class="email"></td>
+                  </tr>
                 </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Gipszjakab@gmail.com</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>@fat</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>Jacob</td>
-                    <td>@twitter</td>
-                  </tr>
+                <tbody class="tablafoglaSzulo">
+                  
+                 
+                
                 </tbody>
               </table>
 
@@ -202,6 +196,38 @@
 
 
         <div id="jegyekdarab"class="col-xl-2 col-lg-1">
+        <form action="{{route('foglalas-Felvitel')}}" method="post">
+
+          @if(Session::has('sikeres'))
+
+        <div class="alert alert-sikeres">{{Session::get('sikeres')}}</div>
+
+          @endif
+
+        @if(Session::has('sikertelen'))
+
+        <div class="alert alert-danger">{{Session::get('sikertelen')}}</div>
+
+        @endif
+
+        @csrf
+
+<div class="container">
+
+
+<label for="nev">Név:</label>
+                    <input type="text" id="nev" name="nev" value="{{old('nev')}}" >
+
+<label for="email">Email:</label>
+<input type="text" placeholder="beta@emil.com" name="email" id="email"  value="{{old('email')}}">
+<button type="submit" class="foglalasgomb col">Foglalás</button>
+
+</div>
+</form>
+
+      
+
+
           <div id="jegyek">
 
                 <div id="diakjegy">
@@ -268,7 +294,7 @@
  
               </div>
               <div class="gombok row">
-                <button type="button" class="foglalasgomb col">Foglalás</button>
+                
                 <a href="/penztarVasarlas" class="col"><button type="button" class="vasarlas1">Vásárlás</button></a>
             </div>
             </aside>

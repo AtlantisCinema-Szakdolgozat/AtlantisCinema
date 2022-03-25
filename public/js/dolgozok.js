@@ -1,20 +1,37 @@
 class Dolgozok{
-    constructor(elem, adat, index){
-        this.elem=elem;
+    constructor(szuloelem, adat){
+        this.szuloelem=szuloelem;
         this.adat=adat;
-        this.index=index;
-        this.setAdatok(this.adat);
-    }   
-    setAdatok(ertekek){
-        let aktSor="<tr dataid="+this.index+">";
-        for (const key in ertekek) {
+        this.tablaSorGeneralas();
+    } 
+
+    torles(){
+        let event = new CustomEvent("torles", {detail:this});
+        console.log({detail:this});
+        console.log(event);
+        
+        window.dispatchEvent(event);
+    }
+
+    mosdositas(){  
+        let event = new CustomEvent("mosdositas", {detail:this});
+        window.dispatchEvent(event);
+    }
+
+    tablaSorGeneralas(){
+        for (const key in this.adat) {
             if(key!="created_at" && key!="updated_at"){
-                aktSor+="<td>"+ertekek[key]+"</td>";
+                this.szuloelem.append("<td>"+this.adat[key]+"</td>");
             }
         }
-        aktSor+="<td><button type='button' dataid="+this.index+" class='torles'>Törlés</button></td>";
-        aktSor+="<td><button type='button' dataid="+this.index+"  class='modositas'>Módosítás</button></td>";
-        aktSor+="</tr>";
-        this.elem.append(aktSor);
+        this.szuloelem.append("<td><button type='torles' dataid="+this.adat.dolgozoId+" class='torles'>Törlés</button></td>");
+        this.szuloelem.append("<td><button type='modositas' dataid="+this.adat.dolgozoId+" class='modositas'>Módosítás</button></td>");
+        $(this.szuloelem.find('.torles')).on("click", ()=>{
+             this.torles();
+         });
+
+        $(this.szuloelem.find('.modositas')).on("click", ()=>{
+            this.mosdositas();
+        });
     }
 }

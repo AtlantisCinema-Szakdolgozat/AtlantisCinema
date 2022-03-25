@@ -9,6 +9,6 @@
 
         <div class="bejelentpenztar col-xxl-1 col-md-2">
           <p class="nev">Név: Kis József</p>
-          <p class="datum">Dátum: 2020.20.20</p>
+          <p class="datum">Dátum: </p>
         </div>
 </header>

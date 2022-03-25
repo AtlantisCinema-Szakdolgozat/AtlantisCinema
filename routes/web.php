@@ -2,6 +2,17 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\MufajController;
+use App\Http\Controllers\FilmController;
+use App\Http\Controllers\SzemelyController;
+use App\Http\Controllers\VetitesController;
+use App\Http\Controllers\NezoController;
+use App\Http\Controllers\KedvezmenyController;
+use App\Http\Controllers\DolgozoController;
+use App\Http\Controllers\Film_SzemelyController;
+use App\Http\Controllers\SzekController;
+use App\Http\Controllers\foglalasFelvitelController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,6 +23,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::post('/foglalas-Felvitel', [foglalasFelvitelController::class, 'foglalasFelvitel'] )->name('foglalas-Felvitel');
+
+
 
 Route::get('/', function () {
     return view('pages.index');

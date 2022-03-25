@@ -10,7 +10,8 @@ class FilmController extends Controller
     //
     public function index()
     {
-        return Film::all();
+        $filmek= Film::with('szemelyek', 'mufaj')->get();
+        return $filmek;
     }
  
     public function show($id)

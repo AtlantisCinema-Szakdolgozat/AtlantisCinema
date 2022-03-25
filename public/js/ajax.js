@@ -36,7 +36,6 @@ class MyAjax{
             type:"POST",
             data:adat,
             success:function(result){
-                console.log(result);
             }
         });
         
@@ -47,7 +46,6 @@ class MyAjax{
             url:apivegpont+"/"+id,
             type:"DELETE",
             success:function(data){
-                console.log(data);
                 calback(sor);
             },
             error: function(data) {
@@ -63,7 +61,6 @@ class MyAjax{
             type:"PUT",
             data:adat,
             success:function(result){
-                console.log(result);
             }
         });
     }

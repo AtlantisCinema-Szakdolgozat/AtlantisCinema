@@ -29,10 +29,10 @@ class Idopontok{
     }
 
     setAdatok(ertekek){
-        this.terem.html(ertekek.terem);
-        this.idopont.html(ertekek.idopont);
-        this.szinkron.html(ertekek.szinkron);
-        this.ferohely.html(ertekek.ferohely);
+        this.terem.html(ertekek.teremNev);
+        this.idopont.html(ertekek.kapcsolat.kezdesiIdo);
+        this.szinkron.html(ertekek.kapcsolat.szinkron);
+        //this.ferohely.html(ertekek.ferohely);
     }
 
 

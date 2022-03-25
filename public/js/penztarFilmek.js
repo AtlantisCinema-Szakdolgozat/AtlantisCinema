@@ -11,7 +11,7 @@ class Filmek{
     }
 
     setAdatok(ertekek){
-        this.filmcim.html(ertekek.filmcim);
+        this.filmcim.html(ertekek.cim);
 
     }
 
