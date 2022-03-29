@@ -27,7 +27,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-4">
-                        <img src="Css/ideiglenes/akcio.PNG" class="img-thumbnail" alt="Öt plusz egy kedvezmeny">
+                        <img src="Css/ideiglenes/akcJegy.jpg" class="img-thumbnail" alt="Öt plusz egy kedvezmeny">
                     </div>
                     <div class="col-md-8">
                         <h4>5 + 1 akció <span>&#127915;</span></h4>
@@ -36,7 +36,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-4">
-                        <img src="Css/ideiglenes/akcio2.PNG" class="img-thumbnail" alt="Ússz be hozzánk">
+                        <img src="Css/ideiglenes/uszas.jpg" class="img-thumbnail" alt="Ússz be hozzánk">
                     </div>
                     <div class="col-md-8">
                         <h4>Gyere  úszva <span>&#x1F3CA</span></h4>

@@ -10,6 +10,6 @@ class Vetites extends Model
 {
     
     use HasFactory;
-    protected $primaryKEY = 'vetitesid';
+    protected $primaryKEY='vetitesId';
 
 }

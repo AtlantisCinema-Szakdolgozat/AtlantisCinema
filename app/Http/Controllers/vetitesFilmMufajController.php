@@ -11,9 +11,12 @@ class vetitesFilmMufajController extends Controller
 {
     public function index(Request $request)
     {
-       $name = $request -> query('q', '');
+       $name = $request->query('q', '');
 
-       return Film::with('vetites', 'mufaj')->where('cim', 'like', "% $name %")->get();
+       return Film::with('vetites', 'mufaj')
+       ->where('cim', 'like', "%$name%")
+       
+       ->get();
     }
  
 }
