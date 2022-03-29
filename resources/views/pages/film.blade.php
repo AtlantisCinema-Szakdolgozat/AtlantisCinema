@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
     <title>Film</title>
     <link rel="stylesheet" href="css/admin.css">
     <link rel="stylesheet" href="css/film.css">
@@ -14,6 +15,8 @@
     <script src="js/ajax.js"></script>
     <script src="js/adminfilmek.js" type="text/javascript"></script>
     <script src="js/filmek.js" type="text/javascript"></script>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 </head>
 <body>
     @extends('layouts.adminApp')
@@ -21,6 +24,13 @@
         <section>
             <div id="urlap">
                 <form action=""  method="post">
+                    @csrf
+                        <div class="row" id="index">
+                            <label for="filmid" class="col-sm-3 col-form-label">Index</label>
+                          <div class="col-sm-9">
+                            <input type="text"  class="form-control" id="filmid" name="filmid" value="" required>
+                          </div>
+                        </div>
                         <div class="row">
                             <label for="fcim" class="col-sm-3 col-form-label">Film címe</label>
                           <div class="col-sm-9">
@@ -46,8 +56,8 @@
                                 <option selected>Nyelv</option>
                                 <option value="1">HU</option>
                                 <option value="2">EN</option>
-                                <option value="3">FR</option>
-                                <option value="4">RU</option>
+                                <option value="3">IT</option>
+                                <option value="4"></option>
                               </select>
                           </div>
                         </div>
@@ -94,21 +104,18 @@
                 </form>
             </div>
             <div id="keresesRendezes" class="row  g-2">
-
                 <div id="kereses" class="col-sm-6"> 
-                    <input type="text" class="form-control" placeholder="Keresés">
-                  </div>
-                  <div id="rendezes" class="col-sm-6">
-                          <select class="form-select">
-                            <option selected>Rendezés</option>
-                            <option value="1">Cím szerint növekvő</option>
-                            <option value="2">Cím szerint csökkenő</option>
-                            <option value="3">Hossz szerint növekvő</option>
-                            <option value="4">Hossz szerint csökkenő</option>
-                            <option value="5">Nyelv szerint növekvő</option>
-                            <option value="6">Nyelv szerint növekvő</option>
-                          </select>
-                  </div>                
+                    <input type="text" id="keresesmezo" class="form-control" placeholder="Keresés">
+                </div>
+                <div id="rendezes" class="col-sm-6">
+                    <select class="form-select" id="rendezeskivalasztasa">
+                        <option selected>Rendezés</option>
+                        <option value="rend1">Terem cím szerint növekvő</option>
+                        <option value="rend2">Terem cím szerint csökkenő</option>
+                        <option value="rend3">Film cím szerint növekvő</option>
+                        <option value="rend4">Film cím szerint csökkenő</option>
+                    </select>
+                </div>                
             </div>
             
             

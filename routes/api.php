@@ -15,6 +15,7 @@ use App\Http\Controllers\DolgozoController;
 use App\Http\Controllers\filmVetitesController;
 use App\Http\Controllers\penztarFoOldalController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\FilmSzemelyekMufajController;
 
 use App\Http\Controllers\filmMufajController;
 use App\Http\Controllers\vetitesFilmMufajController;
@@ -98,5 +99,8 @@ Route::get('/vetitesFilmMufaj', [vetitesFilmMufajController::class, 'index']);
 Route::get('/filmPlakat', [filmPlakatController::class, 'index']);
 
 Route::get('/filmVetites', [filmVetitesController::class, 'index']);
+
+
+Route::get('/filmSzemelyMufaj', [FilmSzemelyekMufajController::class, 'index']);
 
 Route::get('/penztarFoOldal', [penztarFoOldalController::class, 'index']);

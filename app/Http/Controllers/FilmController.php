@@ -28,7 +28,7 @@ class FilmController extends Controller
         'nyelv' =>  'required',
         'poszter' =>  'required',
         'youtubelink' =>  'required',
-        'mufajid' =>  'required']);
+        'mufajId' =>  'required']);
         return Film::create($request->all());
     }
 
@@ -42,7 +42,7 @@ class FilmController extends Controller
      'nyelv' =>  'required',
      'poszter' =>  'required',
      'youtubelink' =>  'required',
-     'mufajid' =>  'required']);
+     'mufajId' =>  'required']);
         $article->update($request->all());
 
         return $article;

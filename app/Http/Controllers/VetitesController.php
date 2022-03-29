@@ -19,30 +19,30 @@ class VetitesController extends Controller
 
     public function store(Request $request)
     {
-     $request->validate([
-        'teremid' => 'required',
-        'filmid' =>  'required',
+        $request->validate([
+        'teremId' => 'required',
+        'filmId' =>  'required',
         'felirat' =>  'required',
         'szinkron' => 'required',
-        'vetitesnap' =>  'required',
-        'kezdesido' =>  'required',
-        'teljesjegyar' => 'required']);
+        'vetitesNap' =>  'required',
+        'kezdesiIdo' =>  'required',
+        'teljesJegyar' => 'required']);
         return Vetites::create($request->all());
     }
 
     public function update(Request $request, $id)
     {
         $article = Vetites::find($id);
-     $request->validate([ 
-     'teremid' => 'required',
-     'filmid' =>  'required',
-     'felirat' =>  'required',
-     'szinkron' => 'required',
-     'vetitesnap' =>  'required',
-     'kezdesido' =>  'required',
-     'teljesjegyar' => 'required']);
+        $request->validate([ 
+        'teremId' => 'required',
+        'filmId' =>  'required',
+        'felirat' =>  'required',
+        'szinkron' => 'required',
+        'vetitesNap' =>  'required',
+        'kezdesiIdo' =>  'required',
+        'teljesJegyar' => 'required']);
         $article->update($request->all());
-
+        
         return $article;
     }
 
