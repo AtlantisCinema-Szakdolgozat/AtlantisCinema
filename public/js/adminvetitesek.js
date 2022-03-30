@@ -162,6 +162,11 @@ $(function(){
         $(".modosit").css("display", "none");
     });
 
+    $(window).on("torles",(event)=>{
+        let apivegpontVetites="http://127.0.0.1:8000/api/vetites";
+        myAjax.deletAdat(apivegpontVetites,event.detail.adat.vetitesId,sikeresTorles,event.detail.szuloelem);
+    });
+
     function sikeresTorles(sor){
         $(sor).remove();
     }

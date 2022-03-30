@@ -40,6 +40,11 @@ main > section > #filmtarolo {
   font-weight: bold;
 }
 
+.row>.poszter{
+  margin: auto;
+  max-width: 150px;
+}
+
 @media only screen and (max-width: 700px) {
   #filmtarolo {
     width: 100%;

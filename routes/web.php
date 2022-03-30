@@ -75,6 +75,10 @@ Route::get('penztarVasarlas', function () {
     return view('pages.penztarVasarlas');
 })->middleware('can:penztarosJogosultsag');
 
+Route::get('szemelyek', function () {
+    return view('pages.szemelyek');
+})->middleware('can:adminJogosultsag');
+
 Route::get('film', function () {
     return view('pages.film');
 })->middleware('can:adminJogosultsag');

@@ -11,7 +11,7 @@ class FilmSzemelyekMufajController extends Controller
     public function index(Request $request)
     {
         $name = $request->query('q','');
-        $keres=Film::with('szemelyek', 'mufaj')->where('cim','like',"%$name%");
+        $keres=Film::with('szemelyek', 'mufaj')->where('cim','like',"%$name%")->orWhere('filmLeiras','like',"%$name%");
         $sort = $request->query('desc','');
         $a='';
         if($sort==""){

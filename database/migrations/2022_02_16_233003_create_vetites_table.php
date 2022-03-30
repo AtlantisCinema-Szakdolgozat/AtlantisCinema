@@ -22,8 +22,8 @@ return new class extends Migration
             $table->date('vetitesNap');
             $table->time('kezdesIdo');
             $table->integer('teljesJegyar');
-            $table->date('premier');
-            $table->boolean('publikus');
+            $table->date('premier')->nullable();;
+            $table->boolean('publikus')->nullable();;
 
             $table->foreign('teremId')->references('teremId')->on('terems');
             $table->foreign('filmId')->references('filmId')->on('films');
