@@ -19,6 +19,7 @@ use App\Http\Controllers\FilmSzemelyekMufajController;
 
 use App\Http\Controllers\filmMufajController;
 use App\Http\Controllers\vetitesFilmMufajController;
+use App\Http\Controllers\filmPlakatController;
 
 
 
@@ -95,6 +96,7 @@ Route::post('/dolgozo', [DolgozoController::class, 'store']);
 
 Route::get('/filmMufaj', [filmMufajController::class, 'index']);
 Route::get('/vetitesFilmMufaj', [vetitesFilmMufajController::class, 'index']);
+Route::get('/filmPlakat', [filmPlakatController::class, 'index']);
 
 Route::get('/filmVetites', [filmVetitesController::class, 'index']);
 

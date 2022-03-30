@@ -143,7 +143,7 @@
                         
                         <tbody>
                             <tr>
-                                <th scope="row"> <a href="/filmOldal"> Mátrix feltámadások </a> </th>
+                                <th scope="row"> <a href="/filmOldal">  </a> </th>
 
                                 <th> <a href="/foglalasOldal">  </a> </th>
 
