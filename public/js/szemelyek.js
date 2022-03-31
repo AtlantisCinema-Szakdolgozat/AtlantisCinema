@@ -1,4 +1,4 @@
-class Termek{
+class Szemely{
     constructor(szuloelem, adat){
         this.szuloelem=szuloelem;
         this.adat=adat;
@@ -21,8 +21,8 @@ class Termek{
                 this.szuloelem.append("<td>"+this.adat[key]+"</td>");
             }
         }
-        this.szuloelem.append("<td><button type='torles' dataid="+this.adat.teremId+" class='torles'>Törlés</button></td>");
-        this.szuloelem.append("<td><button type='modositas' dataid="+this.adat.teremId+" class='modositas'>Módosítás</button></td>");
+        this.szuloelem.append("<td><button type='torles' dataid="+this.adat.szemelyId+" class='torles'>Törlés</button></td>");
+        this.szuloelem.append("<td><button type='modositas' dataid="+this.adat.szemelyId+" class='modositas'>Módosítás</button></td>");
         $(this.szuloelem.find('.torles')).on("click", ()=>{
              this.torles();
          });

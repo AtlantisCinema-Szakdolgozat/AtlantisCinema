@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('filmLeiras',500);
             $table->integer('hossz');
             $table->string('nyelv',10);
-            $table->string('poszter',50);
+            $table->string('poszter',255);
             $table->string('youtubeLink',100);
             $table->integer('mufajId')->unsigned();
             

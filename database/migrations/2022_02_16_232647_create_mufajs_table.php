@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\DB;
 
 return new class extends Migration
 {
@@ -19,6 +20,20 @@ return new class extends Migration
             
             $table->timestamps();
         });
+        DB::table('mufajs')->insert([
+            ['mufaj' => 'Akció'],
+            ['mufaj' => 'Dokumentum'],
+            ['mufaj' => 'Dráma'],
+            ['mufaj' => 'Családi'],
+            ['mufaj' => 'Életrajzi'],
+            ['mufaj' => 'Fantasy'],
+            ['mufaj' => 'Horror'],      
+            ['mufaj' => 'Kaland'],
+            ['mufaj' => 'Kém'],
+            ['mufaj' => 'Sci-fi'],
+            ['mufaj' => 'Thriller'],
+            ['mufaj' => 'Western']
+        ]);
     }
 
     /**

@@ -11,6 +11,7 @@ class Szemely extends Model
     
     protected $primaryKey='szemelyId';
     protected $table ='szemelies';
+    protected $fillable = ['nev'];
     public $timestamps = false;
 
     public function filmek(){

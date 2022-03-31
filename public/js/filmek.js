@@ -12,11 +12,18 @@ class Filmek{
         this.rendezo=this.szuloelem.children(".filmadatok").children(".row").children(".rendezo");
         this.poszter=this.szuloelem.children(".filmadatok").children(".row").children(".poszter");
         this.youtubeLink=this.szuloelem.children(".filmadatok").children(".row").children(".youtubeLink");
-        this.torles=this.szuloelem.children(".filmadatok").children(".row").children(".col-6").children(".torles");
-        this.modositas=this.szuloelem.children(".filmadatok").children(".row").children(".col-6").children(".modositas");
+        this.torl=this.szuloelem.children(".filmadatok").children(".row").children(".col-6").children(".torles");
+        this.mosdosit=this.szuloelem.children(".filmadatok").children(".row").children(".col-6").children(".modositas");
        
         this.adat=adat;
         this.filmekSorGeneralas(this.adat);
+        $(this.szuloelem.find('.torles')).on("click", ()=>{
+            this.torles();
+        });
+
+       $(this.szuloelem.find('.modositas')).on("click", ()=>{
+           this.mosdositas();
+       });
     }
 
     torles(){
@@ -39,7 +46,8 @@ class Filmek{
         let szemely="";
         let rendezo="";
         ertekek.szemelyek.forEach(element => {
-            if(element.kapcsolat.poszt="Szereplő"){
+            
+            if(element.kapcsolat.poszt=="színész"){
                 szemely+=element.nev+", ";
                 this.szereplo.html(szemely);
             }
@@ -48,16 +56,62 @@ class Filmek{
                 this.rendezo.html(rendezo);
             }
         });
-        this.poszter.html(this.adat.poszter);
+        this.poszter.attr('src',this.adat.poszter);
         this.youtubeLink.html(this.adat.youtubeLink);
-        this.torles.attr('value',this.adat.filmId);
-        this.modositas.attr('value',this.adat.filmId);
-        $(this.szuloelem.find('.torles')).on("click", ()=>{
-             this.torles();
-         });
-
-        $(this.szuloelem.find('.modositas')).on("click", ()=>{
-            this.mosdositas();
-        });
+        this.torl.attr('value',this.adat.filmId);
+        this.mosdosit.attr('value',this.adat.filmId);
+        
     }
+}
+
+class MufajBetoltes{
+    constructor(szuloelem, adat){
+        this.szuloelem=szuloelem;
+        this.adat=adat;
+        this.mufajGeneralasa();
+    }
+       
+    mufajGeneralasa(){
+        for (const key in this.adat) {
+            if(key=="mufaj"){
+                this.szuloelem.append("<option value="+this.adat.mufajId+" id=m"+this.adat.mufajId+">"+this.adat[key]+"</option>");
+            }
+        }
+    }
+}
+
+class Szemely{
+    constructor(szuloelem, adat){
+        this.szuloelem=szuloelem;
+        this.adat=adat;
+        this.szemelyGeneralas();
+    }
+       
+    szemelyGeneralas(){
+        for (const key in this.adat) {
+            if(key=="nev"){
+                this.szuloelem.append("<option value="+this.adat.szemelyId+" id=s"+this.adat.szemelyId+">"+this.adat[key]+"</option>");
+            }
+        }
+    }
+
+  
+}
+
+class Szemely2{
+    constructor(szuloelem, adat){
+        this.szuloelem=szuloelem;
+        this.adat=adat;
+        this.szemelyGeneralas();
+    }
+       
+    szemelyGeneralas(){
+        for (const key in this.adat) {
+            if(key=="nev"){
+                this.szuloelem.append("<option value="+this.adat.szemelyId+" id=r"+this.adat.szemelyId+">"+this.adat[key]+"</option>");
+            }
+        }
+    }
+
+  
 }

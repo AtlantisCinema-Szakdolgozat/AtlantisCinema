@@ -8,9 +8,22 @@ use App\Models\Szemely;
 class SzemelyController extends Controller
 {
     //
-    public function index()
+    public function index(Request $request)
     {
-        return Szemely::all();
+        $name = $request->query('q','');
+        $keres=Szemely::where('nev','like',"%$name%");
+        $sort = $request->query('desc','');
+        $a='';
+        if($sort==""){
+            return $keres->get();
+        }
+        else if($sort=="rend1"){
+            $a='ASC';
+        }
+        else if($sort=="rend2"){
+            $a='DESC';
+        }
+        return $keres->orderBy('nev', $a)->get();    
     }
  
     public function show($id)
@@ -21,7 +34,7 @@ class SzemelyController extends Controller
     public function store(Request $request)
     {
      $request->validate([
-    'neve' => 'required']);
+    'nev' => 'required']);
         return Szemely::create($request->all());
     }
 
@@ -29,7 +42,7 @@ class SzemelyController extends Controller
     {
         $article = Szemely::find($id);
      $request->validate([ 
-        'neve' => 'required']);
+        'nev' => 'required']);
         $article->update($request->all());
 
         return $article;

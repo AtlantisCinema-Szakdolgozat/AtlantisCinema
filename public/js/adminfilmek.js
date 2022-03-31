@@ -1,26 +1,88 @@
 $(function(){
     const myAjax=new MyAjax;
-    let filmek =[];
+    let filmekSzemelyMufaj =[];
+    let mufaj =[];
+    let foszereplo =[];
+    let rendezo =[];
     const szuloelem = $(".szulo");
     const sablonElem = $(".gyerek");
     let apivegpont="http://127.0.0.1:8000/api/filmSzemelyMufaj";
+    let apivegpontFilm="http://127.0.0.1:8000/api/film";
+    let apivegpontMufaj="http://127.0.0.1:8000/api/mufaj";
+    let apivegpontSzemely="http://127.0.0.1:8000/api/szemely";
+    let akt="";
 
-    myAjax.getAdat(apivegpont,filmek,filmekMegjelenitese);
+    myAjax.getAdat(apivegpont,filmekSzemelyMufaj,filmekMegjelenitese);
 
     function filmekMegjelenitese(){
-        szuloelem.empty();
-        sablonElem.show();
-        filmek.forEach(function(adat) {
-            let ujElem = sablonElem.clone().appendTo(szuloelem);
-            let ujFilm = new Filmek(ujElem,adat);
-        });
-        sablonElem.hide();
+        let egyezes=apivegpont;
+        if(egyezes=="http://127.0.0.1:8000/api/filmSzemelyMufaj?q="){
+            filmekSzemelyMufaj=[]
+            apivegpont="http://127.0.0.1:8000/api/filmSzemelyMufaj";
+            myAjax.getAdat(apivegpont,filmekSzemelyMufaj,filmekMegjelenitese);
+        }
+        else if(akt!==apivegpont || akt=="http://127.0.0.1:8000/api/filmSzemelyMufaj"){
+            szuloelem.empty();
+            sablonElem.show();
+            filmekSzemelyMufaj.forEach(function(adat) {
+              let ujElem = sablonElem.clone().appendTo(szuloelem);
+              let ujFilm = new Filmek(ujElem,adat);
+            });
+            sablonElem.hide();
+        }
+        akt=apivegpont;
     }
+
+    myAjax.getAdat(apivegpontMufaj,mufaj,mufajBetoltese);
+
+    function mufajBetoltese(){
+      const szuloelem = $(".fmufaj");
+      let ujMufaj;
+      mufaj.forEach(function(adat) {
+        ujMufaj = new MufajBetoltes(szuloelem,adat);
+      });
+    }
+
+    myAjax.getAdat(apivegpontSzemely,foszereplo,foszereploBetoltese);
+
+    function foszereploBetoltese(){
+      const szuloelem = $(".ffoszereplok");
+      let ujFoszereplo;
+      foszereplo.forEach(function(adat) {
+        ujFoszereplo = new Szemely(szuloelem,adat);
+      });
+    }
+
+    myAjax.getAdat(apivegpontSzemely,rendezo,rendezoBetoltese);
+
+    function rendezoBetoltese(){
+      const szuloelem = $(".frendezok");
+      let ujRendezo;
+      rendezo.forEach(function(adat) {
+        ujRendezo = new Szemely2(szuloelem,adat);
+      });
+    }
+
+    $(".fmufaj").select2({
+      placeholder: "Mufaj",
+      allowClear: true
+    });
+
+    $(".ffoszereplok").select2 ({ 
+      tags : true , 
+      tokenSeparators : [ ',' , ' ' ]
+    });
+  
+    $(".frendezok").select2 ({ 
+      tags : true , 
+      tokenSeparators : [ ',' , ' ' ]
+    });
+    
 
     $("#keresesmezo").on("keyup",()=>{
         apivegpont="http://127.0.0.1:8000/api/filmSzemelyMufaj";
         apivegpont+="?q="+$("#keresesmezo").val();
-        myAjax.getAdat(apivegpont,filmek,filmekMegjelenitese);
+        myAjax.getAdat(apivegpont,filmekSzemelyMufaj,filmekMegjelenitese);
     })
 
     $("#rendezeskivalasztasa").on("change",function(){
@@ -41,8 +103,100 @@ $(function(){
               break;
             default:
           }
-          myAjax.getAdat(apivegpont,filmek,filmekMegjelenitese);
+          myAjax.getAdat(apivegpont,filmekSzemelyMufaj,filmekMegjelenitese);
     });
 
-   
+    
+ 
+    $(".felvitel").on("click", ()=>{
+      let apivegpontFilm="http://127.0.0.1:8000/api/film";
+      let form = document.getElementById("filmadat");
+      let input = document.querySelector('input[type="file"]');
+      let data = new FormData(form);
+      data.append('file', input.files[0]);
+      fetch(apivegpontFilm, {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json'
+        },
+        body: data
+      }).then(response => response.json())
+      .then(data2 => {
+        data.append("filmId",data2.filmId)
+      });
+      myAjax.getAdat(apivegpont,filmekSzemelyMufaj,filmekMegjelenitese);
+      $("#filmid").val('');
+      $(".fcim").val('');
+      $("#fleiras").val('');
+      $("#fhossz").val('');
+      $(".fnyelv").val('');
+      $(".fmufaj").select2().val(null).trigger("change");
+      $("#ffoszereplok").val([]).trigger('change');
+      $("#frendezok").val([]).trigger('change');
+      $(".poszter").val('');
+      $("#fyoutube").val('');
+    });
+
+    $(window).on("mosdositas",(event)=>{
+      $("#filmid").val(event.detail.adat.filmId);
+      $("#fcim").val(event.detail.adat.cim);
+      $("#fleiras").val(event.detail.adat.filmLeiras);
+      $("#fhossz").val(event.detail.adat.hossz);
+      $(".fnyelv").select2().val(event.detail.adat.nyelv).trigger("change");
+      $("#fmufaj").select2().val(event.detail.adat.mufajId).trigger("change");
+      let szemelyek=event.detail.adat.szemelyek;
+      let szinesz=[];
+      let rendezo=[];
+      for (let i = 0; i < szemelyek.length; i++) {
+          if(szemelyek[i].kapcsolat.poszt=="színész"){
+            szinesz.push(szemelyek[i].szemelyId);
+          }
+          else{
+            rendezo.push(szemelyek[i].szemelyId);
+          }
+      }
+      $("#ffoszereplok").select2().val(szinesz).trigger("change");
+      $("#frendezok").select2().val(rendezo).trigger("change");
+      $("#fyoutube").val(event.detail.adat.youtubeLink);
+      $(".felvitel").css("display", "none");
+      $(".modosit").css("display", "inline");
+  });
+
+  $(".modosit").on("click", ()=>{
+      let apivegpontFilmek="http://127.0.0.1:8000/api/film";
+      let form = document.getElementById("filmadat");
+      let input = document.querySelector('input[type="file"]');
+      let id=$("#filmid").val();
+      let data = new FormData(form);
+      data.append('file', input.files[0]);
+      data.append('_method', 'PUT');
+      fetch(apivegpontFilmek+"/"+id, {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        body: data,
+      })
+      myAjax.getAdat(apivegpont,filmekSzemelyMufaj,filmekMegjelenitese);
+      $("#filmid").val('');
+      $(".fcim").val('');
+      $("#fleiras").val('');
+      $("#fhossz").val('');
+      $(".fnyelv").select2().val(null).trigger("change");
+      $(".fmufaj").select2().val(null).trigger("change");
+      $("#ffoszereplok").val([]).trigger('change');
+      $("#frendezok").val([]).trigger('change');
+      $(".poszter").val('');
+      $("#fyoutube").val('');
+  });
+
+    $(window).on("torles",(event)=>{
+      apivegpontFilm="http://127.0.0.1:8000/api/film";
+      myAjax.deletAdat(apivegpontFilm,event.detail.adat.filmId,sikeresTorles,event.detail.szuloelem);
+    });
+
+   function sikeresTorles(sor){
+      $(sor).remove();
+    }
 });

@@ -10,4 +10,7 @@ class Film_Szemely extends Model
     use HasFactory;
     protected $primaryKey=['filmId','szemelyId'];
     public $incrementing = false;
+    protected $table='szemelise';
+    protected $fillable = ['filmId','szemelyId','poszt'];
+    public $timestamps=false;
 }

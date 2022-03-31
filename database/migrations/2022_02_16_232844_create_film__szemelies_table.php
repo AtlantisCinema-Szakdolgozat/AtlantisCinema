@@ -17,9 +17,9 @@ return new class extends Migration
             $table->integer('filmId')->unsigned();
             $table->integer('szemelyId')->unsigned();
 
-            $table->primary(['filmId', 'szemelyId']);
+            
             $table->string('poszt',50);
-
+            $table->primary(['filmId', 'szemelyId', 'poszt']);
             $table->foreign('filmId')->references('filmId')->on('films');
             $table->foreign('szemelyId')->references('szemelyId')->on('szemelies');
 

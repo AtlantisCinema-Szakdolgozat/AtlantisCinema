@@ -31,9 +31,10 @@
 
         <script src="js/ajax.js" type="text/javascript"></script>
 
+        <script src="js/GaleriaPlakat.js" type="text/javascript"></script>
         <script src="js/Film.js" type="text/javascript"></script>
 
-        <script src="js/nyitoFilmek.js" type="text/javascript"></script>
+        <script src="js/nyitoScript.js" type="text/javascript"></script>
 
 
     </head>
@@ -49,26 +50,32 @@
 
                 <div id="galeriaSzulo" class="row">
 
-
-                    <div id="korhintaGaleria" class="col-md-9">
-
-                        <img src="Css/ideiglenes/akcio.PNG" alt="kép"/>
-                        
+                    <div id="carousel" class="flex-container">
+                        <button id="bal" style="order: 1"> << </button>
+                        <div id="korhintaGaleria" class="col-md-9" style="order: 2">
+                    
+                            <img class="galeriaPlakat" src="" alt="poszter"/>
+                            
+                        </div>
+                        <button id="jobb" style="order: 3"> >> </button>
                     </div>
+                    
+                    <div id="kisGaleria"> <!-- class="col-md-3 row" -->
 
-
-                    <div id="kisGaleria" class="col-md-3 row">
-
-                        <div class=" col-md-12">
-                            <img src="Css/ideiglenes/hir.PNG" alt="kép"/>
+                        <div> <!-- class=" col-md-12" -->
+                            <img src="Css/ideiglenes/popcornAkcio.jpg" alt="kép"/>
                         </div>
 
-                        <div class=" col-md-12">
-                            <img src="Css/ideiglenes/akcio2.PNG" alt="kép"/>
+                        <div> <!-- class=" col-md-12" -->
+                            <img src="Css/ideiglenes/popcorn.jpg" alt="kép"/>
+                        </div>
+
+                        <div> <!-- class=" col-md-12" -->
+                            <img src="Css/ideiglenes/oscarAkc.jpg" alt="kép"/>
                         </div>
                         
                     </div> 
-
+                    
 
                 </div>
 
@@ -120,9 +127,11 @@
                                     <a class="nav-link" href="/index"> Vasárnap </a>
                                 </li>
 
+                                <!--
                                 <li class="nav-item">
                                     <a class="nav-link" href="/nyitoLap_tablazat"> Műsoron </a>
                                 </li>
+                                -->
 
                             </ul>
                                     
