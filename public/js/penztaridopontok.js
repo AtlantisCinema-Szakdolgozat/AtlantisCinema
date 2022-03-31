@@ -1,6 +1,7 @@
 class Idopontok{
 
     constructor(elem, adat,nyelv){
+        this.adat=adat;
         this.elem=elem;
         this.nyelv=nyelv;
         //console.log(adat);
@@ -11,7 +12,7 @@ class Idopontok{
         this.szinkron=this.elem.children(".szinkron");
         this.ferohely=this.elem.children(".ferohely");
         this.vasarlas1=this.elem.children(".vasarlas1");
-        this.adat=adat;
+        
         this.setAdatok(this.adat,this.nyelv);
         
         

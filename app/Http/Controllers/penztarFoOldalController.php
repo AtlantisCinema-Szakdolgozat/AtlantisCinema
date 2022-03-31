@@ -10,7 +10,5 @@ class penztarFoOldalController extends Controller
     {
         $filmek=Film::with('terem')->get();
         return  $filmek;
-        
-        
     }
 }

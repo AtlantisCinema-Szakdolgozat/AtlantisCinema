@@ -14,7 +14,14 @@ class Film extends Model
     public $timestamps=false;
 
     public function terem(){
+
+
+        return $this->belongsToMany(Terem::class,'vetites','filmId','teremId')->as('kapcsolat')->withPivot('vetitesId','szinkron','kezdesiIdo','vetitesNap','publikus');
+
+
+
         return $this->belongsToMany(Terem::class,'vetites','filmId','teremId')->as('kapcsolat')->withPivot('vetitesId','szinkron','kezdesiIdo','vetitesNap');
+
     }
 
     public function szemelyek(){
