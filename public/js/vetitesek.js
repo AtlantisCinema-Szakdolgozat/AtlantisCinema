@@ -45,6 +45,9 @@ class Vetitesek{
                 if(this.adat.publikus==0){
                     this.szuloelem.append("<td><button type='publikus' dataid="+this.adat.vetitesId+" class='publikus'>Publikus</button></td>");
                 }
+                else if(this.adat.publikus==null){
+                    this.szuloelem.append("<td><button type='publikus' dataid="+this.adat.vetitesId+" class='publikus'>Publikus</button></td>");
+                }
                 else if(this.adat.publikus==1){
                     this.szuloelem.append("<td><button type='publikus' disabled>Publikus</button></td>");
                 }                 

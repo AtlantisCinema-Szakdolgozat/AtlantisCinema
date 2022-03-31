@@ -50,7 +50,17 @@
                                 </div>
                             </div>
                         </div>
+                        <div id="forgot-password-container">
 
+                            @if (Route::has('password.request'))
+
+                            <p>Elfelejtette jelszavát?</p>
+
+                            <p>Kattintson <a id="forg-pass" href="{{ route('password.request') }}">ide</a></p>
+
+                            @endif
+
+                        </div>
                         <div class="row mb-0">
                             <div class="col-md-8 offset-md-4">
                                 <button type="submit" class="btn btn-primary">

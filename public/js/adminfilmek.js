@@ -64,7 +64,7 @@ $(function(){
     }
 
     $(".fmufaj").select2({
-      placeholder: "Mufaj",
+      placeholder: "Műfaj",
       allowClear: true
     });
 
@@ -129,8 +129,12 @@ $(function(){
       $(".fcim").val('');
       $("#fleiras").val('');
       $("#fhossz").val('');
-      $(".fnyelv").val('');
+      $("#fhossz").val('');
       $(".fmufaj").select2().val(null).trigger("change");
+      $(".fmufaj").select2({
+        placeholder: "Műfaj",
+        allowClear: true
+      });
       $("#ffoszereplok").val([]).trigger('change');
       $("#frendezok").val([]).trigger('change');
       $(".poszter").val('');

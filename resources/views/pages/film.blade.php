@@ -34,7 +34,7 @@
                         <div class="row">
                             <label for="fcim" class="col-sm-3 col-form-label">Film címe</label>
                           <div class="col-sm-9">
-                            <input type="text" class="form-control fcim" id="fcim" name="cim" placeholder="Hunger Games">
+                            <input type="text" class="form-control fcim" id="fcim" name="cim" placeholder="Mátrix feltámadások">
                           </div>
                         </div>
                         <div class="row">
@@ -46,14 +46,14 @@
                         <div class="row">
                             <label for="fhossz" class="col-sm-3 col-form-label">Film hossza</label>
                           <div class="col-sm-9">
-                            <input type="number" class="form-control" id="fhossz" name="hossz"  placeholder="120 perc" required>
+                            <input type="number" class="form-control" min="1" id="fhossz" name="hossz"  placeholder="120 perc" required>
                           </div>
                         </div>
                         <div class="row">
                             <label for="fnyelv" class="col-sm-3 col-form-label">Film nyelve</label>
                           <div class="col-sm-9">
                             <select class="fnyelv form-select fnyelv" id="fnyelv" name="nyelv">
-                                <option selected>Nyelv</option>
+                                <option id="nyelv" selected>Nyelv</option>
                                 <option value="HU">HU</option>
                                 <option value="EN">EN</option>
                                 <option value="IT">IT</option>
@@ -64,7 +64,7 @@
                         <div class="row">
                             <label for="fmufaj" class="col-sm-3 col-form-label">Film műfaj</label>
                           <div class="col-sm-9">
-                            <select class="js-example-placeholder-single js-states form-control fmufaj" id="fmufaj" name="mufajId">
+                            <select class="js-example-placeholder-single js-states form-control fmufaj" id="fmufaj" placeholder="Műfaj" name="mufajId">
                                 <option></option>
                             </select>
                           </div>
@@ -73,16 +73,13 @@
                             <label for="ffoszereplok" class="col-sm-3 col-form-label">Film főszereplők</label>
                           <div class="col-sm-9">
                             <select class="js-example-placeholder-multiple js-states form-control ffoszereplok"   name="szereploIdk[]" multiple="multiple" id="ffoszereplok">
-                                <option></option>
                             </select>
                           </div>
-
                         </div>
                         <div class="row rendezo">
                             <label for="frendezok" class="col-sm-3 col-form-label">Film rendező</label>
                           <div class="col-sm-9">
                             <select class=" js-example-placeholder-multiple js-states form-control frendezok"  name="rendezoIdk[]" multiple="multiple" id="frendezok">
-                                <option></option>
                             </select>
                           </div>
                         </div>

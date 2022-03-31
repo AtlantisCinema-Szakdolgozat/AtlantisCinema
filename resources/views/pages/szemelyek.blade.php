@@ -32,7 +32,7 @@
                         <div class="row">
                             <label for="nev" class="col-sm-3 col-form-label">Név</label>
                             <div class="col-sm-9">
-                                <input type="text"  class="form-control" id="nev" name="nev" placeholder="Ilku Gergő" required>
+                                <input type="text"  class="form-control" id="nev" name="nev" placeholder="Váradi Ákos" required>
                             </div>
                         </div>
                         <div class="d-grid gap-2 d-md-flex justify-content-end">

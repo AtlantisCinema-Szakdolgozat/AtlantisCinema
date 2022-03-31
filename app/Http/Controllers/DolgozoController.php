@@ -50,7 +50,6 @@ class DolgozoController extends Controller
         $request->validate([ 
             'name' => 'required',
             'email' => 'required|max:200',
-            'password' =>  'required',
             'munkakor' =>  'required']);
         $article->update($request->all());
         return $article;

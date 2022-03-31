@@ -32,30 +32,15 @@
                         <div class="row">
                             <label for="dnev" class="col-sm-3 col-form-label">Dolgozó neve</label>
                           <div class="col-sm-9">
-                            <input type="text"  class="form-control" id="dnev" name="dnev" required>
+                            <input type="text"  class="form-control" id="dnev" name="dnev" placeholder="Váradi Ákos" required>
                           </div>
                         </div>
                         <div class="row">
                             <label for="demail" class="col-sm-3 col-form-label">Email cím</label>
                           <div class="col-sm-9">
-                            <input type="email"  class="form-control" id="demail" name="demail" required>
+                            <input type="email"  class="form-control" id="demail" name="demail" placeholder="v.akos@atlantiscimea.com"required>
                           </div>
                         </div>
-                        <div class="row">
-                            <label for="djelszo" class="col-sm-3 col-form-label">Jelszó</label>
-                          <div class="col-sm-7">
-                            <input type="password" class="form-control" id="djelszo" name="djelszo" required>
-                          </div>
-                          <div class="col-sm-2">
-                            <input type="button" class="btn jelszo" value="Új jelszó">
-                          </div>
-                        </div>
-                        <!-- <div class="row">
-                            <label for="dmunkakor" class="col-sm-3 col-form-label">Munkaköre</label>
-                          <div class="col-sm-9">
-                            <input type="text" class="form-control" id="dmunkakor" name="dmunkakor" required>
-                          </div>
-                        </div> -->
                         <div class="row">
                             <label for="dmunkakor" class="col-sm-3 col-form-label">Munkaköre</label>
                           <div class="col-sm-9">
@@ -67,7 +52,6 @@
                           </div>
                         </div>
                         <div class="d-grid gap-2 d-md-flex justify-content-end">
-                            <input type="button" class="btn felvitel" value="Felvitel">
                             <input type="button" class="btn modosit" value="Módosit">
                         </div>
                 </form>

@@ -5,6 +5,7 @@ $(function(){
     let apivegpont="http://127.0.0.1:8000/api/dolgozo";
     let akt="";
 
+    $(".modosit").css("display", "inline");
     myAjax.getAdat(apivegpont,dolgozok,dolgozokMegjelenitese);
 
     function dolgozokMegjelenitese(){
@@ -52,19 +53,6 @@ $(function(){
         myAjax.deletAdat(apivegpont,event.detail.adat.id,sikeresTorles,event.detail.szuloelem);
     });
 
-    $(".felvitel").on("click", ()=>{
-        let ujDolgozo={};
-        ujDolgozo.name=$("#dnev").val();
-        ujDolgozo.email=$("#demail").val();
-        ujDolgozo.password=$("#djelszo").val();
-        ujDolgozo.munkakor=$("#dmunkakor").val();
-        myAjax.postAdat(apivegpont,ujDolgozo);
-        myAjax.getAdat(apivegpont,dolgozok,dolgozokMegjelenitese);
-        $("#dnev").val('');
-        $("#demail").val('');
-        $("#djelszo").val('');
-        $("#dmunkakor").val('');
-    });
 
     $(window).on("mosdositas",(event)=>{
         $("#dolgozoid").val(event.detail.adat.id);
@@ -73,8 +61,6 @@ $(function(){
         $("#djelszo").val(event.detail.adat.password);
         $("#djelszo").css("display", "block");
         $("#dmunkakor").val(event.detail.adat.munkakor);
-        $(".felvitel").css("display", "none");
-        $(".modosit").css("display", "inline");
 
     });
 
@@ -93,9 +79,6 @@ $(function(){
         $("#djelszo").val('');
         $("#sor").val('');
         $("#dmunkakor").val('');
-        $(".felvitel").css("display", "inline");
-        $(".modosit").css("display", "none");
-
     });
 
     function sikeresTorles(sor){

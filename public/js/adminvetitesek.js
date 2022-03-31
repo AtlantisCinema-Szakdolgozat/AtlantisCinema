@@ -8,6 +8,7 @@ $(function(){
     let apivegpontTerem="http://127.0.0.1:8000/api/terem";
     let apivegpontFilm="http://127.0.0.1:8000/api/film";
     let akt="";
+    let premier=null;
 
     myAjax.getAdat(apivegpont,vetitesek,vetitesekMegjelenitese);
 
@@ -91,17 +92,20 @@ $(function(){
         ujVetites.vetitesNap=$("#fvetitesnap").val();
         ujVetites.kezdesiIdo=$("#fkezdesIdopot").val();
         ujVetites.teljesJegyar=Number($("#fteljesJegyar").val());
-        ujVetites.premier=$("#premier").val();
+        ujVetites.premier=premier;
         myAjax.postAdat(apivegpontVetites,ujVetites);
         myAjax.getAdat(apivegpont,vetitesek,vetitesekMegjelenitese);
         $("#terem").val('');
-        $(".js-example-placeholder-single").select2().val('');
+        $("#fcim").select2().val(null).trigger("change");
+        $("#fcim").select2({
+            placeholder: "Film cím",
+            allowClear: true
+        });
         $("#ffelirat").val('');
         $("#fszinkron").val('');
         $("#fvetitesnap").val('');
         $("#fkezdesIdopot").val('');
-        $("#fteljesJegyar").val('');
-        $("#premier").val('');
+        $("#fteljesJegyar").val('1900');
     });
     $(window).on("publikus",(event)=>{
         let apivegpontVetites="http://127.0.0.1:8000/api/vetites";
@@ -118,8 +122,8 @@ $(function(){
             mosoitottPublikus.publikus=1
             myAjax.putAdat(apivegpontVetites,mosoitottPublikus,mosoitottPublikus.vetitesId);
             myAjax.getAdat(apivegpont,vetitesek,vetitesekMegjelenitese);
-            // $(".publikus").css("display", "none");
     });
+    
     $(window).on("mosdositas",(event)=>{
         $("#vetitesid").val(event.detail.adat.vetitesId);
         $("#terem").val(event.detail.adat.teremId);
@@ -129,10 +133,20 @@ $(function(){
         $("#fvetitesnap").val(event.detail.adat.vetitesNap);
         $("#fkezdesIdopot").val(event.detail.adat.kezdesiIdo);
         $("#fteljesJegyar").val(event.detail.adat.teljesJegyar);
-        $("#premier").val(event.detail.adat.premier);
+        console.log(event.detail.adat.premier)
+        if(event.detail.adat.premier!=null){
+            $("#premier").css("display", "none");
+            $("#nemPremier").css("display", "inline");
+        }
+        else{
+           
+            $("#nemPremier").css("display", "none");
+            $("#premier").css("display", "inline");
+           
+        }
         $(".felvitel").css("display", "none");
         $(".modosit").css("display", "inline");
-
+       
     });
 
     $(".modosit").on("click", ()=>{
@@ -146,20 +160,36 @@ $(function(){
         mosoitottVetites.vetitesNap=$("#fvetitesnap").val();
         mosoitottVetites.kezdesiIdo=$("#fkezdesIdopot").val();
         mosoitottVetites.teljesJegyar=Number($("#fteljesJegyar").val());
-        mosoitottVetites.premier=$("#premier").val();
+        mosoitottVetites.premier=premier;
         myAjax.putAdat(apivegpontVetites,mosoitottVetites,mosoitottVetites.vetitesId);
         myAjax.getAdat(apivegpont,vetitesek,vetitesekMegjelenitese);
         $("#vetitesid").val('');
         $("#terem").val('');
-        $(".js-example-placeholder-single").select2().val('');
+        $("#fcim").select2().val(null).trigger("change");
         $("#ffelirat").val('');
         $("#fszinkron").val('');
         $("#fvetitesnap").val('');
         $("#fkezdesIdopot").val('');
-        $("#fteljesJegyar").val('');
-        $("#premier").val('');
+        $("#fteljesJegyar").val('1900');
         $(".felvitel").css("display", "inline");
         $(".modosit").css("display", "none");
+        $("#nemPremier").css("display", "none");
+        $("#premier").css("display", "inline");
+    });
+
+
+    $("#premier").on("click", ()=>{
+        premier=$("#fvetitesnap").val();
+        console.log(premier);
+        $("#premier").css("display", "none");
+        $("#nemPremier").css("display", "inline")
+    });
+
+    $("#nemPremier").on("click", ()=>{
+        premier=null;
+       
+        $("#nemPremier").css("display", "none");
+        $("#premier").css("display", "inline");
     });
 
     $(window).on("torles",(event)=>{

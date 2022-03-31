@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
     <title>Terem</title>
     <link rel="stylesheet" href="css/admin.css">
     <link rel="stylesheet" href="css/terem.css">
@@ -22,6 +23,7 @@
         <section>
             <div id="urlap">
                 <form action=""  method="POST">
+                  @csrf
                         <div class="row" id="index">
                             <label for="teremid" class="col-sm-3 col-form-label">Index</label>
                           <div class="col-sm-9">
@@ -31,19 +33,19 @@
                         <div class="row">
                             <label for="tnev" class="col-sm-3 col-form-label">Terem név</label>
                           <div class="col-sm-9">
-                            <input type="text"  class="form-control" id="tnev" name="tnev" value="" required>
+                            <input type="text"  class="form-control" id="tnev" name="tnev" placeholder="Bergman" value="" required>
                           </div>
                         </div>
                         <div class="row">
                             <label for="sor" class="col-sm-3 col-form-label">Sor</label>
                           <div class="col-sm-9">
-                            <input type="number" class="form-control" id="sor" name="sor" value="" required>
+                            <input type="number" class="form-control" min="1" id="sor" name="sor" required>
                           </div>
                         </div>
                         <div class="row">
                             <label for="oszlop" class="col-sm-3 col-form-label">Oszlop</label>
                           <div class="col-sm-9">
-                            <input type="number" class="form-control" id="oszlop" name="oszlop" value="" required>
+                            <input type="number" class="form-control" min="1" id="oszlop" name="oszlop" value="" required>
                           </div>
                         </div>
                         <div class="d-grid gap-2 d-md-flex justify-content-end">

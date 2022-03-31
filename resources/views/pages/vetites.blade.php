@@ -73,6 +73,8 @@
                       <label for="fvetitesnap" class="col-sm-4 col-form-label">Vetítés napja</label>
                       <div class="col-sm-8">
                         <input type="date" id="fvetitesnap" name="fvetitesnap" required>
+                        <input type="button" id="premier" name="premier" value="Premier">
+                        <input type="button" id="nemPremier" name="nemPremier" value="Nem premier">
                       </div>
                     </div>
                     <div class="row">
@@ -84,15 +86,15 @@
                     <div class="row">
                       <label for="fteljesJegyar" class="col-sm-4 col-form-label">Teljes jegyár</label>
                       <div class="col-sm-8">
-                        <input type="number" class="form-control" id="fteljesJegyar" name="fteljesJegyar" value="1900" required>
+                        <input type="number" min="1" class="form-control" id="fteljesJegyar" name="fteljesJegyar" value="1900" required>
                       </div>
                     </div>
-                    <div class="row">
+                    <!-- <div class="row">
                       <label for="premier" class="col-sm-4 col-form-label">Permier Nap</label>
                       <div class="col-sm-8">
-                        <input type="date" id="premier" name="premier" required>
+                        <input type="button" id="premier" name="premier" value="Premier">
                       </div>
-                    </div>
+                    </div> -->
                     <div class="d-grid gap-2 d-md-flex justify-content-end">
                       <input type="button" class="btn felvitel" value="Felvitel">
                       <input type="button" class="btn modosit" value="Módosit">

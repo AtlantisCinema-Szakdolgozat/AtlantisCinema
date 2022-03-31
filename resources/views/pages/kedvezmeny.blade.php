@@ -32,19 +32,19 @@
                         <div class="row">
                             <label for="tipus" class="col-sm-3 col-form-label">Jegy típus</label>
                         <div class="col-sm-9">
-                            <input type="text"  class="form-control" id="tipus" name="tipus" required>
+                            <input type="text"  class="form-control" id="tipus" name="tipus" placeholder="Diák" required>
                         </div>
                         </div>
                         <div class="row">
                             <label for="szazalek" class="col-sm-3 col-form-label">Százalék</label>
                         <div class="col-sm-9">
-                            <input type="number" class="form-control" id="szazalek" name="szazalek" required>
+                            <input type="number" min="1" class="form-control" id="szazalek" name="szazalek" required>
                         </div>
                         </div>
                         <div class="row">
                             <label for="leiras" class="col-sm-3 col-form-label">Leírás</label>
                         <div class="col-sm-9">
-                            <textarea class="form-control" id="leiras" rows="5" maxlength="300" required></textarea>
+                            <textarea class="form-control" id="leiras" rows="5" maxlength="300" placeholder="Töltsd ki a film leírást..." required></textarea>
                         </div>
                         </div>
                         
