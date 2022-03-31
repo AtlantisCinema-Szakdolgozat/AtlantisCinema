@@ -1,5 +1,6 @@
 $(function(){
     let fajlnevFoglalas ="http://127.0.0.1:8000/api/nezo";
+    ellenorzo();
     const foglalasTomb = [];
     const myAjax = new MyAjax();
     myAjax.getAdat(fajlnevFoglalas, foglalasTomb, foglalasKiir);
@@ -8,6 +9,65 @@ $(function(){
     
     kiir(adat);
     kiir2(nyelv);
+
+    $(".kezd").on("click", () => {
+      $(".vasarlas").prop('disabled', false);
+        console.log('megnyomva');
+        adatSzerzes();
+    });
+
+
+    $(".vasarlas").on("click", () => {
+        let allSeatsVals = [];
+  
+          if ($("input:checked").length == ($("#szekekszama").val()))
+            {
+              let check = [];
+              $("input:checkbox[class='szekek']:checked").each(function(){
+                check.push($(this).val());
+              });
+              console.log(check);
+  
+              let check2 = $("input:checkbox[class='szekek']:checked").val("");
+              $.each(check2, function( key, value ) {
+                allSeatsVals.push(check);
+                $(value).css('accent-color','red');
+              });
+  
+               //console.log("The best cricketers are: " + allSeatsVals.join(", "));
+               $(".szekTerv*").css('pointer-events', 'none');
+
+               $(".vasarlas").prop('disabled', true);
+               $("#ertesites").html("<b style='margin-bottom:0px;background:yellow;'>A vasárlás sikeres volt</b>");
+            }
+          else
+            {
+              alert("Kérlek válassz " + ($("#szekekszama").val()) + " széket!")
+            }
+  
+      });
+ function adatSzerzes()
+    {
+      if (( $("#nev").val().length == 0 ) || ( $("#szekekszama").val().length == 0 ))
+      {
+      alert("Kérlek töltsd ki a nevet és a a székek számát");
+      $(".vasarlas").prop('disabled', true);
+      }
+      else
+      {
+        $(".gombok *").prop("disabled", true);
+        $("#ulohelyek *").prop("disabled", false);
+        $("#ertesites").html("<b style='margin-bottom:0px;background:yellow;'>Kezd el a foglalást</b>");
+      }
+    }
+function ellenorzo()
+{
+  $(".vasarlas").prop('disabled', true);
+  $("#ulohelyek *").prop("disabled", true);
+  //$(".displayerBoxes *").prop("disabled", true);
+}
+
+
 function kiir(adat){
         $(".terem").html(adat[0].teremNev);
         $(".idopont").html(adat[0].kapcsolat.kezdesiIdo);

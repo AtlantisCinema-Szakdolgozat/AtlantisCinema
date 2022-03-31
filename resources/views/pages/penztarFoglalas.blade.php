@@ -63,127 +63,214 @@
                 
                 </tbody>
               </table>
-
-           
-                
-
-            
             </div>
         <div id="ulesterv" class="col-xl-7 col-lg-9">
+
+        <p id="ertesites"></p>
           <div class="aktfilm">
             <p class="terem"></p>
             <p class="idopont"></p>
             <p class="szinkron"></p>
             </div>
           <div id="vaszon"></div>
-          
-          <div class="szek">
-          <div class="sor">
-            <div class="oszlop"></div>
-            <div class="oszlop"></div>
-            <div class="oszlop"></div>
-            <div class="oszlop"></div>
-            <div class="oszlop"></div>
-            <div class="oszlop"></div>
-            <div class="oszlop"></div>
-            <div class="oszlop"></div>
-            <div class="oszlop"></div>
-            <div class="oszlop"></div>
-            <div class="oszlop"></div>
-            <div class="oszlop"></div>
-            <div class="oszlop"></div>
-          </div>
 
-          <div class="sor">
-            <div class="oszlop"></div>
-            <div class="oszlop"></div>
-            <div class="oszlop"></div>
-            <div class="oszlop"></div>
-            <div class="oszlop"></div>
-            <div class="oszlop"></div>
-            <div class="oszlop"></div>
-            <div class="oszlop"></div>
-            <div class="oszlop"></div>
-            <div class="oszlop"></div>
-            <div class="oszlop"></div>
-            <div class="oszlop"></div>
-            <div class="oszlop"></div>
-          </div>
-          <div class="sor">
-            <div class="oszlop"></div>
-            <div class="oszlop"></div>
-            <div class="oszlop"></div>
-            <div class="oszlop"></div>
-            <div class="oszlop"></div>
-            <div class="oszlop"></div>
-            <div class="oszlop"></div>
-            <div class="oszlop"></div>
-            <div class="oszlop"></div>
-            <div class="oszlop"></div>
-            <div class="oszlop"></div>
-            <div class="oszlop"></div>
-            <div class="oszlop"></div>
-          </div>
+          <div class="szekTerv">
+        <table id="ulohelyek">
+        <tr>
+          <td></td>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+          <td>4</td>
+          <td>5</td>
+          <td></td>
+          <td>6</td>
+          <td>7</td>
+          <td>8</td>
+          <td>9</td>
+          <td>10</td>
+          <td>11</td>
+          <td>12</td>
+      </tr>
+        
+      <tr>
+          <td>A</td>
+          <td><input type="checkbox" class="szekek" value="A1"></td>
+          <td><input type="checkbox" class="szekek" value="A2"></td>
+          <td><input type="checkbox" class="szekek" value="A3"></td>
+          <td><input type="checkbox" class="szekek" value="A4"></td>
+          <td><input type="checkbox" class="szekek" value="A5"></td>
+          <td class="szekGap"></td>
+          <td><input type="checkbox" class="szekek" value="A6"></td>
+          <td><input type="checkbox" class="szekek" value="A7"></td>
+          <td><input type="checkbox" class="szekek" value="A8"></td>
+          <td><input type="checkbox" class="szekek" value="A9"></td>
+          <td><input type="checkbox" class="szekek" value="A10"></td>
+          <td><input type="checkbox" class="szekek" value="A11"></td>
+          <td><input type="checkbox" class="szekek" value="A12"></td>
+        </tr>
+        
+        <tr>
+          <td>B</td>
+          <td><input type="checkbox" class="szekek" value="B1"></td>
+          <td><input type="checkbox" class="szekek" value="B2"></td>
+          <td><input type="checkbox" class="szekek" value="B3"></td>
+          <td><input type="checkbox" class="szekek" value="B4"></td>
+          <td><input type="checkbox" class="szekek" value="B5"></td>
+          <td></td>
+          <td><input type="checkbox" class="szekek" value="B6"></td>
+          <td><input type="checkbox" class="szekek" value="B7"></td>
+          <td><input type="checkbox" class="szekek" value="B8"></td>
+          <td><input type="checkbox" class="szekek" value="B9"></td>
+          <td><input type="checkbox" class="szekek" value="B10"></td>
+          <td><input type="checkbox" class="szekek" value="B11"></td>
+          <td><input type="checkbox" class="szekek" value="B12"></td>
+        </tr>
+        
+        <tr>
+          <td>C</td>
+          <td><input type="checkbox" class="szekek" value="C1"></td>
+          <td><input type="checkbox" class="szekek" value="C2"></td>
+          <td><input type="checkbox" class="szekek" value="C3"></td>
+          <td><input type="checkbox" class="szekek" value="C4"></td>
+          <td><input type="checkbox" class="szekek" value="C5"></td>
+          <td></td>
+          <td><input type="checkbox" class="szekek" value="C6"></td>
+          <td><input type="checkbox" class="szekek" value="C7"></td>
+          <td><input type="checkbox" class="szekek" value="C8"></td>
+          <td><input type="checkbox" class="szekek" value="C9"></td>
+          <td><input type="checkbox" class="szekek" value="C10"></td>
+          <td><input type="checkbox" class="szekek" value="C11"></td>
+          <td><input type="checkbox" class="szekek" value="C12"></td>
+      </tr>
+        
+      <tr>
+          <td>D</td>
+          <td><input type="checkbox" class="szekek" value="D1"></td>
+          <td><input type="checkbox" class="szekek" value="D2"></td>
+          <td><input type="checkbox" class="szekek" value="D3"></td>
+          <td><input type="checkbox" class="szekek" value="D4"></td>
+          <td><input type="checkbox" class="szekek" value="D5"></td>
+          <td></td>
+          <td><input type="checkbox" class="szekek" value="D6"></td>
+          <td><input type="checkbox" class="szekek" value="D7"></td>
+          <td><input type="checkbox" class="szekek" value="D8"></td>
+          <td><input type="checkbox" class="szekek" value="D9"></td>
+          <td><input type="checkbox" class="szekek" value="D10"></td>
+          <td><input type="checkbox" class="szekek" value="D11"></td>
+          <td><input type="checkbox" class="szekek" value="D12"></td>
+      </tr>
+        
+      <tr>
+          <td>E</td>
+          <td><input type="checkbox" class="szekek" value="E1"></td>
+          <td><input type="checkbox" class="szekek" value="E2"></td>
+          <td><input type="checkbox" class="szekek" value="E3"></td>
+          <td><input type="checkbox" class="szekek" value="E4"></td>
+          <td><input type="checkbox" class="szekek" value="E5"></td>
+          <td></td>
+          <td><input type="checkbox" class="szekek" value="E6"></td>
+          <td><input type="checkbox" class="szekek" value="E7"></td>
+          <td><input type="checkbox" class="szekek" value="E8"></td>
+          <td><input type="checkbox" class="szekek" value="E9"></td>
+          <td><input type="checkbox" class="szekek" value="E10"></td>
+          <td><input type="checkbox" class="szekek" value="E11"></td>
+          <td><input type="checkbox" class="szekek" value="E12"></td>
+      </tr>
+        
+      <tr class="szekVGap"></tr>
+        
+      <tr>
+          <td>F</td>
+          <td><input type="checkbox" class="szekek" value="F1"></td>
+          <td><input type="checkbox" class="szekek" value="F2"></td>
+          <td><input type="checkbox" class="szekek" value="F3"></td>
+          <td><input type="checkbox" class="szekek" value="F4"></td>
+          <td><input type="checkbox" class="szekek" value="F5"></td>
+          <td></td>
+          <td><input type="checkbox" class="szekek" value="F6"></td>
+          <td><input type="checkbox" class="szekek" value="F7"></td>
+          <td><input type="checkbox" class="szekek" value="F8"></td>
+          <td><input type="checkbox" class="szekek" value="F9"></td>
+          <td><input type="checkbox" class="szekek" value="F10"></td>
+          <td><input type="checkbox" class="szekek" value="F11"></td>
+          <td><input type="checkbox" class="szekek" value="F12"></td>
+      </tr>
+        
+      <tr>
+          <td>G</td>
+          <td><input type="checkbox" class="szekek" value="G1"></td>
+          <td><input type="checkbox" class="szekek" value="G2"></td>
+          <td><input type="checkbox" class="szekek" value="G3"></td>
+          <td><input type="checkbox" class="szekek" value="G4"></td>
+          <td><input type="checkbox" class="szekek" value="G5"></td>
+          <td></td>
+          <td><input type="checkbox" class="szekek" value="G6"></td>
+          <td><input type="checkbox" class="szekek" value="G7"></td>
+          <td><input type="checkbox" class="szekek" value="G8"></td>
+          <td><input type="checkbox" class="szekek" value="G9"></td>
+          <td><input type="checkbox" class="szekek" value="G10"></td>
+          <td><input type="checkbox" class="szekek" value="G11"></td>
+          <td><input type="checkbox" class="szekek" value="G12"></td>
+      </tr>
+        
+      <tr>
+          <td>H</td>
+          <td><input type="checkbox" class="szekek" value="H1"></td>
+          <td><input type="checkbox" class="szekek" value="H2"></td>
+          <td><input type="checkbox" class="szekek" value="H3"></td>
+          <td><input type="checkbox" class="szekek" value="H4"></td>
+          <td><input type="checkbox" class="szekek" value="H5"></td>
+          <td></td>
+          <td><input type="checkbox" class="szekek" value="H6"></td>
+          <td><input type="checkbox" class="szekek" value="H7"></td>
+          <td><input type="checkbox" class="szekek" value="H8"></td>
+          <td><input type="checkbox" class="szekek" value="H9"></td>
+          <td><input type="checkbox" class="szekek" value="H10"></td>
+          <td><input type="checkbox" class="szekek" value="H11"></td>
+          <td><input type="checkbox" class="szekek" value="H12"></td>
+      </tr>
+        
+      <tr>
+          <td>I</td>
+          <td><input type="checkbox" class="szekek" value="I1"></td>
+          <td><input type="checkbox" class="szekek" value="I2"></td>
+          <td><input type="checkbox" class="szekek" value="I3"></td>
+          <td><input type="checkbox" class="szekek" value="I4"></td>
+          <td><input type="checkbox" class="szekek" value="I5"></td>
+          <td></td>
+          <td><input type="checkbox" class="szekek" value="I6"></td>
+          <td><input type="checkbox" class="szekek" value="I7"></td>
+          <td><input type="checkbox" class="szekek" value="I8"></td>
+          <td><input type="checkbox" class="szekek" value="I9"></td>
+          <td><input type="checkbox" class="szekek" value="I10"></td>
+          <td><input type="checkbox" class="szekek" value="I11"></td>
+          <td><input type="checkbox" class="szekek" value="I12"></td>
+      </tr>
+        
+      <tr>
+          <td>J</td>
+          <td><input type="checkbox" class="szekek" value="J1"></td>
+          <td><input type="checkbox" class="szekek" value="J2"></td>
+          <td><input type="checkbox" class="szekek" value="J3"></td>
+          <td><input type="checkbox" class="szekek" value="J4"></td>
+          <td><input type="checkbox" class="szekek" value="J5"></td>
+          <td></td>
+          <td><input type="checkbox" class="szekek" value="J6"></td>
+          <td><input type="checkbox" class="szekek" value="J7"></td>
+          <td><input type="checkbox" class="szekek" value="J8"></td>
+          <td><input type="checkbox" class="szekek" value="J9"></td>
+          <td><input type="checkbox" class="szekek" value="J10"></td>
+          <td><input type="checkbox" class="szekek" value="J11"></td>
+          <td><input type="checkbox" class="szekek" value="J12"></td>
+      </tr>
 
-          <div class="sor">
-            <div class="oszlop"></div>
-            <div class="oszlop"></div>
-            <div class="oszlop"></div>
-            <div class="oszlop"></div>
-            <div class="oszlop"></div>
-            <div class="oszlop"></div>
-            <div class="oszlop"></div>
-            <div class="oszlop"></div>
-            <div class="oszlop"></div>
-            <div class="oszlop"></div>
-            <div class="oszlop"></div>
-            <div class="oszlop"></div>
-            <div class="oszlop"></div>
-          </div>
-
-          <div class="sor">
-            <div class="oszlop"></div>
-            <div class="oszlop"></div>
-            <div class="oszlop"></div>
-            <div class="oszlop"></div>
-            <div class="oszlop"></div>
-            <div class="oszlop"></div>
-            <div class="oszlop"></div>
-            <div class="oszlop"></div>
-            <div class="oszlop"></div>
-            <div class="oszlop"></div>
-            <div class="oszlop"></div>
-            <div class="oszlop"></div>
-            <div class="oszlop"></div>
-          </div>
-
-          <div class="sor">
-            <div class="oszlop"></div>
-            <div class="oszlop"></div>
-            <div class="oszlop"></div>
-            <div class="oszlop"></div>
-            <div class="oszlop"></div>
-            <div class="oszlop"></div>
-            <div class="oszlop"></div>
-            <div class="oszlop"></div>
-            <div class="oszlop"></div>
-            <div class="oszlop"></div>
-            <div class="oszlop"></div>
-            <div class="oszlop"></div>
-            <div class="oszlop"></div>
-          </div>
-
-
-
-        </div>
-    
+        
+      </table>
+</div>
             
         <div class="jelzes row">
-
           <div id="szabad" class="col">Szabad</div>
-         
-  
-          <div id="foglalt" class="col">Foglalt</div>
           <div id="eppen"class="col">Éppen foglal</div>
           <div id="eladott"class="col">Eladott</div>
   
@@ -192,7 +279,7 @@
       </div>
 
 
-
+        
         <div id="jegyekdarab"class="col-xl-2 col-lg-1">
         <form action="{{route('foglalas-Felvitel')}}" method="post">
 
@@ -212,13 +299,15 @@
 
 <div class="container">
 
-
-<label for="nev">Név:</label>
+<label for="nev">Név*:</label><br>
                     <input type="text" id="nev" name="nev" value="{{old('nev')}}" >
 
-<label for="email">Email:</label>
+<label for="email">Email*:</label>
 <input type="text" placeholder="beta@emil.com" name="email" id="email"  value="{{old('email')}}">
-<button type="submit" class="foglalasgomb col">Foglalás</button>
+
+<label for="email">Székek száma*:</label>
+ <input type="number" id="szekekszama" required>
+<!-- <button type="submit" class="foglalasgomb col">Foglalás</button> -->
 
 </div>
 </form>
@@ -226,81 +315,18 @@
       
 
 
-          <div id="jegyek">
-
-                <div id="diakjegy">
-                    <p>Diákjegy</p>
-                    <form>
-                        <select class="form-select" aria-label="Default select example">
-                          <option value="0">0</option>
-                          <option value="1">1</option>
-                          <option value="2">2</option>
-                          <option value="3">3</option>
-                          <option value="4">4</option>
-                          <option value="5">5</option>
-                          <option value="6">6</option>
-                          <option value="7">7</option>
-                          <option value="8">8</option>
-                          <option value="9">9</option>
-                          <option value="10">10</option>
-                        </select>
-                      </form>
-                </div>
-
-                <div id="felnott">
-                    <p>Felnőtt  jegy</p>
-                    <form>
-
-                        <select class="form-select" aria-label="Default select example">
-                          <option value="0">0</option>
-                          <option value="1">1</option>
-                          <option value="2">2</option>
-                          <option value="3">3</option>
-                          <option value="4">4</option>
-                          <option value="5">5</option>
-                          <option value="6">6</option>
-                          <option value="7">7</option>
-                          <option value="8">8</option>
-                          <option value="9">9</option>
-                          <option value="10">10</option>
-                        </select>
-                      </form>
-             
-
-                </div>
-                <div id="szerda">
-                    <p>Szerdai jegy</p>
-                    <form>
-                      <select class="form-select" aria-label="Default select example">
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                      </select>
-                      </form>
-                     
-                    </div>
-              
-
- 
-              </div>
+         
               <div class="gombok row">
+                <button class="kezd">Kezdés</button>
                 
-                <a href="/penztarVasarlas" class="col"><button type="button" class="vasarlas1">Vásárlás</button></a>
             </div>
+            <button class="vasarlas">Vásárlás</button>
             </aside>
           
 
         <footer>
-   
-            <button type="button" class="vissza">Vissza</button>
+        <input type="button" class='vissza'onclick="location.href='penztar';" value="Vissza" />
+            <!-- <button type="button" class="vissza">Vissza</button> -->
         </footer>
     
    

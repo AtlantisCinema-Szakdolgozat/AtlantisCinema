@@ -16,6 +16,41 @@
 }
 
 
+#ulohelyek{
+margin: auto;
+width: 50%;
+}
+.szekek{
+  width: 30px;
+  height: 30px;
+}
+
+.szekTerv{
+
+  text-align: center;
+
+}
+.szekGap
+{
+  width:40px;
+}
+
+.szekVGap
+{
+  height:40px;
+}
+
+
+input[type=checkbox]:checked {
+  accent-color:Green;
+} 
+#ertesites{
+  text-align: center;
+
+}
+
+
+
 body>main>#foglalas{
   padding-left: 30px;
   padding-right: 30px;
@@ -33,9 +68,7 @@ body>main>#foglalas{
 
 
   /*Táblázat*/
-  table{
-    border: 1px solid black;
-  }
+  
  
  
  #foglalas>#foglalasadatok>table{
@@ -44,31 +77,20 @@ body>main>#foglalas{
  }
 
 
-
- 
-  
   /*Ülésterv*/
 
-  #vaszon{
+    #vaszon{
     width: 50%;
     margin: auto;
-    height: 10px;
-    border: 1px solid black;
+    height: 70px;
+    transform: rotateX(-45deg);
+    box-shadow: 5px 0px 30px lightblue inset;
     margin-bottom: 5px;
     background-color: 
     #31619b;
-}
+}  
 
 
-.sor{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  width: max-content;
-  margin: auto;
-  margin-bottom: 10px;
-
-}
 
 #foglalas>#foglalasadatok>div{
 
@@ -77,46 +99,26 @@ max-height:45vh;
 
 }
 
-.oszlop{
-  width: 1ex;
-  height: 1ex;
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 20px;
-  font-size: 10px;
-  text-align: center;
-  background-color: rgb(15, 219, 15);
-
-}
 #ulesterv>.jelzes{
   margin: auto;
   margin-top: 30px;
   max-width: 600px;
-  
+  border: 1px solid black;
 }
 
 #szabad{
   text-align: center;
-  background-color: chartreuse;
+  background-color: white;
 }
-
-#foglalt{
-  text-align: center;
-  background-color: gray;
-}
-
-
 
 #eladott{
-
   text-align: center;
   background-color: red;
 }
 
 #eppen{
-
   text-align: center;
-  background-color: yellow;
+  background-color: green;
 }
 
 
@@ -124,10 +126,11 @@ max-height:45vh;
 /*Darab jegyek*/
  
   #jegyekdarab{
-
+    margin-top: 175px;
+    max-height: 400px;
     background-color: #d9d9d9;
     border: 1px solid black;
-  
+
   
   }
   
@@ -143,10 +146,10 @@ max-height:45vh;
 
   }
 
-#jegyek>div{
+/* #jegyek>div{
   margin: 12px;
 
-}
+} */
 
 #diakjegy p,#felnott p,#szerda,form label{
     color: black;
@@ -158,10 +161,12 @@ max-height:45vh;
     padding:5px;
     padding-top: 10px;
     
-    
  
    }
-  .foglalasgomb,.vasarlas1{
+   
+
+
+  .foglalasgomb,.vasarlas{
     margin:auto;
     font-size: 20px;
     border-radius: 10px;
@@ -196,6 +201,13 @@ max-height:45vh;
   #foglalas>#foglalasadatok>div{
     max-height: 35vh;
     padding-bottom: 15px;
+  }
+}
+
+
+@media only screen and (max-width: 1400px) {
+  #jegyekdarab{
+    margin-top: 0;
   }
 }
 
