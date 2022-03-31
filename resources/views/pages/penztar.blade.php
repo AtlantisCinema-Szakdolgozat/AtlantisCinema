@@ -37,14 +37,16 @@
 
       <nav class="row datumnapSzulo">
         <!-- <div class="datumnapSablon col">
+          <div>
           <p class="nap"></p>
           <p class="datum"></p>
+          <div>
         </div> -->
         
       </nav>
 
       <article>
-        <p class="aktnap">2020.20.20</p>
+        <p class="aktnap"></p>
       </article>
 
 
