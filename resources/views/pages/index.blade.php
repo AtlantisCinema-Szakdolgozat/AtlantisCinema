@@ -63,16 +63,18 @@
                     <div id="kisGaleria"> <!-- class="col-md-3 row" -->
 
                         <div> <!-- class=" col-md-12" -->
-                            <img src="Css/ideiglenes/popcornAkcio.jpg" alt="kép"/>
+                            <img src="Css/akciok_hirek/popcornAkcio.jpg" alt="kép"/>
                         </div>
 
                         <div> <!-- class=" col-md-12" -->
-                            <img src="Css/ideiglenes/popcorn.jpg" alt="kép"/>
+                            <img src="Css/akciok_hirek/popcorn.jpg" alt="kép"/>
                         </div>
 
-                        <div> <!-- class=" col-md-12" -->
+                        <!--
+                        <div>  class=" col-md-12" 
                             <img src="Css/ideiglenes/oscarAkc.jpg" alt="kép"/>
                         </div>
+                        -->
                         
                     </div> 
                     
@@ -147,32 +149,32 @@
 
                     <div class="csempeSablon row">
 
-                        <div class="divCsempePlakat col-md-3">
+
+                        <div class="divCsempePlakat col-md-3">  
                             <img  class="csempePlakat" src="" alt="plakát">
                         </div>
                         
-                        <div  class="csempeLeiras col-md-9" >
 
-                            <a href="/filmOldal"> <h3>  </h3> </a>
+                        <div  class="csempeLeiras col-md-9" > 
+
+                            <h3 class="filmCim"></h3>
+                            <a href="/filmOldal" class="tovabb">Tovább a filmre!</a>
+                            
                             <p>  </p>
                             <p>  </p>
                             
-                            <div>
-                                <table class="idoPontok table table-success bg-black" >
+                            <div id="idopontSzulo">
 
-                                    <tr id="idopontSzulo">
-                                        <th class="idopont"> Időpontok: </th>
+                                <p> Időpontok: </p>
 
-                                        <th class="idopontSablon"> <a href="/foglalasOldal">  </a></th>
-
-                                    </tr>
-
-                                </table>
                             </div>
 
                         </div>
+                        
                     </div>
+                    
                 </div>
+
 
             </article>
 

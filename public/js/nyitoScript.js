@@ -5,37 +5,60 @@ $(function() {
     const myAjax = new MyAjax();
 
 
+    /*****************************************************/
     /* API végpontok: */
 
-    const filmApi = "http://127.0.0.1:8000/api/filmMufaj";   // film tábla, összekötve a műfaj táblával
-    const plakatApi = "http://127.0.0.1:8000/api/filmPlakat";   
-    const film = "http://127.0.0.1:8000/api/film";   
-    const vfmApi = "http://127.0.0.1:8000/api/vetitesFilmMufaj";
-
-    /* Adat tömb: */
-
-    const filmekTomb = [];
-    const plakatTomb = [];
-    const vfmTomb = [];
-
-
-    /* Adatok lekérése, tárolása és megjelenítések: */
-
-    myAjax.getAdat(filmApi, filmekTomb, filmekMegjelenites);
-    
-    myAjax.getAdat(film, plakatTomb, galeriaMegjelenites);
-    
-    myAjax.getAdatOnly(vfmApi, vfmTomb);
-    //console.log("vfmTomb: ", vfmTomb);
-
+    const vfmApi = "/api/vetitesFilmMufaj";
+    const plakatApi = "/api/film";
+    const vetitesApi = "/api/vetites";
 
     /*
-    console.log(filmekTomb);
-    galeriaMegjelenites();
+    const filmApi = "/api/filmMufaj";
+    */
+
+    
+    /*****************************************************/
+    /* Adat tömbök: */
+
+    const vfmTomb = [];
+    const plakatTomb = [];
+    const vetitesTomb = [];
+
+    /*
+    const filmTomb = [];
+    */
+    
+    const filmEventTomb = [];
+
+
+    /*****************************************************/
+    /* Adatok lekérése, tárolása és megjelenítések: */
+
+    myAjax.getAdat(vfmApi, vfmTomb, filmekMegjelenites);   // FILMEK példányosítása
+    myAjax.getAdat(plakatApi, plakatTomb, galeriaMegjelenites);   // GALÉRIA
+    
+    myAjax.getAdatOnly(vetitesApi, vetitesTomb); 
+
+
+
+    /*****************************************************/
+    /* Oldal váltás, local storage */
+
+    /*
+    $(window).on("filmTovabbTolt", (event) => {
+
+        alert("ghf");
+        filmEventTomb.push(event.detail);
+        console.log(filmEventTomb);
+        localStorage.setItem("kulcs", JSON.stringify(filmEventTomb));
+
+
+    });
     */
 
 
 
+    /*****************************************************/
     /* Megjelenítés: */
 
     function filmekMegjelenites() {
@@ -43,17 +66,41 @@ $(function() {
         const szuloElem = $("#musorListaCsempeSzulo");
         let sablonElem = $(".csempeSablon");
 
-        filmekTomb.forEach(function(element, index) {
+        vfmTomb.forEach(function(elem, index) {
+
+            //console.log(elem, index); 
 
             const ujElem = sablonElem.clone().appendTo(szuloElem);
-            const ujFilm = new Film(ujElem, filmekTomb[index]); 
+            const ujFilm = new Film(ujElem, vfmTomb[index]); 
+
+            // vetitesMegjelenites(index);
         });
 
         sablonElem.remove(); 
     }
 
+    // function vetitesMegjelenites(index) {
+
+    //     const szuloElem = $(".idopontSzulo");
+    //     let sablonElem = $(".idopontSablon");
+
+    //     // const idopontok = vetitesTomb[index];
+    //     // console.log(idopontok);
+
+    //     idopontok.forEach(function (elem, index) {
+
+    //         console.log(elem, index); 
+
+    //         //const ujElem = sablonElem.clone().appendTo(szuloElem); 
+    //         //const ujVetites = new Vetites(ujElem, vfmTomb[index].kezdesIdo);
+    //     });
+
+    //     sablonElem.remove();
+    // }
 
 
+
+    /*****************************************************/
     /* Galéria: */
 
     let ujGaleriaPlakat=[];
@@ -63,12 +110,8 @@ $(function() {
         const galeriaSzulo = $("#carousel");
         let sablonElem = $("#korhintaGaleria");
 
-        //let bal = " <button id='bal'> << </button> ".appendTo(carousel);
-        
         const ujElem = sablonElem.clone().appendTo(carousel);
         ujGaleriaPlakat = new GaleriaPlakat(ujElem, plakatTomb[0]);
-
-        //let jobb = " <button id='jobb'> << </button> ".appendTo(carousel);
 
         sablonElem.remove();
     }
@@ -103,30 +146,5 @@ $(function() {
     $("#bal").on("click", ()=> {balra()} );     
     $("#jobb").on("click", ()=> {jobbra()} );
     
-
-
-
-
-    /* Auto lapozás 
-   
-        let slideIndex = 0;
-        showSlides();
-
-        function showSlides() {
-        let i;
-        let slides = document.getElementsByClassName("mySlides");
-        let dots = document.getElementsByClassName("dot");
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";  
-        }
-        slideIndex++;
-        if (slideIndex > slides.length) {slideIndex = 1}    
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex-1].style.display = "block";  
-        dots[slideIndex-1].className += " active";
-        setTimeout(showSlides, 2000); // Change image every 2 seconds
-    */
 
 });

@@ -15,7 +15,8 @@ class vetitesFilmMufajController extends Controller
 
        return Film::with('vetites', 'mufaj')
        ->where('cim', 'like', "%$name%")
-       
+       -> join('mufajs', 'films.mufajId','=','mufajs.mufajId')
+
        ->get();
     }
  
