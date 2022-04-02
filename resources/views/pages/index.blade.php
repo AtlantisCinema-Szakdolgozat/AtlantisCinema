@@ -160,7 +160,7 @@
                             <h3 class="filmCim"></h3>
                             <a href="/filmOldal" class="tovabb">Tovább a filmre!</a>
                             
-                            <p>  </p>
+                            <p class="mufaj">  </p>
                             <p>  </p>
                             
                             <div id="idopontSzulo">

@@ -186,6 +186,41 @@ a:hover {
     text-align: justify;
 }
 
+.mufaj {
+
+    padding-top: 20px;
+}
+
+#idopontSzulo {
+
+    background-color: rgba(117, 164, 170, 0.664);
+    border: 1px solid black;
+    margin: 5px;
+    padding-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#idopontSzulo > p {
+
+    color: black;
+    padding-left: 10px;
+}
+
+.idopont {
+
+    padding-left: 20px;
+    color: black;
+}
+
+.idopont:hover {
+
+    color: rgb(194, 165, 0);
+    background-color: rgba(49, 69, 71, 0.856);
+}
+
+
+/*
 table {
 
     max-width: 100%;
@@ -198,6 +233,9 @@ table {
 table{
     max-width: 100%;
 }
+/*
+
+
 
 
 /* Reszponzivitás */

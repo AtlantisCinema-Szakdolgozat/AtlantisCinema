@@ -24,7 +24,13 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-        
+
+        <script src="js/ajax.js" type="text/javascript"></script>
+
+        <script src="js/Film.js" type="text/javascript"></script>
+
+        <script src="js/filmOldalScript.js" type="text/javascript"></script>
+
     </head>
 
     <body>
@@ -36,7 +42,7 @@
             <section>
 
                 <div>
-                    <iframe id="youtube" src="https://www.youtube.com/embed/RcdSQ2scYio" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe src="" id="youtube" title="Film Trailer"> </iframe>
                 </div>
 
             </section>
@@ -48,18 +54,18 @@
 
                     <div id="plakat" class="col-md-4">
 
-                        <img  src="Css/ideiglenes/matrix.jpg" alt="plakát">
+                        <img  src="" alt="plakát">
 
                     </div>
                         
                     <div id="leiras" class="col-md-8">
 
-                        <h3 id="cim"> Mátrix: Feltámadások </h3>
-                        <p> sci-fi, akció </p>
-                        <p> 148 perc </p>
-                        <p> Rendező: Lana Wachowski </p>
-                        <p> Színészek: Keanu Reeves, Carrie-Anne Moss, Patrick Harris </p>
-                        <p> Neo nem halt meg. A Mátrix működik, de megújult, erősebb és biztonságosabb, mint valaha. Az élet megy tovább. Vannak hősök, akik képesek a feltámadásra. Vannak szörnyű erők, amelyek ellen mindig újra harcba kell szállni. És van néhány nagy titok, amelynek segítségével a hősök vállalhatják a harcot, és szembeszállhatnak azzal, aki/ami az elpusztításukra tör. Legfeljebb maguk sem értik, hogy történik mindez. </p>
+                        <h3 id="cim">  </h3>
+                        <p id="mufaj">  </p>
+                        <p id="hossz">  </p>
+                        <p id="rendezo">  </p>
+                        <p id="szineszek">  </p>
+                        <p id="leiras">  </p>
                     
                     </div>
                 </div>
@@ -114,18 +120,11 @@
                 </nav> 
                 
 
-                 <div>
-                    <table class="idoPontok table  table-dark bg-black" >
+                <div id="idopontSzulo">
 
-                        <tr>
-                            <th class="idopont"> Időpontok: </th>
-                            <th> <a href="/foglalasOldal">13:15</a></th>
-                            <th> <a href="/foglalasOldal">16:30</a> </th>
-                            <th> <a href="/foglalasOldal">20:00</a> </th>
-                        </tr>
-    
-                    </table>
-                 </div>
+                    <p> Időpontok: </p>
+
+                </div>
                 
 
             </article>

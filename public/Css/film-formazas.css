@@ -67,11 +67,6 @@ article > .row {
 
 /* linkek */
 
-.idoPontok>tbody>tr>th>a {
-    padding: 10px;
-    text-align: center;
-}
-
 a {
     text-decoration: none;
     color: rgb(194, 165, 0);
@@ -81,4 +76,29 @@ a:hover {
 
     background-color: #333333;
     color: rgb(194, 165, 0);
+}
+
+
+#idopontSzulo {
+
+    background-color: #333333;
+    padding-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#idopontSzulo > p {
+
+    color: rgb(212, 175, 55);
+    padding-left: 30px;
+}
+
+.idopont {
+
+    padding-left: 30px;
+}
+
+.idopont:hover {
+
+    color: rgb(223, 223, 185);
 }

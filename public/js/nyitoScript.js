@@ -10,53 +10,32 @@ $(function() {
 
     const vfmApi = "/api/vetitesFilmMufaj";
     const plakatApi = "/api/film";
-    const vetitesApi = "/api/vetites";
 
-    /*
-    const filmApi = "/api/filmMufaj";
-    */
 
-    
     /*****************************************************/
     /* Adat tömbök: */
 
     const vfmTomb = [];
     const plakatTomb = [];
-    const vetitesTomb = [];
-
-    /*
-    const filmTomb = [];
-    */
-    
-    const filmEventTomb = [];
-
 
     /*****************************************************/
     /* Adatok lekérése, tárolása és megjelenítések: */
 
-    myAjax.getAdat(vfmApi, vfmTomb, filmekMegjelenites);   // FILMEK példányosítása
+    myAjax.getAdat(vfmApi, vfmTomb, filmekMegjelenites);   // FILMEK 
     myAjax.getAdat(plakatApi, plakatTomb, galeriaMegjelenites);   // GALÉRIA
     
-    myAjax.getAdatOnly(vetitesApi, vetitesTomb); 
-
 
 
     /*****************************************************/
-    /* Oldal váltás, local storage */
+    /* Oldal váltás, film tovább adása */
 
-    /*
+    
     $(window).on("filmTovabbTolt", (event) => {
 
-        alert("ghf");
-        filmEventTomb.push(event.detail);
-        console.log(filmEventTomb);
-        localStorage.setItem("kulcs", JSON.stringify(filmEventTomb));
-
-
+        localStorage.setItem("filmKulcs", JSON.stringify(event.detail));
     });
-    */
-
-
+    
+    
 
     /*****************************************************/
     /* Megjelenítés: */
@@ -66,38 +45,14 @@ $(function() {
         const szuloElem = $("#musorListaCsempeSzulo");
         let sablonElem = $(".csempeSablon");
 
-        vfmTomb.forEach(function(elem, index) {
-
-            //console.log(elem, index); 
+        vfmTomb.forEach(function(elem, index) { 
 
             const ujElem = sablonElem.clone().appendTo(szuloElem);
             const ujFilm = new Film(ujElem, vfmTomb[index]); 
-
-            // vetitesMegjelenites(index);
         });
 
         sablonElem.remove(); 
     }
-
-    // function vetitesMegjelenites(index) {
-
-    //     const szuloElem = $(".idopontSzulo");
-    //     let sablonElem = $(".idopontSablon");
-
-    //     // const idopontok = vetitesTomb[index];
-    //     // console.log(idopontok);
-
-    //     idopontok.forEach(function (elem, index) {
-
-    //         console.log(elem, index); 
-
-    //         //const ujElem = sablonElem.clone().appendTo(szuloElem); 
-    //         //const ujVetites = new Vetites(ujElem, vfmTomb[index].kezdesIdo);
-    //     });
-
-    //     sablonElem.remove();
-    // }
-
 
 
     /*****************************************************/

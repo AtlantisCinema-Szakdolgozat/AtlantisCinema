@@ -1,6 +1,8 @@
 
 class Vetites {
 
+    /* NINCS HASZNÁLATBAN! (egyelőre nem akarom törölni)*/
+
     constructor(vElem, vAdat) {
 
         
