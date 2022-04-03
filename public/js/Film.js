@@ -13,9 +13,10 @@ class Film {
         this.plakat = this.fElem.children("div:first").children("img");
         this.mufaj = this.fElem.children("div:last").children("p:first");
 
-        this.idopontSzulo = this.fElem.children("div:last").children("#idopontSzulo")
+        this.idopontSzulo = this.fElem.children("div:last").children("#idopontSzulo");
 
 
+        
         this.setAdatok(this.fAdat);
 
 
@@ -65,7 +66,7 @@ class FilmOldal {
        
         this.fAdat = fAdat;
 
-        this.youtube = $("section").children("div").children("iframe");
+        this.youtube = $("section").children("div").children("#youtube");
 
         this.plakat = $("article").children("#filmAdatlap").children("#plakat").children("img");
         this.fCim = $("article").children("#filmAdatlap").children("#leiras").children("#cim");

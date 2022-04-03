@@ -43,7 +43,7 @@ article > .row {
 
 #plakat {
 
-    padding: 0px;
+    padding-right: 20px;
 }
 
 #plakat > img {
@@ -56,13 +56,13 @@ article > .row {
 #cim {
 
     color: rgb(194, 165, 0);
+    padding-top: 20px;
 }
 
 
 #leiras {
 
     text-align: justify;
-    padding: 10px;
 }
 
 /* linkek */

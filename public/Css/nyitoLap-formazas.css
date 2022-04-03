@@ -162,13 +162,12 @@ a:hover {
 .divCsempePlakat {
 
     text-align: center;
-
-    padding-bottom: 30px;
 } 
 
 .divCsempePlakat > img {
 
-    border: 2px solid black;
+    border: 1px solid black;
+    margin-top:20px;
 }
 
 .divCsempePlakat > img:hover {
@@ -179,6 +178,11 @@ a:hover {
 .csempePlakat {
     max-width: 100%;
     max-height: 240px;
+}
+
+.filmCim {
+
+    margin-top: 20px;
 }
 
 .csempeLeiras > p {
@@ -197,6 +201,7 @@ a:hover {
     border: 1px solid black;
     margin: 5px;
     padding-top: 10px;
+    margin-bottom: 10px;
     display: flex;
     flex-wrap: wrap;
 }
