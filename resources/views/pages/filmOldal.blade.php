@@ -63,9 +63,14 @@
                         <h3 id="cim">  </h3>
                         <p id="mufaj">  </p>
                         <p id="hossz">  </p>
-                        <p id="rendezo">  </p>
+
+                        <p class="szemelyek">Rendező:</p>
+                        <p id="rendezo"> </p>
+
+                        <p class="szemelyek">Színészek:</p>
                         <p id="szineszek">  </p>
-                        <p id="leiras">  </p>
+
+                        <p id="fLeiras">  </p>
                     
                     </div>
                 </div>

@@ -37,7 +37,7 @@ article > .row {
 #filmAdatlap {
 
     background-color: rgba(219, 219, 207, 0.507);
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 
 
@@ -50,12 +50,14 @@ article > .row {
 
     width: 100%;
     height: auto;
-    border: 2px solid black;
+    border: 1px solid black;
 }
 
 #cim {
 
-    color: rgb(194, 165, 0);
+    color: rgb(189, 163, 15);
+    font-weight: bold;
+    font-size: 40px;
     padding-top: 20px;
 }
 
@@ -64,6 +66,18 @@ article > .row {
 
     text-align: justify;
 }
+
+
+p {
+
+    margin: 0px;
+}
+
+#mufaj, #hossz, .szemelyek, #fLeiras {
+
+    margin-top: 20px;
+}
+
 
 /* linkek */
 
@@ -83,6 +97,7 @@ a:hover {
 
     background-color: #333333;
     padding-top: 10px;
+    padding-bottom: 10px;
     display: flex;
     flex-wrap: wrap;
 }

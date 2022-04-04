@@ -26,6 +26,12 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
 
+        <script src="js/ajax.js" type="text/javascript"></script>
+
+        <script src="js/Film.js" type="text/javascript"></script>
+
+        <script src="js/foglalasOldalScript.js" type="text/javascript"></script>
+
     </head>
 
     <body>
@@ -41,28 +47,27 @@
 
                         <div class="col-sm-4">
 
-                            <img  src="Css/ideiglenes/matrix.jpg" alt="plakát">
+                            <img class="plakat" src="" alt="plakát">
 
                         </div>
 
-                        <div class="col-sm-4">
+                        <div id="filmLeiras" class="col-sm-4">
 
-                            <h4>Film adatok</h4>
-                            <p >Mátrix: Feltámadások</p>
-    
-                            <p >2020. 01. 28.</p>
-    
-                            <p >16:30</p>
-    
-                            <p >Szinkronizált</p>
+                            <h4 id="cim"> </h4>
 
-                            <p >6. terem</p>
+                            <p id="nap"> </p>
+    
+                            <p id="kezdesIdo"> </p>
+    
+                            <p id="terem"> </p>
+    
+                            <p id="nyelv"> </p>
 
                         </div>
                         
                         <div class="col-sm-4">
 
-                            <img  src="Css/ideiglenes/matrix.jpg" alt="plakát">
+                            <img class="plakat" src="" alt="plakát">
 
                         </div>
 
@@ -324,11 +329,6 @@
             </article>
 
          @endsection
-
-        <!-- Felugró ablak -->
-
-        <script src="js/foglalasFelugro.js"></script>
-
 
     </body>
 </html>

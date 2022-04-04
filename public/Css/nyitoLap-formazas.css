@@ -9,18 +9,24 @@ header {
     display: flex;
 }
 
+
+/*
 #kereses {
 
     display: flex;
 }
+*/
+
 
 
 /* ARTICLE */
 
+/*
 #topGomb {
 
     float: right;
 }
+*/
 
 
 article > div {
@@ -74,6 +80,7 @@ section .row {
     padding-left: 3px;
 }
 
+
 #carousel {
 
     grid-area: p;
@@ -106,6 +113,7 @@ section .row {
 
     width: 99%;
     height: auto;
+    border: 1px solid black;
 }
 
 
@@ -128,13 +136,13 @@ a:hover {
 }
 
 
-/* Táblázatos megjelenítés */
+/* Táblázatos megjelenítés 
 
 #musorLista {
 
     border: 2px solid black;
 }
-
+*/
 
 
 /* Csempés megjelenítés */
@@ -182,7 +190,10 @@ a:hover {
 
 .filmCim {
 
+    color: rgb(189, 163, 15);
+    font-weight: bold;
     margin-top: 20px;
+    font-size: 30px;
 }
 
 .csempeLeiras > p {
@@ -192,7 +203,7 @@ a:hover {
 
 .mufaj {
 
-    padding-top: 20px;
+    padding-top: 10px;
 }
 
 #idopontSzulo {
@@ -200,8 +211,8 @@ a:hover {
     background-color: rgba(117, 164, 170, 0.664);
     border: 1px solid black;
     margin: 5px;
-    padding-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -210,12 +221,14 @@ a:hover {
 
     color: black;
     padding-left: 10px;
+    margin-top: 10px;
 }
 
 .idopont {
 
     padding-left: 20px;
     color: black;
+    padding-top: 10px;
 }
 
 .idopont:hover {

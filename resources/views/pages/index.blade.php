@@ -157,8 +157,7 @@
 
                         <div  class="csempeLeiras col-md-9" > 
 
-                            <h3 class="filmCim"></h3>
-                            <a href="/filmOldal" class="tovabb">Tovább a filmre!</a>
+                            <a href='/filmOldal'" class="filmCim"> </a>
                             
                             <p class="mufaj">  </p>
                             <p>  </p>
@@ -166,6 +165,7 @@
                             <div id="idopontSzulo">
 
                                 <p> Időpontok: </p>
+
 
                             </div>
 

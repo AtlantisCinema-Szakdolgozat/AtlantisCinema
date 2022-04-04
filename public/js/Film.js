@@ -16,11 +16,16 @@ class Film {
         this.idopontSzulo = this.fElem.children("div:last").children("#idopontSzulo");
 
 
-        
+
         this.setAdatok(this.fAdat);
 
 
-        this.tovabb.on("click", () => {
+        this.fCim.on("click", () => {
+
+            this.filmTovabbToltTrigger();
+        });
+
+        this.idopontSzulo.children(".idopont").on("click", () => {
 
             this.filmTovabbToltTrigger();
         });
@@ -60,6 +65,8 @@ class Film {
 
 
 
+/************************************************/
+
 class FilmOldal {
 
     constructor(fAdat) {
@@ -76,7 +83,7 @@ class FilmOldal {
         this.rendezo = $("article").children("#filmAdatlap").children("#leiras").children("#rendezo");
         this.szineszek = $("article").children("#filmAdatlap").children("#leiras").children("#szineszek");
         
-        this.leiras = $("article").children("#filmAdatlap").children("#leiras").children("#leiras");
+        this.fLeiras = $("article").children("#filmAdatlap").children("#leiras").children("#fLeiras");
 
         this.idopontSzulo = $("article").children("#idopontSzulo");
 
@@ -99,17 +106,76 @@ class FilmOldal {
         }
 
         this.hossz.html(ertek.hossz);
-        this.leiras.html(ertek.filmLeiras);
+        this.fLeiras.html(ertek.filmLeiras);
 
-        /* not yet
-        this.szinesz.html();
-        this.rendezo.html();
-        */
+        for (const key in ertek.szemelyek) {
+            
+            for (const keY in ertek.szemelyek[key]) {
+
+                if(ertek.szemelyek[key].kapcsolat.poszt === "Rendező") {
+
+                    this.rendezo.html(ertek.szemelyek[key].nev);
+
+                } else {
+                    
+                    this.szineszek.html(ertek.szemelyek[key].nev);
+
+                    console.log(key, keY);
+
+                }
+            }  
+        }
+
 
         for (const key in ertek.vetites) {
 
-            this.idopontSzulo.append("<p class='idopont'>" + ertek.vetites[key].kezdesIdo +"</p>");
+            this.idopontSzulo.append("<a href='/foglalasOldal' class='idopont'>" + ertek.vetites[key].kezdesIdo +"</a>");
         }
+        
+    }
+}
+
+
+
+/************************************************/
+
+class FilmFoglalas {
+
+    constructor(fAdat) {
+       
+        this.fAdat = fAdat;
+
+        this.plakat1 = $("section").children("#valasztottFilm").children("div:first").children("img");
+        this.plakat2 = $("section").children("#valasztottFilm").children("div:last").children("img");
+        
+        this.cim = $("section").children("#valasztottFilm").children("#filmLeiras").children("#cim");
+        this.nap = $("section").children("#valasztottFilm").children("#filmLeiras").children("#nap");
+        this.kezdesIdo = $("section").children("#valasztottFilm").children("#filmLeiras").children("#kezdesIdo");
+        this.terem = $("section").children("#valasztottFilm").children("#filmLeiras").children("#terem");
+        this.nyelv = $("section").children("#valasztottFilm").children("#filmLeiras").children("#nyelv");
+
+
+        this.setAdatok(this.fAdat);
+    }
+
+
+    setAdatok(ertek) {
+
+        this.plakat1.attr("src", ertek.poszter);
+        this.plakat2.attr("src", ertek.poszter);
+
+        this.cim.html(ertek.cim);
+        
+        for (const key in ertek.vetites) {
+
+            this.nap.html(ertek.vetites[key].vetitesNap);
+            this.kezdesIdo.html(ertek.vetites[key].kezdesIdo);
+        }
+
+        /* 
+            terem
+            nyelv
+        */
         
     }
 }

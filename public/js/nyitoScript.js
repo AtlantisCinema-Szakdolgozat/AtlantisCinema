@@ -1,4 +1,3 @@
-
 $(function() {
 
 
@@ -8,7 +7,9 @@ $(function() {
     /*****************************************************/
     /* API végpontok: */
 
-    const vfmApi = "/api/vetitesFilmMufaj";
+    //const vfmApi = "/api/vetitesFilmMufaj";
+    const vfmApi = "/api/filmSzemelyMufaj";
+
     const plakatApi = "/api/film";
 
 
@@ -35,7 +36,7 @@ $(function() {
         localStorage.setItem("filmKulcs", JSON.stringify(event.detail));
     });
     
-    
+
 
     /*****************************************************/
     /* Megjelenítés: */
