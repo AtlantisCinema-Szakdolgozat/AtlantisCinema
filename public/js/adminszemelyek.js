@@ -2,19 +2,19 @@ $(function(){
     const myAjax=new MyAjax;
     let szemely =[];
     const szuloelem = $("#szulo");
-    let apivegpont="http://127.0.0.1:8000/api/szemely";
+    let apivegpont="/api/szemely";
     let akt="";
 
     myAjax.getAdat(apivegpont,szemely,szemelyekMegjelenitese);
 
     function szemelyekMegjelenitese(){
         let egyezes=apivegpont;
-        if(egyezes=="http://127.0.0.1:8000/api/szemely?q="){
+        if(egyezes=="/api/szemely?q="){
             szemely=[]
-            apivegpont="http://127.0.0.1:8000/api/szemely";
+            apivegpont="/api/szemely";
             myAjax.getAdat(apivegpont,szemely,szemelyekMegjelenitese);
         }
-        else if(akt!==apivegpont || akt=="http://127.0.0.1:8000/api/szemely"){
+        else if(akt!==apivegpont || akt=="/api/szemely"){
             szuloelem.children().remove();
             let ujSzemely;
             szemely.forEach(function(adat) {
@@ -26,13 +26,13 @@ $(function(){
     }
 
     $("#keresesmezo").on("keyup",()=>{
-        apivegpont="http://127.0.0.1:8000/api/szemely";
+        apivegpont="/api/szemely";
         apivegpont+="?q="+$("#keresesmezo").val();
         myAjax.getAdat(apivegpont,szemely,szemelyekMegjelenitese);
     })
 
     $("#rendezeskivalasztasa").on("change",function(){
-        apivegpont="http://127.0.0.1:8000/api/szemely";
+        apivegpont="/api/szemely";
         let szempont=$(this).val();
         switch(szempont) {
             case "rend1":
@@ -47,7 +47,7 @@ $(function(){
     })
 
     $(window).on("torles",(event)=>{
-        apivegpont="http://127.0.0.1:8000/api/szemely";
+        apivegpont="/api/szemely";
         myAjax.deletAdat(apivegpont,event.detail.adat.szemelyId,sikeresTorles,event.detail.szuloelem);
     });
 

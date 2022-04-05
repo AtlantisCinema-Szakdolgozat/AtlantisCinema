@@ -20,19 +20,26 @@ class SzekController extends Controller
 
     public function store(Request $request)
     {
-        //kötelező oszlopok
-     $request->validate([
-        'allapot' => 'required']);
-        return Szek::create($request->all());
+        $sor=$request['sor'];
+        $oszlop=$request['oszlop'];
+        for ($i=1; $i < $sor+1; $i++) { 
+            for ($j=1; $j < $oszlop+1; $j++) { 
+                    $request['sor']=$i;
+                    $request['oszlop']=$j;
+                Szek::create($request->all());
+            }
+        }
     }
 
     public function update(Request $request, $id)
     {
         $article = Szek::find($id);
-     $request->validate([ 
-     'allapot' => 'required']);
+        $request->validate([ 
+            'sor' => 'required',
+            'oszlop' => 'required',
+            'vetitesId' => 'required'
+        ]);
         $article->update($request->all());
-
         return $article;
     }
 

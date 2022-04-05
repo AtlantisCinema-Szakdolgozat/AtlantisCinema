@@ -28,6 +28,9 @@ class MyAjax{
                     tomb.push(element)
                 });
                 myCallback();
+            },
+            error: function(result) {
+                alert("Nem sikerölt az adatbetöltés");
             }
         });
     }
@@ -39,6 +42,10 @@ class MyAjax{
             data:adat,
             headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
             success:function(result){
+            }
+            ,
+            error: function(result) {
+                alert("Nem sikerölt az adatfeltöltés");
             }
         });
         
@@ -66,6 +73,9 @@ class MyAjax{
             data:adat,
             headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
             success:function(result){
+            },
+            error: function(result) {
+                alert("Nem sikerölt az adatmódosítás");
             }
         });
     }

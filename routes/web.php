@@ -98,10 +98,6 @@ Route::get('kedvezmeny', function () {
 Route::get('dolgozok', function () {
     return view('pages.dolgozok');
 })->middleware('can:adminJogosultsag');
-
-Route::get('statisztika', function () {
-    return view('pages.statisztika');
-})->middleware('can:adminJogosultsag');
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

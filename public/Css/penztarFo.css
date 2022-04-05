@@ -4,6 +4,20 @@ body{
     color: #be9d31;
   }
 
+  @font-face {
+    font-family: 'CASTELAR';
+    src: url('./CASTELAR.eot');
+    src: local('CASTELAR'), url('./CASTELAR.woff') format('woff'), url('./CASTELAR.ttf') format('truetype');
+  }
+  .fontsforweb_fontid_21688 {
+    font-family: 'CASTELAR' !important;
+  }
+  
+  #felhasznaloKezdolapLink{
+    font-family: CASTELLAR;
+    font-size: 20px;
+  }
+
 
   /*Header*/
 header div{

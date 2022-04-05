@@ -20,7 +20,7 @@ return new class extends Migration
             $table->boolean('felirat');
             $table->boolean('szinkron');
             $table->date('vetitesNap');
-            $table->time('kezdesIdo');
+            $table->time('kezdesiIdo');
             $table->integer('teljesJegyar');
             $table->date('premier')->nullable();;
             $table->boolean('publikus')->nullable();;

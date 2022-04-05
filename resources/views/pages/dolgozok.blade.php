@@ -21,7 +21,7 @@
     @section('content')
         <section>
             <div id="urlap">
-                <form action=""  method="post">
+                <form action=""  method="POST">
                   @csrf
                         <div class="row" id="index">
                             <label for="dolgozoid" class="col-sm-3 col-form-label">Index</label>
@@ -52,7 +52,7 @@
                           </div>
                         </div>
                         <div class="d-grid gap-2 d-md-flex justify-content-end">
-                            <input type="button" class="btn modosit" value="Módosit">
+                            <input type="submit" class="btn modosit" value="Módosit">
                         </div>
                 </form>
             </div>

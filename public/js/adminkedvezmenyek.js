@@ -1,7 +1,7 @@
 $(function(){
     const myAjax=new MyAjax;
     const kedvezmenyek =[];
-    let apivegpont="http://127.0.0.1:8000/api/kedvezmeny";
+    let apivegpont="/api/kedvezmeny";
 
     myAjax.getAdat(apivegpont,kedvezmenyek,kedvezmenyekMegjelenitese);
 
@@ -15,7 +15,7 @@ $(function(){
     }
 
     $(window).on("torles",(event)=>{
-        apivegpont="http://127.0.0.1:8000/api/kedvezmeny";
+        apivegpont="/api/kedvezmeny";
         myAjax.deletAdat(apivegpont,event.detail.adat.kedvezmenyId,sikeresTorles,event.detail.szuloelem);
     });
 

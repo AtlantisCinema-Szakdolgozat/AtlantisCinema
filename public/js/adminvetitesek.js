@@ -1,12 +1,12 @@
 $(function(){
-    const myAjax=new MyAjax;
+    const myAjax=new MyAjax();
     let vetitesek =[];
     let vetitesekTerem =[];
     let vetitesekFilm =[];
     const szuloelem = $("#szulo");
-    let apivegpont="http://127.0.0.1:8000/api/filmVetites";
-    let apivegpontTerem="http://127.0.0.1:8000/api/terem";
-    let apivegpontFilm="http://127.0.0.1:8000/api/film";
+    let apivegpont="/api/filmVetites";
+    let apivegpontTerem="/api/terem";
+    let apivegpontFilm="/api/film";
     let akt="";
     let premier=null;
 
@@ -14,12 +14,12 @@ $(function(){
 
     function vetitesekMegjelenitese(){
         let egyezes=apivegpont;
-        if(egyezes=="http://127.0.0.1:8000/api/filmVetites?q="){
+        if(egyezes=="/api/filmVetites?q="){
             vetitesek=[]
-            apivegpont="http://127.0.0.1:8000/api/filmVetites";
+            apivegpont="/api/filmVetites";
             myAjax.getAdat(apivegpont,vetitesek,vetitesekMegjelenitese);
         }
-        else if(akt!==apivegpont || akt=="http://127.0.0.1:8000/api/filmVetites"){
+        else if(akt!==apivegpont || akt=="/api/filmVetites"){
             szuloelem.children().remove();
             let ujVetites;
             vetitesek.forEach(function(adat) {
@@ -56,13 +56,13 @@ $(function(){
 
     
     $("#keresesmezo").on("keyup",()=>{
-        apivegpont="http://127.0.0.1:8000/api/filmVetites";
+        apivegpont="/api/filmVetites";
         apivegpont+="?q="+$("#keresesmezo").val();
         myAjax.getAdat(apivegpont,vetitesek,vetitesekMegjelenitese);
     })
 
     $("#rendezeskivalasztasa").on("change",function(){
-        apivegpont="http://127.0.0.1:8000/api/filmVetites";
+        apivegpont="/api/filmVetites";
         let szempont=$(this).val();
         switch(szempont) {
             case "rend1":
@@ -83,7 +83,7 @@ $(function(){
     });
 
     $(".felvitel").on("click", ()=>{
-        let apivegpontVetites="http://127.0.0.1:8000/api/vetites";
+        let apivegpontVetites="/api/vetites";
         let ujVetites={};
         ujVetites.teremId=$("#terem").val();
         ujVetites.filmId=$(".fcim :selected").attr("id");
@@ -108,7 +108,19 @@ $(function(){
         $("#fteljesJegyar").val('1900');
     });
     $(window).on("publikus",(event)=>{
-        let apivegpontVetites="http://127.0.0.1:8000/api/vetites";
+        let apivegpontSzek="/api/szek";
+        vetitesekTerem.forEach(element => {
+            if(event.detail.adat.teremId==element.teremId){
+                let adatok={};
+                adatok.sor=element.sor
+                adatok.oszlop=element.oszlop
+                adatok.vetitesId=event.detail.adat.vetitesId
+                myAjax.postAdat(apivegpontSzek,adatok);
+            }
+            
+        });
+        
+        let apivegpontVetites="/api/vetites";
             let mosoitottPublikus={};
             mosoitottPublikus.vetitesId=event.detail.adat.vetitesId;
             mosoitottPublikus.teremId=event.detail.adat.teremId
@@ -150,7 +162,7 @@ $(function(){
     });
 
     $(".modosit").on("click", ()=>{
-        let apivegpontVetites="http://127.0.0.1:8000/api/vetites";
+        let apivegpontVetites="/api/vetites";
         let mosoitottVetites={};
         mosoitottVetites.vetitesId=$("#vetitesid").val();
         mosoitottVetites.teremId=$("#terem").val();
@@ -193,7 +205,7 @@ $(function(){
     });
 
     $(window).on("torles",(event)=>{
-        let apivegpontVetites="http://127.0.0.1:8000/api/vetites";
+        let apivegpontVetites="/api/vetites";
         myAjax.deletAdat(apivegpontVetites,event.detail.adat.vetitesId,sikeresTorles,event.detail.szuloelem);
     });
 
