@@ -27,8 +27,31 @@ main {
 
 /* HEADER */
 
-header {
 
+
+@font-face {
+
+	font-family: 'CASTELAR';
+	src: url('./CASTELAR.eot');
+	src: local('CASTELAR'), url('./CASTELAR.woff') format('woff'), url('./CASTELAR.ttf') format('truetype');
+}
+
+.fontsforweb_fontid_21688 {
+
+	font-family: 'CASTELAR' !important;
+}
+
+/* Font downloaded from FontsForWeb.com */
+
+
+
+
+
+
+header > h1 {
+
+    font-family: CASTELLAR;
+    font-size: 60px;
     padding: 20px;
 }
 
@@ -92,6 +115,7 @@ footer {
 
 #moziNev {
 
+    font-family: CASTELLAR;
     color: rgb(223, 223, 185);
     padding-bottom: 20px;
     padding-top: 5px;
@@ -195,6 +219,12 @@ h5 {
     .terkep {
 
         margin-top: 20px;
+    }
+
+    header > h1 {
+
+
+        font-size: 30px;
     }
 }
 

@@ -33,24 +33,24 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td><h5>2D Normál</h5><p>Teljes árú jegy. 2021.12.16.-től érvényes jegyár.</p></td>
+                                <td><h5>Normál</h5><p>2D-s vetítés teljes ára</p></td>
+                                <td><h5>1700 Ft</h5></td>
+                            </tr>
+                            <tr>
+                                <td><h5>3D</h5><p>3D-s vetítés teljes ára</p></td>
                                 <td><h5>1900 Ft</h5></td>
                             </tr>
                             <tr>
-                                <td><h5>2D Normál</h5><p>Teljes árú jegy. 2021.12.16.-től érvényes jegyár.</p></td>
+                                <td><h5>Normál Diák/Nyugdíjas</h5><p>Kedvezményes ár 2D-s filmekre, diák/személyi igazolvány felmutatása esetén</p></td>
+                                <td><h5>1300 Ft</h5></td>
+                            </tr>
+                            <tr>
+                                <td><h5>3D Diák/Nyugdíjas</h5><p>Kedvezményes ár 3D-s filmekre, diák/személyi igazolvány felmutatása esetén</p></td>
                                 <td><h5>1900 Ft</h5></td>
                             </tr>
                             <tr>
-                                <td><h5>2D Normál</h5><p>Teljes árú jegy. 2021.12.16.-től érvényes jegyár.</p></td>
-                                <td><h5>1900 Ft</h5></td>
-                            </tr>
-                            <tr>
-                                <td><h5>2D Normál</h5><p>Teljes árú jegy. 2021.12.16.-től érvényes jegyár.</p></td>
-                                <td><h5>1900 Ft</h5></td>
-                            </tr>
-                            <tr>
-                                <td><h5>2D Normál</h5><p>Teljes árú jegy. 2021.12.16.-től érvényes jegyár.</p></td>
-                                <td><h5>1900 Ft</h5></td>
+                                <td><h5>Gyerek</h5><p>14 éves kornál fiatalabb gyermekek esetén</p></td>
+                                <td><h5>1200 Ft</h5></td>
                             </tr>
                         </tbody>
                     </table>

@@ -37,40 +37,49 @@ article > .row {
 #filmAdatlap {
 
     background-color: rgba(219, 219, 207, 0.507);
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 
 
 #plakat {
 
-    padding: 0px;
+    padding-right: 20px;
 }
 
 #plakat > img {
 
     width: 100%;
     height: auto;
-    border: 2px solid black;
+    border: 1px solid black;
 }
 
 #cim {
 
-    color: rgb(194, 165, 0);
+    color: rgb(189, 163, 15);
+    font-weight: bold;
+    font-size: 40px;
+    padding-top: 20px;
 }
 
 
 #leiras {
 
     text-align: justify;
-    padding: 10px;
 }
+
+
+p {
+
+    margin: 0px;
+}
+
+#mufaj, #hossz, .szemelyek, #fLeiras {
+
+    margin-top: 20px;
+}
+
 
 /* linkek */
-
-.idoPontok>tbody>tr>th>a {
-    padding: 10px;
-    text-align: center;
-}
 
 a {
     text-decoration: none;
@@ -81,4 +90,30 @@ a:hover {
 
     background-color: #333333;
     color: rgb(194, 165, 0);
+}
+
+
+#idopontSzulo {
+
+    background-color: #333333;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#idopontSzulo > p {
+
+    color: rgb(212, 175, 55);
+    padding-left: 30px;
+}
+
+.idopont {
+
+    padding-left: 30px;
+}
+
+.idopont:hover {
+
+    color: rgb(223, 223, 185);
 }
