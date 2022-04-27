@@ -36,20 +36,15 @@
     @section('content')
 
       <nav class="row datumnapSzulo">
-        <!-- <div class="datumnapSablon col">
-          <div>
-          <p class="nap"></p>
-          <p class="datum"></p>
-          <div>
-        </div> -->
-        
+
       </nav>
 
       <article>
         <p class="aktnap"></p>
+        <p id="tajekoztat"></p>
       </article>
 
-
+      
 
       <section class="secSablon">
           <!-- filmidőpontok sablonja -->
@@ -57,7 +52,9 @@
           <p class="terem"></p>
           <p class="idopont"></p>
           <p class="szinkron"></p>
+        
           <a href="/penztarFoglalas" class="foglalj">Foglalj!</a>
+         
         </div>
         <!-- filmek sablonja -->
         <div class="filmmezok row">

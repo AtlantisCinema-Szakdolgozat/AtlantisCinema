@@ -10,18 +10,12 @@ class Film extends Model
     use HasFactory;
     protected $primaryKey='filmId';
     protected $table='films';
-    protected $fillable = ['cim','filmLeiras','hossz','nyelv','poszter','youtubeLink','mufajId'];
+    protected $fillable = ['cim','filmLeiras','hossz','nyelv','poszter',
+    'youtubeLink','mufajId'];
     public $timestamps=false;
 
     public function terem(){
-
-
         return $this->belongsToMany(Terem::class,'vetites','filmId','teremId')->as('kapcsolat')->withPivot('vetitesId','szinkron','kezdesiIdo','vetitesNap','publikus');
-
-
-
-        return $this->belongsToMany(Terem::class,'vetites','filmId','teremId')->as('kapcsolat')->withPivot('vetitesId','szinkron','kezdesiIdo','vetitesNap');
-
     }
 
     public function szemelyek(){

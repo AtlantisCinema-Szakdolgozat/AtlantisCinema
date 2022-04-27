@@ -35,6 +35,43 @@ class MyAjax{
         });
     }
 
+    getAdat2(apivegpont,tomb,myCallback){
+        tomb=[];
+        $.ajax({
+            url:apivegpont,
+            type:"GET",
+            headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+            success:function(result){
+                result.forEach(element => {
+                    tomb.push(element)
+                });
+                myCallback(tomb);
+            },
+            error: function(result) {
+                alert("Nem sikerölt az adatbetöltés");
+            }
+        });
+    }
+
+    postAdat2(apivegpont,adat,myCallback){
+        $.ajax({
+            url:apivegpont,
+            type:"POST",
+            data:adat,
+            headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+            success:function(result){
+                myCallback();
+            }
+            
+            ,
+            
+            error: function(result) {
+                alert("Nem sikerölt az adatfeltöltés");
+            }
+        });
+        
+    }
+
     postAdat(apivegpont,adat){
         $.ajax({
             url:apivegpont,
