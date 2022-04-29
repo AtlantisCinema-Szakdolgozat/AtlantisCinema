@@ -5,16 +5,12 @@ class Idopontok{
         this.elem=elem;
         this.nyelv=nyelv;
         //console.log(adat);
-        this.filmidopontSablon=this.elem.children(".filmidopontSablon");
         this.foglalj=this.elem.children(".foglalj");
         this.terem=this.elem.children(".terem");
         this.idopont=this.elem.children(".idopont");
         this.szinkron=this.elem.children(".szinkron");
-        this.ferohely=this.elem.children(".ferohely");
         this.vasarlas1=this.elem.children(".vasarlas1");
-        
         this.setAdatok(this.adat,this.nyelv);
-        
         
         this.foglalj.on("click",()=>{
         this.idopontbetoltTrigger();

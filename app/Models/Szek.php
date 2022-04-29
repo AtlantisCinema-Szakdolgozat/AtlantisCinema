@@ -8,5 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Szek extends Model
 {
     use HasFactory;
-    protected $primaryKEY=['sor','oszlop','vetítésid'];
+    protected $table='szeks';
+    protected $primaryKey=['sor','oszlop','vetitesId'];
+    public $incrementing = false;
+    protected $fillable = ['sor','oszlop','vetitesId','nezoId','kedvezmenId','elvesztesiIdopont','allapot'];
+    public $timestamps=false;
 }

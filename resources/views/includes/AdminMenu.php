@@ -19,9 +19,6 @@
       <li class="nav-item">
         <a class="nav-link active" href="/dolgozok">Dolgozók</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link active" href="/statisztika">Statisztika</a>
-      </li>
     </ul>
   </div>
 </nav>

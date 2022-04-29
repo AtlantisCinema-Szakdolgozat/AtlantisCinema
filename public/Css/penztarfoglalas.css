@@ -163,8 +163,20 @@ max-height:45vh;
     
  
    }
-   
 
+   #tablazat{
+    min-height: 65vh;
+
+
+   }
+
+
+
+   .table{
+    height: 100%;
+
+
+   }
 
   .foglalasgomb,.vasarlas{
     margin:auto;

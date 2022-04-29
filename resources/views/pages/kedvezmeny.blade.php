@@ -21,7 +21,7 @@
     @section('content')
         <section>
             <div id="urlap">
-                <form action=""  method="post">
+                <form action=""  method="POST">
                      @csrf
                         <div class="row" id="index">
                             <label for="kedvezmenyid" class="col-sm-3 col-form-label">Index</label>
@@ -44,13 +44,13 @@
                         <div class="row">
                             <label for="leiras" class="col-sm-3 col-form-label">Leírás</label>
                         <div class="col-sm-9">
-                            <textarea class="form-control" id="leiras" rows="5" maxlength="300" placeholder="Töltsd ki a film leírást..." required></textarea>
+                            <textarea class="form-control" id="leiras" rows="5" maxlength="300" placeholder="Add meg a kedvezmény leírását..." required></textarea>
                         </div>
                         </div>
                         
                         <div class="d-grid gap-2 d-md-flex justify-content-end">
-                            <input type="button" class="btn felvitel" value="Felvitel">
-                            <input type="button" class="btn modosit" value="Módosit">
+                            <input type="submit" class="btn felvitel" value="Felvitel">
+                            <input type="submit" class="btn modosit" value="Módosit">
                         </div>
                 </form>
             </div>

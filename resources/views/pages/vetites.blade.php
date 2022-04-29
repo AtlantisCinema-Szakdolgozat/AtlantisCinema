@@ -25,7 +25,7 @@
     @section('content')
         <section>
             <div id="urlap">
-                <form action=""  method="post">
+                <form action=""  method="POST">
                   @csrf
                     <div class="row" id="index">
                       <label for="vetitesid" class="col-sm-3 col-form-label">Index</label>
@@ -50,7 +50,7 @@
                       </div>
                     </div>
                     <div class="row">
-                      <label for="ffelirat" class="col-sm-4 col-form-label">Felirat</label>
+                      <label for="ffelirat" class="col-sm-4 col-form-label">Feliratos</label>
                       <div class="col-sm-8">
                         <select class="ffelirat form-select" id="ffelirat">
                           <option selected>Feliratos</option>
@@ -89,15 +89,9 @@
                         <input type="number" min="1" class="form-control" id="fteljesJegyar" name="fteljesJegyar" value="1900" required>
                       </div>
                     </div>
-                    <!-- <div class="row">
-                      <label for="premier" class="col-sm-4 col-form-label">Permier Nap</label>
-                      <div class="col-sm-8">
-                        <input type="button" id="premier" name="premier" value="Premier">
-                      </div>
-                    </div> -->
                     <div class="d-grid gap-2 d-md-flex justify-content-end">
-                      <input type="button" class="btn felvitel" value="Felvitel">
-                      <input type="button" class="btn modosit" value="Módosit">
+                      <input type="submit" class="btn felvitel" value="Felvitel">
+                      <input type="submit" class="btn modosit" value="Módosit">
                     </div>
                 </form>
             </div>
@@ -124,7 +118,7 @@
                         <th>Film cím</th>
                         <th>Feliratos</th>
                         <th>Szinkronizált</th>
-                        <th>Vtítés napja</th>
+                        <th>Vetítés napja</th>
                         <th>Kezdés</th>
                         <th>Teljes jegyár</th>
                         <th>Premier</th>

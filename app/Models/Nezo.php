@@ -8,5 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Nezo extends Model
 {
     use HasFactory;
-    protected $primaryKey='nezoid';
+    protected $primaryKey='nezoId';
+    protected $fillable = ['nezoId','nev','email'];
+
+    protected $table='nezos';
+    public $timestamps=false;
 }

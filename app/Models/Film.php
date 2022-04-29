@@ -9,7 +9,8 @@ class Film extends Model
     use HasFactory;
     protected $primaryKey='filmId';
     protected $table='films';
-    protected $fillable = ['cim','filmLeiras','hossz','nyelv','poszter','youtubeLink','mufajId'];
+    protected $fillable = ['cim','filmLeiras','hossz','nyelv','poszter',
+    'youtubeLink','mufajId'];
     public $timestamps=false;
 
     

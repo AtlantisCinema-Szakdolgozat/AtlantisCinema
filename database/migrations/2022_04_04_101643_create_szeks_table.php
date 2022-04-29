@@ -19,10 +19,10 @@ return new class extends Migration
             $table->integer('vetitesId')->unsigned();
 
             $table->primary(['sor', 'oszlop','vetitesId']);
-            $table->integer('nezoId')->unsigned();
-            $table->integer('kedvezmenyId')->unsigned();
-            $table->dateTime('elevesztesIdopont');
-            $table->boolean('allapot');
+            $table->integer('nezoId')->unsigned()->nullable();
+            $table->integer('kedvezmenyId')->unsigned()->nullable();
+            $table->dateTime('elevesztesIdopont')->nullable();
+            $table->boolean('allapot')->nullable();
 
             $table->foreign('vetitesId')->references('vetitesId')->on('vetites');
             $table->foreign('nezoId')->references('nezoId')->on('nezos');

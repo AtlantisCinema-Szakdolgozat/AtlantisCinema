@@ -6,22 +6,22 @@ $(function(){
     let rendezo =[];
     const szuloelem = $(".szulo");
     const sablonElem = $(".gyerek");
-    let apivegpont="http://127.0.0.1:8000/api/filmSzemelyMufaj";
-    let apivegpontFilm="http://127.0.0.1:8000/api/film";
-    let apivegpontMufaj="http://127.0.0.1:8000/api/mufaj";
-    let apivegpontSzemely="http://127.0.0.1:8000/api/szemely";
+    let apivegpont="/api/filmSzemelyMufaj";
+    let apivegpontFilm="/api/film";
+    let apivegpontMufaj="/api/mufaj";
+    let apivegpontSzemely="/api/szemely";
     let akt="";
 
     myAjax.getAdat(apivegpont,filmekSzemelyMufaj,filmekMegjelenitese);
 
     function filmekMegjelenitese(){
         let egyezes=apivegpont;
-        if(egyezes=="http://127.0.0.1:8000/api/filmSzemelyMufaj?q="){
+        if(egyezes=="/api/filmSzemelyMufaj?q="){
             filmekSzemelyMufaj=[]
-            apivegpont="http://127.0.0.1:8000/api/filmSzemelyMufaj";
+            apivegpont="/api/filmSzemelyMufaj";
             myAjax.getAdat(apivegpont,filmekSzemelyMufaj,filmekMegjelenitese);
         }
-        else if(akt!==apivegpont || akt=="http://127.0.0.1:8000/api/filmSzemelyMufaj"){
+        else if(akt!==apivegpont || akt=="/api/filmSzemelyMufaj"){
             szuloelem.empty();
             sablonElem.show();
             filmekSzemelyMufaj.forEach(function(adat) {
@@ -80,13 +80,13 @@ $(function(){
     
 
     $("#keresesmezo").on("keyup",()=>{
-        apivegpont="http://127.0.0.1:8000/api/filmSzemelyMufaj";
+        apivegpont="/api/filmSzemelyMufaj";
         apivegpont+="?q="+$("#keresesmezo").val();
         myAjax.getAdat(apivegpont,filmekSzemelyMufaj,filmekMegjelenitese);
     })
 
     $("#rendezeskivalasztasa").on("change",function(){
-        apivegpont="http://127.0.0.1:8000/api/filmSzemelyMufaj";
+        apivegpont="/api/filmSzemelyMufaj";
         let szempont=$(this).val();
         switch(szempont) {
             case "rend1":
@@ -109,7 +109,7 @@ $(function(){
     
  
     $(".felvitel").on("click", ()=>{
-      let apivegpontFilm="http://127.0.0.1:8000/api/film";
+      let apivegpontFilm="/api/film";
       let form = document.getElementById("filmadat");
       let input = document.querySelector('input[type="file"]');
       let data = new FormData(form);
@@ -167,7 +167,7 @@ $(function(){
   });
 
   $(".modosit").on("click", ()=>{
-      let apivegpontFilmek="http://127.0.0.1:8000/api/film";
+      let apivegpontFilmek="/api/film";
       let form = document.getElementById("filmadat");
       let input = document.querySelector('input[type="file"]');
       let id=$("#filmid").val();
@@ -196,7 +196,7 @@ $(function(){
   });
 
     $(window).on("torles",(event)=>{
-      apivegpontFilm="http://127.0.0.1:8000/api/film";
+      apivegpontFilm="/api/film";
       myAjax.deletAdat(apivegpontFilm,event.detail.adat.filmId,sikeresTorles,event.detail.szuloelem);
     });
 

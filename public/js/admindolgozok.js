@@ -2,7 +2,7 @@ $(function(){
     const myAjax=new MyAjax;
     let dolgozok =[];
     const szuloelem = $("#szulo");
-    let apivegpont="http://127.0.0.1:8000/api/dolgozo";
+    let apivegpont="/api/dolgozo";
     let akt="";
 
     $(".modosit").css("display", "inline");
@@ -10,12 +10,12 @@ $(function(){
 
     function dolgozokMegjelenitese(){
         let egyezes=apivegpont;
-        if(egyezes=="http://127.0.0.1:8000/api/dolgozo?q="){
+        if(egyezes=="/api/dolgozo?q="){
             dolgozok=[]
-            apivegpont="http://127.0.0.1:8000/api/dolgozo";
+            apivegpont="/api/dolgozo";
             myAjax.getAdat(apivegpont,dolgozok,dolgozokMegjelenitese);
         }
-        else if(akt!==apivegpont || akt=="http://127.0.0.1:8000/api/dolgozo"){
+        else if(akt!==apivegpont || akt=="/api/dolgozo"){
             szuloelem.children().remove();
             let ujDolgoz;
             dolgozok.forEach(function(adat) {
@@ -27,13 +27,13 @@ $(function(){
     }
 
     $("#keresesmezo").on("keyup",()=>{
-        apivegpont="http://127.0.0.1:8000/api/dolgozo";
+        apivegpont="/api/dolgozo";
         apivegpont+="?q="+$("#keresesmezo").val();
         myAjax.getAdat(apivegpont,dolgozok,dolgozokMegjelenitese);
     })
 
     $("#rendezeskivalasztasa").on("change",function(){
-        apivegpont="http://127.0.0.1:8000/api/dolgozo";
+        apivegpont="/api/dolgozo";
         let szempont=$(this).val();
         switch(szempont) {
             case "rend1":
@@ -48,7 +48,7 @@ $(function(){
     })
 
     $(window).on("torles",(event)=>{
-        apivegpont="http://127.0.0.1:8000/api/dolgozo";
+        apivegpont="/api/dolgozo";
         console.log(event);
         myAjax.deletAdat(apivegpont,event.detail.adat.id,sikeresTorles,event.detail.szuloelem);
     });

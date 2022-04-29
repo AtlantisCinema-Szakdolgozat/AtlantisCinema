@@ -49,8 +49,8 @@
                           </div>
                         </div>
                         <div class="d-grid gap-2 d-md-flex justify-content-end">
-                            <input type="button" class="btn felvitel" value="Felvitel">
-                            <input type="button" class="btn modosit" value="Módosit">
+                            <input type="submit" class="btn felvitel" value="Felvitel">
+                            <input type="submit" class="btn modosit" value="Módosit">
                         </div>
                 </form>
             </div>

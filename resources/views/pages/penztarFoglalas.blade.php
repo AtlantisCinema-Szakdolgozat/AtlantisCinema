@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
     <link rel="stylesheet" href="Css/penztarFo.css">
     <link rel="stylesheet" href="Css/penztarfoglalas.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -22,7 +23,7 @@
 <body>
     @extends('layouts.penztarApp')
     @section('content')
-
+   
 
 
         <aside id="foglalas" class="row">
@@ -46,23 +47,27 @@
                
       
               </form> 
+              <div id="tablazat" class="table-responsive">
               <table class="table table-striped">
                 <thead>
                   <tr>
+                    <th scope="col">ID</th>
                     <th scope="col">Név</th>
                     <th scope="col">E-mail</th>
                   </tr>
-                   <tr class="tablafoglaSablon">
+                   <!-- <tr class="tablafoglaSablon">
                     <td class="nev"></td>
                     <td class="email"></td>
-                  </tr>
+                  </tr> -->
                 </thead>
+                
                 <tbody class="tablafoglaSzulo">
                   
                  
                 
                 </tbody>
               </table>
+              </div>
             </div>
         <div id="ulesterv" class="col-xl-7 col-lg-9">
 
@@ -95,19 +100,19 @@
         
       <tr>
           <td>A</td>
-          <td><input type="checkbox" class="szekek" value="A1"></td>
-          <td><input type="checkbox" class="szekek" value="A2"></td>
-          <td><input type="checkbox" class="szekek" value="A3"></td>
-          <td><input type="checkbox" class="szekek" value="A4"></td>
-          <td><input type="checkbox" class="szekek" value="A5"></td>
+          <td><input type="checkbox" class="szekek" value="1/1"></td>
+          <td><input type="checkbox" class="szekek" value="1/2"></td>
+          <td><input type="checkbox" class="szekek" value="1/3"></td>
+          <td><input type="checkbox" class="szekek" value="1/4"></td>
+          <td><input type="checkbox" class="szekek" value="1/5"></td>
           <td class="szekGap"></td>
-          <td><input type="checkbox" class="szekek" value="A6"></td>
-          <td><input type="checkbox" class="szekek" value="A7"></td>
-          <td><input type="checkbox" class="szekek" value="A8"></td>
-          <td><input type="checkbox" class="szekek" value="A9"></td>
-          <td><input type="checkbox" class="szekek" value="A10"></td>
-          <td><input type="checkbox" class="szekek" value="A11"></td>
-          <td><input type="checkbox" class="szekek" value="A12"></td>
+          <td><input type="checkbox" class="szekek" value="1/6"></td>
+          <td><input type="checkbox" class="szekek" value="1/7"></td>
+          <td><input type="checkbox" class="szekek" value="1/8"></td>
+          <td><input type="checkbox" class="szekek" value="1/9" ></td>
+          <td><input type="checkbox" class="szekek" value="1/10"></td>
+          <td><input type="checkbox" class="szekek" value="1/11"></td>
+          <td><input type="checkbox" class="szekek" value="1/12"></td>
         </tr>
         
         <tr>
@@ -300,12 +305,12 @@
 <div class="container">
 
 <label for="nev">Név*:</label><br>
-                    <input type="text" id="nev" name="nev" value="{{old('nev')}}" >
+                    <input type="text" id="nev" class="infok" name="nev" value="{{old('nev')}}" >
 
 <label for="email">Email*:</label>
-<input type="text" placeholder="beta@emil.com" name="email" id="email"  value="{{old('email')}}">
+<input type="text" placeholder="beta@emil.com" class="infok" name="email" id="email"  value="{{old('email')}}">
 
-<label for="email">Székek száma*:</label>
+<label for="szekekszama">Székek száma*:</label>
  <input type="number" id="szekekszama" required>
 <!-- <button type="submit" class="foglalasgomb col">Foglalás</button> -->
 
