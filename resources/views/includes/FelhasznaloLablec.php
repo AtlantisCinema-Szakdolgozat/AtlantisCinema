@@ -5,7 +5,7 @@
     <div class="row">
         <div id="informacio" class="col-md-5">
             <div><h5> Információk </h5></div>
-            <div><p><a href="hazirend.html"> Házirend </a></p></div>
+            <div><p><a href="/hazirend"> Házirend </a></p></div>
             <div><p><a href=""> Adatkezelési tájékoztató </a></p></div>
             <div><p>A pénztárak 10:00 és 22:00 óra közt vannak nyitva </p></div>
         </div>

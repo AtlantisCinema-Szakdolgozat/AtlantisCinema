@@ -1,44 +1,24 @@
 $(function() {
 
-
     const myAjax = new MyAjax();
+    
 
-
-    /*****************************************************/
     /* API végpontok: */
-
-    //const vfmApi = "/api/vetitesFilmMufaj";
-    const vfmApi = "/api/filmSzemelyMufaj";
-
+    const komplettFilmApi = "/api/komplettFilm";
     const plakatApi = "/api/film";
 
 
-    /*****************************************************/
     /* Adat tömbök: */
-
-    const vfmTomb = [];
+    const komplettFilmTomb = [];
     const plakatTomb = [];
 
-    /*****************************************************/
-    /* Adatok lekérése, tárolása és megjelenítések: */
 
-    myAjax.getAdat(vfmApi, vfmTomb, filmekMegjelenites);   // FILMEK 
+    /* Adatok lekérése, tárolása és megjelenítések: */
+    myAjax.getAdat(komplettFilmApi, komplettFilmTomb, filmekMegjelenites);   // FILMEK 
     myAjax.getAdat(plakatApi, plakatTomb, galeriaMegjelenites);   // GALÉRIA
     
 
 
-    /*****************************************************/
-    /* Oldal váltás, film tovább adása */
-
-    
-    $(window).on("filmTovabbTolt", (event) => {
-
-        localStorage.setItem("filmKulcs", JSON.stringify(event.detail));
-    });
-    
-
-
-    /*****************************************************/
     /* Megjelenítés: */
 
     function filmekMegjelenites() {
@@ -46,17 +26,35 @@ $(function() {
         const szuloElem = $("#musorListaCsempeSzulo");
         let sablonElem = $(".csempeSablon");
 
-        vfmTomb.forEach(function(elem, index) { 
+        komplettFilmTomb.forEach(function(elem, index) { 
 
             const ujElem = sablonElem.clone().appendTo(szuloElem);
-            const ujFilm = new Film(ujElem, vfmTomb[index]); 
+            const ujFilm = new Film(ujElem, komplettFilmTomb[index]); 
         });
-
+        
         sablonElem.remove(); 
     }
 
 
-    /*****************************************************/
+
+    /* Oldal váltás, film tovább adása */
+
+    $(window).on("filmTovabbTolt", (filmEsemeny) => {
+
+    
+        localStorage.setItem("filmKulcs", JSON.stringify(filmEsemeny.detail));
+    });
+    
+    
+    $(window).on("idopontTovabbToltTrigger", (idopontEsemeny) => {
+    
+        localStorage.setItem("vetitesKulcs", JSON.stringify(idopontEsemeny.detail));
+    });
+    
+    
+
+
+
     /* Galéria: */
 
     let ujGaleriaPlakat=[];
@@ -66,8 +64,8 @@ $(function() {
         const galeriaSzulo = $("#carousel");
         let sablonElem = $("#korhintaGaleria");
 
-        const ujElem = sablonElem.clone().appendTo(carousel);
-        ujGaleriaPlakat = new GaleriaPlakat(ujElem, plakatTomb[0]);
+        const ujElem = sablonElem.clone().appendTo(galeriaSzulo);
+        ujGaleriaPlakat = new GaleriaPlakat(ujElem, plakatTomb[1]);
 
         sablonElem.remove();
     }

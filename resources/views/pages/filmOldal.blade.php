@@ -68,7 +68,7 @@
                         <p id="rendezo"> </p>
 
                         <p class="szemelyek">Színészek:</p>
-                        <p id="szineszek">  </p>
+                        <div id="szineszek">  </div>
 
                         <p id="fLeiras">  </p>
                     

@@ -1,6 +1,9 @@
 @charset "utf-8";
 
+
 /* általános formázások másik css-ben */
+
+
 
 /* HEADER */
 
@@ -10,36 +13,36 @@ header {
 }
 
 
-/*
-#kereses {
 
-    display: flex;
+/* linkek */
+
+a {
+    text-decoration: none;
+    color: rgb(194, 165, 0);
 }
-*/
+
+a:hover {
+
+    background-color: #333333;
+    color: rgb(194, 165, 0);
+}
 
 
 
 /* ARTICLE */
 
-/*
-#topGomb {
-
-    float: right;
-}
-*/
-
-
 article > div {
 
     max-width: 1200px;
 }
+
 .table-responsive > table > thead > tr > th {
 
     padding: 3px;
 }
 
-
 nav > .container-fluid > .navbar-toggler {
+
     margin: auto;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -62,12 +65,9 @@ section .row {
 }
 
 
-#filmek{
-    padding: 10px;
-    background-color: #d1e7dd;
-}
 
 
+/* Galéria szekció */
 
 #korhintaGaleria {
 
@@ -80,7 +80,6 @@ section .row {
     padding-left: 3px;
 }
 
-
 #carousel {
 
     grid-area: p;
@@ -89,7 +88,7 @@ section .row {
     flex-direction: row;
 }
 
-#galeriaSzulo{
+#galeriaSzulo {
     margin: 20px;
 
     display: grid;
@@ -97,7 +96,7 @@ section .row {
         "p p h h ";
 }
 
-#kisGaleria{
+#kisGaleria {
 
     grid-area: h;
     padding-top: 10px;
@@ -117,32 +116,6 @@ section .row {
 }
 
 
-/* linkek */
-
-.idoPontok>tbody>tr>th>a {
-    padding: 10px;
-    text-align: center;
-}
-
-a {
-    text-decoration: none;
-    color: rgb(194, 165, 0);
-}
-
-a:hover {
-
-    background-color: #333333;
-    color: rgb(194, 165, 0);
-}
-
-
-/* Táblázatos megjelenítés 
-
-#musorLista {
-
-    border: 2px solid black;
-}
-*/
 
 
 /* Csempés megjelenítés */
@@ -165,6 +138,12 @@ a:hover {
     padding-top: 10px;
     background-color: rgba(177, 214, 219, 0.562);
     border: 2px solid black;
+}
+
+#filmek {
+    
+    padding: 10px;
+    background-color: #d1e7dd;
 }
 
 .divCsempePlakat {
@@ -206,6 +185,8 @@ a:hover {
     padding-top: 10px;
 }
 
+
+
 #idopontSzulo {
 
     background-color: rgba(117, 164, 170, 0.664);
@@ -238,28 +219,15 @@ a:hover {
 }
 
 
-/*
-table {
-
-    max-width: 100%;
-}
-
-.csempeLeiras>p {
-    text-align: justify;
-}
-
-table{
-    max-width: 100%;
-}
-/*
-
 
 
 
 /* Reszponzivitás */
 
 @media only screen and (max-width: 992px) {
+
     #kisGaleria div {
+
         text-align: center;
     }
 }
@@ -276,7 +244,8 @@ table{
 @media only screen and (max-width: 810px) {
 
 
-    .table-responsive{
+    .table-responsive {
+
         font-size: 11pt;
         max-width: 100%;
         margin: auto;
@@ -284,7 +253,9 @@ table{
 }
 
 @media only screen and (max-width: 768px) {
-    .table-responsive>table{
+
+    .table-responsive>table {
+
         display: none;
     }
 
@@ -299,12 +270,19 @@ table{
         margin: auto;
     }
 }
+
 @media only screen and (max-width: 578px) {
 
     #galeriaSzulo {
 
         display: none;
     }
+
+    .leiras {
+
+        display: none;
+    }
+
 }
 
 @media only screen and (min-width: 768px) {
