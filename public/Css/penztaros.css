@@ -36,7 +36,11 @@
 /*Section
 -filmemzők
 */
+  .foglalj{
+    border-radius: 5px;
+    text-decoration: none;
 
+  }
 
   section{
     margin-top: 20px;

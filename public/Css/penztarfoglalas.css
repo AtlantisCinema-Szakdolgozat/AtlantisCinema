@@ -158,6 +158,7 @@ max-height:45vh;
   }
   
 /*Gombok*/
+
 #jegyekdarab .gombok{
   margin: 0px;
   padding: 10px;
@@ -166,6 +167,28 @@ max-height:45vh;
 .gombok .vasarlas{
   margin-top: 10px;
 }
+
+  .gombok{
+    padding:5px;
+    padding-top: 10px;
+    
+ 
+   }
+
+   #tablazat{
+    min-height: 65vh;
+
+
+   }
+
+
+
+   .table{
+    height: 100%;
+
+
+   }
+
 
   .foglalasgomb,.vasarlas{
     margin:auto;

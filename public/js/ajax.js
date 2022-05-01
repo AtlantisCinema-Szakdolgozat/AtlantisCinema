@@ -35,6 +35,57 @@ class MyAjax{
         });
     }
 
+    getAdat3(apivegpont,adat){
+        $.ajax({
+            url:apivegpont,
+            type:"GET",
+            data:adat,
+            headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+            success:function(adat){
+            },
+            error: function(result) {
+                alert("Nem sikerült az adatmodósítás");
+            }
+        });
+    }
+
+    getAdat2(apivegpont,tomb,myCallback){
+        tomb=[];
+        $.ajax({
+            url:apivegpont,
+            type:"GET",
+            headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+            success:function(result){
+                result.forEach(element => {
+                    tomb.push(element)
+                });
+                myCallback(tomb);
+            },
+            error: function(result) {
+                alert("Nem sikerölt az adatbetöltés");
+            }
+        });
+    }
+
+    postAdat2(apivegpont,adat,myCallback){
+        $.ajax({
+            url:apivegpont,
+            type:"POST",
+            data:adat,
+            headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+            success:function(result){
+                myCallback();
+            }
+            
+            ,
+            
+            error: function(result) {
+                alert("Nem sikerölt az adatfeltöltés");
+            }
+        });
+        
+    }
+
     postAdat(apivegpont,adat){
         $.ajax({
             url:apivegpont,
@@ -76,6 +127,19 @@ class MyAjax{
             },
             error: function(result) {
                 alert("Módosítás sikertelen");
+            }
+        });
+    }
+    putAdat2(apivegpont,adat,id,id1,id2){
+        $.ajax({
+            url:apivegpont+"/"+id+"/"+id1+"/"+id2,
+            type:"PUT",
+            data:adat,
+            headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+            success:function(result){
+            },
+            error: function(result) {
+                alert("Nem sikerölt az adatmódosítás");
             }
         });
     }

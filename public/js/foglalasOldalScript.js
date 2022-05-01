@@ -1,42 +1,29 @@
 $(function() {
 
 
-    //const myAjax = new MyAjax();
+    /* felugró ablak */
 
+    var ablak = document.getElementById("foglFelugro");
+                
+    var gomb = document.getElementById("foglalasGomb");
+                
+    gomb.onclick = function() {
+
+        ablak.style.display = "block";
+    }
+                
 
     /* Oldal váltás, film betöltése */
  
     let filmAdat = [];
 
-    filmAdat = JSON.parse(localStorage.getItem("filmKulcs"));
+    filmAdat = JSON.parse(localStorage.getItem("vetitesKulcs"));
     console.log(filmAdat);
 
     
-    /* Megjelenítés: */
 
+    /* Megjelenítés: */
 
     const filmOldal = new FilmFoglalas(filmAdat);
 
-
-
 });
-
-
-
-
-
-/*
-var modal = document.getElementById("foglFelugro");
-            
-var btn = document.getElementById("foglalasGomb");
-            
-btn.onclick = function() {
-
-    modal.style.display = "block";
-}
-            
-span.onclick = function() {
-
-    modal.style.display = "none";
-}
-*/

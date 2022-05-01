@@ -17,8 +17,9 @@ use App\Http\Controllers\penztarFoOldalController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\FilmSzemelyekMufajController;
 
-use App\Http\Controllers\filmMufajController;
 use App\Http\Controllers\vetitesFilmMufajController;
+use App\Http\Controllers\filMuVetSzeController;
+
 use App\Http\Controllers\filmPlakatController;
 
 
@@ -77,8 +78,7 @@ Route::delete('/nezo/{id}', [NezoController::class, 'delete']);
 Route::post('/nezo', [NezoController::class, 'store']);
 
 Route::get('/szek', [SzekController::class, 'index']);
-Route::put('/szek/{id}', [SzekController::class, 'update']);
-Route::get('/szek/{szek}', [SzekController::class, 'show']);
+Route::get('/szek', [SzekController::class, 'update']);
 Route::delete('/szek/{id}', [SzekController::class, 'delete']);
 Route::post('/szek', [SzekController::class, 'store']);
 
@@ -99,7 +99,7 @@ Route::get('/vetitesFilmMufaj', [vetitesFilmMufajController::class, 'index']);
 Route::get('/filmPlakat', [filmPlakatController::class, 'index']);
 
 Route::get('/filmVetites', [filmVetitesController::class, 'index']);
-
+Route::get('/komplettFilm', [filMuVetSzeController::class, 'index']);
 
 Route::get('/filmSzemelyMufaj', [FilmSzemelyekMufajController::class, 'index']);
 

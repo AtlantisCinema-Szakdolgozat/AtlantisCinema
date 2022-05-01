@@ -60,21 +60,15 @@
                         <button id="jobb" style="order: 3"> >> </button>
                     </div>
                     
-                    <div id="kisGaleria"> <!-- class="col-md-3 row" -->
+                    <div id="kisGaleria">
 
-                        <div> <!-- class=" col-md-12" -->
+                        <div>
                             <img src="Css/akciok_hirek/popcornAkcio.jpg" alt="kép"/>
                         </div>
 
-                        <div> <!-- class=" col-md-12" -->
+                        <div>
                             <img src="Css/akciok_hirek/popcorn.jpg" alt="kép"/>
                         </div>
-
-                        <!--
-                        <div>  class=" col-md-12" 
-                            <img src="Css/ideiglenes/oscarAkc.jpg" alt="kép"/>
-                        </div>
-                        -->
                         
                     </div> 
                     
@@ -129,12 +123,6 @@
                                     <a class="nav-link" href="/index"> Vasárnap </a>
                                 </li>
 
-                                <!--
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/nyitoLap_tablazat"> Műsoron </a>
-                                </li>
-                                -->
-
                             </ul>
                                     
                         </div>
@@ -160,7 +148,7 @@
                             <a href='/filmOldal'" class="filmCim"> </a>
                             
                             <p class="mufaj">  </p>
-                            <p>  </p>
+                            <p class="leiras">  </p>
                             
                             <div id="idopontSzulo">
 
@@ -180,10 +168,6 @@
 
         @endsection
 
-         <!-- <button onclick="topFunction()" id="topGomb"> <i class="arrow up"></i> </button> -->
-
     </body>
-
-    <!-- <script src="js/topp.js"></script> -->
     
 </html>

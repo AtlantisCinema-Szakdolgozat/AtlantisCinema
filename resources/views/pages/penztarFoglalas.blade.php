@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
     <link rel="stylesheet" href="Css/penztarFo.css">
     <link rel="stylesheet" href="Css/penztarfoglalas.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -12,7 +13,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="js/ajax.js"></script>
     <script src="js/penztarFoglalasClass.js" type="text/javascript"></script>
-    <script src="js/penztarFoscript.js" type="text/javascript"></script>
+    <!-- <script src="js/penztarFoscript.js" type="text/javascript"></script> -->
     <script src="js/penztarFilmek.js" type="text/javascript"></script>
     <script src="js/penztaridopontok.js" type="text/javascript"></script>
     <script src="js/penztarFoglalasOldal.js" type="text/javascript"></script>
@@ -22,7 +23,7 @@
 <body>
     @extends('layouts.penztarApp')
     @section('content')
-
+   
 
 
         <aside id="foglalas" class="row">
@@ -46,23 +47,24 @@
                
       
               </form> 
+              <div id="tablazat" class="table-responsive">
               <table class="table table-striped">
                 <thead>
                   <tr>
+                    <th scope="col">ID</th>
                     <th scope="col">Név</th>
                     <th scope="col">E-mail</th>
                   </tr>
-                   <tr class="tablafoglaSablon">
-                    <td class="nev"></td>
-                    <td class="email"></td>
-                  </tr>
+    
                 </thead>
+                
                 <tbody class="tablafoglaSzulo">
                   
                  
                 
                 </tbody>
               </table>
+              </div>
             </div>
         <div id="ulesterv" class="col-xl-7 col-lg-6">
 
@@ -89,180 +91,167 @@
           <td>8</td>
           <td>9</td>
           <td>10</td>
-          <td>11</td>
-          <td>12</td>
+
       </tr>
         
       <tr>
-          <td>A</td>
-          <td><input type="checkbox" class="szekek" value="A1"></td>
-          <td><input type="checkbox" class="szekek" value="A2"></td>
-          <td><input type="checkbox" class="szekek" value="A3"></td>
-          <td><input type="checkbox" class="szekek" value="A4"></td>
-          <td><input type="checkbox" class="szekek" value="A5"></td>
+          <td>1</td>
+          <td><input type="checkbox" class="szekek" id="1/1"></td>
+          <td><input type="checkbox" class="szekek" id="1/2"></td>
+          <td><input type="checkbox" class="szekek" id="1/3"></td>
+          <td><input type="checkbox" class="szekek" id="1/4"></td>
+          <td><input type="checkbox" class="szekek" id="1/5"></td>
           <td class="szekGap"></td>
-          <td><input type="checkbox" class="szekek" value="A6"></td>
-          <td><input type="checkbox" class="szekek" value="A7"></td>
-          <td><input type="checkbox" class="szekek" value="A8"></td>
-          <td><input type="checkbox" class="szekek" value="A9"></td>
-          <td><input type="checkbox" class="szekek" value="A10"></td>
-          <td><input type="checkbox" class="szekek" value="A11"></td>
-          <td><input type="checkbox" class="szekek" value="A12"></td>
+          <td><input type="checkbox" class="szekek" id="1/6"></td>
+          <td><input type="checkbox" class="szekek" id="1/7"></td>
+          <td><input type="checkbox" class="szekek" id="1/8"></td>
+          <td><input type="checkbox" class="szekek" id="1/9" ></td>
+          <td><input type="checkbox" class="szekek" id="1/10"></td>
         </tr>
         
         <tr>
-          <td>B</td>
-          <td><input type="checkbox" class="szekek" value="B1"></td>
-          <td><input type="checkbox" class="szekek" value="B2"></td>
-          <td><input type="checkbox" class="szekek" value="B3"></td>
-          <td><input type="checkbox" class="szekek" value="B4"></td>
-          <td><input type="checkbox" class="szekek" value="B5"></td>
+          <td>2</td>
+          <td><input type="checkbox" class="szekek" id="2/1"></td>
+          <td><input type="checkbox" class="szekek" id="2/2"></td>
+          <td><input type="checkbox" class="szekek" id="2/3"></td>
+          <td><input type="checkbox" class="szekek" id="2/4"></td>
+          <td><input type="checkbox" class="szekek" id="2/5"></td>
           <td></td>
-          <td><input type="checkbox" class="szekek" value="B6"></td>
-          <td><input type="checkbox" class="szekek" value="B7"></td>
-          <td><input type="checkbox" class="szekek" value="B8"></td>
-          <td><input type="checkbox" class="szekek" value="B9"></td>
-          <td><input type="checkbox" class="szekek" value="B10"></td>
-          <td><input type="checkbox" class="szekek" value="B11"></td>
-          <td><input type="checkbox" class="szekek" value="B12"></td>
+          <td><input type="checkbox" class="szekek" id="2/6"></td>
+          <td><input type="checkbox" class="szekek" id="2/7"></td>
+          <td><input type="checkbox" class="szekek" id="2/8"></td>
+          <td><input type="checkbox" class="szekek" id="2/9"></td>
+          <td><input type="checkbox" class="szekek" id="2/10"></td>
+
         </tr>
         
         <tr>
-          <td>C</td>
-          <td><input type="checkbox" class="szekek" value="C1"></td>
-          <td><input type="checkbox" class="szekek" value="C2"></td>
-          <td><input type="checkbox" class="szekek" value="C3"></td>
-          <td><input type="checkbox" class="szekek" value="C4"></td>
-          <td><input type="checkbox" class="szekek" value="C5"></td>
+          <td>3</td>
+          <td><input type="checkbox" class="szekek" id="3/1"></td>
+          <td><input type="checkbox" class="szekek" id="3/2"></td>
+          <td><input type="checkbox" class="szekek" id="3/3"></td>
+          <td><input type="checkbox" class="szekek" id="3/4"></td>
+          <td><input type="checkbox" class="szekek" id="3/5"></td>
           <td></td>
-          <td><input type="checkbox" class="szekek" value="C6"></td>
-          <td><input type="checkbox" class="szekek" value="C7"></td>
-          <td><input type="checkbox" class="szekek" value="C8"></td>
-          <td><input type="checkbox" class="szekek" value="C9"></td>
-          <td><input type="checkbox" class="szekek" value="C10"></td>
-          <td><input type="checkbox" class="szekek" value="C11"></td>
-          <td><input type="checkbox" class="szekek" value="C12"></td>
+          <td><input type="checkbox" class="szekek" id="3/6"></td>
+          <td><input type="checkbox" class="szekek" id="3/7"></td>
+          <td><input type="checkbox" class="szekek" id="3/8"></td>
+          <td><input type="checkbox" class="szekek" id="3/9"></td>
+          <td><input type="checkbox" class="szekek" id="3/10"></td>
+
       </tr>
         
       <tr>
-          <td>D</td>
-          <td><input type="checkbox" class="szekek" value="D1"></td>
-          <td><input type="checkbox" class="szekek" value="D2"></td>
-          <td><input type="checkbox" class="szekek" value="D3"></td>
-          <td><input type="checkbox" class="szekek" value="D4"></td>
-          <td><input type="checkbox" class="szekek" value="D5"></td>
+          <td>4</td>
+          <td><input type="checkbox" class="szekek" id="4/1"></td>
+          <td><input type="checkbox" class="szekek" id="4/2"></td>
+          <td><input type="checkbox" class="szekek" id="4/3"></td>
+          <td><input type="checkbox" class="szekek" id="4/4"></td>
+          <td><input type="checkbox" class="szekek" id="4/5"></td>
           <td></td>
-          <td><input type="checkbox" class="szekek" value="D6"></td>
-          <td><input type="checkbox" class="szekek" value="D7"></td>
-          <td><input type="checkbox" class="szekek" value="D8"></td>
-          <td><input type="checkbox" class="szekek" value="D9"></td>
-          <td><input type="checkbox" class="szekek" value="D10"></td>
-          <td><input type="checkbox" class="szekek" value="D11"></td>
-          <td><input type="checkbox" class="szekek" value="D12"></td>
+          <td><input type="checkbox" class="szekek" id="4/6"></td>
+          <td><input type="checkbox" class="szekek" id="4/7"></td>
+          <td><input type="checkbox" class="szekek" id="4/8"></td>
+          <td><input type="checkbox" class="szekek" id="4/9"></td>
+          <td><input type="checkbox" class="szekek" id="4/10"></td>
+
       </tr>
         
       <tr>
-          <td>E</td>
-          <td><input type="checkbox" class="szekek" value="E1"></td>
-          <td><input type="checkbox" class="szekek" value="E2"></td>
-          <td><input type="checkbox" class="szekek" value="E3"></td>
-          <td><input type="checkbox" class="szekek" value="E4"></td>
-          <td><input type="checkbox" class="szekek" value="E5"></td>
+          <td>5</td>
+          <td><input type="checkbox" class="szekek" id="5/1"></td>
+          <td><input type="checkbox" class="szekek" id="5/2"></td>
+          <td><input type="checkbox" class="szekek" id="5/3"></td>
+          <td><input type="checkbox" class="szekek" id="5/4"></td>
+          <td><input type="checkbox" class="szekek" id="5/5"></td>
           <td></td>
-          <td><input type="checkbox" class="szekek" value="E6"></td>
-          <td><input type="checkbox" class="szekek" value="E7"></td>
-          <td><input type="checkbox" class="szekek" value="E8"></td>
-          <td><input type="checkbox" class="szekek" value="E9"></td>
-          <td><input type="checkbox" class="szekek" value="E10"></td>
-          <td><input type="checkbox" class="szekek" value="E11"></td>
-          <td><input type="checkbox" class="szekek" value="E12"></td>
+          <td><input type="checkbox" class="szekek" id="5/6"></td>
+          <td><input type="checkbox" class="szekek" id="5/7"></td>
+          <td><input type="checkbox" class="szekek" id="5/8"></td>
+          <td><input type="checkbox" class="szekek" id="5/9"></td>
+          <td><input type="checkbox" class="szekek" id="5/10"></td>
+
       </tr>
         
       <tr class="szekVGap"></tr>
         
       <tr>
-          <td>F</td>
-          <td><input type="checkbox" class="szekek" value="F1"></td>
-          <td><input type="checkbox" class="szekek" value="F2"></td>
-          <td><input type="checkbox" class="szekek" value="F3"></td>
-          <td><input type="checkbox" class="szekek" value="F4"></td>
-          <td><input type="checkbox" class="szekek" value="F5"></td>
+          <td>6</td>
+          <td><input type="checkbox" class="szekek" id="6/1"></td>
+          <td><input type="checkbox" class="szekek" id="6/2"></td>
+          <td><input type="checkbox" class="szekek" id="6/3"></td>
+          <td><input type="checkbox" class="szekek" id="6/4"></td>
+          <td><input type="checkbox" class="szekek" id="6/5"></td>
           <td></td>
-          <td><input type="checkbox" class="szekek" value="F6"></td>
-          <td><input type="checkbox" class="szekek" value="F7"></td>
-          <td><input type="checkbox" class="szekek" value="F8"></td>
-          <td><input type="checkbox" class="szekek" value="F9"></td>
-          <td><input type="checkbox" class="szekek" value="F10"></td>
-          <td><input type="checkbox" class="szekek" value="F11"></td>
-          <td><input type="checkbox" class="szekek" value="F12"></td>
+          <td><input type="checkbox" class="szekek" id="6/6"></td>
+          <td><input type="checkbox" class="szekek" id="6/7"></td>
+          <td><input type="checkbox" class="szekek" id="6/8"></td>
+          <td><input type="checkbox" class="szekek" id="6/9"></td>
+          <td><input type="checkbox" class="szekek" id="6/10"></td>
+
       </tr>
         
       <tr>
-          <td>G</td>
-          <td><input type="checkbox" class="szekek" value="G1"></td>
-          <td><input type="checkbox" class="szekek" value="G2"></td>
-          <td><input type="checkbox" class="szekek" value="G3"></td>
-          <td><input type="checkbox" class="szekek" value="G4"></td>
-          <td><input type="checkbox" class="szekek" value="G5"></td>
+          <td>7</td>
+          <td><input type="checkbox" class="szekek" id="7/1"></td>
+          <td><input type="checkbox" class="szekek" id="7/2"></td>
+          <td><input type="checkbox" class="szekek" id="7/3"></td>
+          <td><input type="checkbox" class="szekek" id="7/4"></td>
+          <td><input type="checkbox" class="szekek" id="7/5"></td>
           <td></td>
-          <td><input type="checkbox" class="szekek" value="G6"></td>
-          <td><input type="checkbox" class="szekek" value="G7"></td>
-          <td><input type="checkbox" class="szekek" value="G8"></td>
-          <td><input type="checkbox" class="szekek" value="G9"></td>
-          <td><input type="checkbox" class="szekek" value="G10"></td>
-          <td><input type="checkbox" class="szekek" value="G11"></td>
-          <td><input type="checkbox" class="szekek" value="G12"></td>
+          <td><input type="checkbox" class="szekek" id="7/6"></td>
+          <td><input type="checkbox" class="szekek" id="7/7"></td>
+          <td><input type="checkbox" class="szekek" id="7/8"></td>
+          <td><input type="checkbox" class="szekek" id="7/9"></td>
+          <td><input type="checkbox" class="szekek" id="7/10"></td>
+
       </tr>
         
       <tr>
-          <td>H</td>
-          <td><input type="checkbox" class="szekek" value="H1"></td>
-          <td><input type="checkbox" class="szekek" value="H2"></td>
-          <td><input type="checkbox" class="szekek" value="H3"></td>
-          <td><input type="checkbox" class="szekek" value="H4"></td>
-          <td><input type="checkbox" class="szekek" value="H5"></td>
+          <td>8</td>
+          <td><input type="checkbox" class="szekek" id="8/1"></td>
+          <td><input type="checkbox" class="szekek" id="8/2"></td>
+          <td><input type="checkbox" class="szekek" id="8/3"></td>
+          <td><input type="checkbox" class="szekek" id="8/4"></td>
+          <td><input type="checkbox" class="szekek" id="8/5"></td>
           <td></td>
-          <td><input type="checkbox" class="szekek" value="H6"></td>
-          <td><input type="checkbox" class="szekek" value="H7"></td>
-          <td><input type="checkbox" class="szekek" value="H8"></td>
-          <td><input type="checkbox" class="szekek" value="H9"></td>
-          <td><input type="checkbox" class="szekek" value="H10"></td>
-          <td><input type="checkbox" class="szekek" value="H11"></td>
-          <td><input type="checkbox" class="szekek" value="H12"></td>
+          <td><input type="checkbox" class="szekek" id="8/6"></td>
+          <td><input type="checkbox" class="szekek" id="8/7"></td>
+          <td><input type="checkbox" class="szekek" id="8/8"></td>
+          <td><input type="checkbox" class="szekek" id="8/9"></td>
+          <td><input type="checkbox" class="szekek" id="8/10"></td>
+
       </tr>
         
       <tr>
-          <td>I</td>
-          <td><input type="checkbox" class="szekek" value="I1"></td>
-          <td><input type="checkbox" class="szekek" value="I2"></td>
-          <td><input type="checkbox" class="szekek" value="I3"></td>
-          <td><input type="checkbox" class="szekek" value="I4"></td>
-          <td><input type="checkbox" class="szekek" value="I5"></td>
+          <td>9</td>
+          <td><input type="checkbox" class="szekek" id="9/1"></td>
+          <td><input type="checkbox" class="szekek" id="9/2"></td>
+          <td><input type="checkbox" class="szekek" id="9/3"></td>
+          <td><input type="checkbox" class="szekek" id="9/4"></td>
+          <td><input type="checkbox" class="szekek" id="9/5"></td>
           <td></td>
-          <td><input type="checkbox" class="szekek" value="I6"></td>
-          <td><input type="checkbox" class="szekek" value="I7"></td>
-          <td><input type="checkbox" class="szekek" value="I8"></td>
-          <td><input type="checkbox" class="szekek" value="I9"></td>
-          <td><input type="checkbox" class="szekek" value="I10"></td>
-          <td><input type="checkbox" class="szekek" value="I11"></td>
-          <td><input type="checkbox" class="szekek" value="I12"></td>
+          <td><input type="checkbox" class="szekek" id="9/6"></td>
+          <td><input type="checkbox" class="szekek" id="9/7"></td>
+          <td><input type="checkbox" class="szekek" id="9/8"></td>
+          <td><input type="checkbox" class="szekek" id="9/9"></td>
+          <td><input type="checkbox" class="szekek" id="9/10"></td>
+
       </tr>
         
       <tr>
-          <td>J</td>
-          <td><input type="checkbox" class="szekek" value="J1"></td>
-          <td><input type="checkbox" class="szekek" value="J2"></td>
-          <td><input type="checkbox" class="szekek" value="J3"></td>
-          <td><input type="checkbox" class="szekek" value="J4"></td>
-          <td><input type="checkbox" class="szekek" value="J5"></td>
+          <td>10</td>
+          <td><input type="checkbox" class="szekek" id="10/1"></td>
+          <td><input type="checkbox" class="szekek" id="10/2"></td>
+          <td><input type="checkbox" class="szekek" id="10/3"></td>
+          <td><input type="checkbox" class="szekek" id="10/4"></td>
+          <td><input type="checkbox" class="szekek" id="10/5"></td>
           <td></td>
-          <td><input type="checkbox" class="szekek" value="J6"></td>
-          <td><input type="checkbox" class="szekek" value="J7"></td>
-          <td><input type="checkbox" class="szekek" value="J8"></td>
-          <td><input type="checkbox" class="szekek" value="J9"></td>
-          <td><input type="checkbox" class="szekek" value="J10"></td>
-          <td><input type="checkbox" class="szekek" value="J11"></td>
-          <td><input type="checkbox" class="szekek" value="J12"></td>
+          <td><input type="checkbox" class="szekek" id="10/6"></td>
+          <td><input type="checkbox" class="szekek" id="10/7"></td>
+          <td><input type="checkbox" class="szekek" id="10/8"></td>
+          <td><input type="checkbox" class="szekek" id="10/9"></td>
+          <td><input type="checkbox" class="szekek" id="10/10"></td>
       </tr>
 
         
@@ -299,6 +288,7 @@
 
 <div class="container row g-2">
 
+
 <label for="nev" class="col-lg-12 col-md-4">Név*:</label><br>
                     <input type="text" id="nev" name="nev" class="col-lg-12 col-md-8" value="{{old('nev')}}" >
 
@@ -308,6 +298,7 @@
 <label for="email" class="col-lg-12 col-md-4">Székek száma*:</label>
  <input type="number" class="col-lg-12 col-md-8" id="szekekszama" required>
 <!-- <button type="submit" class="foglalasgomb col">Foglalás</button> -->
+
 
 </div>
 </form>
@@ -326,7 +317,6 @@
 
         <footer>
         <input type="button" class='vissza'onclick="location.href='penztar';" value="Vissza" />
-            <!-- <button type="button" class="vissza">Vissza</button> -->
         </footer>
     
    
