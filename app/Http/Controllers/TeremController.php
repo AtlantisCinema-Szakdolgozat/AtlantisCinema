@@ -7,7 +7,6 @@ use App\Models\Terem;
 
 class TeremController extends Controller
 {
-    //
     public function index(Request $request)
     {
         $name = $request->query('q','');
@@ -33,7 +32,6 @@ class TeremController extends Controller
 
     public function store(Request $request)
     {
-        //kötelező oszlopok
         $request->validate([
             'teremNev' => 'required',
             'sor' =>  'required',

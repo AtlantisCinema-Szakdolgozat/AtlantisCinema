@@ -15,7 +15,7 @@
                     @endif
                     {{ __('Be vagy jelentkezve!') }}
                     @if (Auth::user()->munkakor=="Admin")
-                    <a href="terem">Admin kezdőoldal</a>
+                    <a href="film">Admin kezdőoldal</a>
                     @endif
                     @if (Auth::user()->munkakor=="Pénztáros")
                     <a href="penztar">Pénztáros kezdőoldal</a>

@@ -30,7 +30,7 @@ class MyAjax{
                 myCallback();
             },
             error: function(result) {
-                alert("Nem sikerölt az adatbetöltés");
+                alert("Betöltés sikertelen");
             }
         });
     }
@@ -45,7 +45,7 @@ class MyAjax{
             }
             ,
             error: function(result) {
-                alert("Nem sikerölt az adatfeltöltés");
+                alert("Feltöltés sikertelen");
             }
         });
         
@@ -60,7 +60,7 @@ class MyAjax{
                 calback(sor);
             },
             error: function(data) {
-                alert("NO");
+                alert("Törlés sikertelen");
             }
         });
         
@@ -75,7 +75,7 @@ class MyAjax{
             success:function(result){
             },
             error: function(result) {
-                alert("Nem sikerölt az adatmódosítás");
+                alert("Módosítás sikertelen");
             }
         });
     }

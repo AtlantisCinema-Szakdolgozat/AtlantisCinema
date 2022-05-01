@@ -130,7 +130,8 @@ max-height:45vh;
     max-height: 400px;
     background-color: #d9d9d9;
     border: 1px solid black;
-
+    margin: 0px;
+    padding: 0px;
   
   }
   
@@ -157,19 +158,20 @@ max-height:45vh;
   }
   
 /*Gombok*/
-  .gombok{
-    padding:5px;
-    padding-top: 10px;
-    
- 
-   }
+#jegyekdarab .gombok{
+  margin: 0px;
+  padding: 10px;
+}
    
-
+.gombok .vasarlas{
+  margin-top: 10px;
+}
 
   .foglalasgomb,.vasarlas{
     margin:auto;
     font-size: 20px;
     border-radius: 10px;
+    margin-top: 10px;
     
   }
 
@@ -177,6 +179,11 @@ max-height:45vh;
 
     margin-right: 5px;
 
+  }
+
+  form .container{
+    margin: 0px;
+    padding: 10px;
   }
   
 
@@ -191,12 +198,41 @@ max-height:45vh;
     font-size: 20px;
     cursor: pointer;
   }
+
+  #jegyekdarab .kezd{
+    font-size: 20px;
+    border-radius: 10px;
+  }
  
 
 
 
 /*Reszponzivitás*/
+@media only screen and (max-width: 993px) {
+  form .container{
+    width: 90%;
+    margin: auto;
+  }
+  #jegyekdarab .gombok .kezd{
+    max-width: 40%;
+    padding: 10px;
+    margin: auto;
+  }
 
+  #jegyekdarab .gombok .vasarlas{
+    max-width: 40%;
+    padding: 10px;
+    margin: auto;
+  }
+  .foglalasgomb,.vasarlas{
+    margin:auto;
+    font-size: 20px;
+    border-radius: 10px;
+    margin: 10px;
+    
+  }
+  
+}
 @media only screen and (max-width: 1400px) {
   #foglalas>#foglalasadatok>div{
     max-height: 35vh;
@@ -206,14 +242,9 @@ max-height:45vh;
 
 
 @media only screen and (max-width: 1400px) {
-  #jegyekdarab{
-    margin-top: 0;
-  }
-}
-
-@media only screen and (max-width: 1400px) {
   #foglalas>#ulesterv{
    margin-top: 10px;
    margin-bottom: 20px;
   }
 }
+

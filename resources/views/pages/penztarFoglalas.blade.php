@@ -27,7 +27,7 @@
 
         <aside id="foglalas" class="row">
 
-        <div id="foglalasadatok" class="col-xl-3 col-lg-2">
+        <div id="foglalasadatok" class="col-xl-3 col-lg-3">
 
 
             <form class="row">
@@ -64,7 +64,7 @@
                 </tbody>
               </table>
             </div>
-        <div id="ulesterv" class="col-xl-7 col-lg-9">
+        <div id="ulesterv" class="col-xl-7 col-lg-6">
 
         <p id="ertesites"></p>
           <div class="aktfilm">
@@ -280,7 +280,7 @@
 
 
         
-        <div id="jegyekdarab"class="col-xl-2 col-lg-1">
+        <div id="jegyekdarab"class="col-xl-2 col-lg-3">
         <form action="{{route('foglalas-Felvitel')}}" method="post">
 
           @if(Session::has('sikeres'))
@@ -297,16 +297,16 @@
 
         @csrf
 
-<div class="container">
+<div class="container row g-2">
 
-<label for="nev">Név*:</label><br>
-                    <input type="text" id="nev" name="nev" value="{{old('nev')}}" >
+<label for="nev" class="col-lg-12 col-md-4">Név*:</label><br>
+                    <input type="text" id="nev" name="nev" class="col-lg-12 col-md-8" value="{{old('nev')}}" >
 
-<label for="email">Email*:</label>
-<input type="text" placeholder="beta@emil.com" name="email" id="email"  value="{{old('email')}}">
+<label for="email" class="col-lg-12 col-md-4">Email*:</label>
+<input type="text" class="col-lg-12 col-md-8" placeholder="beta@emil.com" name="email" id="email"  value="{{old('email')}}">
 
-<label for="email">Székek száma*:</label>
- <input type="number" id="szekekszama" required>
+<label for="email" class="col-lg-12 col-md-4">Székek száma*:</label>
+ <input type="number" class="col-lg-12 col-md-8" id="szekekszama" required>
 <!-- <button type="submit" class="foglalasgomb col">Foglalás</button> -->
 
 </div>
@@ -318,9 +318,9 @@
          
               <div class="gombok row">
                 <button class="kezd">Kezdés</button>
-                
+                <button class="vasarlas">Vásárlás</button>
             </div>
-            <button class="vasarlas">Vásárlás</button>
+            
             </aside>
           
 

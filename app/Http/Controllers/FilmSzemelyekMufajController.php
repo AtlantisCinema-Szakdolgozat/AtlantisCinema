@@ -7,7 +7,6 @@ use App\Models\Film;
 
 class FilmSzemelyekMufajController extends Controller
 {
-    //
     public function index(Request $request)
     {
         $name = $request->query('q','');

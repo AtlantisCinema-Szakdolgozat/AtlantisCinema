@@ -193,6 +193,8 @@ $(function(){
       $("#frendezok").val([]).trigger('change');
       $(".poszter").val('');
       $("#fyoutube").val('');
+      $(".felvitel").css("display", "inline");
+      $(".modosit").css("display", "none");
   });
 
     $(window).on("torles",(event)=>{
