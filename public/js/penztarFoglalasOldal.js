@@ -10,7 +10,6 @@ $(function(){
     let nyelv=JSON.parse(localStorage.getItem("nyelv"));
     myAjax.getAdat(fajlnevFoglalas, foglalasTomb, foglalasKiir);
 
-    let tombUtolos;
 
     kiir(adat);
     kiir2(nyelv);
@@ -113,7 +112,7 @@ $(function(){
       }
       else
       {
-        $(".gombok *").prop("disabled", true);
+        $(".kezd").prop("disabled", true);
         $("#ulohelyek *").prop("disabled", false);
         $("#ertesites").html("<b style='margin-bottom:0px;background:yellow;'>Válaszd ki a székeket!</b>");
       }
