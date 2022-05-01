@@ -59,9 +59,10 @@
     
                             <p id="kezdesIdo"> </p>
     
-                            <p id="terem"> </p>
-    
                             <p id="nyelv"> </p>
+                            <p id="szinkron"> </p>
+    
+                            
 
                         </div>
                         
@@ -320,8 +321,7 @@
                         <a class="close" href="/index"> x </a>
 
                         <h3> Köszönjük! Foglalását rögzítettük. </h3>
-                        <p> A megadott email címre visszaigazoló levelet fog kapni, a foglalás adataival.</p>
-
+            
                     </div>
                   
                 </div>

@@ -1,13 +1,18 @@
 @charset "utf-8";
 
+
 /* általános formázások másik css-ben */
 
+
 /* ARTICLE */
-nav > .container-fluid > .navbar-toggler{
+
+nav > .container-fluid > .navbar-toggler {
+    
     margin: auto;
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
 nav > .container-fluid > #mynavbar > .navbar-nav {
 
     width: 100%;
@@ -22,6 +27,22 @@ section {
 
     margin: 15px;
 }
+
+
+/* linkek */
+
+a {
+    text-decoration: none;
+    color: rgb(194, 165, 0);
+}
+
+a:hover {
+
+    background-color: #333333;
+    color: rgb(194, 165, 0);
+}
+
+
 
 #youtube {
 
@@ -39,7 +60,6 @@ article > .row {
     background-color: rgba(219, 219, 207, 0.507);
     margin-bottom: 30px;
 }
-
 
 #plakat {
 
@@ -61,12 +81,10 @@ article > .row {
     padding-top: 20px;
 }
 
-
 #leiras {
 
     text-align: justify;
 }
-
 
 p {
 
@@ -78,19 +96,22 @@ p {
     margin-top: 20px;
 }
 
+#rendezo {
 
-/* linkek */
-
-a {
-    text-decoration: none;
-    color: rgb(194, 165, 0);
+    margin: 10px;
 }
 
-a:hover {
+#szineszek {
 
-    background-color: #333333;
-    color: rgb(194, 165, 0);
+    display: flex;
+    flex-wrap: wrap;
 }
+
+.szineszek {
+
+    margin: 10px;
+}
+
 
 
 #idopontSzulo {
@@ -116,4 +137,17 @@ a:hover {
 .idopont:hover {
 
     color: rgb(223, 223, 185);
+}
+
+
+
+
+/* reszponzivitás */
+
+@media only screen and (max-width: 800px) {
+
+    #plakat  {
+
+        display: none;
+    }
 }

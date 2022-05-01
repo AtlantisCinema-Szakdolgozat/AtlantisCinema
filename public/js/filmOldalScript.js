@@ -1,9 +1,6 @@
 $(function() {
 
 
-    //const myAjax = new MyAjax();
-
-
     /* Oldal váltás, film betöltése */
  
     let filmAdat = [];
@@ -14,9 +11,6 @@ $(function() {
     
     /* Megjelenítés: */
 
-
     const filmOldal = new FilmOldal(filmAdat);
-
-
 
 });
