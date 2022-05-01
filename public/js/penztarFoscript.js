@@ -1,13 +1,10 @@
 $(function () {
-    let fajlnev = "http://127.0.0.1:8000/api/penztarFoOldal";
 
-    let fajlnevVetites = "http://127.0.0.1:8000/api/vetites/";
+    let fajlnev = "http://127.0.0.1:8000/api/penztarFoOldal";
     const vetitesekTomb = [];
-    //const foglalasTomb = [];
-    const fajlnevVetitesTomb = [];
     let eventTomb = [];
     let eventTomb2 = [];
-    var itemDatum;
+    let itemDatum;
 
     const napok = [
         "Vasárnap",
@@ -21,57 +18,17 @@ $(function () {
     elejenmegjelenit();
     const myAjax = new MyAjax();
 
-    //myAjax.getAdat(fajlnevVetites, fajlnevVetitesTomb, elejenmegjelenit);
-    //myAjax.getAdat(fajlnevVetites, fajlnevVetitesTomb, fajlnevVetitesNap);
+
 
     megjelenit();
     megjelenitAktualisNapot();
 
-    function fajlnevVetitesNap() {
-        fajlnevVetitesTomb.forEach(function (elem) {
-            return elem.vetitesNap;
-        });
-    }
 
     function elejenmegjelenit() {
         $("#tajekoztat").html("Kattintson egy dátumra");
         $(".foglalj").css("display", "none");
         $(".filmmezok").css("display", "none");
-
-        // let filmId = 0;
-        // let ujFilm;
-        // let itemDatume = localStorage.getItem("itemdatumertek");
-        // const szuloelem = $(".vetitesek");
-        // const sablonElem = $(".secSablon .filmmezok");
-        // //console.log(vetitesekTomb);
-        // szuloelem.empty();
-        // sablonElem.show();
-        // vetitesekTomb.forEach(function (elem, index) {
-        //     elem.terem.forEach(function (ka, i) {
-        //         if (itemDatume == ka.kapcsolat.vetitesNap) {
-        //             if (ka.kapcsolat.publikus == 1) {
-        //                 //console.log(ka);
-        //                 //console.log(itemDatume,ka.kapcsolat.vetitesNap);
-        //                 $(".filmmezok").css("border", "inline");
-        //                 $(".foglalj").css("display", "inline");
-        //                 if (filmId != elem.filmId) {
-        //                     let ujElem = sablonElem.clone().appendTo(szuloelem);
-        //                     console.log(filmId, elem.filmId);
-        //                     ujFilm = new Filmek(ujElem, elem);
-        //                 }
-
-        //                 idopontKiir(ujFilm.filmIdopont, index, i);
-        //                 filmId = elem.filmId;
-        //             }
-        //         }
-        //     });
-
-        //     //A KONKRÉT FILMHEZ A FILMIDŐPONTOK
-        //     //idopontKiir(ujFilm.filmIdopont, index);
-
-        //     // console.log(ujIdopontok);
-        // });
-        // sablonElem.hide();
+        $(".ugras").hide();
     }
 
     /** Napok megjelenítése: **/
@@ -84,7 +41,20 @@ $(function () {
         localStorage.setItem("itemdatumertek", itemDatum);
         myAjax.getAdat(fajlnev, vetitesekTomb, filmetkiir);
         betoltes(itemDatum);
+        $(".ugras").show();
     });
+
+   /* PénztárFoOldal*/
+
+   $(window).on("idopontBetolt", (event) => {
+    eventTomb.push(event.detail);
+    localStorage.setItem("kulcs", JSON.stringify(eventTomb));
+});
+
+$(window).on("nyelvKiir", (event) => {
+    eventTomb2.push(event.detail);
+    localStorage.setItem("nyelv", JSON.stringify(eventTomb2));
+});
 
     function betoltes(event) {
         $(".aktnap").html(event);
@@ -146,22 +116,11 @@ $(function () {
         }
     }
 
-    /* PénztárFoOldal*/
-    $(window).on("idopontBetolt", (event) => {
-        eventTomb.push(event.detail);
-
-        localStorage.setItem("kulcs", JSON.stringify(eventTomb));
-    });
-
-    $(window).on("nyelvKiir", (event) => {
-        eventTomb2.push(event.detail);
-        localStorage.setItem("nyelv", JSON.stringify(eventTomb2));
-    });
+ 
 
     function idopontKiir(szuloelem, idopontindex, terem) {
         const sablonElem = $(".secSablon .filmidopontSablon");
         sablonElem.show();
-        console.log(szuloelem);
         let ujElem = sablonElem.clone().appendTo(szuloelem);
         const ujIdopontok = new Idopontok(ujElem,terem,
             vetitesekTomb[idopontindex].nyelv);

@@ -35,6 +35,20 @@ class MyAjax{
         });
     }
 
+    getAdat3(apivegpont,adat){
+        $.ajax({
+            url:apivegpont,
+            type:"GET",
+            data:adat,
+            headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+            success:function(adat){
+            },
+            error: function(result) {
+                alert("Nem sikerült az adatmodósítás");
+            }
+        });
+    }
+
     getAdat2(apivegpont,tomb,myCallback){
         tomb=[];
         $.ajax({
@@ -106,6 +120,19 @@ class MyAjax{
     putAdat(apivegpont,adat,id){
         $.ajax({
             url:apivegpont+"/"+id,
+            type:"PUT",
+            data:adat,
+            headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+            success:function(result){
+            },
+            error: function(result) {
+                alert("Nem sikerölt az adatmódosítás");
+            }
+        });
+    }
+    putAdat2(apivegpont,adat,id,id1,id2){
+        $.ajax({
+            url:apivegpont+"/"+id+"/"+id1+"/"+id2,
             type:"PUT",
             data:adat,
             headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},

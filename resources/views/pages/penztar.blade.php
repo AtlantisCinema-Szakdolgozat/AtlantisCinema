@@ -24,7 +24,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="js/ajax.js"></script>
-    <!--<script src="penztarFoOldalScript.js" type="text/javascript"></script> -->
     <script src="js/penztarFoscript.js" type="text/javascript"></script>
     <script src="js/penztarFilmek.js" type="text/javascript"></script>
     <script src="js/penztaridopontok.js" type="text/javascript"></script>
@@ -52,9 +51,9 @@
           <p class="terem"></p>
           <p class="idopont"></p>
           <p class="szinkron"></p>
-        
-          <a href="/penztarFoglalas" class="foglalj">Foglalj!</a>
-         
+          <div class="ugras">
+          <button class="gombugras"><a href="/penztarFoglalas" class="foglalj">Foglalj!</a></button>
+            </div>
         </div>
         <!-- filmek sablonja -->
         <div class="filmmezok row">
