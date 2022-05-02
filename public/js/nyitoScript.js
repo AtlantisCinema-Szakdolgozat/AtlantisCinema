@@ -12,13 +12,12 @@ $(function() {
     const komplettFilmTomb = [];
     const plakatTomb = [];
 
-
+    
     /* Adatok lekérése, tárolása és megjelenítések: */
     myAjax.getAdat(komplettFilmApi, komplettFilmTomb, filmekMegjelenites);   // FILMEK 
     myAjax.getAdat(plakatApi, plakatTomb, galeriaMegjelenites);   // GALÉRIA
     
-
-
+    
     /* Megjelenítés: */
 
     function filmekMegjelenites() {
@@ -39,6 +38,7 @@ $(function() {
 
     /* Oldal váltás, film tovább adása */
 
+    
     $(window).on("filmTovabbTolt", (filmEsemeny) => {
 
     

@@ -64,7 +64,6 @@ class Film {
         let idopontEsemeny = new CustomEvent("idopontTovabbToltTrigger", {detail: this.fAdat});
         window.dispatchEvent(idopontEsemeny);
     }
-
     
 }
 

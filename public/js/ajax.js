@@ -13,6 +13,9 @@ class MyAjax{
                 result.forEach(element => {
                     tomb.push(element)
                 });
+            },
+            error: function(result) {
+                alert("Adatbetöltés sikertelen!");
             }
         });
     }
@@ -30,7 +33,7 @@ class MyAjax{
                 myCallback();
             },
             error: function(result) {
-                alert("Nem sikerölt az adatbetöltés");
+                alert("Adatbetöltés sikertelen!");
             }
         });
     }
@@ -48,7 +51,7 @@ class MyAjax{
                 myCallback(tomb);
             },
             error: function(result) {
-                alert("Nem sikerölt az adatbetöltés");
+                alert("Adatbetöltés sikertelen!");
             }
         });
     }
@@ -61,12 +64,9 @@ class MyAjax{
             headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
             success:function(result){
                 myCallback();
-            }
-            
-            ,
-            
+            },
             error: function(result) {
-                alert("Nem sikerölt az adatfeltöltés");
+                alert("Adatfeltöltés sikertelen!");
             }
         });
         
@@ -82,7 +82,7 @@ class MyAjax{
             }
             ,
             error: function(result) {
-                alert("Nem sikerölt az adatfeltöltés");
+                alert("Adatfeltöltés sikertelen!");
             }
         });
         
@@ -112,7 +112,7 @@ class MyAjax{
             success:function(result){
             },
             error: function(result) {
-                alert("Nem sikerölt az adatmódosítás");
+                alert("Adatmódosítás sikertelen!");
             }
         });
     }
