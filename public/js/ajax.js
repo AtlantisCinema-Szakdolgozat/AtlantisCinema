@@ -49,7 +49,6 @@ class MyAjax{
             },
             error: function(result) {
                 alert("Nem sikerült az adatmodósítás");
->>>>>>> b8ecdbb80de4c21391420770cbebf1aa9fbc2147
             }
         });
     }
@@ -98,11 +97,7 @@ class MyAjax{
             }
             ,
             error: function(result) {
-<<<<<<< HEAD
                 alert("Adatfeltöltés sikertelen!");
-=======
-                alert("Feltöltés sikertelen");
->>>>>>> b8ecdbb80de4c21391420770cbebf1aa9fbc2147
             }
         });
         
@@ -132,10 +127,9 @@ class MyAjax{
             success:function(result){
             },
             error: function(result) {
-<<<<<<< HEAD
+
                 alert("Adatmódosítás sikertelen!");
-=======
-                alert("Módosítás sikertelen");
+
             }
         });
     }
@@ -149,7 +143,7 @@ class MyAjax{
             },
             error: function(result) {
                 alert("Nem sikerölt az adatmódosítás");
->>>>>>> b8ecdbb80de4c21391420770cbebf1aa9fbc2147
+
             }
         });
     }
