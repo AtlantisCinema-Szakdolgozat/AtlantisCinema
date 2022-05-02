@@ -96,31 +96,31 @@
                             <ul class="navbar-nav nav-justified">
 
                                 <li id="hetfo" class="nav-item">
-                                    <a class="nav-link" href="/index"> Hétfő </a>
+                                    <a class="nav-link" href=""> Hétfő </a>
                                 </li>
 
                                 <li id="kedd" class="nav-item">
-                                    <a class="nav-link" href="/index"> Kedd </a>
+                                    <a class="nav-link" href=""> Kedd </a>
                                 </li>
 
                                 <li id="szerda" class="nav-item">
-                                    <a class="nav-link" href="/index"> Szerda </a>
+                                    <a class="nav-link" href=""> Szerda </a>
                                 </li>
 
                                 <li id="csutortok" class="nav-item">
-                                    <a class="nav-link" href="/index"> Csütörtök </a>
+                                    <a class="nav-link" href=""> Csütörtök </a>
                                 </li>
 
                                 <li id="pentek" class="nav-item">
-                                    <a class="nav-link" href="/index"> Péntek </a>
+                                    <a class="nav-link" href=""> Péntek </a>
                                 </li>
 
                                 <li id="szombat" class="nav-item">
-                                    <a class="nav-link" href="/index"> Szombat </a>
+                                    <a class="nav-link" href=""> Szombat </a>
                                 </li>
 
                                 <li id="vasarnap" class="nav-item">
-                                    <a class="nav-link" href="/index"> Vasárnap </a>
+                                    <a class="nav-link" href=""> Vasárnap </a>
                                 </li>
 
                             </ul>
