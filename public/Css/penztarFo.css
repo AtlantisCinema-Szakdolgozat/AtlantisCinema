@@ -17,7 +17,21 @@ body{
     font-family: CASTELLAR;
     font-size: 20px;
   }
+  .ugras{
+    padding-top: 5px;
+    text-align: center;
 
+  }
+  
+.gombugras{
+
+  border-radius: 8px;
+
+}
+.foglalj{
+
+  color:black;
+}
 
   /*Header*/
 header div{

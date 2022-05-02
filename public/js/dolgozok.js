@@ -7,9 +7,6 @@ class Dolgozok{
 
     torles(){
         let event = new CustomEvent("torles", {detail:this});
-        console.log({detail:this});
-        console.log(event);
-        
         window.dispatchEvent(event);
     }
 

@@ -4,18 +4,31 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Szek;
-
+use Illuminate\Support\Facades\DB;
 class SzekController extends Controller
 {
-    //
+    
     public function index()
     {
         return Szek::all();
     }
  
-    public function show($id)
-    {
-        return Szek::find($id);
+    public function update(Request $request)
+    {   
+        $sor=$request->input('sor');
+        $oszlop=$request->input('oszlop');
+        $vetitesId=$request->input('vetitesId');
+        $nezoId=$request->input("nezoId");
+        $allapot=$request->input("allapot");
+
+        $affected = DB::table(app(Szek::class)->getTable())
+              ->where('sor','=',$sor)
+              ->where('oszlop','=',$oszlop)
+              ->where('vetitesId','=',$vetitesId)
+              ->update(['nezoId' => $nezoId,'allapot' => $allapot]);
+
+        return $affected;
+         
     }
 
     public function store(Request $request)
@@ -31,17 +44,7 @@ class SzekController extends Controller
         }
     }
 
-    public function update(Request $request, $id)
-    {
-        $article = Szek::find($id);
-        $request->validate([ 
-            'sor' => 'required',
-            'oszlop' => 'required',
-            'vetitesId' => 'required'
-        ]);
-        $article->update($request->all());
-        return $article;
-    }
+  
 
     public function delete(Request $request, $id)
     {

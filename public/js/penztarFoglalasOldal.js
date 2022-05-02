@@ -1,35 +1,33 @@
 $(function(){
     let fajlnevFoglalas ="http://127.0.0.1:8000/api/nezo";
+    let fajlnevSzek ="http://127.0.0.1:8000/api/szek";
+
+
     ellenorzo();
     let foglalasTomb = [];
     const myAjax = new MyAjax();
-    
-    myAjax.getAdat(fajlnevFoglalas, foglalasTomb, foglalasKiir);
-
     let adat=JSON.parse(localStorage.getItem("kulcs"));
     let nyelv=JSON.parse(localStorage.getItem("nyelv"));
-    let tombUtolos;
-    let check = [];
+    myAjax.getAdat(fajlnevFoglalas, foglalasTomb, foglalasKiir);
+
+
     kiir(adat);
     kiir2(nyelv);
 
     let szuloelem = $(".tablafoglaSzulo");
-    let sablonElem = $(".tablafoglaSablon");
+  
+
 
 
     function foglalasKiir() {
       szuloelem = $(".tablafoglaSzulo");
-      //sablonElem = $(".tablafoglaSablon");
-      //szuloelem.empty();
-      //sablonElem.show();
       szuloelem.children().remove();
       foglalasTomb.forEach(function (elem) {
-          //let ujElem = sablonElem.clone().appendTo(szuloelem);
           let tablaElem=$("<tr></tr>").appendTo(szuloelem);
           const ujFoglalas = new Foglalas(tablaElem, elem);
           
       });
-      //sablonElem.hide();
+
       
   }
 
@@ -41,24 +39,10 @@ $(function(){
     });
 
 
-    // function maxNyugtaszam(){
-    //   let maxErtek = -1;
-    //   foglalasTomb.forEach((elem, index) => {
-    //     if (elem.nezoId>maxErtek) {
-    //       maxErtek = elem.nezoId;
-    //     }
-    //   });
-    //   // console.log(foglalasTomb);
-    // }
-
     function adatokKiiras(){
-      console.log($("#nev").val());
-              // console.log($("#email").val());
               let nezo= {};
               nezo.nev=$("#nev").val();
               nezo.email=$("#email").val();
-              // console.log(nezo);
-              // console.log(foglalasTomb);
               myAjax.postAdat2(fajlnevFoglalas,nezo,utolosKeres);
               
     }
@@ -66,31 +50,45 @@ $(function(){
     function utolosKeres(){
       function utolsoID(tomb){
         utolsoElem=tomb[tomb.length-1].nezoId;
-        console.log(utolsoElem);
+        szekmodositas(utolsoElem);
       }
       myAjax.getAdat2(fajlnevFoglalas, foglalasTomb, utolsoID);
     }
 
+      function szekmodositas(nezoid){
+        let check = [];
+        let szekekObj={};
+        $("input:checkbox[class='szekek']:checked").each(function(){
+          check.push($(this).attr("id"));
+        });
+        check.forEach(element => {
+          let ertek=element.split("/");
+          let sor=ertek[0];
+          let szek=ertek[1];
+
+          szekekObj.sor=sor;
+          szekekObj.oszlop=szek;
+          szekekObj.vetitesId=adat[0].kapcsolat.vetitesId;
+          szekekObj.nezoId=nezoid;
+          szekekObj.allapot=2;
+
+          myAjax.getAdat3(fajlnevSzek,szekekObj);
+          
+          
+        });
+        
+      }
+
+
 
     $(".vasarlas").on("click", () => {
-        let allSeatsVals = [];
+        
           if ($("input:checked").length == ($("#szekekszama").val()))
             {
               adatokKiiras();
-            let szekek={};
-            $("input:checkbox[class='szekek']:checked").each(function(){
-              check.push($(this).val());
-              let sor=$(this).val()[0];
-              let szek=$(this).val()[2];
-              szekek.sor=sor;
-              szekek.szek=szek;
-            });
-            console.log(szekek);
-            console.log(check);
-            
+
               let check2 = $("input:checkbox[class='szekek']:checked").val("");
               $.each(check2, function( key, value ) {
-                allSeatsVals.push(check);
                 $(value).css('accent-color','red');
               });
             
@@ -114,7 +112,7 @@ $(function(){
       }
       else
       {
-        $(".gombok *").prop("disabled", true);
+        $(".kezd").prop("disabled", true);
         $("#ulohelyek *").prop("disabled", false);
         $("#ertesites").html("<b style='margin-bottom:0px;background:yellow;'>Válaszd ki a székeket!</b>");
       }
@@ -128,8 +126,7 @@ function ellenorzo()
 
 function kiir(adat){
         $(".terem").html(adat[0].teremNev);
-        $(".idopont").html(adat[0].kapcsolat.kezdesiIdo);
-
+        $(".idopont").html(adat[0].kapcsolat.kezdesiIdo); 
 }
 function kiir2(nyelv){
     $(".szinkron").html(nyelv);
@@ -143,7 +140,6 @@ $("#keresesmezofoglalas").on("keyup", () => {
     apivegpont += "?q=" + $("#keresesmezofoglalas").val();
     szuloelem.children().remove();
     foglalasTomb.splice();
-    console.log(foglalasTomb);
     myAjax.getAdat(apivegpont, foglalasTomb, foglalasKiir);
 });
 

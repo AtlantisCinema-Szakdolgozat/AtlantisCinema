@@ -78,8 +78,7 @@ Route::delete('/nezo/{id}', [NezoController::class, 'delete']);
 Route::post('/nezo', [NezoController::class, 'store']);
 
 Route::get('/szek', [SzekController::class, 'index']);
-Route::put('/szek/{id}', [SzekController::class, 'update']);
-Route::get('/szek/{szek}', [SzekController::class, 'show']);
+Route::get('/szek', [SzekController::class, 'update']);
 Route::delete('/szek/{id}', [SzekController::class, 'delete']);
 Route::post('/szek', [SzekController::class, 'store']);
 

@@ -33,7 +33,23 @@ class MyAjax{
                 myCallback();
             },
             error: function(result) {
+
                 alert("Adatbetöltés sikertelen!");
+            }
+        });
+    }
+
+    getAdat3(apivegpont,adat){
+        $.ajax({
+            url:apivegpont,
+            type:"GET",
+            data:adat,
+            headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+            success:function(adat){
+            },
+            error: function(result) {
+                alert("Nem sikerült az adatmodósítás");
+>>>>>>> b8ecdbb80de4c21391420770cbebf1aa9fbc2147
             }
         });
     }
@@ -82,7 +98,11 @@ class MyAjax{
             }
             ,
             error: function(result) {
+<<<<<<< HEAD
                 alert("Adatfeltöltés sikertelen!");
+=======
+                alert("Feltöltés sikertelen");
+>>>>>>> b8ecdbb80de4c21391420770cbebf1aa9fbc2147
             }
         });
         
@@ -97,7 +117,7 @@ class MyAjax{
                 calback(sor);
             },
             error: function(data) {
-                alert("NO");
+                alert("Törlés sikertelen");
             }
         });
         
@@ -112,7 +132,24 @@ class MyAjax{
             success:function(result){
             },
             error: function(result) {
+<<<<<<< HEAD
                 alert("Adatmódosítás sikertelen!");
+=======
+                alert("Módosítás sikertelen");
+            }
+        });
+    }
+    putAdat2(apivegpont,adat,id,id1,id2){
+        $.ajax({
+            url:apivegpont+"/"+id+"/"+id1+"/"+id2,
+            type:"PUT",
+            data:adat,
+            headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+            success:function(result){
+            },
+            error: function(result) {
+                alert("Nem sikerölt az adatmódosítás");
+>>>>>>> b8ecdbb80de4c21391420770cbebf1aa9fbc2147
             }
         });
     }
