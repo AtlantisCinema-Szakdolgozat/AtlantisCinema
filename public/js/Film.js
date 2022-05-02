@@ -44,7 +44,7 @@ class Film {
 
         for (const key in ertek.vetites) {
 
-            this.idopontSzulo.append("<a class='idopont' href='/foglalasOldal'>" + ertek.vetites[key].kezdesIdo +"</a>");
+            this.idopontSzulo.append("<a class='idopont' href='/foglalasOldal'>" + ertek.vetites[key].kezdesiIdo +"</a>");
         }
     }
 
@@ -132,7 +132,7 @@ class FilmOldal {
 
         for (const key in ertek.vetites) {
 
-            this.idopontSzulo.append("<a href='/foglalasOldal' class='idopont'>" + ertek.vetites[key].kezdesIdo + "</a>");
+            this.idopontSzulo.append("<a href='/foglalasOldal' class='idopont'>" + ertek.vetites[key].kezdesiIdo + "</a>");
         }
         
     }
@@ -181,7 +181,7 @@ class FilmFoglalas {
         for (const key in ertek.vetites) {
 
             this.nap.html(ertek.vetites[key].vetitesNap);
-            this.kezdesIdo.html(ertek.vetites[key].kezdesIdo);
+            this.kezdesIdo.html(ertek.vetites[key].kezdesiIdo);
         }
 
         this.nyelv.html(ertek.nyelv);
