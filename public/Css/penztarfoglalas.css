@@ -91,12 +91,12 @@ body>main>#foglalas{
 }  */
 
 #vaszon {
-
-  max-width: 100%;
+  width: 50%;
   margin: auto;
-  height: 10px;
-  border: 1px solid black;
-  margin-bottom: 10px;
+  height: 70px;
+  transform: rotateX(-45deg);
+  box-shadow: 5px 0px 30px lightblue inset;
+  margin-bottom: 5px;
   background-color: 
   #31619b;
 }
