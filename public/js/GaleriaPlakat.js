@@ -14,7 +14,7 @@ class GaleriaPlakat {
 
     setAdatok(ertek) {
 
-        this.plakat.attr("src", ertek.poszter);
+        this.plakat.attr("src", ertek.poszter); 
     }
 
 }

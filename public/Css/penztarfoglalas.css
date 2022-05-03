@@ -78,7 +78,7 @@ body>main>#foglalas{
 
 
   /*Ülésterv*/
-
+/* 
     #vaszon{
     width: 50%;
     margin: auto;
@@ -88,7 +88,18 @@ body>main>#foglalas{
     margin-bottom: 5px;
     background-color: 
     #31619b;
-}  
+}  */
+
+#vaszon {
+
+  max-width: 100%;
+  margin: auto;
+  height: 10px;
+  border: 1px solid black;
+  margin-bottom: 10px;
+  background-color: 
+  #31619b;
+}
 
 
 
