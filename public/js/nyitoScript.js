@@ -120,7 +120,7 @@ $(function() {
 
 
     function filmMegjelenites() {
-
+        let filmId = 0;
         let itemDatume = localStorage.getItem("itemdatumertek");
         szuloelem.show();
         sablonElem.show();
@@ -130,9 +130,11 @@ $(function() {
             elem.vetites.forEach(function (ka, i) {
 
                 if (itemDatume == ka.vetitesNap && ka.publikus == 1 ) {
-
-                    const ujElem = sablonElem.clone().appendTo(szuloelem);
-                    const ujFilm = new Film(ujElem, komplettFilmTomb[index],itemDatume);
+                    if (filmId != elem.filmId) {
+                        const ujElem = sablonElem.clone().appendTo(szuloelem);
+                        const ujFilm = new Film(ujElem, komplettFilmTomb[index],itemDatume);
+                    }
+                    filmId = elem.filmId;
                 }
             });
         });

@@ -208,9 +208,8 @@ section .row {
 
 .idopont {
 
-    padding-left: 20px;
+    padding: 10px;
     color: black;
-    padding-top: 10px;
 }
 
 .idopont:hover {

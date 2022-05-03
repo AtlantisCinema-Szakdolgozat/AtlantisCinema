@@ -75,7 +75,8 @@ $(function() {
     //console.log(filmAdat);
     
     const szuloelem = $("#idopontSzulo");
-    const filmOldal = new FilmOldal(filmAdat);
+    let itemDatume = localStorage.getItem("itemdatumertek");
+    const filmOldal = new FilmOldal(filmAdat,itemDatume);
 
     $(".adat").on("click", (event) => {
 
@@ -83,7 +84,8 @@ $(function() {
         itemDatum = itemDatum.trim();
         localStorage.setItem("itemdatumertek", itemDatum);
         szuloelem.empty();
-        szuloelem.append("<p> Időpontok: </p>")   
+        szuloelem.append("<p> Időpontok: </p>") 
+        $("#szineszek").empty(); 
         const filmOldal2 = new FilmOldal(filmAdat, itemDatum);
     });
 

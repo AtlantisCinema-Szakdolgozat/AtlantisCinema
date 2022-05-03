@@ -19,6 +19,9 @@ main > section > #filmtarolo {
 .youtubeLink{
   font-size: 2vh;
 }
+.filmadatok{
+  height: 100%;
+}
 
 .filmadatok {
   max-width: calc(400px - 10px);

@@ -40,7 +40,7 @@
                         <div class="row">
                             <label for="fleiras" class="col-sm-3 col-form-label">Leírás</label>
                           <div class="col-sm-9">
-                            <textarea class="form-control" id="fleiras" rows="5" maxlength="300"  name="filmLeiras" placeholder="Add meg a film leírását." required></textarea>
+                            <textarea class="form-control" id="fleiras" rows="5" maxlength="500"  name="filmLeiras" placeholder="Add meg a film leírását." required></textarea>
                           </div>
                         </div>
                         <div class="row">

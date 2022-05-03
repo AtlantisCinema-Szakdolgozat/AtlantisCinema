@@ -130,12 +130,12 @@ class FilmOldal {
 
         for (const key in ertek.szemelyek) {
 
-            if(ertek.szemelyek[key].kapcsolat.poszt === "Rendező") {
+            if(ertek.szemelyek[key].kapcsolat.poszt === "rendező") {
 
                 this.rendezo.html(ertek.szemelyek[key].nev);
 
             } else {
-
+                
                 this.szineszek.append("<p class='szineszek'>" + ertek.szemelyek[key].nev + "</p>");
             } 
         }
