@@ -1,17 +1,8 @@
 $(function() {
 
 
-    /* Oldal váltás, film betöltése */
- 
-    
-
-    
-    /* Megjelenítés: */
-
-   
-
-    
     const napok = [
+
         "Vasárnap",
         "Hétfő",
         "Kedd",
@@ -21,15 +12,20 @@ $(function() {
         "Szombat",
     ];
     
+
     megjelenit();
+
     function napKiir(napvaltoztat) {
+
         let d = new Date();
         d.setDate(d.getDate() + napvaltoztat);
         let day = napok[d.getDay()];
         return day;
     }
 
+
     function datumkiir(napvaltoztat) {
+
         let jelenlegiDatum = new Date();
 
         jelenlegiDatum.setDate(jelenlegiDatum.getDate() + napvaltoztat);
@@ -57,36 +53,38 @@ $(function() {
         return jelenlegiDatumSzerkesztes;
     }
 
+
     function megjelenit() {
+
         const szuloelem = $(".collapse");
         szuloelem.empty();
         $(szuloelem).append("<ul class='navbar-nav nav-justified'></ul>");
         for (let index = 0; index < 7; index++) {
            
             $(szuloelem).children(".navbar-nav").append(
-                "<li class='nap nav-item ' ><p class='nav-link adat' id="+datumkiir(index)+">"+napKiir(index)+"</p></li>"
-            )
 
-            
+                "<li class='nap nav-item ' ><p class='nav-link adat' id="+datumkiir(index)+">"+napKiir(index)+"</p></li>"
+            )    
         }
     }
+
 
     let filmAdat = [];
 
     filmAdat = JSON.parse(localStorage.getItem("filmKulcs"));
-    console.log(filmAdat);
+    //console.log(filmAdat);
     
     const szuloelem = $("#idopontSzulo");
     const filmOldal = new FilmOldal(filmAdat);
 
     $(".adat").on("click", (event) => {
+
         itemDatum = $(event.target).closest(".adat").attr("id");
         itemDatum = itemDatum.trim();
         localStorage.setItem("itemdatumertek", itemDatum);
         szuloelem.empty();
         szuloelem.append("<p> Időpontok: </p>")   
-        const filmOldal2 = new FilmOldal(filmAdat,itemDatum);
-
+        const filmOldal2 = new FilmOldal(filmAdat, itemDatum);
     });
 
 });

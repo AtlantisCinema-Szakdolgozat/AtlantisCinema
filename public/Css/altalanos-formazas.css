@@ -74,6 +74,11 @@ nav > .container-fluid > ul > .nav-item > .nav-link {
 }
 
 
+#mynavbar{
+
+    cursor: pointer;
+}
+
 
 
 /* ARTICLE */

@@ -10,8 +10,9 @@ $(function() {
     gomb.onclick = function() {
 
          ablak.style.display = "block";
-     }
+    }
                 
+
 
     /* Oldal váltás, film betöltése */
  
@@ -23,26 +24,22 @@ $(function() {
 
         console.log(element.kivalasztottIdopont);
     });
-    // kiir(filmAdat);
+
 
     /* Megjelenítés: */
 
     const filmOldal = new FilmFoglalas(filmAdat);
 
-    // function kiir(adat){
-    //     $("#kezdesIdo").html(adat.kezdesiIdo);
-
-
-    // }
-
-
 
    
     const myAjax = new MyAjax();
+
     let foglalasTomb = [];
     let fajlnevFoglalas ="http://127.0.0.1:8000/api/nezo";
     let fajlnevSzek ="http://127.0.0.1:8000/api/szek";
-    function adatokKiiras(){
+
+    function adatokKiiras() {
+
         let nezo= {};
         nezo.nev=$("#nev").val();
         nezo.email=$("#email").val();
@@ -52,15 +49,19 @@ $(function() {
 
     let utolsoElem;
     function utolosKeres(){
+
         function utolsoID(tomb){
+
             utolsoElem=tomb[tomb.length-1].nezoId;
 
             szekmodositas(utolsoElem);
         }
+
         myAjax.getAdat2(fajlnevFoglalas, foglalasTomb, utolsoID);
     }
 
     function szekmodositas(nezoid){
+
         let check = [];
         let szekekObj={};
         $("input:checkbox[class='szekek']:checked").each(function(){
@@ -104,9 +105,7 @@ $(function() {
             let check2 = $("input:checkbox[class='szekek']:checked").val("");
             $.each(check2, function( key, value ) {
                 $(value).css('accent-color','red');
-            });
-        
-           
+            }); 
         }
         else
         {
@@ -116,6 +115,7 @@ $(function() {
         
     });
 
+
     function adatSzerzes()
     {
         if (( $("#nev").val().length == 0 ) || ( $("#szekekszama").val().length == 0 )||( $("#email").val().length == 0 ))
@@ -124,24 +124,5 @@ $(function() {
 
         }
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 });

@@ -14,30 +14,9 @@ $(function() {
 
     
     /* Adatok lekérése, tárolása és megjelenítések: */
-    //myAjax.getAdat(komplettFilmApi, komplettFilmTomb, filmekMegjelenites);   // FILMEK 
-    myAjax.getAdat(komplettFilmApi, komplettFilmTomb, filmetkiir);
+    myAjax.getAdat(komplettFilmApi, komplettFilmTomb, filmMegjelenites);   // FILMEK
     myAjax.getAdat(plakatApi, plakatTomb, galeriaMegjelenites);   // GALÉRIA
     
-    
-    /* Megjelenítés: */
-
-    // function filmekMegjelenites() {
-
-    //     const szuloElem = $("#musorListaCsempeSzulo");
-    //     let sablonElem = $(".csempeSablon");
-
-    //     komplettFilmTomb.forEach(function(elem, index) { 
-
-    //         const ujElem = sablonElem.clone().appendTo(szuloElem);
-    //         const ujFilm = new Film(ujElem, komplettFilmTomb[index]); 
-    //     });
-        
-    //     sablonElem.remove(); 
-    // }
-
-    
-    
-
 
 
     /* Oldal váltás, film tovább adása */
@@ -45,18 +24,18 @@ $(function() {
     
     $(window).on("filmTovabbTolt", (filmEsemeny) => {
 
-    
         localStorage.setItem("filmKulcs", JSON.stringify(filmEsemeny.detail));
     });
     
     
     $(window).on("idopontTovabbToltTrigger", (event) => {
+
         eventTomb.push(event.detail);
-        console.log("eventTomb");
         localStorage.setItem("vetitesKulcs", JSON.stringify(eventTomb));
     });
 
     const napok = [
+
         "Vasárnap",
         "Hétfő",
         "Kedd",
@@ -66,8 +45,14 @@ $(function() {
         "Szombat",
     ];
     
+
+
+    /* Megjelenítés: */
+
     megjelenit();
+
     function napKiir(napvaltoztat) {
+
         let d = new Date();
         d.setDate(d.getDate() + napvaltoztat);
         let day = napok[d.getDay()];
@@ -75,6 +60,7 @@ $(function() {
     }
 
     function datumkiir(napvaltoztat) {
+
         let jelenlegiDatum = new Date();
 
         jelenlegiDatum.setDate(jelenlegiDatum.getDate() + napvaltoztat);
@@ -103,46 +89,57 @@ $(function() {
     }
 
     function megjelenit() {
+
         const szuloelem = $(".collapse");
         szuloelem.empty();
         $(szuloelem).append("<ul class='navbar-nav nav-justified'></ul>");
+
         for (let index = 0; index < 7; index++) {
            
             $(szuloelem).children(".navbar-nav").append(
                 "<li class='nap nav-item ' ><p class='nav-link adat' id="+datumkiir(index)+">"+napKiir(index)+"</p></li>"
-            )
-
-            
+            )    
         }
     }
+
     const szuloelem = $("#musorListaCsempeSzulo");
     const sablonElem = $(".csempeSablon");
 
     $(".adat").on("click", (event) => {
+
         itemDatum = $(event.target).closest(".adat").attr("id");
         itemDatum = itemDatum.trim();
         localStorage.setItem("itemdatumertek", itemDatum);
         szuloelem.empty();           
         sablonElem.show();
-        myAjax.getAdat(komplettFilmApi, komplettFilmTomb, filmetkiir);
+        myAjax.getAdat(komplettFilmApi, komplettFilmTomb, filmMegjelenites);
 
     });
 
 
-    function filmetkiir() {
+
+
+    function filmMegjelenites() {
+
         let itemDatume = localStorage.getItem("itemdatumertek");
         szuloelem.show();
         sablonElem.show();
+
         komplettFilmTomb.forEach(function (elem, index) {
+
             elem.vetites.forEach(function (ka, i) {
+
                 if (itemDatume == ka.vetitesNap && ka.publikus == 1 ) {
+
                     const ujElem = sablonElem.clone().appendTo(szuloelem);
                     const ujFilm = new Film(ujElem, komplettFilmTomb[index],itemDatume);
                 }
             });
         });
+
         sablonElem.hide();
     }
+
 
 
     /* Galéria: */
