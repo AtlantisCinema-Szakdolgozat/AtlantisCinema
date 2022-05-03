@@ -93,7 +93,7 @@
 
                         <div class="collapse navbar-collapse" id="mynavbar">
 
-                            <ul class="navbar-nav nav-justified">
+                            <!-- <ul class="navbar-nav nav-justified">
 
                                 <li id="hetfo" class="nav-item">
                                     <a class="nav-link" href=""> Hétfő </a>
@@ -121,7 +121,7 @@
 
                                 <li id="vasarnap" class="nav-item">
                                     <a class="nav-link" href=""> Vasárnap </a>
-                                </li>
+                                </li> -->
 
                             </ul>
                                     
@@ -150,9 +150,9 @@
                             <p class="mufaj">  </p>
                             <p class="leiras">  </p>
                             
-                            <div id="idopontSzulo">
-
+                            <div id="idopontSzulo" class="idopontSzulo">
                                 <p> Időpontok: </p>
+                                
 
 
                             </div>

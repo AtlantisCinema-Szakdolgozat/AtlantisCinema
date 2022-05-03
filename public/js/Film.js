@@ -1,10 +1,11 @@
 
 class Film {
 
-    constructor(fElem, fAdat) {
+    constructor(fElem, fAdat, datum) {
        
         this.fElem = fElem;
         this.fAdat = fAdat;
+        this.datum=datum;
 
         this.fCim = this.fElem.children("div:last").children(".filmCim");
         this.tovabb = this.fElem.find(".tovabb");
@@ -23,10 +24,17 @@ class Film {
         });
 
 
-        this.idopontSzulo.children(".idopont").on("click", () => {
-
-            this.idopontTovabbToltTrigger();
-        });
+        // this.idopontSzulo.find(".idopont").on("click", () => {
+        //     console.log($(this));
+        //     this.idopontTovabbToltTrigger();
+        // });
+        for (let i = 0; i < this.idopontok.length; i++) {
+                $(this.idopontok[i]).on("click", ()=>{
+                    this.kivalasztottIdopont=$(this.idopontok[i]).attr("id");
+                    this.idopontTovabbToltTrigger();
+                });
+            
+        }
             
     }
 
@@ -43,17 +51,24 @@ class Film {
         }
 
         for (const key in ertek.vetites) {
-
-            this.idopontSzulo.append("<a class='idopont' href='/foglalasOldal'>" + ertek.vetites[key].kezdesiIdo +"</a>");
+        // console.log(this.datum);
+        // console.log(ertek.vetites[key].vetitesNap);
+        if(this.datum==ertek.vetites[key].vetitesNap){
+            this.idopontSzulo.append("<a class='idopont' id="+ertek.vetites[key].vetitesId +" href='/foglalasOldal'>" + ertek.vetites[key].kezdesiIdo +"</a>");
         }
+  
+            
+            
+        }
+        this.idopontok=this.idopontSzulo.find(".idopont");
     }
 
 
     
     filmTovabbToltTrigger() {
-
+        console.log("sdfojhsjdlkfj")
         let filmEsemeny = new CustomEvent("filmTovabbTolt", {detail: this.fAdat});
-        window.dispatchEvent(filmEsemeny);
+        window.dispatchEvent(filmEsemeny,1);
 
         console.log("filmTovabbToltTrigger");
     }
@@ -61,7 +76,7 @@ class Film {
 
     idopontTovabbToltTrigger() {
 
-        let idopontEsemeny = new CustomEvent("idopontTovabbToltTrigger", {detail: this.fAdat});
+        let idopontEsemeny = new CustomEvent("idopontTovabbToltTrigger", {detail: this});
         window.dispatchEvent(idopontEsemeny);
     }
     
@@ -73,9 +88,10 @@ class Film {
 
 class FilmOldal {
 
-    constructor(fAdat) {
+    constructor(fAdat,datum) {
        
         this.fAdat = fAdat;
+        this.datum=datum;
 
         this.youtube = $("section").children("div").children("#youtube");
 
@@ -132,7 +148,10 @@ class FilmOldal {
 
         for (const key in ertek.vetites) {
 
-            this.idopontSzulo.append("<a href='/foglalasOldal' class='idopont'>" + ertek.vetites[key].kezdesiIdo + "</a>");
+            if(this.datum==ertek.vetites[key].vetitesNap){
+                this.idopontSzulo.append("<a href='/foglalasOldal' class='idopont'>" + ertek.vetites[key].kezdesiIdo + "</a>");
+            }
+           
         }
         
     }
@@ -172,18 +191,22 @@ class FilmFoglalas {
 
 
     setAdatok(ertek) {
+        console.log(ertek=ertek[0]);
+        this.plakat1.attr("src", ertek.fAdat.poszter);
+        this.plakat2.attr("src", ertek.fAdat.poszter);
 
-        this.plakat1.attr("src", ertek.poszter);
-        this.plakat2.attr("src", ertek.poszter);
-
-        this.cim.html(ertek.cim);
-        
-        for (const key in ertek.vetites) {
-
-            this.nap.html(ertek.vetites[key].vetitesNap);
-            this.kezdesIdo.html(ertek.vetites[key].kezdesiIdo);
+        this.cim.html(ertek.fAdat.cim);
+        let i=0;
+        while(i<ertek.fAdat.vetites.length &&  ertek.fAdat.vetites[i].vetitesId!=ertek.kivalasztottIdopont){
+            i++;
         }
+            this.nap.html(ertek.fAdat.vetites[i].vetitesNap);
+            this.kezdesIdo.html(ertek.fAdat.vetites[i].kezdesiIdo);
+            this.vet=ertek.fAdat.vetites[i].vetitesId;
+            console.log( this.vet);
+            //console.log(ertek.vetites[key].kezdesiIdo);
 
-        this.nyelv.html(ertek.nyelv);
+
+        this.nyelv.html(ertek.fAdat.nyelv);
     }    
 }

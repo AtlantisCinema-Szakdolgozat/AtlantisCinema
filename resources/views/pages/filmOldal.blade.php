@@ -88,7 +88,7 @@
 
                         <div class="collapse navbar-collapse" id="mynavbar">
 
-                            <ul class="navbar-nav nav-justified">
+                            <!-- <ul class="navbar-nav nav-justified">
 
                                 <li class="nav-item">
                                     <a class="nav-link" href="/foglalasOldal"> Hétfő </a>
@@ -118,7 +118,7 @@
                                     <a class="nav-link" href="/foglalasOldal"> Vasárnap </a>
                                 </li>
 
-                            </ul>
+                            </ul> -->
                                       
                         </div>
                     </div> 

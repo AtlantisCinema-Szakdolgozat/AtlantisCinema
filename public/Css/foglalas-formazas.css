@@ -140,6 +140,40 @@ form > div > div > .btn {
     background-color:  #004d99;
 }
 
+.szekTerv{
+
+    text-align: center;
+  
+  }
+  #ulohelyek{
+    margin: auto;
+    width: 50%;
+    }
+    .szekek{
+      width: 30px;
+      height: 30px;
+    }
+    
+    .szekTerv{
+    
+      text-align: center;
+    
+    }
+    .szekGap
+    {
+      width:40px;
+    }
+    
+    .szekVGap
+    {
+      height:40px;
+    }
+    
+    
+    input[type=checkbox]:checked {
+      accent-color:Green;
+    } 
+
 /* linkek */
 
 .idoPontok>tbody>tr>th>a {
@@ -174,7 +208,7 @@ a:hover {
     margin: auto;
 }
 
-#vaszon {
+/* #vaszon {
 
     width: 700px;
     margin: auto;
@@ -183,7 +217,18 @@ a:hover {
     margin-bottom: 10px;
     background-color: 
     #31619b;
-}
+} */
+
+#vaszon{
+    width: 50%;
+    margin: auto;
+    height: 70px;
+    transform: rotateX(-45deg);
+    box-shadow: 5px 0px 30px lightblue inset;
+    margin-bottom: 5px;
+    background-color: 
+    #31619b;
+} 
 
 .sor {
 
@@ -271,7 +316,6 @@ button {
 }
 
 #vasarlasGomb {
-
     background-image: linear-gradient( #fa6464 , #ff0000);
     color: white;
     font-weight: bold;
