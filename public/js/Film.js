@@ -125,7 +125,7 @@ class FilmOldal {
             this.mufaj.html(ertek.mufaj.mufaj);
         }
 
-        this.hossz.html(ertek.hossz);
+        this.hossz.html(ertek.hossz + " perc");
         this.fLeiras.html(ertek.filmLeiras);
 
         for (const key in ertek.szemelyek) {
