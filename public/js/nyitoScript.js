@@ -65,7 +65,7 @@ $(function() {
         let sablonElem = $("#korhintaGaleria");
 
         const ujElem = sablonElem.clone().appendTo(galeriaSzulo);
-        ujGaleriaPlakat = new GaleriaPlakat(ujElem, plakatTomb[1]);
+        ujGaleriaPlakat = new GaleriaPlakat(ujElem, plakatTomb[0]);
 
         sablonElem.remove();
     }
